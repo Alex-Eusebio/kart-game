@@ -25,7 +25,7 @@ public class CameraFollow : MonoBehaviour
 
     private void Follow()
     {
-        _camera.transform.position = Vector3.Lerp(camPos2.position, camPos.position, Time.deltaTime*player.GetComponent<CarSystem>().currentSpeed);
+        _camera.transform.position = Vector3.Lerp(camPos.position, camPos2.position, Time.deltaTime*player.GetComponent<CarSystem>().currentSpeed);
         _camera.transform.LookAt(player.gameObject.transform.position);
     }
 }

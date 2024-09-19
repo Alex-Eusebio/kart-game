@@ -1370,13 +1370,14 @@ MonoBehaviour:
   speed: 0
   currentSpeed: 0
   driftPower: 0
-  minDriftPower: 450
-  driftPowerPerLvl: 760
+  minDriftPower: 380
+  driftPowerPerLvl: 520
   driftBoostPerLvl: 20
   driftMode: 0
   drifting: 0
   acceleration: 30
-  steering: 25
+  driftSpeedDebuff: 8
+  steering: 20
   gravity: 12
   layerMask:
     serializedVersion: 2
@@ -1510,7 +1511,7 @@ Transform:
   m_GameObject: {fileID: 1443951748}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.19, z: -2.32}
+  m_LocalPosition: {x: 0, y: 1.08, z: -3.47}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1815,7 +1816,7 @@ Transform:
   m_GameObject: {fileID: 1605926873}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.83800006, z: -1.675}
+  m_LocalPosition: {x: 0, y: 0.61, z: -2.155}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
