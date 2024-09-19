@@ -176,7 +176,7 @@ public class CarSystem : MonoBehaviour
         kartNormal.Rotate(0, transform.eulerAngles.y, 0);
     }
 
-    int GetDriftLevel()
+    public int GetDriftLevel()
     {
         if (driftPower > minDriftPower && driftPower < driftPowerPerLvl)
         {
