@@ -109,17 +109,6 @@ public class CarSystem : MonoBehaviour
 
         }
 
-        if (drifting)
-        {
-            speed -= driftSpeedDebuff;
-            float control = (driftDirection == 1) ? ExtensionMethods.Remap(Input.GetAxis("Horizontal"), -1, 1, 0, 2) : ExtensionMethods.Remap(Input.GetAxis("Horizontal"), -1, 1, 2, 0);
-            float powerControl = (driftDirection == 1) ? ExtensionMethods.Remap(Input.GetAxis("Horizontal"), -1, 1, .2f, 1) : ExtensionMethods.Remap(Input.GetAxis("Horizontal"), -1, 1, 1, .2f);
-            Steer(driftDirection, control);
-            driftPower += powerControl;
-
-            ColorDrift();
-        }
-
         if (Input.GetButtonUp("Jump") && drifting)
         {
             Boost();
@@ -153,6 +142,17 @@ public class CarSystem : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (drifting)
+        {
+            speed -= driftSpeedDebuff;
+            float control = (driftDirection == 1) ? ExtensionMethods.Remap(Input.GetAxis("Horizontal"), -1, 1, 0, 2) : ExtensionMethods.Remap(Input.GetAxis("Horizontal"), -1, 1, 2, 0);
+            float powerControl = (driftDirection == 1) ? ExtensionMethods.Remap(Input.GetAxis("Horizontal"), -1, 1, .2f, 1) : ExtensionMethods.Remap(Input.GetAxis("Horizontal"), -1, 1, 1, .2f);
+            Steer(driftDirection, control);
+            driftPower += powerControl;
+
+            ColorDrift();
+        }
+
         //Forward Acceleration
         if (!drifting)
             sphere.AddForce(-kartModel.transform.right * currentSpeed, ForceMode.Acceleration);
