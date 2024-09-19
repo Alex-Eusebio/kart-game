@@ -37,7 +37,8 @@ public class CarSystem : MonoBehaviour
 
     [Header("Parameters")]
 
-    public float acceleration = 30f;
+    public float maxSpeed = 30f;
+    public float acceleration = 1f;
     public float driftSpeedDebuff = 8f;
     public float steering = 80f;
     public float gravity = 10f;
@@ -80,10 +81,6 @@ public class CarSystem : MonoBehaviour
         //Follow Collider
         transform.position = sphere.transform.position - new Vector3(0, 0.75f, 0);
 
-        //Accelerate
-        if (Input.GetAxis("Vertical") > 0)
-            speed = acceleration;
-
         //Steer
         if (Input.GetAxis("Horizontal") != 0)
         {
@@ -114,7 +111,6 @@ public class CarSystem : MonoBehaviour
             Boost();
         }
 
-        currentSpeed = Mathf.SmoothStep(currentSpeed, speed, Time.deltaTime * 8f); speed = 0f;
         currentRotate = Mathf.Lerp(currentRotate, rotate, Time.deltaTime * 4f); rotate = 0f;
 
         //Animations    
@@ -142,16 +138,22 @@ public class CarSystem : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //Accelerate
+        if (Input.GetAxis("Vertical") > 0)
+            speed = maxSpeed;
+
         if (drifting)
         {
             speed -= driftSpeedDebuff;
             float control = (driftDirection == 1) ? ExtensionMethods.Remap(Input.GetAxis("Horizontal"), -1, 1, 0, 2) : ExtensionMethods.Remap(Input.GetAxis("Horizontal"), -1, 1, 2, 0);
             float powerControl = (driftDirection == 1) ? ExtensionMethods.Remap(Input.GetAxis("Horizontal"), -1, 1, .2f, 1) : ExtensionMethods.Remap(Input.GetAxis("Horizontal"), -1, 1, 1, .2f);
-            Steer(driftDirection, control);
+            Steer(driftDirection*2, control);
             driftPower += powerControl;
 
             ColorDrift();
         }
+
+        currentSpeed = Mathf.SmoothStep(currentSpeed, speed, Time.deltaTime * acceleration); speed = 0f;
 
         //Forward Acceleration
         if (!drifting)
