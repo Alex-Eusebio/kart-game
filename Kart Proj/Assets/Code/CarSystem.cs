@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//using DG.Tweening;
+using DG.Tweening;
 //using UnityEngine.Rendering.PostProcessing;
 //using Cinemachine;
 
@@ -82,7 +82,7 @@ public class CarSystem : MonoBehaviour
         transform.position = sphere.transform.position - new Vector3(0, 0.75f, 0);
 
         //Steer
-        if (Input.GetAxis("Horizontal") != 0)
+        if (Input.GetAxis("Horizontal") != 0 && !drifting)
         {
             int dir = Input.GetAxis("Horizontal") > 0 ? 1 : -1;
             float amount = Mathf.Abs((Input.GetAxis("Horizontal")));
@@ -101,8 +101,8 @@ public class CarSystem : MonoBehaviour
                 p.Play();
             }*/
 
-            /*kartModel.parent.DOComplete();
-            kartModel.parent.DOPunchPosition(transform.up * .2f, .3f, 5, 1);*/
+            kartModel.parent.DOComplete();
+            kartModel.parent.DOPunchPosition(transform.up * .2f, .3f, 5, 1);
 
         }
 
@@ -205,8 +205,6 @@ public class CarSystem : MonoBehaviour
             currentSpeed += driftBoostPerLvl * GetDriftLevel();
 
             Debug.Log("BOOST!" + GetDriftLevel());
-            /*DOVirtual.Float(currentSpeed * 3, currentSpeed, .3f * driftMode, Speed);
-            DOVirtual.Float(0, 1, .5f, ChromaticAmount).OnComplete(() => DOVirtual.Float(1, 0, .5f, ChromaticAmount));*/
             //kartModel.Find("Tube001").GetComponentInChildren<ParticleSystem>().Play();
             //kartModel.Find("Tube002").GetComponentInChildren<ParticleSystem>().Play();
         }
@@ -221,7 +219,7 @@ public class CarSystem : MonoBehaviour
             p.Stop();
         }*/
 
-        //kartModel.parent.DOLocalRotate(Vector3.zero, .5f).SetEase(Ease.OutBack);
+        kartModel.parent.DOLocalRotate(Vector3.zero, .5f).SetEase(Ease.OutBack);
 
     }
 
