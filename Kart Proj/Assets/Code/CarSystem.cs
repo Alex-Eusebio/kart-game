@@ -34,6 +34,7 @@ public class CarSystem : MonoBehaviour
 
     [Header("Bools")]
     public bool drifting;
+    public bool isGrounded;
 
     [Header("Parameters")]
 
@@ -43,6 +44,7 @@ public class CarSystem : MonoBehaviour
     public float steering = 80f;
     public float gravity = 10f;
     public LayerMask layerMask;
+    public LayerMask groundMask;
 
     [Header("Model Parts")]
 
@@ -50,10 +52,19 @@ public class CarSystem : MonoBehaviour
     public Transform backWheels;
     public Transform steeringWheel;
 
+
+    [Header("Grounded Stats")]
+    public float bonusGravity;
+    public float gravityScale;
+    public float airBorneTime;
+    public float airBorneTimer;
+
     /*[Header("Particles")]
     public Transform wheelParticles;
     public Transform flashParticles;
     public Color[] turboColors;*/
+
+    float distToGround;
 
     void Start()
     {
@@ -76,18 +87,21 @@ public class CarSystem : MonoBehaviour
         }*/
     }
 
+    public bool IsGrounded()
+    {
+        RaycastHit hit;
+        float rayLength = 1.1f; // Adjust based on your character's size
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, rayLength))
+        {
+            return true;
+        }
+        return false;
+    }
+
     void Update()
     {
         //Follow Collider
         transform.position = sphere.transform.position - new Vector3(0, 0.75f, 0);
-
-        //Steer
-        if (Input.GetAxis("Horizontal") != 0 && !drifting)
-        {
-            int dir = Input.GetAxis("Horizontal") > 0 ? 1 : -1;
-            float amount = Mathf.Abs((Input.GetAxis("Horizontal")));
-            Steer(dir, amount);
-        }
 
         //Drift
         if (Input.GetButtonDown("Jump") && !drifting && Input.GetAxis("Horizontal") != 0)
@@ -138,6 +152,28 @@ public class CarSystem : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (!IsGrounded())
+        {
+            airBorneTimer += Time.deltaTime;
+
+            if (airBorneTimer > airBorneTime)
+            {
+                bonusGravity += gravityScale * Time.deltaTime;
+            }
+        } else
+        {
+            bonusGravity = 0;
+            airBorneTimer = 0;
+        }
+
+        //Steer
+        if (Input.GetAxis("Horizontal") != 0 && !drifting)
+        {
+            int dir = Input.GetAxis("Horizontal") > 0 ? 1 : -1;
+            float amount = Mathf.Abs((Input.GetAxis("Horizontal")));
+            Steer(dir, amount);
+        }
+
         //Accelerate
         if (Input.GetAxis("Vertical") > 0)
             speed = maxSpeed;
@@ -162,7 +198,7 @@ public class CarSystem : MonoBehaviour
             sphere.AddForce(transform.forward * currentSpeed, ForceMode.Acceleration);
 
         //Gravity
-        sphere.AddForce(Vector3.down * gravity, ForceMode.Acceleration);
+        sphere.AddForce(Vector3.down * (gravity+bonusGravity), ForceMode.Acceleration);
 
         //Steering
         transform.eulerAngles = Vector3.Lerp(transform.eulerAngles, new Vector3(0, transform.eulerAngles.y + currentRotate, 0), Time.deltaTime * 5f);
