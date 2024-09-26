@@ -55,22 +55,30 @@ MonoBehaviour:
   speed: 0
   currentSpeed: 0
   driftPower: 0
-  minDriftPower: 380
-  driftPowerPerLvl: 520
-  driftBoostPerLvl: 20
+  minDriftPower: 40
+  driftPowerPerLvl: 80
+  driftBoostPerLvl: 40
   driftMode: 0
   drifting: 0
-  maxSpeed: 40
-  acceleration: 6
+  isGrounded: 0
+  maxSpeed: 60
+  acceleration: 10
   driftSpeedDebuff: 3
-  steering: 20
-  gravity: 12
+  steering: 10
+  gravity: 20
   layerMask:
     serializedVersion: 2
     m_Bits: 55
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 0
   frontWheels: {fileID: 3116369572165924115}
   backWheels: {fileID: 4776764368576013894}
   steeringWheel: {fileID: 6418145159621599518}
+  bonusGravity: 0
+  gravityScale: 70
+  airBorneTime: 0.4
+  airBorneTimer: 0
 --- !u!114 &3919090456375274765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -230,7 +238,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.2986, y: 0.6428, z: 0.7384091}
+  m_LocalScale: {x: 1.2986, y: 0.6428, z: 0.6}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3116369572165924115}
