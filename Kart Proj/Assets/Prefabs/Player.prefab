@@ -57,13 +57,13 @@ MonoBehaviour:
   driftPower: 0
   minDriftPower: 40
   driftPowerPerLvl: 80
-  driftBoostPerLvl: 40
+  driftBoostPerLvl: 50
   driftMode: 0
   drifting: 0
   isGrounded: 0
-  maxSpeed: 60
+  maxSpeed: 80
   acceleration: 10
-  driftSpeedDebuff: 3
+  driftSpeedDebuff: 5
   steering: 10
   gravity: 20
   layerMask:
@@ -77,7 +77,7 @@ MonoBehaviour:
   steeringWheel: {fileID: 6418145159621599518}
   bonusGravity: 0
   gravityScale: 70
-  airBorneTime: 0.4
+  airBorneTime: 0.2
   airBorneTimer: 0
 --- !u!114 &3919090456375274765
 MonoBehaviour:
