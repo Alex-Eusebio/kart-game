@@ -64,7 +64,9 @@ MonoBehaviour:
   maxSpeed: 80
   acceleration: 10
   driftSpeedDebuff: 5
-  steering: 10
+  driftPassiveSteeringMulti: 1.6
+  steering: 20
+  steeringDriftMulti: 0.42
   gravity: 20
   layerMask:
     serializedVersion: 2
