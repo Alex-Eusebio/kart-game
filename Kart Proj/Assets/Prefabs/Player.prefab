@@ -62,12 +62,12 @@ MonoBehaviour:
   drifting: 0
   isGrounded: 0
   maxSpeed: 80
-  acceleration: 10
-  driftSpeedDebuff: 5
+  acceleration: 8
+  driftSpeedDebuff: 4
   driftPassiveSteeringMulti: 1.6
-  steering: 20
+  steering: 13
   steeringDriftMulti: 0.42
-  gravity: 20
+  gravity: 22
   layerMask:
     serializedVersion: 2
     m_Bits: 55

@@ -131,8 +131,6 @@ public class CarSystem : MonoBehaviour
             Boost();
         }
 
-        currentRotate = Mathf.Lerp(currentRotate, rotate, Time.deltaTime * 4f); rotate = 0f;
-
         //Animations    
 
         //a) Kart
@@ -207,6 +205,8 @@ public class CarSystem : MonoBehaviour
 
         //Gravity
         sphere.AddForce(Vector3.down * (gravity+bonusGravity), ForceMode.Acceleration);
+
+        currentRotate = Mathf.Lerp(currentRotate, rotate, Time.deltaTime * 4f); rotate = 0f;
 
         //Steering
         transform.eulerAngles = Vector3.Lerp(transform.eulerAngles, new Vector3(0, transform.eulerAngles.y + currentRotate, 0), Time.deltaTime * 5f);
