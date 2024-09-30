@@ -41,7 +41,9 @@ public class CarSystem : MonoBehaviour
     public float maxSpeed = 30f;
     public float acceleration = 1f;
     public float driftSpeedDebuff = 8f;
+    public float driftPassiveSteeringMulti = 2f;
     public float steering = 80f;
+    public float steeringDriftMulti = 1f;
     public float gravity = 10f;
     public LayerMask layerMask;
     public LayerMask groundMask;
@@ -93,6 +95,10 @@ public class CarSystem : MonoBehaviour
         float rayLength = 1.1f; // Adjust based on your character's size
         if (Physics.Raycast(transform.position, Vector3.down, out hit, rayLength))
         {
+            if (hit.collider.gameObject.GetComponent<IChangeSpeed>() != null)
+            {
+                currentSpeed += hit.collider.gameObject.GetComponent<IChangeSpeed>().ChangeSpeed(currentSpeed);
+            }
             return true;
         }
         return false;
@@ -170,7 +176,7 @@ public class CarSystem : MonoBehaviour
         if (Input.GetAxis("Horizontal") != 0 && !drifting)
         {
             int dir = Input.GetAxis("Horizontal") > 0 ? 1 : -1;
-            float amount = Mathf.Abs((Input.GetAxis("Horizontal")));
+            float amount = Mathf.Abs(Input.GetAxis("Horizontal"));
             Steer(dir, amount);
         }
 
@@ -180,10 +186,12 @@ public class CarSystem : MonoBehaviour
 
         if (drifting)
         {
-            speed -= driftSpeedDebuff;
+            if (speed > 5)
+                speed -= driftSpeedDebuff;
+
             float control = (driftDirection == 1) ? ExtensionMethods.Remap(Input.GetAxis("Horizontal"), -1, 1, 0.2f, 2) : ExtensionMethods.Remap(Input.GetAxis("Horizontal"), -1, 1, 2, 0.2f);
             float powerControl = (driftDirection == 1) ? ExtensionMethods.Remap(Input.GetAxis("Horizontal"), -1, 1, .2f, 1) : ExtensionMethods.Remap(Input.GetAxis("Horizontal"), -1, 1, 1, .2f);
-            Steer(driftDirection*2, control);
+            Steer(driftDirection*driftPassiveSteeringMulti, control, steeringDriftMulti);
             driftPower += powerControl;
 
             ColorDrift();
@@ -259,9 +267,9 @@ public class CarSystem : MonoBehaviour
 
     }
 
-    public void Steer(int direction, float amount)
+    public void Steer(float direction, float amount, float steeringMulti = 1)
     {
-        rotate = (steering * direction) * amount;
+        rotate = ((steering*steeringMulti) * direction) * amount;
     }
 
     public void ColorDrift()
