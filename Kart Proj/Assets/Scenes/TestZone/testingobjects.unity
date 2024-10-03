@@ -1545,6 +1545,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2621778200463138833, guid: ed93a58a075497c4486ca597f369d756, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3919090456375274765, guid: ed93a58a075497c4486ca597f369d756, type: 3}
       propertyPath: _camera
       value: 
@@ -1555,7 +1559,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5075192125091602741, guid: ed93a58a075497c4486ca597f369d756, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.57
+      value: 1.89
       objectReference: {fileID: 0}
     - target: {fileID: 5075192125091602741, guid: ed93a58a075497c4486ca597f369d756, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1593,6 +1597,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8680975895763679563, guid: ed93a58a075497c4486ca597f369d756, type: 3}
+      propertyPath: backWheels
+      value: 
+      objectReference: {fileID: 852097314}
+    - target: {fileID: 8680975895763679563, guid: ed93a58a075497c4486ca597f369d756, type: 3}
+      propertyPath: frontWheels
+      value: 
+      objectReference: {fileID: 1952920683}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2161,6 +2173,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3ae1181ed7ad13479403c619739ede2, type: 3}
+--- !u!4 &852097314 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4776764368576013894, guid: ed93a58a075497c4486ca597f369d756, type: 3}
+  m_PrefabInstance: {fileID: 623419565}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &866136547
 GameObject:
   m_ObjectHideFlags: 0
@@ -4691,6 +4708,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bba7076a110bf545b9824f0a988f196, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1952920683 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3116369572165924115, guid: ed93a58a075497c4486ca597f369d756, type: 3}
+  m_PrefabInstance: {fileID: 623419565}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1956893682
 PrefabInstance:
   m_ObjectHideFlags: 0
