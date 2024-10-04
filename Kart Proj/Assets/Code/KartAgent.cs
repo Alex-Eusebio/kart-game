@@ -8,6 +8,7 @@ using Unity.MLAgents.Sensors;
 public class KartAgent : Agent
 {
     private CarSystem carSystem;
+    public CheckpointManager checkpointManager;
 
     public override void Initialize()
     {
@@ -16,8 +17,8 @@ public class KartAgent : Agent
 
     public override void OnEpisodeBegin()
     {
-        //add respawn
-        //add checkpointmanager
+        checkpointManager.ResetCheckpoints();
+        carSystem.Respawn();
     }
 
     #region
@@ -32,7 +33,8 @@ public class KartAgent : Agent
     {
         var input = actions.ContinuousActions;
 
-        //carSystem.ApplyAccelaration <- edit carSystem? maybe
+        carSystem.ApplyAcceleration(input[1]);
+        carSystem.Steer(input[0]);
     }
 
     //For manual testing with human input, the actionsOut defined here will be sent to OnActionsRecieved

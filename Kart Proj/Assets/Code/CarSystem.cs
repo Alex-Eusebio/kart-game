@@ -13,6 +13,7 @@ public class CarSystem : MonoBehaviour
     public Transform kartModel;
     public Transform kartNormal;
     public Rigidbody sphere;
+    private SpawnPointManager spawnPointManager;
 
     //public List<ParticleSystem> primaryParticles = new List<ParticleSystem>();
     //public List<ParticleSystem> secondaryParticles = new List<ParticleSystem>();
@@ -152,6 +153,34 @@ public class CarSystem : MonoBehaviour
         //c) Steering Wheel
         steeringWheel.localEulerAngles = new Vector3(-25, 90, ((Input.GetAxis("Horizontal") * 45)));
 
+    }
+
+    public void ApplyAcceleration(float input)
+    {
+        speed = acceleration * input;
+        currentSpeed = Mathf.SmoothStep(currentSpeed, speed, Time.deltaTime * 12f);
+        speed = 0f;
+        currentRotate = Mathf.Lerp(currentRotate, rotate, Time.deltaTime * 4f);
+        rotate = 0f;
+    }
+
+    public void Steer(float steeringSignal)
+    {
+        int steerDirection = steeringSignal > 0 ? 1 : -1;
+        float steeringStrength = Mathf.Abs(steeringSignal);
+
+        rotate = (steering * steerDirection) * steeringStrength;
+    }
+
+    public void AnimateKart(float input)
+    {
+        kartModel.localEulerAngles = Vector3.Lerp(kartModel.localEulerAngles, new Vector3(0, 90 + (input * 15), kartModel.localEulerAngles.z), .2f);
+
+        frontWheels.localEulerAngles = new Vector3(0, (input * 15), frontWheels.localEulerAngles.z);
+        frontWheels.localEulerAngles += new Vector3(0, 0, sphere.velocity.magnitude / 2);
+        backWheels.localEulerAngles += new Vector3(0, 0, sphere.velocity.magnitude / 2);
+
+        steeringWheel.localEulerAngles = new Vector3(-25, 90, ((input * 45)));
     }
 
     private void FixedUpdate()
@@ -327,6 +356,13 @@ public class CarSystem : MonoBehaviour
             pmain.startColor = c;
             p.Play();
         }*/
+    }
+
+    public void Respawn()
+    {
+        Vector3 pos = spawnPointManager.SelectRandomSpawnpoint();
+        sphere.MovePosition(pos);
+        transform.position = pos - new Vector3(0, 0.4f, 0);
     }
 
     private void Speed(float x)
