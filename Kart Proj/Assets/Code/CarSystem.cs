@@ -40,6 +40,7 @@ public class CarSystem : MonoBehaviour
     [Header("Parameters")]
 
     public float maxSpeed = 30f;
+    public float backwardsSpeed = -15f;
     public float acceleration = 1f;
     public float driftSpeedDebuff = 8f;
     public float driftPassiveSteeringMulti = 2f;
@@ -210,6 +211,10 @@ public class CarSystem : MonoBehaviour
         //Accelerate
         if (Input.GetAxis("Vertical") > 0)
             speed = maxSpeed;
+        else if (Input.GetAxis("Vertical") < 0)
+        {
+            speed = backwardsSpeed;
+        }
 
         if (drifting)
         {
