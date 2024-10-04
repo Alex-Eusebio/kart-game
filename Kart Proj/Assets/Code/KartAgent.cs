@@ -25,7 +25,11 @@ public class KartAgent : Agent
     //collect extra information that isn't picked up by the RaycastSensors
     public override void CollectObservations(VectorSensor sensor)
     {
-        
+        Vector3 diff = checkpointManager.nextCheckPointToReach.transform.position - transform.position;
+
+        sensor.AddObservation(diff/20f);
+
+        AddReward(-0.001f);
     }
 
     //Processing the actions recieved
