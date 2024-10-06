@@ -67,6 +67,7 @@ MonoBehaviour:
   driftMode: 0
   drifting: 0
   isGrounded: 0
+  onRoad: 0
   maxSpeed: 80
   backwardsSpeed: -15
   acceleration: 8
@@ -74,7 +75,7 @@ MonoBehaviour:
   driftPassiveSteeringMulti: 1.6
   steering: 13
   steeringDriftMulti: 0.42
-  gravity: 22
+  gravity: 1
   layerMask:
     serializedVersion: 2
     m_Bits: 55
@@ -134,7 +135,7 @@ MonoBehaviour:
   m_Model: {fileID: 0}
   m_InferenceDevice: 0
   m_BehaviorType: 0
-  m_BehaviorName: My Behavior
+  m_BehaviorName: KartAI
   TeamId: 0
   m_UseChildSensors: 1
   m_UseChildActuators: 1
@@ -155,7 +156,7 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 0
-  checkpointManager: {fileID: 0}
+  checkpointManager: {fileID: 2002910360361881589}
 --- !u!114 &5260853809218118204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,12 +193,12 @@ MonoBehaviour:
   m_RayLength: 20
   m_RayLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967291
+    m_Bits: 4294967155
   m_ObservationStacks: 1
   rayHitColor: {r: 1, g: 0, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
-  m_StartVerticalOffset: 0
-  m_EndVerticalOffset: 0
+  m_StartVerticalOffset: 9
+  m_EndVerticalOffset: 4
 --- !u!114 &5728554766467452472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,12 +266,12 @@ MonoBehaviour:
   m_RayLength: 20
   m_RayLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967291
+    m_Bits: 4294967155
   m_ObservationStacks: 1
   rayHitColor: {r: 1, g: 0, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
-  m_StartVerticalOffset: 0
-  m_EndVerticalOffset: 0
+  m_StartVerticalOffset: 9
+  m_EndVerticalOffset: 4
 --- !u!1 &956760711398695323
 GameObject:
   m_ObjectHideFlags: 0
@@ -893,6 +894,7 @@ GameObject:
   - component: {fileID: 1360452859183796177}
   - component: {fileID: 3290385464774314319}
   - component: {fileID: 4136492240716495676}
+  - component: {fileID: 2002910360361881589}
   m_Layer: 3
   m_Name: SphereCollider
   m_TagString: Untagged
@@ -928,7 +930,7 @@ SphereCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -955,7 +957,7 @@ Rigidbody:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
@@ -963,6 +965,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2002910360361881589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8737309900208232065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ef14f6660ca1dd43b0555b848b83a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxTimeToReachNextCheckpoint: 15
+  TimeLeft: 15
+  kartAgent: {fileID: 7317988881178992869}
+  nextCheckPointToReach: {fileID: 0}
 --- !u!1 &8915943828899904714
 GameObject:
   m_ObjectHideFlags: 0

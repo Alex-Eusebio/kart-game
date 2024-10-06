@@ -13,6 +13,7 @@ public class KartAgent : Agent
     public override void Initialize()
     {
         carSystem = GetComponent<CarSystem>();  
+        checkpointManager = carSystem.sphere.gameObject.GetComponent<CheckpointManager>();
     }
 
     public override void OnEpisodeBegin()
@@ -29,6 +30,9 @@ public class KartAgent : Agent
 
         sensor.AddObservation(diff/20f);
 
+        if (!carSystem.onRoad)
+            AddReward(-0.05f);
+
         AddReward(-0.001f);
     }
 
@@ -37,8 +41,23 @@ public class KartAgent : Agent
     {
         var input = actions.ContinuousActions;
 
+        if (input[1] < 0)
+        {
+            AddReward(-0.4f);
+        } else if (input[1] > 0.8f)
+        {
+            AddReward(0.0001f);
+        }else if (input[1] == 1f)
+        {
+            AddReward(0.00015f);
+        }
+
         carSystem.ApplyAcceleration(input[1]);
+
         carSystem.Steer(input[0]);
+
+        //if (input[2] == 1 && input[0] > 0 || input[0] < 0)
+            //carSystem.Drift(input[0]);
     }
 
     //For manual testing with human input, the actionsOut defined here will be sent to OnActionsRecieved
@@ -48,7 +67,6 @@ public class KartAgent : Agent
 
         action[0] = Input.GetAxis("Horizontal"); //Steering
         action[1] = Input.GetAxis("Vertical"); // Acceralating
-
     }
     #endregion
 }

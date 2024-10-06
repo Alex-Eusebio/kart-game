@@ -8,6 +8,6 @@ public class Checkpoints : MonoBehaviour
 
     private void Awake()
     {
-        checkPoints = new List<Checkpoint>(GetComponentsInChildren<Checkpoint>());
+        //checkPoints = new List<Checkpoint>(GetComponentsInChildren<Checkpoint>());
     }
 }

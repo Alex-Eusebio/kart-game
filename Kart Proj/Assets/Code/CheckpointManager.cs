@@ -37,7 +37,7 @@ public class CheckpointManager : MonoBehaviour
 
         if (TimeLeft < 0f)
         {
-            kartAgent.AddReward(-1f);
+            kartAgent.AddReward(-5f);
             kartAgent.EndEpisode();
         }
     }
@@ -52,12 +52,13 @@ public class CheckpointManager : MonoBehaviour
 
         if (CurrentCheckpointIndex >= Checkpoints.Count)
         {
-            kartAgent.AddReward(0.5f);
+            kartAgent.AddReward(30f);
+            Debug.Log(gameObject.transform.parent.name + " COMPLETED!");
             kartAgent.EndEpisode();
         }
         else
         {
-            kartAgent.AddReward((0.5f) / Checkpoints.Count);
+            kartAgent.AddReward(0.4f * Checkpoints.Count);
             SetNextCheckpoint();
         }
     }

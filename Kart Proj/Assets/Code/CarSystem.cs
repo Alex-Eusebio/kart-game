@@ -13,7 +13,7 @@ public class CarSystem : MonoBehaviour
     public Transform kartModel;
     public Transform kartNormal;
     public Rigidbody sphere;
-    private SpawnPointManager spawnPointManager;
+    SpawnPointManager spawnPointManager;
 
     //public List<ParticleSystem> primaryParticles = new List<ParticleSystem>();
     //public List<ParticleSystem> secondaryParticles = new List<ParticleSystem>();
@@ -36,6 +36,7 @@ public class CarSystem : MonoBehaviour
     [Header("Bools")]
     public bool drifting;
     public bool isGrounded;
+    public bool onRoad;
 
     [Header("Parameters")]
 
@@ -70,6 +71,12 @@ public class CarSystem : MonoBehaviour
 
     float distToGround;
 
+    private void Awake()
+    {
+        if (!spawnPointManager)
+            spawnPointManager = FindObjectOfType<SpawnPointManager>();
+    }
+
     void Start()
     {
         /*postVolume = Camera.main.GetComponent<PostProcessVolume>();
@@ -99,7 +106,15 @@ public class CarSystem : MonoBehaviour
         {
             if (hit.collider.gameObject.GetComponent<IChangeSpeed>() != null)
             {
-                currentSpeed += hit.collider.gameObject.GetComponent<IChangeSpeed>().ChangeSpeed(currentSpeed);
+                float speedChange = hit.collider.gameObject.GetComponent<IChangeSpeed>().ChangeSpeed(currentSpeed);
+                currentSpeed += speedChange;
+                if (speedChange > 0)
+                    onRoad = true;
+                else 
+                    onRoad = false;
+            } else
+            {
+                onRoad = true;
             }
             return true;
         }
@@ -158,19 +173,32 @@ public class CarSystem : MonoBehaviour
 
     public void ApplyAcceleration(float input)
     {
-        speed = acceleration * input;
-        currentSpeed = Mathf.SmoothStep(currentSpeed, speed, Time.deltaTime * 12f);
-        speed = 0f;
-        currentRotate = Mathf.Lerp(currentRotate, rotate, Time.deltaTime * 4f);
-        rotate = 0f;
+        if (input > 0)
+            speed = maxSpeed;
+        currentSpeed = Mathf.SmoothStep(currentSpeed, speed, Time.deltaTime * acceleration); speed = 0f;
+        currentRotate = Mathf.Lerp(currentRotate, rotate, Time.deltaTime * 4f); rotate = 0f;
     }
 
     public void Steer(float steeringSignal)
     {
         int steerDirection = steeringSignal > 0 ? 1 : -1;
         float steeringStrength = Mathf.Abs(steeringSignal);
+        rotate = (steering *steerDirection) * steeringStrength;
+    }
 
-        rotate = (steering * steerDirection) * steeringStrength;
+    public void Drift(float steeringSignal)
+    {
+        float control = ((steeringSignal > 0 ? 1 : -1) == 1) ? ExtensionMethods.Remap(Input.GetAxis("Horizontal"), -1, 1, .5f, 2) : ExtensionMethods.Remap(Input.GetAxis("Horizontal"), -1, 1, 2, .5f);
+        kartModel.parent.localRotation = Quaternion.Euler(0, Mathf.LerpAngle(kartModel.parent.localEulerAngles.y, (control * 15) * driftDirection, .2f), 0);
+
+        if (speed > 5)
+            speed -= driftSpeedDebuff;
+
+        float powerControl = (driftDirection == 1) ? ExtensionMethods.Remap(Input.GetAxis("Horizontal"), -1, 1, .2f, 1) : ExtensionMethods.Remap(Input.GetAxis("Horizontal"), -1, 1, 1, .2f);
+        Steer(driftDirection * driftPassiveSteeringMulti, control, steeringDriftMulti);
+        driftPower += powerControl;
+
+        ColorDrift();
     }
 
     public void AnimateKart(float input)
@@ -368,6 +396,8 @@ public class CarSystem : MonoBehaviour
         Vector3 pos = spawnPointManager.SelectRandomSpawnpoint();
         sphere.MovePosition(pos);
         transform.position = pos - new Vector3(0, 0.4f, 0);
+        transform.rotation = Quaternion.identity;
+        transform.eulerAngles = new Vector3(0, 0, 0);
     }
 
     private void Speed(float x)
