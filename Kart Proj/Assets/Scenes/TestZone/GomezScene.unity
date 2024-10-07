@@ -642,7 +642,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b7850613e662cac4d86d2427e7924ef5, type: 2}
+  - {fileID: 2100000, guid: c688ee0075d4acb42b4cfcc327345eed, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1173,7 +1173,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b7850613e662cac4d86d2427e7924ef5, type: 2}
+  - {fileID: 2100000, guid: 9aa8db6554fffea4abccf484ad624974, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1765,7 +1765,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b7850613e662cac4d86d2427e7924ef5, type: 2}
+  - {fileID: 2100000, guid: d679a6db32ce1964d8231685f663738c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2085,7 +2085,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b7850613e662cac4d86d2427e7924ef5, type: 2}
+  - {fileID: 2100000, guid: 876e6d1996229a54899090fddbb6e723, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2265,7 +2265,9 @@ MonoBehaviour:
   driftMode: 0
   drifting: 0
   isGrounded: 0
+  onRoad: 0
   maxSpeed: 30
+  backwardsSpeed: -15
   acceleration: 30
   driftSpeedDebuff: 8
   driftPassiveSteeringMulti: 2
