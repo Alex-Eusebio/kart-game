@@ -31,7 +31,7 @@ public class KartAgent : Agent
         sensor.AddObservation(diff/20f);
 
         if (!carSystem.onRoad)
-            AddReward(-0.05f);
+            AddReward(-0.08f);
 
         AddReward(-0.001f);
     }
