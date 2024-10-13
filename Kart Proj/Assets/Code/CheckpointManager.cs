@@ -52,8 +52,8 @@ public class CheckpointManager : MonoBehaviour
 
         if (CurrentCheckpointIndex >= Checkpoints.Count)
         {
-            kartAgent.AddReward(30f);
-            Debug.Log(gameObject.transform.parent.name + " COMPLETED!");
+            kartAgent.AddReward(1f * Checkpoints.Count);
+            Debug.Log($"{gameObject.transform.parent.name} COMPLETED! ({kartAgent.GetCumulativeReward()})");
             kartAgent.EndEpisode();
         }
         else

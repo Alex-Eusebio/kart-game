@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1864117718262681463}
-  - component: {fileID: 8680975895763679563}
+  - component: {fileID: 4114234932513477002}
   - component: {fileID: 5673087399909195987}
   - component: {fileID: 335788766218644730}
   - component: {fileID: 7317988881178992869}
@@ -43,7 +43,7 @@ Transform:
   - {fileID: 6805579643618492312}
   m_Father: {fileID: 5075192125091602741}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8680975895763679563
+--- !u!114 &4114234932513477002
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -52,7 +52,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 713885144395614289}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bba7076a110bf545b9824f0a988f196, type: 3}
+  m_Script: {fileID: 11500000, guid: 0d45b04ff0ea46d46bd5f5503e3cab95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   kartModel: {fileID: 6518262514905910846}
@@ -60,12 +60,14 @@ MonoBehaviour:
   sphere: {fileID: 4136492240716495676}
   speed: 0
   currentSpeed: 0
+  currentSteer: 0
   driftPower: 0
   minDriftPower: 40
   driftPowerPerLvl: 80
   driftBoostPerLvl: 50
   driftMode: 0
   drifting: 0
+  isTryingToDrift: 0
   isGrounded: 0
   onRoad: 0
   maxSpeed: 80
@@ -126,13 +128,13 @@ MonoBehaviour:
     VectorObservationSize: 3
     NumStackedVectorObservations: 1
     m_ActionSpec:
-      m_NumContinuousActions: 2
+      m_NumContinuousActions: 3
       BranchSizes: 
-    VectorActionSize: 02000000
+    VectorActionSize: 03000000
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 24d51bafe6d894047a5056544b5afb75, type: 3}
+  m_Model: {fileID: 0}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: KartAI

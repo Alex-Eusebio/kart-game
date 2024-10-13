@@ -4,15 +4,16 @@ using UnityEngine;
 using Unity.MLAgents;
 using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Sensors;
+using System;
 
 public class KartAgent : Agent
 {
-    private CarSystem carSystem;
+    private AICarSystem carSystem;
     public CheckpointManager checkpointManager;
 
     public override void Initialize()
     {
-        carSystem = GetComponent<CarSystem>();  
+        carSystem = GetComponent<AICarSystem>();  
         checkpointManager = carSystem.sphere.gameObject.GetComponent<CheckpointManager>();
     }
 
@@ -30,8 +31,13 @@ public class KartAgent : Agent
 
         sensor.AddObservation(diff/20f);
 
+        if (checkpointManager.nextCheckPointToReach.isOnTurn && carSystem.isTryingToDrift)
+            AddReward(0.01f);
+        else if (!checkpointManager.nextCheckPointToReach.isOnTurn && carSystem.isTryingToDrift)
+            AddReward(-0.08f);
+            
         if (!carSystem.onRoad)
-            AddReward(-0.0005f);
+            AddReward(-0.07f);
 
         AddReward(-0.001f);
     }
@@ -42,11 +48,8 @@ public class KartAgent : Agent
         var input = actions.ContinuousActions;
 
         carSystem.ApplyAcceleration(input[1]);
-
         carSystem.Steer(input[0]);
-
-        //if (input[2] == 1 && input[0] > 0 || input[0] < 0)
-            //carSystem.Drift(input[0]);
+        carSystem.Drift(input[2]);
     }
 
     //For manual testing with human input, the actionsOut defined here will be sent to OnActionsRecieved
@@ -56,6 +59,7 @@ public class KartAgent : Agent
 
         action[0] = Input.GetAxis("Horizontal"); //Steering
         action[1] = Input.GetAxis("Vertical"); // Acceralating
+        action[2] = Convert.ToSingle(Input.GetButton("Jump")); // Drifting
     }
     #endregion
 }
