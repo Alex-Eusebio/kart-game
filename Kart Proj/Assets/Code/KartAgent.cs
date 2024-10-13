@@ -31,7 +31,7 @@ public class KartAgent : Agent
         sensor.AddObservation(diff/20f);
 
         if (!carSystem.onRoad)
-            AddReward(-0.08f);
+            AddReward(-0.0005f);
 
         AddReward(-0.001f);
     }
@@ -40,17 +40,6 @@ public class KartAgent : Agent
     public override void OnActionReceived(ActionBuffers actions)
     {
         var input = actions.ContinuousActions;
-
-        if (input[1] < 0)
-        {
-            AddReward(-0.4f);
-        } else if (input[1] > 0.8f)
-        {
-            AddReward(0.0001f);
-        }else if (input[1] == 1f)
-        {
-            AddReward(0.00015f);
-        }
 
         carSystem.ApplyAcceleration(input[1]);
 

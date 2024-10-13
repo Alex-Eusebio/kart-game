@@ -397,7 +397,7 @@ public class CarSystem : MonoBehaviour
         sphere.MovePosition(pos);
         transform.position = pos - new Vector3(0, 0.4f, 0);
         transform.rotation = Quaternion.identity;
-        transform.eulerAngles = new Vector3(0, 0, 0);
+        transform.eulerAngles = new Vector3(0, -90, 0);
     }
 
     private void Speed(float x)
