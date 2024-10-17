@@ -56,6 +56,7 @@ public class CarSystem : MonoBehaviour
     public Transform frontWheels;
     public Transform backWheels;
     public Transform steeringWheel;
+    public AnimationController animControll;
 
 
     [Header("Grounded Stats")]
@@ -126,11 +127,13 @@ public class CarSystem : MonoBehaviour
         //Follow Collider
         transform.position = sphere.transform.position - new Vector3(0, 0.75f, 0);
 
+        float steer = Input.GetAxis("Horizontal");
+
         //Drift
-        if (Input.GetButtonDown("Jump") && !drifting && Input.GetAxis("Horizontal") != 0)
+        if (Input.GetButtonDown("Jump") && !drifting && steer != 0)
         {
             drifting = true;
-            driftDirection = Input.GetAxis("Horizontal") > 0 ? 1 : -1;
+            driftDirection = steer > 0 ? 1 : -1;
 
             /*foreach (ParticleSystem p in primaryParticles)
             {
@@ -153,52 +156,49 @@ public class CarSystem : MonoBehaviour
         //a) Kart
         if (!drifting)
         {
-            kartModel.localEulerAngles = Vector3.Lerp(kartModel.localEulerAngles, new Vector3(0, 90 + (Input.GetAxis("Horizontal") * 15), kartModel.localEulerAngles.z), .2f);
+            kartModel.localEulerAngles = Vector3.Lerp(kartModel.localEulerAngles, new Vector3(0, 90 + (steer * 15), kartModel.localEulerAngles.z), .2f);
         }
         else
         {
-            float control = (driftDirection == 1) ? ExtensionMethods.Remap(Input.GetAxis("Horizontal"), -1, 1, .5f, 2) : ExtensionMethods.Remap(Input.GetAxis("Horizontal"), -1, 1, 2, .5f);
+            float control = (driftDirection == 1) ? ExtensionMethods.Remap(steer, -1, 1, .5f, 2) : ExtensionMethods.Remap(steer, -1, 1, 2, .5f);
             kartModel.parent.localRotation = Quaternion.Euler(0, Mathf.LerpAngle(kartModel.parent.localEulerAngles.y, (control * 15) * driftDirection, .2f), 0);
         }
 
         //b) Wheels
-        frontWheels.localEulerAngles = new Vector3((Input.GetAxis("Horizontal") * 15), frontWheels.localEulerAngles.y, 0);
-        frontWheels.localEulerAngles += new Vector3(0, 0, sphere.velocity.magnitude / 2);
-        backWheels.localEulerAngles += new Vector3(sphere.velocity.magnitude / 2, 0, 0);
+        
 
         //c) Steering Wheel
-        steeringWheel.localEulerAngles = new Vector3(-25, 90, ((Input.GetAxis("Horizontal") * 45)));
+        steeringWheel.localEulerAngles = new Vector3(-25, 90, ((steer * 45)));
 
+        if (!drifting)
+            animControll.steering = steer;
+        else
+            animControll.steering = driftDirection;
     }
 
-    public void ApplyAcceleration(float input)
+    void UpdateFrontWheelsRotation(float steer)
     {
-        if (input > 0)
-            speed = maxSpeed;
-        currentSpeed = Mathf.SmoothStep(currentSpeed, speed, Time.deltaTime * acceleration); speed = 0f;
-        currentRotate = Mathf.Lerp(currentRotate, rotate, Time.deltaTime * 4f); rotate = 0f;
+        // Apply steering to the FrontWheels parent (Y-axis turning)
+        Quaternion steerRotation = Quaternion.Euler(-(steer * 10f), 0, 0); // Adjust steering amount (15f)
+        frontWheels.localRotation = steerRotation;
+
+        // Spin each front wheel based on speed (X-axis for rolling)
+        Quaternion spinRotation = Quaternion.Euler(0, 0, currentSpeed * Time.deltaTime * -180f); // Spin on X-axis
+        //L wheel (1º child)
+        frontWheels.transform.GetChild(0).localRotation *= spinRotation;
+        //R wheel (2º child)
+        frontWheels.transform.GetChild(1).localRotation *= spinRotation;
     }
 
-    public void Steer(float steeringSignal)
+    // Set up back wheels rotation for spinning only
+    void UpdateBackWheelsRotation()
     {
-        int steerDirection = steeringSignal > 0 ? 1 : -1;
-        float steeringStrength = Mathf.Abs(steeringSignal);
-        rotate = (steering *steerDirection) * steeringStrength;
-    }
-
-    public void Drift(float steeringSignal)
-    {
-        float control = ((steeringSignal > 0 ? 1 : -1) == 1) ? ExtensionMethods.Remap(Input.GetAxis("Horizontal"), -1, 1, .5f, 2) : ExtensionMethods.Remap(Input.GetAxis("Horizontal"), -1, 1, 2, .5f);
-        kartModel.parent.localRotation = Quaternion.Euler(0, Mathf.LerpAngle(kartModel.parent.localEulerAngles.y, (control * 15) * driftDirection, .2f), 0);
-
-        if (speed > 5)
-            speed -= driftSpeedDebuff;
-
-        float powerControl = (driftDirection == 1) ? ExtensionMethods.Remap(Input.GetAxis("Horizontal"), -1, 1, .2f, 1) : ExtensionMethods.Remap(Input.GetAxis("Horizontal"), -1, 1, 1, .2f);
-        Steer(driftDirection * driftPassiveSteeringMulti, control, steeringDriftMulti);
-        driftPower += powerControl;
-
-        ColorDrift();
+        // Spin each back wheel based on speed (X-axis for rolling)
+        Quaternion spinRotation = Quaternion.Euler(0, 0, currentSpeed * Time.deltaTime * -180f); // Spin on X-axis
+        //L wheel (1º child)
+        backWheels.transform.GetChild(0).localRotation *= spinRotation;
+        //R wheel (2º child)
+        backWheels.transform.GetChild(1).localRotation *= spinRotation;
     }
 
     public void AnimateKart(float input)
@@ -228,11 +228,13 @@ public class CarSystem : MonoBehaviour
             airBorneTimer = 0;
         }
 
+        float steer = Input.GetAxis("Horizontal");
+
         //Steer
-        if (Input.GetAxis("Horizontal") != 0 && !drifting)
+        if (steer != 0 && !drifting)
         {
-            int dir = Input.GetAxis("Horizontal") > 0 ? 1 : -1;
-            float amount = Mathf.Abs(Input.GetAxis("Horizontal"));
+            int dir = steer > 0 ? 1 : -1;
+            float amount = Mathf.Abs(steer);
             Steer(dir, amount);
         }
 
@@ -249,8 +251,8 @@ public class CarSystem : MonoBehaviour
             if (speed > 5)
                 speed -= driftSpeedDebuff;
 
-            float control = (driftDirection == 1) ? ExtensionMethods.Remap(Input.GetAxis("Horizontal"), -1, 1, 0.2f, 2) : ExtensionMethods.Remap(Input.GetAxis("Horizontal"), -1, 1, 2, 0.2f);
-            float powerControl = (driftDirection == 1) ? ExtensionMethods.Remap(Input.GetAxis("Horizontal"), -1, 1, .2f, 1) : ExtensionMethods.Remap(Input.GetAxis("Horizontal"), -1, 1, 1, .2f);
+            float control = (driftDirection == 1) ? ExtensionMethods.Remap(steer, -1, 1, 0.2f, 2) : ExtensionMethods.Remap(steer, -1, 1, 2, 0.2f);
+            float powerControl = (driftDirection == 1) ? ExtensionMethods.Remap(steer, -1, 1, .2f, 1) : ExtensionMethods.Remap(steer, -1, 1, 1, .2f);
             Steer(driftDirection*driftPassiveSteeringMulti, control, steeringDriftMulti);
             driftPower += powerControl;
 
@@ -282,6 +284,9 @@ public class CarSystem : MonoBehaviour
         //Normal Rotation
         kartNormal.up = Vector3.Lerp(kartNormal.up, hitNear.normal, Time.deltaTime * 8.0f);
         kartNormal.Rotate(0, transform.eulerAngles.y, 0);
+
+        UpdateFrontWheelsRotation(steer);
+        UpdateBackWheelsRotation();
     }
 
     public int GetDriftLevel()
