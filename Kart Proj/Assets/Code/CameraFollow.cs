@@ -20,7 +20,10 @@ public class CameraFollow : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Follow();
+        if (_camera)
+        {
+            Follow();
+        }
     }
 
     private void Follow()

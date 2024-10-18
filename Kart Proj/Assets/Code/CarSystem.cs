@@ -172,45 +172,30 @@ public class CarSystem : MonoBehaviour
         steeringWheel.localEulerAngles = new Vector3(-25, 90, ((steer * 45)));
 
         if (!drifting)
-            animControll.steering = steer;
+            animControll.ChangeSteer(steer);
         else
-            animControll.steering = driftDirection;
+            animControll.ChangeSteer(driftDirection);
     }
 
     void UpdateFrontWheelsRotation(float steer)
     {
         // Apply steering to the FrontWheels parent (Y-axis turning)
-        Quaternion steerRotation = Quaternion.Euler(-(steer * 10f), 0, 0); // Adjust steering amount (15f)
-        frontWheels.localRotation = steerRotation;
+        Quaternion steerRotation = Quaternion.Euler(0, 0, 90); // Adjust steering amount (15f)
+        frontWheels.transform.localRotation = steerRotation;
 
         // Spin each front wheel based on speed (X-axis for rolling)
-        Quaternion spinRotation = Quaternion.Euler(0, 0, currentSpeed * Time.deltaTime * -180f); // Spin on X-axis
-        //L wheel (1º child)
-        frontWheels.transform.GetChild(0).localRotation *= spinRotation;
-        //R wheel (2º child)
-        frontWheels.transform.GetChild(1).localRotation *= spinRotation;
+        Quaternion spinRotation = Quaternion.Euler(currentSpeed * Time.deltaTime * -180f, (steer * 10f), 0);
+        
+        frontWheels.transform.localRotation *= spinRotation;
     }
 
     // Set up back wheels rotation for spinning only
     void UpdateBackWheelsRotation()
     {
         // Spin each back wheel based on speed (X-axis for rolling)
-        Quaternion spinRotation = Quaternion.Euler(0, 0, currentSpeed * Time.deltaTime * -180f); // Spin on X-axis
-        //L wheel (1º child)
-        backWheels.transform.GetChild(0).GetChild(0).localRotation *= spinRotation;
-        //R wheel (2º child)
-        backWheels.transform.GetChild(1).GetChild(1).localRotation *= spinRotation;
-    }
-
-    public void AnimateKart(float input)
-    {
-        kartModel.localEulerAngles = Vector3.Lerp(kartModel.localEulerAngles, new Vector3(0, 90 + (input * 15), kartModel.localEulerAngles.z), .2f);
-
-        frontWheels.localEulerAngles = new Vector3(0, (input * 15), frontWheels.localEulerAngles.z);
-        frontWheels.localEulerAngles += new Vector3(0, 0, sphere.velocity.magnitude / 2);
-        backWheels.localEulerAngles += new Vector3(0, 0, sphere.velocity.magnitude / 2);
-
-        steeringWheel.localEulerAngles = new Vector3(-25, 90, ((input * 45)));
+        Quaternion spinRotation = Quaternion.Euler(currentSpeed * Time.deltaTime * -180f, 0, 0);
+        
+        backWheels.transform.localRotation *= spinRotation;
     }
 
     private void FixedUpdate()
