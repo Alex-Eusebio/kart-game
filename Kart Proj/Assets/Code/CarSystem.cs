@@ -165,7 +165,8 @@ public class CarSystem : MonoBehaviour
         }
 
         //b) Wheels
-        
+        UpdateFrontWheelsRotation(steer);
+        UpdateBackWheelsRotation();
 
         //c) Steering Wheel
         steeringWheel.localEulerAngles = new Vector3(-25, 90, ((steer * 45)));
@@ -196,9 +197,9 @@ public class CarSystem : MonoBehaviour
         // Spin each back wheel based on speed (X-axis for rolling)
         Quaternion spinRotation = Quaternion.Euler(0, 0, currentSpeed * Time.deltaTime * -180f); // Spin on X-axis
         //L wheel (1º child)
-        backWheels.transform.GetChild(0).localRotation *= spinRotation;
+        backWheels.transform.GetChild(0).GetChild(0).localRotation *= spinRotation;
         //R wheel (2º child)
-        backWheels.transform.GetChild(1).localRotation *= spinRotation;
+        backWheels.transform.GetChild(1).GetChild(1).localRotation *= spinRotation;
     }
 
     public void AnimateKart(float input)
@@ -285,8 +286,7 @@ public class CarSystem : MonoBehaviour
         kartNormal.up = Vector3.Lerp(kartNormal.up, hitNear.normal, Time.deltaTime * 8.0f);
         kartNormal.Rotate(0, transform.eulerAngles.y, 0);
 
-        UpdateFrontWheelsRotation(steer);
-        UpdateBackWheelsRotation();
+        
     }
 
     public int GetDriftLevel()
