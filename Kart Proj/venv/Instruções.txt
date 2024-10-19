@@ -1,0 +1,13 @@
+! Python 3.10.8 !
+cmd nesta pasta
+Scripts\activate
+Começar
+mlagents-learn "D:\GitHub\kart-game\Kart Proj\configuration.yaml"
+Continuar
+mlagents-learn "D:\GitHub\kart-game\Kart Proj\configuration.yaml" --resume
+
+
+Gráficos
+tensorboard --logdir results --port 6006
+
+localhost:6006 (no browser)
