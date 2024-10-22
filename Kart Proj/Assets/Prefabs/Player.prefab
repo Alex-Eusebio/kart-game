@@ -61,7 +61,9 @@ MonoBehaviour:
   driftMode: 0
   drifting: 0
   isGrounded: 0
+  onRoad: 0
   maxSpeed: 80
+  backwardsSpeed: -15
   acceleration: 8
   driftSpeedDebuff: 4
   driftPassiveSteeringMulti: 1.6
@@ -77,6 +79,7 @@ MonoBehaviour:
   frontWheels: {fileID: 3116369572165924115}
   backWheels: {fileID: 4776764368576013894}
   steeringWheel: {fileID: 6418145159621599518}
+  animControll: {fileID: 0}
   bonusGravity: 0
   gravityScale: 70
   airBorneTime: 0.2
@@ -739,6 +742,7 @@ GameObject:
   - component: {fileID: 1360452859183796177}
   - component: {fileID: 3290385464774314319}
   - component: {fileID: 4136492240716495676}
+  - component: {fileID: 2170112198060463287}
   m_Layer: 3
   m_Name: SphereCollider
   m_TagString: Untagged
@@ -809,6 +813,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2170112198060463287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8737309900208232065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21eef4a0cad805942b195afa806dc4b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curLaps: 0
 --- !u!1 &8915943828899904714
 GameObject:
   m_ObjectHideFlags: 0

@@ -107,7 +107,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 665999898493642148}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -125,6 +125,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7653936682809605484}
+  - component: {fileID: 7112184812528613875}
   m_Layer: 0
   m_Name: ZumZum
   m_TagString: Untagged
@@ -149,6 +150,21 @@ Transform:
   - {fileID: 3866560493772039773}
   m_Father: {fileID: 5586130446989495368}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7112184812528613875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215618742297729986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbc1113ac3db1e647b379203c9832d57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterAnimator: {fileID: 1710515795842165596}
+  carAnimator: {fileID: 8801337042872138034}
+  steering: 0
 --- !u!1 &1397240460927009100
 GameObject:
   m_ObjectHideFlags: 0
@@ -474,6 +490,7 @@ GameObject:
   - component: {fileID: 6332947870795793169}
   - component: {fileID: 7542304552229422479}
   - component: {fileID: 8963764030470223868}
+  - component: {fileID: 675868897198522797}
   m_Layer: 3
   m_Name: SphereCollider
   m_TagString: Untagged
@@ -544,6 +561,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &675868897198522797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4342388330443528769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21eef4a0cad805942b195afa806dc4b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curLaps: 0
 --- !u!1 &4519821333649109002
 GameObject:
   m_ObjectHideFlags: 0
@@ -687,6 +717,7 @@ MonoBehaviour:
   frontWheels: {fileID: 7943782117643663827}
   backWheels: {fileID: 524691074665310854}
   steeringWheel: {fileID: 2023170830546660830}
+  animControll: {fileID: 7112184812528613875}
   bonusGravity: 0
   gravityScale: 70
   airBorneTime: 0.2
