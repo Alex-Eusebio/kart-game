@@ -18,10 +18,12 @@ public class LapManager : MonoBehaviour
 
     public void Lap(float time)
     {
-        curLaps++;
-        lapTimes.Add(time);
+        if (curLaps > 0)
+            lapTimes.Add(time);
 
-        if (curLaps > maxLaps)
+        curLaps++;
+
+        if (curLaps == maxLaps+1)
         {
             for (int i = 0;  i < lapTimes.Count; i++)
             {
