@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d83352cb2f90a6d449c41634f97969ac
+guid: e43df6e4e2688b74885339e452924289
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -8,12 +8,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Bake
-    second: {fileID: 2100000, guid: 6b8846663976b074991939dc7d2826f1, type: 2}
+    second: {fileID: 2100000, guid: cc857b975d247aa489824cf7e5b18233, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Glass
-    second: {fileID: 2100000, guid: ecb49781bb0c1f5489347dfb61691e85, type: 2}
+    second: {fileID: 2100000, guid: 0a53378b75b394043b28ec843a658a95, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
