@@ -51,11 +51,7 @@ public class CarSystem : MonoBehaviour
     public LayerMask layerMask;
     public LayerMask groundMask;
 
-    [Header("Model Parts")]
-
-    public Transform frontWheels;
-    public Transform backWheels;
-    public Transform steeringWheel;
+    [Header("Animator")]
     public AnimationController animControll;
 
 
@@ -165,37 +161,14 @@ public class CarSystem : MonoBehaviour
         }
 
         //b) Wheels
-        UpdateFrontWheelsRotation(steer);
-        UpdateBackWheelsRotation();
+        animControll.UpdateWheelsRotation(currentSpeed);
 
         //c) Steering Wheel
-        steeringWheel.localEulerAngles = new Vector3(-25, 90, ((steer * 45)));
 
         if (!drifting)
             animControll.ChangeSteer(steer);
         else
             animControll.ChangeSteer(driftDirection);
-    }
-
-    void UpdateFrontWheelsRotation(float steer)
-    {
-        // Apply steering to the FrontWheels parent (Y-axis turning)
-        Quaternion steerRotation = Quaternion.Euler(0, 0, 90); // Adjust steering amount (15f)
-        frontWheels.transform.localRotation = steerRotation;
-
-        // Spin each front wheel based on speed (X-axis for rolling)
-        Quaternion spinRotation = Quaternion.Euler(currentSpeed * Time.deltaTime * -180f, (steer * 10f), 0);
-        
-        frontWheels.transform.localRotation *= spinRotation;
-    }
-
-    // Set up back wheels rotation for spinning only
-    void UpdateBackWheelsRotation()
-    {
-        // Spin each back wheel based on speed (X-axis for rolling)
-        Quaternion spinRotation = Quaternion.Euler(currentSpeed * Time.deltaTime * -180f, 0, 0);
-        
-        backWheels.transform.localRotation *= spinRotation;
     }
 
     private void FixedUpdate()
@@ -248,7 +221,7 @@ public class CarSystem : MonoBehaviour
         currentSpeed = Mathf.SmoothStep(currentSpeed, speed, Time.deltaTime * acceleration); speed = 0f;
 
         //Forward Acceleration
-        if (!drifting)
+        if (drifting)
             sphere.AddForce(-kartModel.transform.right * currentSpeed, ForceMode.Acceleration);
         else
             sphere.AddForce(transform.forward * currentSpeed, ForceMode.Acceleration);
