@@ -67,6 +67,7 @@ public class CarSystem : MonoBehaviour
     public Color[] turboColors;*/
 
     float distToGround;
+    private Quaternion initialRotation;
 
     private void Awake()
     {
@@ -76,6 +77,8 @@ public class CarSystem : MonoBehaviour
 
     void Start()
     {
+        //initialRotation = kartModel.localEulerAngles;
+
         /*postVolume = Camera.main.GetComponent<PostProcessVolume>();
         postProfile = postVolume.profile;*/
 
@@ -160,15 +163,19 @@ public class CarSystem : MonoBehaviour
             kartModel.parent.localRotation = Quaternion.Euler(0, Mathf.LerpAngle(kartModel.parent.localEulerAngles.y, (control * 15) * driftDirection, .2f), 0);
         }
 
-        //b) Wheels
-        animControll.UpdateWheelsRotation(currentSpeed);
+        if (animControll)
+        {
+            //b) Wheels
+            animControll.UpdateWheelsRotation(currentSpeed);
 
-        //c) Steering Wheel
+            //c) Steering Wheel
 
-        if (!drifting)
-            animControll.ChangeSteer(steer);
-        else
-            animControll.ChangeSteer(driftDirection);
+            if (!drifting)
+                animControll.ChangeSteer(steer);
+            else
+                animControll.ChangeSteer(driftDirection);
+        }
+        
     }
 
     private void FixedUpdate()
@@ -221,7 +228,7 @@ public class CarSystem : MonoBehaviour
         currentSpeed = Mathf.SmoothStep(currentSpeed, speed, Time.deltaTime * acceleration); speed = 0f;
 
         //Forward Acceleration
-        if (drifting)
+        if (!drifting)
             sphere.AddForce(-kartModel.transform.right * currentSpeed, ForceMode.Acceleration);
         else
             sphere.AddForce(transform.forward * currentSpeed, ForceMode.Acceleration);
@@ -243,8 +250,6 @@ public class CarSystem : MonoBehaviour
         //Normal Rotation
         kartNormal.up = Vector3.Lerp(kartNormal.up, hitNear.normal, Time.deltaTime * 8.0f);
         kartNormal.Rotate(0, transform.eulerAngles.y, 0);
-
-        
     }
 
     public int GetDriftLevel()

@@ -23,6 +23,8 @@ public class AnimationController : MonoBehaviour
     private float steering;
     private float smoothTime = 20f;
 
+    float wheelSpinAngle = 0f;
+
     private void Update()
     {
         if (characterAnimator)
@@ -41,27 +43,21 @@ public class AnimationController : MonoBehaviour
 
     public void UpdateWheelsRotation(float speed)
     {
+        wheelSpinAngle += speed * Time.deltaTime * -180f;
+
         if (frontWheels.Count > 0)
         {
-            // Apply steering to the FrontWheels parent (Y-axis turning)
-            Quaternion steerRotation = Quaternion.Euler(0, 90, 0); // Adjust steering amount (15f)
-            // Spin each front wheel based on speed (X-axis for rolling)
-            Quaternion spinRotation = Quaternion.Euler(speed * Time.deltaTime * -180f, (steering * 10f), 0);
             foreach (Transform f in frontWheels)
             {
-                f.transform.localRotation = steerRotation;
-                f.transform.localRotation *= spinRotation;
+                f.localEulerAngles = new Vector3(wheelSpinAngle, (steering * 10f), 0);
             }
         }
         
         if (backWheels.Count > 0)
         {
-            // Spin each back wheel based on speed (X-axis for rolling)
-            Quaternion spinRotation = Quaternion.Euler(speed * Time.deltaTime * -180f, 0, 0);
-
-            foreach (Transform b in frontWheels)
+            foreach (Transform b in backWheels)
             {
-                b.transform.localRotation *= spinRotation;
+                b.localEulerAngles = new Vector3(wheelSpinAngle, 0, 0);
             }
         }
         
