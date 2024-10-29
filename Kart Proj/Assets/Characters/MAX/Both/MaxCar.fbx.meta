@@ -3,7 +3,27 @@ guid: b3df1440a7db30d4b8e27b82bd019f6b
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bake
+    second: {fileID: 2100000, guid: 17d1bbd9b8001c248ab44e1e0d4abb61, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass
+    second: {fileID: 2100000, guid: 92b11b140446c0b47a281d2e26850ea0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LuzFrente
+    second: {fileID: 2100000, guid: 68dd1b178b0c1734c9ffdb69ff3408c1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LuzTraseira
+    second: {fileID: 2100000, guid: a7bb443721549ec4988d5b15f07de485, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
