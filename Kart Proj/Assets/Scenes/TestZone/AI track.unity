@@ -2643,6 +2643,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ben
       objectReference: {fileID: 0}
+    - target: {fileID: 4533926791655011688, guid: 189de88e3007603469433377a1c26746, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: dc4a17356709bc24dbe866dafac4bf1b, type: 2}
     - target: {fileID: 8313928737931796941, guid: 189de88e3007603469433377a1c26746, type: 3}
       propertyPath: _camera
       value: 
