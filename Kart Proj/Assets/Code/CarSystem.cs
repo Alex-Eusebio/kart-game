@@ -13,6 +13,7 @@ public class CarSystem : MonoBehaviour
     public Transform kartModel;
     public Transform kartNormal;
     public Rigidbody sphere;
+    public SpecialAbility special;
     SpawnPointManager spawnPointManager;
 
     //public List<ParticleSystem> primaryParticles = new List<ParticleSystem>();
@@ -161,6 +162,11 @@ public class CarSystem : MonoBehaviour
         {
             float control = (driftDirection == 1) ? ExtensionMethods.Remap(steer, -1, 1, .5f, 2) : ExtensionMethods.Remap(steer, -1, 1, 2, .5f);
             kartModel.parent.localRotation = Quaternion.Euler(0, Mathf.LerpAngle(kartModel.parent.localEulerAngles.y, (control * 15) * driftDirection, .2f), 0);
+        }
+
+        if (Input.GetButtonDown("Special") && special != null)
+        {
+            special.Activate();
         }
 
         if (animControll)

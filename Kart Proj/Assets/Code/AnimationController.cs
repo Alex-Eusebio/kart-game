@@ -21,6 +21,8 @@ public class AnimationController : MonoBehaviour
 
     [SerializeField]
     private float steering;
+    [SerializeField]
+    private bool isOnSpecial = false;
     private float smoothTime = 20f;
 
     float wheelSpinAngle = 0f;
@@ -32,6 +34,10 @@ public class AnimationController : MonoBehaviour
 
         if (carAnimator)
             carAnimator.SetFloat("Steer", steering);
+
+        characterAnimator.SetBool("IsOnSpecial", isOnSpecial);
+        carAnimator.SetBool("IsOnSpecial", isOnSpecial);
+        
 
         //steeringWheel.localEulerAngles = new Vector3(-25, 90, ((steer * 45)));
     }
