@@ -87,6 +87,7 @@ MonoBehaviour:
   - {fileID: 5765580572736961326}
   steeringWheel: {fileID: 0}
   steering: 0
+  isOnSpecial: 0
 --- !u!1 &1436829384125259500
 GameObject:
   m_ObjectHideFlags: 0
@@ -829,6 +830,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 229773207410728004, guid: eae1d9c589105f44899081ded7493282, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: dc4a17356709bc24dbe866dafac4bf1b, type: 2}
     - target: {fileID: 919132149155446097, guid: eae1d9c589105f44899081ded7493282, type: 3}
       propertyPath: m_Name
       value: Ben
