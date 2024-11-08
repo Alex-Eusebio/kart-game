@@ -13,6 +13,7 @@ public class CarSystem : MonoBehaviour
     public Transform kartModel;
     public Transform kartNormal;
     public Rigidbody sphere;
+    [SerializeField]
     public SpecialAbility special;
     SpawnPointManager spawnPointManager;
 
@@ -164,7 +165,7 @@ public class CarSystem : MonoBehaviour
             kartModel.parent.localRotation = Quaternion.Euler(0, Mathf.LerpAngle(kartModel.parent.localEulerAngles.y, (control * 15) * driftDirection, .2f), 0);
         }
 
-        if (Input.GetButtonDown("Special") && special != null)
+        if (Input.GetButtonDown("Fire1") && special != null)
         {
             special.Activate();
         }
@@ -256,6 +257,8 @@ public class CarSystem : MonoBehaviour
         //Normal Rotation
         kartNormal.up = Vector3.Lerp(kartNormal.up, hitNear.normal, Time.deltaTime * 8.0f);
         kartNormal.Rotate(0, transform.eulerAngles.y, 0);
+
+        special.Charge();
     }
 
     public int GetDriftLevel()

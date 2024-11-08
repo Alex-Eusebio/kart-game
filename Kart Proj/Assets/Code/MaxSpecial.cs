@@ -2,17 +2,46 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MaxSpecial : MonoBehaviour
+public class MaxSpecial : SpecialAbility
 {
-    // Start is called before the first frame update
-    void Start()
+    [Header("Values")]
+    [SerializeField]
+    private float boostStrenght;
+    [SerializeField]
+    private float maxBattery;
+    [SerializeField]
+    private float chargingCap = 10;
+    [SerializeField]
+    private float chargingDivision = 100;
+
+    private void Awake()
     {
-        
+        maxResource = maxBattery;
     }
 
-    // Update is called once per frame
-    void Update()
+    protected override void ExecuteAbility()
     {
-        
+        carSystem.currentSpeed += boostStrenght; 
+    }
+
+    public override void Charge()
+    {
+        if (carSystem.drifting)
+        {
+            float charge = carSystem.driftPower / chargingDivision;
+
+            if (charge > chargingCap)
+            {
+                charge = chargingCap;
+            }
+
+            resource += charge;
+        }
+
+        if (resource > maxResource)
+        {
+            resource = maxResource;
+            Debug.Log("Max Special is Ready!!");
+        }
     }
 }

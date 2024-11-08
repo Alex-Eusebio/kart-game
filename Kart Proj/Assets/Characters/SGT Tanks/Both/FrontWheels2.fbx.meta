@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Bake.001
-    second: {fileID: 2100000, guid: e0cdbb15648202440bbe39f26c978112, type: 2}
+    second: {fileID: 2100000, guid: 6b8846663976b074991939dc7d2826f1, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
