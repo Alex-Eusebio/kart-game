@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8680975895763679563}
   - component: {fileID: 3919090456375274765}
   - component: {fileID: 5673087399909195987}
+  - component: {fileID: 7152816898753582295}
   m_Layer: 3
   m_Name: Kart
   m_TagString: Untagged
@@ -52,6 +53,7 @@ MonoBehaviour:
   kartModel: {fileID: 638508522548299387}
   kartNormal: {fileID: 7034196224785165130}
   sphere: {fileID: 4136492240716495676}
+  special: {fileID: 7152816898753582295}
   speed: 0
   currentSpeed: 0
   driftPower: 0
@@ -117,6 +119,24 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7152816898753582295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 713885144395614289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c92c2d01a133eae41adccade1d3d457b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resource: 0
+  carSystem: {fileID: 0}
+  boostStrenght: 200
+  maxBattery: 1000
+  chargingCap: 6
+  chargingDivision: 80
 --- !u!1 &1667886926985640032
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,6 +254,7 @@ MonoBehaviour:
   - {fileID: 6751307512024024313}
   steeringWheel: {fileID: 0}
   steering: 0
+  isOnSpecial: 0
 --- !u!1 &4469739469312493226
 GameObject:
   m_ObjectHideFlags: 0
@@ -690,6 +711,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2827701987133333969, guid: b3df1440a7db30d4b8e27b82bd019f6b, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: 92b11b140446c0b47a281d2e26850ea0, type: 2}
     - target: {fileID: 919132149155446097, guid: b3df1440a7db30d4b8e27b82bd019f6b, type: 3}
       propertyPath: m_Name
       value: MaxCar
