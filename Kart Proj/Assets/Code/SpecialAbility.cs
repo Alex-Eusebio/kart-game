@@ -2,21 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class SpecialAbility : ISpecial
+public abstract class SpecialAbility : MonoBehaviour, ISpecial
 {
+    [SerializeField]
     protected float resource;
     protected float maxResource;
 
-    public SpecialAbility(float cooldown)
+    [SerializeField]
+    protected private CarSystem carSystem;
+
+    public SpecialAbility()
     {
-        maxResource = cooldown;
         resource = 0;
     }
 
-    public virtual void Charge(float val)
+    private void Start()
     {
-        resource += val;
+        carSystem = GetComponent<CarSystem>();
+    }
 
+    public virtual void Charge()
+    {
         if (resource > maxResource)
         {
             resource = maxResource;

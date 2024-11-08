@@ -2259,6 +2259,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Testmobile
       objectReference: {fileID: 0}
+    - target: {fileID: 5493390178810718564, guid: ed93a58a075497c4486ca597f369d756, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2642,6 +2646,10 @@ PrefabInstance:
     - target: {fileID: 665999898493642148, guid: 189de88e3007603469433377a1c26746, type: 3}
       propertyPath: m_Name
       value: Ben
+      objectReference: {fileID: 0}
+    - target: {fileID: 665999898493642148, guid: 189de88e3007603469433377a1c26746, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3350,10 +3358,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tanks
       objectReference: {fileID: 0}
+    - target: {fileID: 665999898493642148, guid: 352db47fad1f631418c31ebe97c8d8f0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3456103076725219026, guid: 352db47fad1f631418c31ebe97c8d8f0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6b8846663976b074991939dc7d2826f1, type: 2}
+    - target: {fileID: 4009472731023651315, guid: 352db47fad1f631418c31ebe97c8d8f0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6b8846663976b074991939dc7d2826f1, type: 2}
     - target: {fileID: 8313928737931796941, guid: 352db47fad1f631418c31ebe97c8d8f0, type: 3}
       propertyPath: _camera
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8885115834944339155, guid: 352db47fad1f631418c31ebe97c8d8f0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6b8846663976b074991939dc7d2826f1, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3468,10 +3492,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3052272119096248014, guid: 49ba74f5a40370f40a1cb48f055d76ba, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: 92b11b140446c0b47a281d2e26850ea0, type: 2}
     - target: {fileID: 3919090456375274765, guid: 49ba74f5a40370f40a1cb48f055d76ba, type: 3}
       propertyPath: _camera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1149226916}
     - target: {fileID: 5075192125091602741, guid: 49ba74f5a40370f40a1cb48f055d76ba, type: 3}
       propertyPath: m_LocalPosition.x
       value: 18.8172
@@ -3516,20 +3544,24 @@ PrefabInstance:
       propertyPath: m_Name
       value: Max
       objectReference: {fileID: 0}
+    - target: {fileID: 8680975895763679563, guid: 49ba74f5a40370f40a1cb48f055d76ba, type: 3}
+      propertyPath: special
+      value: 
+      objectReference: {fileID: 1050312559}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 713885144395614289, guid: 49ba74f5a40370f40a1cb48f055d76ba, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1050312558}
+      addedObject: {fileID: 1050312559}
   m_SourcePrefab: {fileID: 100100000, guid: 49ba74f5a40370f40a1cb48f055d76ba, type: 3}
 --- !u!1 &1050312557 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 713885144395614289, guid: 49ba74f5a40370f40a1cb48f055d76ba, type: 3}
   m_PrefabInstance: {fileID: 1050312556}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1050312558
+--- !u!114 &1050312559
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3538,9 +3570,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1050312557}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4614063936c84d4e8e4dd2a716c8c5c, type: 3}
+  m_Script: {fileID: 11500000, guid: c92c2d01a133eae41adccade1d3d457b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resource: 0
+  carSystem: {fileID: 0}
+  boostStrenght: 200
+  maxBattery: 1000
+  chargingCap: 6
+  chargingDivision: 80
 --- !u!1 &1066945854
 GameObject:
   m_ObjectHideFlags: 0
@@ -3729,6 +3767,10 @@ PrefabInstance:
     - target: {fileID: 5493390178810718564, guid: 982bb9e04a0018f4f9a2b15267d4f194, type: 3}
       propertyPath: m_Name
       value: Ratao
+      objectReference: {fileID: 0}
+    - target: {fileID: 5493390178810718564, guid: 982bb9e04a0018f4f9a2b15267d4f194, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8348936705749571569, guid: 982bb9e04a0018f4f9a2b15267d4f194, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4339,6 +4381,10 @@ PrefabInstance:
     - target: {fileID: 665999898493642148, guid: 089aafb7bb6d8b2459892bae38ad165b, type: 3}
       propertyPath: m_Name
       value: ZumZum
+      objectReference: {fileID: 0}
+    - target: {fileID: 665999898493642148, guid: 089aafb7bb6d8b2459892bae38ad165b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8313928737931796941, guid: 089aafb7bb6d8b2459892bae38ad165b, type: 3}
       propertyPath: _camera
