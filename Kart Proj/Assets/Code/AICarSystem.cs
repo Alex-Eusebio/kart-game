@@ -296,12 +296,16 @@ public class AICarSystem : MonoBehaviour
     {
         drifting = false;
 
+        if (GetDriftLevel() < 3)
+        {
+            GetComponent<KartAgent>().AddReward(0.0001f * driftPower);
+        }
+
         if (driftMode > 0)
         {
             currentSpeed += driftBoostPerLvl * GetDriftLevel();
-
+            GetComponent<KartAgent>().AddReward(0.04f * GetDriftLevel());
             Debug.Log($"{this.gameObject.name} BOOST! {GetDriftLevel()}");
-            GetComponent<KartAgent>().AddReward(0.02f * GetDriftLevel());
             //kartModel.Find("Tube001").GetComponentInChildren<ParticleSystem>().Play();
             //kartModel.Find("Tube002").GetComponentInChildren<ParticleSystem>().Play();
         }

@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &246816699468803573
 Transform:
   m_ObjectHideFlags: 0
@@ -59,7 +59,7 @@ Transform:
   m_GameObject: {fileID: 1215618742297729986}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.101, z: -0.144}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -85,6 +85,7 @@ MonoBehaviour:
   backWheels: []
   steeringWheel: {fileID: 0}
   steering: 0
+  isOnSpecial: 0
 --- !u!1 &4276506471608531099
 GameObject:
   m_ObjectHideFlags: 0
@@ -237,7 +238,7 @@ Transform:
   m_GameObject: {fileID: 4519821333649109002}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.61, z: -2.155}
+  m_LocalPosition: {x: 0, y: 1.4, z: -3.21}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -295,6 +296,7 @@ MonoBehaviour:
   kartModel: {fileID: 7653936682809605484}
   kartNormal: {fileID: 2638007742865844106}
   sphere: {fileID: 8963764030470223868}
+  special: {fileID: 0}
   speed: 0
   currentSpeed: 0
   driftPower: 0
@@ -385,7 +387,7 @@ Transform:
   m_GameObject: {fileID: 5960597877002866917}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.08, z: -3.47}
+  m_LocalPosition: {x: 0, y: 2.01, z: -4.45}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

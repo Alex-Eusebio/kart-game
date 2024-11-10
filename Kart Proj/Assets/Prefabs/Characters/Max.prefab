@@ -64,10 +64,10 @@ MonoBehaviour:
   drifting: 0
   isGrounded: 0
   onRoad: 0
-  maxSpeed: 80
+  maxSpeed: 75
   backwardsSpeed: -15
-  acceleration: 8
-  driftSpeedDebuff: 4
+  acceleration: 9
+  driftSpeedDebuff: 3
   driftPassiveSteeringMulti: 1.6
   steering: 13
   steeringDriftMulti: 0.42
@@ -136,7 +136,7 @@ MonoBehaviour:
   boostStrenght: 200
   maxBattery: 1000
   chargingCap: 6
-  chargingDivision: 80
+  chargingDivision: 70
 --- !u!1 &1667886926985640032
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,7 +162,7 @@ Transform:
   m_GameObject: {fileID: 1667886926985640032}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.24, z: 0.87}
+  m_LocalPosition: {x: 0, y: 0.247, z: 0.852}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -226,7 +226,7 @@ Transform:
   m_GameObject: {fileID: 3146050299853393842}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -0.337, z: 0}
+  m_LocalPosition: {x: 0, y: -0.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -302,7 +302,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5075192125091602741
 Transform:
   m_ObjectHideFlags: 0
@@ -345,7 +345,7 @@ Transform:
   m_GameObject: {fileID: 8397660124238790333}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.23, z: -1.01}
+  m_LocalPosition: {x: 0, y: 0.246, z: -1.025}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -524,11 +524,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d9343dfa1c88bca4f945f9f44b78fe95, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.23
+      value: -0.246
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d9343dfa1c88bca4f945f9f44b78fe95, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.0010018349
+      value: 0.011998177
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d9343dfa1c88bca4f945f9f44b78fe95, type: 3}
       propertyPath: m_LocalRotation.w
@@ -778,11 +778,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2769583f8246a0c4fb007aeb729a621a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.24
+      value: -0.247
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2769583f8246a0c4fb007aeb729a621a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.009997487
+      value: 0.010997474
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2769583f8246a0c4fb007aeb729a621a, type: 3}
       propertyPath: m_LocalRotation.w

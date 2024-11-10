@@ -2609,11 +2609,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 246816699468803573, guid: 189de88e3007603469433377a1c26746, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.25
+      value: 0.85
       objectReference: {fileID: 0}
     - target: {fileID: 246816699468803573, guid: 189de88e3007603469433377a1c26746, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 101.4766
+      value: 100.23
       objectReference: {fileID: 0}
     - target: {fileID: 246816699468803573, guid: 189de88e3007603469433377a1c26746, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2646,10 +2646,6 @@ PrefabInstance:
     - target: {fileID: 665999898493642148, guid: 189de88e3007603469433377a1c26746, type: 3}
       propertyPath: m_Name
       value: Ben
-      objectReference: {fileID: 0}
-    - target: {fileID: 665999898493642148, guid: 189de88e3007603469433377a1c26746, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3362,22 +3358,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3456103076725219026, guid: 352db47fad1f631418c31ebe97c8d8f0, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 6b8846663976b074991939dc7d2826f1, type: 2}
-    - target: {fileID: 4009472731023651315, guid: 352db47fad1f631418c31ebe97c8d8f0, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 6b8846663976b074991939dc7d2826f1, type: 2}
     - target: {fileID: 8313928737931796941, guid: 352db47fad1f631418c31ebe97c8d8f0, type: 3}
       propertyPath: _camera
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8885115834944339155, guid: 352db47fad1f631418c31ebe97c8d8f0, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 6b8846663976b074991939dc7d2826f1, type: 2}
+      objectReference: {fileID: 1149226916}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4348,14 +4332,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ZumZum
       objectReference: {fileID: 0}
-    - target: {fileID: 665999898493642148, guid: 089aafb7bb6d8b2459892bae38ad165b, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8313928737931796941, guid: 089aafb7bb6d8b2459892bae38ad165b, type: 3}
       propertyPath: _camera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1149226916}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

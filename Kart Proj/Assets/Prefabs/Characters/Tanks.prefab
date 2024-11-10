@@ -87,6 +87,7 @@ MonoBehaviour:
   - {fileID: 8325305539503974089}
   steeringWheel: {fileID: 0}
   steering: 0
+  isOnSpecial: 0
 --- !u!1 &3698674535636110433
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,7 +259,7 @@ GameObject:
   m_Layer: 3
   m_Name: CamPos (1)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -271,7 +272,7 @@ Transform:
   m_GameObject: {fileID: 4519821333649109002}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.88, z: -3.19}
+  m_LocalPosition: {x: 0, y: 1.6, z: -3.71}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -361,23 +362,24 @@ MonoBehaviour:
   kartModel: {fileID: 7653936682809605484}
   kartNormal: {fileID: 2638007742865844106}
   sphere: {fileID: 8963764030470223868}
+  special: {fileID: 0}
   speed: 0
   currentSpeed: 0
   driftPower: 0
   minDriftPower: 40
   driftPowerPerLvl: 80
-  driftBoostPerLvl: 50
+  driftBoostPerLvl: 40
   driftMode: 0
   drifting: 0
   isGrounded: 0
   onRoad: 0
-  maxSpeed: 80
-  backwardsSpeed: -15
-  acceleration: 8
-  driftSpeedDebuff: 4
+  maxSpeed: 65
+  backwardsSpeed: -10
+  acceleration: 5
+  driftSpeedDebuff: 0
   driftPassiveSteeringMulti: 1.6
-  steering: 13
-  steeringDriftMulti: 0.42
+  steering: 11
+  steeringDriftMulti: 0.4
   gravity: 22
   layerMask:
     serializedVersion: 2
@@ -387,7 +389,7 @@ MonoBehaviour:
     m_Bits: 0
   animControll: {fileID: 8675287817834752483}
   bonusGravity: 0
-  gravityScale: 70
+  gravityScale: 75
   airBorneTime: 0.2
   airBorneTimer: 0
 --- !u!114 &8313928737931796941
@@ -438,7 +440,7 @@ GameObject:
   m_Layer: 3
   m_Name: CamPos
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -451,7 +453,7 @@ Transform:
   m_GameObject: {fileID: 5960597877002866917}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.73, z: -6.05}
+  m_LocalPosition: {x: 0, y: 2.37, z: -5.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -592,12 +594,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 7653936682809605484}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: e43df6e4e2688b74885339e452924289, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e43df6e4e2688b74885339e452924289, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e43df6e4e2688b74885339e452924289, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e43df6e4e2688b74885339e452924289, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e43df6e4e2688b74885339e452924289, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.06
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e43df6e4e2688b74885339e452924289, type: 3}
       propertyPath: m_LocalPosition.z
