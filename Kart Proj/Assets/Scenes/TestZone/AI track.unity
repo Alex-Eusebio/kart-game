@@ -2259,10 +2259,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Testmobile
       objectReference: {fileID: 0}
-    - target: {fileID: 5493390178810718564, guid: ed93a58a075497c4486ca597f369d756, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3358,14 +3354,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tanks
       objectReference: {fileID: 0}
-    - target: {fileID: 665999898493642148, guid: 352db47fad1f631418c31ebe97c8d8f0, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5776451557074634025, guid: 352db47fad1f631418c31ebe97c8d8f0, type: 3}
-      propertyPath: m_Materials.Array.data[1]
-      value: 
-      objectReference: {fileID: 2100000, guid: ecb49781bb0c1f5489347dfb61691e85, type: 2}
     - target: {fileID: 8313928737931796941, guid: 352db47fad1f631418c31ebe97c8d8f0, type: 3}
       propertyPath: _camera
       value: 
@@ -3531,10 +3519,6 @@ PrefabInstance:
     - target: {fileID: 5493390178810718564, guid: 49ba74f5a40370f40a1cb48f055d76ba, type: 3}
       propertyPath: m_Name
       value: Max
-      objectReference: {fileID: 0}
-    - target: {fileID: 5493390178810718564, guid: 49ba74f5a40370f40a1cb48f055d76ba, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7021,6 +7005,7 @@ GameObject:
   - component: {fileID: 2124948986}
   - component: {fileID: 2124948985}
   - component: {fileID: 2124948984}
+  - component: {fileID: 2124948987}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -7103,6 +7088,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2124948987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124948983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 252d6ee948b881f40968341f2112d6e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedChange: -8
+  maxTimer: 1
 --- !u!1001 &2135937684
 PrefabInstance:
   m_ObjectHideFlags: 0

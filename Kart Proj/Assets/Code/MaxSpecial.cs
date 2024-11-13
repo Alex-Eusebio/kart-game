@@ -12,7 +12,7 @@ public class MaxSpecial : SpecialAbility
     [SerializeField]
     private float chargingCap = 10;
     [SerializeField]
-    private float chargingDivision = 100;
+    private float driftPowerConvertPer = 0.2f;
 
     private void Awake()
     {
@@ -28,7 +28,7 @@ public class MaxSpecial : SpecialAbility
     {
         if (carSystem.drifting)
         {
-            float charge = carSystem.driftPower / chargingDivision;
+            float charge = carSystem.driftPower * driftPowerConvertPer;
 
             if (charge > chargingCap)
             {

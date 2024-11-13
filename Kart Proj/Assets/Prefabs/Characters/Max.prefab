@@ -57,9 +57,6 @@ MonoBehaviour:
   speed: 0
   currentSpeed: 0
   driftPower: 0
-  minDriftPower: 40
-  driftPowerPerLvl: 80
-  driftBoostPerLvl: 50
   driftMode: 0
   drifting: 0
   isGrounded: 0
@@ -67,6 +64,9 @@ MonoBehaviour:
   maxSpeed: 75
   backwardsSpeed: -15
   acceleration: 9
+  minDriftPower: 40
+  driftPowerPerLvl: 80
+  driftBoostPerLvl: 50
   driftSpeedDebuff: 3
   driftPassiveSteeringMulti: 1.6
   steering: 13
@@ -78,6 +78,9 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 0
+  ignoreStuns: 0
+  ignoreEnemySlows: 0
+  ignoreRoadSlows: 0
   animControll: {fileID: 1509817466724799265}
   bonusGravity: 0
   gravityScale: 70
@@ -135,8 +138,8 @@ MonoBehaviour:
   carSystem: {fileID: 0}
   boostStrenght: 200
   maxBattery: 1000
-  chargingCap: 6
-  chargingDivision: 70
+  chargingCap: 5
+  driftPowerConvertPer: 0.09
 --- !u!1 &1667886926985640032
 GameObject:
   m_ObjectHideFlags: 0
@@ -302,7 +305,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5075192125091602741
 Transform:
   m_ObjectHideFlags: 0

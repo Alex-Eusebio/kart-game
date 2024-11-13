@@ -52,23 +52,24 @@ MonoBehaviour:
   kartModel: {fileID: 638508522548299387}
   kartNormal: {fileID: 7034196224785165130}
   sphere: {fileID: 4136492240716495676}
+  special: {fileID: 0}
   speed: 0
   currentSpeed: 0
   driftPower: 0
-  minDriftPower: 40
-  driftPowerPerLvl: 80
-  driftBoostPerLvl: 50
   driftMode: 0
   drifting: 0
   isGrounded: 0
   onRoad: 0
-  maxSpeed: 80
+  maxSpeed: 70
   backwardsSpeed: -15
-  acceleration: 8
-  driftSpeedDebuff: 4
+  acceleration: 7
+  minDriftPower: 40
+  driftPowerPerLvl: 70
+  driftBoostPerLvl: 65
+  driftSpeedDebuff: 3
   driftPassiveSteeringMulti: 1.6
   steering: 13
-  steeringDriftMulti: 0.42
+  steeringDriftMulti: 0.43
   gravity: 22
   layerMask:
     serializedVersion: 2
@@ -76,6 +77,9 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 0
+  ignoreStuns: 0
+  ignoreEnemySlows: 0
+  ignoreRoadSlows: 0
   animControll: {fileID: 1509817466724799265}
   bonusGravity: 0
   gravityScale: 70
@@ -268,6 +272,7 @@ MonoBehaviour:
   - {fileID: 4776764368576013894}
   steeringWheel: {fileID: 0}
   steering: 0
+  isOnSpecial: 0
 --- !u!1 &4469739469312493226
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &246816699468803573
 Transform:
   m_ObjectHideFlags: 0
@@ -366,9 +366,6 @@ MonoBehaviour:
   speed: 0
   currentSpeed: 0
   driftPower: 0
-  minDriftPower: 40
-  driftPowerPerLvl: 80
-  driftBoostPerLvl: 40
   driftMode: 0
   drifting: 0
   isGrounded: 0
@@ -376,6 +373,9 @@ MonoBehaviour:
   maxSpeed: 65
   backwardsSpeed: -10
   acceleration: 5
+  minDriftPower: 40
+  driftPowerPerLvl: 80
+  driftBoostPerLvl: 40
   driftSpeedDebuff: 0
   driftPassiveSteeringMulti: 1.6
   steering: 11
@@ -387,6 +387,9 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 0
+  ignoreStuns: 1
+  ignoreEnemySlows: 1
+  ignoreRoadSlows: 1
   animControll: {fileID: 8675287817834752483}
   bonusGravity: 0
   gravityScale: 75

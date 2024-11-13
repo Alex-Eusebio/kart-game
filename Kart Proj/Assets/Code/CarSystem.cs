@@ -26,25 +26,23 @@ public class CarSystem : MonoBehaviour
     public float currentSpeed;
     float rotate, currentRotate;
     public float driftPower;
-    public float minDriftPower;
-    public float driftPowerPerLvl;
-    public float driftBoostPerLvl;
     public int driftMode = 0;
 
     bool first, second, third;
     Color c;
     int driftDirection;
 
-    [Header("Bools")]
     public bool drifting;
     public bool isGrounded;
     public bool onRoad;
 
     [Header("Parameters")]
-
     public float maxSpeed = 30f;
     public float backwardsSpeed = -15f;
     public float acceleration = 1f;
+    public float minDriftPower;
+    public float driftPowerPerLvl;
+    public float driftBoostPerLvl;
     public float driftSpeedDebuff = 8f;
     public float driftPassiveSteeringMulti = 2f;
     public float steering = 80f;
@@ -52,6 +50,12 @@ public class CarSystem : MonoBehaviour
     public float gravity = 10f;
     public LayerMask layerMask;
     public LayerMask groundMask;
+
+
+    [Header("Ignore")]
+    public bool ignoreStuns = false;
+    public bool ignoreEnemySlows = false;
+    public bool ignoreRoadSlows = false;
 
     [Header("Animator")]
     public AnimationController animControll;
@@ -109,11 +113,21 @@ public class CarSystem : MonoBehaviour
             if (hit.collider.gameObject.GetComponent<IChangeSpeed>() != null)
             {
                 float speedChange = hit.collider.gameObject.GetComponent<IChangeSpeed>().ChangeSpeed(currentSpeed);
-                currentSpeed += speedChange;
+
+                if (ignoreRoadSlows)
+                {
+                    if (speedChange < 0)
+                    {
+                        currentSpeed += speedChange;
+                    }
+                } else
+                    currentSpeed += speedChange;
+
                 if (speedChange > 0)
                     onRoad = true;
-                else 
+                else
                     onRoad = false;
+                
             } else
             {
                 onRoad = true;
