@@ -30,14 +30,16 @@ public class AnimationController : MonoBehaviour
     private void Update()
     {
         if (characterAnimator)
+        {
+            characterAnimator.SetBool("IsOnSpecial", isOnSpecial);
             characterAnimator.SetFloat("Steer", steering);
+        }
 
         if (carAnimator)
+        {
             carAnimator.SetFloat("Steer", steering);
-
-        characterAnimator.SetBool("IsOnSpecial", isOnSpecial);
-        carAnimator.SetBool("IsOnSpecial", isOnSpecial);
-        
+            carAnimator.SetBool("IsOnSpecial", isOnSpecial);
+        }
 
         //steeringWheel.localEulerAngles = new Vector3(-25, 90, ((steer * 45)));
     }
