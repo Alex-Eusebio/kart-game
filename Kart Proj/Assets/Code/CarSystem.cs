@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using Unity.VisualScripting;
+using System.Dynamic;
 //using UnityEngine.Rendering.PostProcessing;
 //using Cinemachine;
 
@@ -13,6 +15,7 @@ public class CarSystem : MonoBehaviour
     public Transform kartModel;
     public Transform kartNormal;
     public Rigidbody sphere;
+    BoostManager boostManager;
     [SerializeField]
     public SpecialAbility special;
     SpawnPointManager spawnPointManager;
@@ -20,11 +23,12 @@ public class CarSystem : MonoBehaviour
     //public List<ParticleSystem> primaryParticles = new List<ParticleSystem>();
     //public List<ParticleSystem> secondaryParticles = new List<ParticleSystem>();
 
-
     [Header("Car Stats")]
     public float speed;
+    public float bonusSpeed;
     public float currentSpeed;
     float rotate, currentRotate;
+    public float bonusSteer;
     public float driftPower;
     public int driftMode = 0;
 
@@ -43,6 +47,7 @@ public class CarSystem : MonoBehaviour
     public float minDriftPower;
     public float driftPowerPerLvl;
     public float driftBoostPerLvl;
+    public float driftBoostDurationPerLvl = 0.8f;
     public float driftSpeedDebuff = 8f;
     public float driftPassiveSteeringMulti = 2f;
     public float steering = 80f;
@@ -83,6 +88,8 @@ public class CarSystem : MonoBehaviour
 
     void Start()
     {
+        boostManager = GetComponent<BoostManager>();
+
         //initialRotation = kartModel.localEulerAngles;
 
         /*postVolume = Camera.main.GetComponent<PostProcessVolume>();
@@ -187,7 +194,7 @@ public class CarSystem : MonoBehaviour
         if (animControll)
         {
             //b) Wheels
-            animControll.UpdateWheelsRotation(currentSpeed);
+            animControll.UpdateWheelsRotation(currentSpeed+bonusSpeed);
 
             //c) Steering Wheel
 
@@ -250,9 +257,9 @@ public class CarSystem : MonoBehaviour
 
         //Forward Acceleration
         if (!drifting)
-            sphere.AddForce(-kartModel.transform.right * currentSpeed, ForceMode.Acceleration);
+            sphere.AddForce(-kartModel.transform.right * (currentSpeed+bonusSpeed), ForceMode.Acceleration);
         else
-            sphere.AddForce(transform.forward * currentSpeed, ForceMode.Acceleration);
+            sphere.AddForce(transform.forward * (currentSpeed+bonusSpeed), ForceMode.Acceleration);
 
         //Gravity
         sphere.AddForce(Vector3.down * (gravity+bonusGravity), ForceMode.Acceleration);
@@ -299,7 +306,10 @@ public class CarSystem : MonoBehaviour
 
         if (driftMode > 0)
         {
-            currentSpeed += driftBoostPerLvl * GetDriftLevel();
+            Boost boost = ScriptableObject.CreateInstance<Boost>();
+
+            boost.Setup(driftBoostPerLvl*driftMode, 0, driftBoostDurationPerLvl*driftMode);
+            boostManager.AddBoost(boost);
 
             Debug.Log("BOOST!" + GetDriftLevel());
             //kartModel.Find("Tube001").GetComponentInChildren<ParticleSystem>().Play();
@@ -400,10 +410,4 @@ public class CarSystem : MonoBehaviour
     {
         //postProfile.GetSetting<ChromaticAberration>().intensity.value = x;
     }
-
-    //private void OnDrawGizmos()
-    //{
-    //    Gizmos.color = Color.red;
-    //    Gizmos.DrawLine(transform.position + transform.up, transform.position - (transform.up * 2));
-    //}
 }
