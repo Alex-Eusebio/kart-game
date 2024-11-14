@@ -47,7 +47,7 @@ public class CarSystem : MonoBehaviour
     public float minDriftPower;
     public float driftPowerPerLvl;
     public float driftBoostPerLvl;
-    public float driftBoostDurationPerLvl = 0.8f;
+    public float driftBoostDurationPerLvl = 0.7f;
     public float driftSpeedDebuff = 8f;
     public float driftPassiveSteeringMulti = 2f;
     public float steering = 80f;

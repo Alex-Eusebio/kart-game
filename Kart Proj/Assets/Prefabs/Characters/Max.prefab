@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3919090456375274765}
   - component: {fileID: 5673087399909195987}
   - component: {fileID: 7152816898753582295}
+  - component: {fileID: 206921178645280948}
   m_Layer: 3
   m_Name: Kart
   m_TagString: Untagged
@@ -55,7 +56,9 @@ MonoBehaviour:
   sphere: {fileID: 4136492240716495676}
   special: {fileID: 7152816898753582295}
   speed: 0
+  bonusSpeed: 0
   currentSpeed: 0
+  bonusSteer: 0
   driftPower: 0
   driftMode: 0
   drifting: 0
@@ -67,6 +70,7 @@ MonoBehaviour:
   minDriftPower: 40
   driftPowerPerLvl: 80
   driftBoostPerLvl: 50
+  driftBoostDurationPerLvl: 0.7
   driftSpeedDebuff: 3
   driftPassiveSteeringMulti: 1.6
   steering: 13
@@ -140,6 +144,19 @@ MonoBehaviour:
   maxBattery: 1000
   chargingCap: 5
   driftPowerConvertPer: 0.09
+--- !u!114 &206921178645280948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 713885144395614289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b983ca06553ed9747b008c1faf485958, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boosts: []
 --- !u!1 &1667886926985640032
 GameObject:
   m_ObjectHideFlags: 0

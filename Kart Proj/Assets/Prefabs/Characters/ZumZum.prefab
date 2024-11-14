@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &246816699468803573
 Transform:
   m_ObjectHideFlags: 0
@@ -256,6 +256,7 @@ GameObject:
   - component: {fileID: 4430257492302361995}
   - component: {fileID: 8313928737931796941}
   - component: {fileID: 844619324476623891}
+  - component: {fileID: 9031595229998597295}
   m_Layer: 3
   m_Name: Kart
   m_TagString: Untagged
@@ -298,11 +299,10 @@ MonoBehaviour:
   sphere: {fileID: 8963764030470223868}
   special: {fileID: 0}
   speed: 0
+  bonusSpeed: 0
   currentSpeed: 0
+  bonusSteer: 0
   driftPower: 0
-  minDriftPower: 40
-  driftPowerPerLvl: 80
-  driftBoostPerLvl: 50
   driftMode: 0
   drifting: 0
   isGrounded: 0
@@ -310,6 +310,10 @@ MonoBehaviour:
   maxSpeed: 80
   backwardsSpeed: -15
   acceleration: 8
+  minDriftPower: 40
+  driftPowerPerLvl: 80
+  driftBoostPerLvl: 50
+  driftBoostDurationPerLvl: 0.7
   driftSpeedDebuff: 4
   driftPassiveSteeringMulti: 1.6
   steering: 13
@@ -321,6 +325,9 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 0
+  ignoreStuns: 0
+  ignoreEnemySlows: 0
+  ignoreRoadSlows: 0
   animControll: {fileID: 7112184812528613875}
   bonusGravity: 0
   gravityScale: 70
@@ -362,6 +369,19 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &9031595229998597295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5542331229680436369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b983ca06553ed9747b008c1faf485958, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boosts: []
 --- !u!1 &5960597877002866917
 GameObject:
   m_ObjectHideFlags: 0
