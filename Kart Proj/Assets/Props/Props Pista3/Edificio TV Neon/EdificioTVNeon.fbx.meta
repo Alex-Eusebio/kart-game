@@ -1,9 +1,34 @@
 fileFormatVersion: 2
-guid: 54342fe303aeb5d42b8e155c99ec43d7
+guid: 02b9a5815773fe345a8662f9a995359e
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Edificio Color Emission
+    second: {fileID: 2100000, guid: 5cf5d9a6872e60545ac54eba5e597d76, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Edificio Enclave
+    second: {fileID: 2100000, guid: 6092ff86274c62c4dbfac3da15e0a06c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Edificio Preto
+    second: {fileID: 2100000, guid: 040b47255da0e5e4ab721648a627cc82, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Edificio TV
+    second: {fileID: 2100000, guid: 7c879546efb143047836d36bbb9143ee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Edificio cor
+    second: {fileID: 2100000, guid: e038be2c64089054fad620add619d78e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
