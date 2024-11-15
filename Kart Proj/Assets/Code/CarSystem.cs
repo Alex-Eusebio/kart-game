@@ -15,7 +15,8 @@ public class CarSystem : MonoBehaviour
     public Transform kartModel;
     public Transform kartNormal;
     public Rigidbody sphere;
-    BoostManager boostManager;
+    [HideInInspector]
+    public BoostManager boostManager;
     [SerializeField]
     public SpecialAbility special;
     SpawnPointManager spawnPointManager;
@@ -39,6 +40,8 @@ public class CarSystem : MonoBehaviour
     public bool drifting;
     public bool isGrounded;
     public bool onRoad;
+    public bool isStunned;
+    public float stunDuration;
 
     [Header("Parameters")]
     public float maxSpeed = 30f;
@@ -149,28 +152,38 @@ public class CarSystem : MonoBehaviour
         //Follow Collider
         transform.position = sphere.transform.position - new Vector3(0, 0.75f, 0);
 
-        float steer = Input.GetAxis("Horizontal");
+        float steer = 0;
 
-        //Drift
-        if (Input.GetButtonDown("Jump") && !drifting && steer != 0)
+        if (!isStunned || ignoreStuns)
         {
-            drifting = true;
-            driftDirection = steer > 0 ? 1 : -1;
+            steer = Input.GetAxis("Horizontal");
 
-            /*foreach (ParticleSystem p in primaryParticles)
+            //Drift
+            if (Input.GetButtonDown("Jump") && !drifting && steer != 0)
             {
-                p.startColor = Color.clear;
-                p.Play();
-            }*/
+                drifting = true;
+                driftDirection = steer > 0 ? 1 : -1;
 
-            kartModel.parent.DOComplete();
-            kartModel.parent.DOPunchPosition(transform.up * .2f, .3f, 5, 1);
+                /*foreach (ParticleSystem p in primaryParticles)
+                {
+                    p.startColor = Color.clear;
+                    p.Play();
+                }*/
 
-        }
+                kartModel.parent.DOComplete();
+                kartModel.parent.DOPunchPosition(transform.up * .2f, .3f, 5, 1);
 
-        if (Input.GetButtonUp("Jump") && drifting)
-        {
-            Boost();
+            }
+
+            if (Input.GetButtonUp("Jump") && drifting)
+            {
+                Boost();
+            }
+
+            if (Input.GetButtonDown("Fire1") && special != null)
+            {
+                special.Activate();
+            }
         }
 
         //Animations    
@@ -186,11 +199,6 @@ public class CarSystem : MonoBehaviour
             kartModel.parent.localRotation = Quaternion.Euler(0, Mathf.LerpAngle(kartModel.parent.localEulerAngles.y, (control * 15) * driftDirection, .2f), 0);
         }
 
-        if (Input.GetButtonDown("Fire1") && special != null)
-        {
-            special.Activate();
-        }
-
         if (animControll)
         {
             //b) Wheels
@@ -203,11 +211,19 @@ public class CarSystem : MonoBehaviour
             else
                 animControll.ChangeSteer(driftDirection);
         }
-        
     }
 
     private void FixedUpdate()
     {
+        if (stunDuration > 0)
+        {
+            isStunned = true;
+            stunDuration -= Time.deltaTime;
+        }
+
+        if (stunDuration <= 0)
+            isStunned = false;
+
         if (!IsGrounded())
         {
             airBorneTimer += Time.deltaTime;
@@ -222,7 +238,20 @@ public class CarSystem : MonoBehaviour
             airBorneTimer = 0;
         }
 
-        float steer = Input.GetAxis("Horizontal");
+        float steer = 0;
+
+        if (!isStunned || ignoreStuns)
+        {
+            steer = Input.GetAxis("Horizontal");
+
+            //Accelerate
+            if (Input.GetAxis("Vertical") > 0)
+                speed = maxSpeed;
+            else if (Input.GetAxis("Vertical") < 0)
+            {
+                speed = backwardsSpeed;
+            }
+        }
 
         //Steer
         if (steer != 0 && !drifting)
@@ -231,14 +260,7 @@ public class CarSystem : MonoBehaviour
             float amount = Mathf.Abs(steer);
             Steer(dir, amount);
         }
-
-        //Accelerate
-        if (Input.GetAxis("Vertical") > 0)
-            speed = maxSpeed;
-        else if (Input.GetAxis("Vertical") < 0)
-        {
-            speed = backwardsSpeed;
-        }
+        
 
         if (drifting)
         {
@@ -262,7 +284,7 @@ public class CarSystem : MonoBehaviour
             sphere.AddForce(transform.forward * (currentSpeed+bonusSpeed), ForceMode.Acceleration);
 
         //Gravity
-        sphere.AddForce(Vector3.down * (gravity+bonusGravity), ForceMode.Acceleration);
+        sphere.AddForce(Vector3.down * (gravity + bonusGravity), ForceMode.Acceleration);
 
         currentRotate = Mathf.Lerp(currentRotate, rotate, Time.deltaTime * 4f); rotate = 0f;
 

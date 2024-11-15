@@ -54,6 +54,7 @@ MonoBehaviour:
   kartModel: {fileID: 638508522548299387}
   kartNormal: {fileID: 7034196224785165130}
   sphere: {fileID: 4136492240716495676}
+  boostManager: {fileID: 0}
   special: {fileID: 7152816898753582295}
   speed: 0
   bonusSpeed: 0
@@ -64,6 +65,8 @@ MonoBehaviour:
   drifting: 0
   isGrounded: 0
   onRoad: 0
+  isStunned: 0
+  stunDuration: 0
   maxSpeed: 75
   backwardsSpeed: -15
   acceleration: 9
@@ -322,7 +325,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5075192125091602741
 Transform:
   m_ObjectHideFlags: 0

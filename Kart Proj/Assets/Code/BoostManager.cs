@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class BoostManager : MonoBehaviour
@@ -29,13 +30,18 @@ public class BoostManager : MonoBehaviour
             bonusSteer += boost.bonusSteering;
         }
 
-        carSystem.bonusSpeed = bonusSpeed;
+        Debug.Log(carSystem.currentSpeed + bonusSpeed);
+        if (carSystem.currentSpeed + bonusSpeed > 0)
+            carSystem.bonusSpeed = bonusSpeed;
+        else
+            carSystem.bonusSpeed = 0;
+
         carSystem.bonusSteer = bonusSteer;
     }
 
     void ManageBoosts()
     {
-        foreach (Boost boost in boosts)
+        foreach (Boost boost in boosts.ToList())
         {
             boost.UpdateDuration(Time.deltaTime);
 
