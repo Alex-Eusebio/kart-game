@@ -8,7 +8,6 @@ public abstract class SpecialAbility : MonoBehaviour, ISpecial
     protected float resource;
     protected float maxResource;
 
-    [SerializeField]
     protected private CarSystem carSystem;
 
     public SpecialAbility()

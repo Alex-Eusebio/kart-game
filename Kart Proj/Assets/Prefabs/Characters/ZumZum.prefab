@@ -85,7 +85,9 @@ MonoBehaviour:
   backWheels: []
   steeringWheel: {fileID: 0}
   steering: 0
+  bonusSpeed: 0
   isOnSpecial: 0
+  isStunned: 0
 --- !u!1 &4276506471608531099
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,7 +240,7 @@ Transform:
   m_GameObject: {fileID: 4519821333649109002}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.4, z: -3.21}
+  m_LocalPosition: {x: 0, y: 1.82, z: -3.47}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -257,6 +259,7 @@ GameObject:
   - component: {fileID: 8313928737931796941}
   - component: {fileID: 844619324476623891}
   - component: {fileID: 9031595229998597295}
+  - component: {fileID: 8861170714689234600}
   m_Layer: 3
   m_Name: Kart
   m_TagString: Untagged
@@ -280,6 +283,7 @@ Transform:
   - {fileID: 2638007742865844106}
   - {fileID: 8597712885608545398}
   - {fileID: 1977129177468072792}
+  - {fileID: 5961843987588355421}
   m_Father: {fileID: 246816699468803573}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4430257492302361995
@@ -298,7 +302,7 @@ MonoBehaviour:
   kartNormal: {fileID: 2638007742865844106}
   sphere: {fileID: 8963764030470223868}
   boostManager: {fileID: 0}
-  special: {fileID: 0}
+  special: {fileID: 8861170714689234600}
   speed: 0
   bonusSpeed: 0
   currentSpeed: 0
@@ -385,6 +389,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boosts: []
+--- !u!114 &8861170714689234600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5542331229680436369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 851877f0de5a03c40846c90f0b87ff51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resource: 0
+  throwingStrenght: 20
+  cooldown: 5
+  throwablePrefab: {fileID: 8792300465243922998, guid: 04823e20a705b7e46b830dcef76a09a3, type: 3}
+  throwSpawnPoint: {fileID: 5961843987588355421}
 --- !u!1 &5960597877002866917
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,7 +431,38 @@ Transform:
   m_GameObject: {fileID: 5960597877002866917}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.01, z: -4.45}
+  m_LocalPosition: {x: 0, y: 2.25, z: -4.67}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6691442026858546103}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7202875096525470163
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5961843987588355421}
+  m_Layer: 3
+  m_Name: ThrowPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5961843987588355421
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7202875096525470163}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.892, z: 2.107}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
