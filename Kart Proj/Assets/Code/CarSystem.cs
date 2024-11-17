@@ -218,11 +218,15 @@ public class CarSystem : MonoBehaviour
         if (stunDuration > 0)
         {
             isStunned = true;
+            animControll.UpdateStun(isStunned);
             stunDuration -= Time.deltaTime;
         }
 
         if (stunDuration <= 0)
+        {
             isStunned = false;
+            animControll.UpdateStun(isStunned);
+        }
 
         if (!IsGrounded())
         {

@@ -30,13 +30,17 @@ public class BoostManager : MonoBehaviour
             bonusSteer += boost.bonusSteering;
         }
 
-        Debug.Log(carSystem.currentSpeed + bonusSpeed);
         if (carSystem.currentSpeed + bonusSpeed > 0)
             carSystem.bonusSpeed = bonusSpeed;
         else
+        {
             carSystem.bonusSpeed = 0;
+            bonusSpeed = 0;
+        }
 
         carSystem.bonusSteer = bonusSteer;
+
+        carSystem.animControll.UpdateBonusSpeed(bonusSpeed);
     }
 
     void ManageBoosts()

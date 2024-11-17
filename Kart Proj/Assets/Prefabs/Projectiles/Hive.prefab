@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7049414834576361785}
   - component: {fileID: 1127083698202639222}
   - component: {fileID: 2520570973656259157}
-  - component: {fileID: 386775795355458207}
+  - component: {fileID: 9068497694329144402}
   m_Layer: 0
   m_Name: Hive
   m_TagString: Untagged
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 8792300465243922998}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 24.106134, y: 2.91, z: 116.11038}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -83,7 +83,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &386775795355458207
+--- !u!114 &9068497694329144402
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -92,12 +92,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8792300465243922998}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 822fb3fce7f576443bd17f81d7b430c4, type: 3}
+  m_Script: {fileID: 11500000, guid: 1187fa46e7b0bb947a77c676664dbf33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   projectileArea: {fileID: 1127083698202639222}
-  stuns: 0
-  stunDuration: 0
   slowStrenght: -20
   slowDuration: 2
 --- !u!1001 &6340013180069640013

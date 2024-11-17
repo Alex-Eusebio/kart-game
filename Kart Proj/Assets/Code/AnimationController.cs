@@ -22,23 +22,31 @@ public class AnimationController : MonoBehaviour
     [SerializeField]
     private float steering;
     [SerializeField]
+    private float bonusSpeed;
+    [SerializeField]
     private bool isOnSpecial = false;
-    private float smoothTime = 20f;
+    [SerializeField]
+    private bool isStunned = false;
 
     float wheelSpinAngle = 0f;
+    private float smoothTime = 20f;
 
     private void Update()
     {
         if (characterAnimator)
         {
             characterAnimator.SetBool("IsOnSpecial", isOnSpecial);
+            characterAnimator.SetBool("IsStunned", isStunned);
             characterAnimator.SetFloat("Steer", steering);
+            characterAnimator.SetFloat("BonusSpeed", bonusSpeed);
         }
 
         if (carAnimator)
         {
-            carAnimator.SetFloat("Steer", steering);
             carAnimator.SetBool("IsOnSpecial", isOnSpecial);
+            carAnimator.SetBool("IsStunned", isStunned);
+            carAnimator.SetFloat("Steer", steering);
+            carAnimator.SetFloat("BonusSpeed", bonusSpeed);
         }
 
         //steeringWheel.localEulerAngles = new Vector3(-25, 90, ((steer * 45)));
@@ -47,6 +55,22 @@ public class AnimationController : MonoBehaviour
     public void ChangeSteer(float steer)
     {
         steering = Mathf.Lerp(steering, steer, Time.deltaTime*smoothTime);
+    }
+
+    public void UpdateSpecial(bool isOnSpecial)
+    {
+        this.isOnSpecial = isOnSpecial;
+    }
+
+    public void UpdateBonusSpeed(float bonusSpeed)
+    {
+        float temp = 6f;
+        this.bonusSpeed = Mathf.SmoothDamp(this.bonusSpeed, bonusSpeed, ref temp, 0.1f);
+    }
+
+    public void UpdateStun(bool isStunned)
+    {
+        this.isStunned = isStunned;
     }
 
     public void UpdateWheelsRotation(float speed)

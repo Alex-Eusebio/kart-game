@@ -2259,6 +2259,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Testmobile
       objectReference: {fileID: 0}
+    - target: {fileID: 5493390178810718564, guid: ed93a58a075497c4486ca597f369d756, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8680975895763679563, guid: ed93a58a075497c4486ca597f369d756, type: 3}
       propertyPath: isStunned
       value: 0
@@ -2646,6 +2650,10 @@ PrefabInstance:
     - target: {fileID: 665999898493642148, guid: 189de88e3007603469433377a1c26746, type: 3}
       propertyPath: m_Name
       value: Ben
+      objectReference: {fileID: 0}
+    - target: {fileID: 665999898493642148, guid: 189de88e3007603469433377a1c26746, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3349,6 +3357,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tanks
       objectReference: {fileID: 0}
+    - target: {fileID: 665999898493642148, guid: 352db47fad1f631418c31ebe97c8d8f0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8313928737931796941, guid: 352db47fad1f631418c31ebe97c8d8f0, type: 3}
       propertyPath: _camera
       value: 
@@ -3515,6 +3527,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Max
       objectReference: {fileID: 0}
+    - target: {fileID: 5493390178810718564, guid: 49ba74f5a40370f40a1cb48f055d76ba, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3676,6 +3692,10 @@ PrefabInstance:
     - target: {fileID: 5493390178810718564, guid: 982bb9e04a0018f4f9a2b15267d4f194, type: 3}
       propertyPath: m_Name
       value: Ratao
+      objectReference: {fileID: 0}
+    - target: {fileID: 5493390178810718564, guid: 982bb9e04a0018f4f9a2b15267d4f194, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4266,6 +4286,10 @@ PrefabInstance:
     - target: {fileID: 665999898493642148, guid: 089aafb7bb6d8b2459892bae38ad165b, type: 3}
       propertyPath: m_Name
       value: ZumZum
+      objectReference: {fileID: 0}
+    - target: {fileID: 665999898493642148, guid: 089aafb7bb6d8b2459892bae38ad165b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8313928737931796941, guid: 089aafb7bb6d8b2459892bae38ad165b, type: 3}
       propertyPath: _camera
@@ -7152,6 +7176,10 @@ PrefabInstance:
     - target: {fileID: 7367894296141030729, guid: c60849d66e00cd642bed62e1cb7d987b, type: 3}
       propertyPath: m_Name
       value: Missile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8774378991588827112, guid: c60849d66e00cd642bed62e1cb7d987b, type: 3}
+      propertyPath: m_Radius
+      value: 2.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
