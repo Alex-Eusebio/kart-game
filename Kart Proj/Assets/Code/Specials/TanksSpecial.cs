@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ZumzumSpecial : SpecialAbility
+public class TanksSpecial : SpecialAbility
 {
     [Header("Values")]
     [SerializeField]
@@ -37,7 +37,7 @@ public class ZumzumSpecial : SpecialAbility
 
     void Throw()
     {
-        GameObject projectile = MonoBehaviour.Instantiate(throwablePrefab, throwSpawnPoint.position, Quaternion.identity);
+        GameObject projectile = MonoBehaviour.Instantiate(throwablePrefab, throwSpawnPoint.position, carSystem.gameObject.transform.rotation);
         Rigidbody rb = projectile.GetComponent<Rigidbody>();
 
         if (rb != null)

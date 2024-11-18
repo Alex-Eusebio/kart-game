@@ -6,7 +6,7 @@ public abstract class Projectile : MonoBehaviour
 {
     public SphereCollider projectileArea;
 
-    private void OnTriggerEnter(Collider other)
+    protected virtual void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<CarSystem>() != null /*|| other.GetComponent<AiCarSystem>() != null*/)
         {

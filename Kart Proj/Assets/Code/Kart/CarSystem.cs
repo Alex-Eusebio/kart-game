@@ -124,20 +124,22 @@ public class CarSystem : MonoBehaviour
             {
                 float speedChange = hit.collider.gameObject.GetComponent<IChangeSpeed>().ChangeSpeed(currentSpeed);
 
-                if (ignoreRoadSlows)
-                {
-                    if (speedChange < 0)
-                    {
-                        currentSpeed += speedChange;
-                    }
-                } else
-                    currentSpeed += speedChange;
-
                 if (speedChange > 0)
                     onRoad = true;
                 else
                     onRoad = false;
-                
+
+                if (ignoreRoadSlows)
+                {
+                    if (speedChange > 0)
+                    {
+                        currentSpeed += speedChange;
+                    }
+                } else
+                {
+                    currentSpeed += speedChange;
+                }
+
             } else
             {
                 onRoad = true;
@@ -215,6 +217,11 @@ public class CarSystem : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (ignoreStuns)
+        {
+            stunDuration = 0;
+        }
+
         if (stunDuration > 0)
         {
             isStunned = true;
