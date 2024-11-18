@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ZumzumSpecial : SpecialAbility
+public class TanksSpecial : SpecialAbility
 {
     [Header("Values")]
     [SerializeField]
@@ -10,9 +10,9 @@ public class ZumzumSpecial : SpecialAbility
     [SerializeField]
     private float throwingBonusSpeedPer;
     [SerializeField]
-    private float slowStrenght;
+    private float stunDuration;
     [SerializeField]
-    private float slowDuration;
+    private float explosionDuration;
     [SerializeField]
     private float cooldown;
     private float inCooldown;
@@ -41,8 +41,8 @@ public class ZumzumSpecial : SpecialAbility
 
     void Throw()
     {
-        GameObject projectile = MonoBehaviour.Instantiate(throwablePrefab, throwSpawnPoint.position, Quaternion.identity);
-        projectile.GetComponent<HiveProjectile>().SetSlow(slowDuration, slowStrenght);
+        GameObject projectile = MonoBehaviour.Instantiate(throwablePrefab, throwSpawnPoint.position, carSystem.gameObject.transform.rotation);
+        projectile.GetComponent<MissileProjectile>().SetDuration(stunDuration, explosionDuration);
         Rigidbody rb = projectile.GetComponent<Rigidbody>();
 
         if (rb != null)

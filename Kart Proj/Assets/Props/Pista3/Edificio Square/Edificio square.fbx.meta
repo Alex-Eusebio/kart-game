@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b4034863e5c938f4a91a1491e6f5767b
+guid: 9ef1646ffcb4b004e9ee7aaf66b6b045
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,18 +7,33 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Edificio Cor
-    second: {fileID: 2100000, guid: cc253c7b0d4d12442886fd493e12be89, type: 2}
+      name: Color 24
+    second: {fileID: 2100000, guid: 254c57cab3053f243b058023c9239cdc, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Edificio Emission
-    second: {fileID: 2100000, guid: 46085245d7293124998bdce0d9e49d12, type: 2}
+      name: Color Emission 2
+    second: {fileID: 2100000, guid: 11f965ea8c137b54492096368f117d98, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Edificio Luz
-    second: {fileID: 2100000, guid: 7a0d04b630c83894aa4c5b1f51009a00, type: 2}
+      name: Color emission
+    second: {fileID: 2100000, guid: 12d288d17ca42bd43b3cf2b6df6341d7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Edificio TV1
+    second: {fileID: 2100000, guid: 49888f14b06eae349acca008cb940ea6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Edificio cor
+    second: {fileID: 2100000, guid: 9508fea71726e9f40a5e89acafac755a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Edificio door
+    second: {fileID: 2100000, guid: 8212863d06ac14540a1f300ac48f213b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
