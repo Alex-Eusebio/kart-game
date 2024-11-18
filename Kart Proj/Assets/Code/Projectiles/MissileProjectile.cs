@@ -6,11 +6,28 @@ public class MissileProjectile : Projectile
 {
     [SerializeField]
     private MeshRenderer mesh;
-    [SerializeField]
     private float stunDuration;
     public SphereCollider explosionArea;
     [SerializeField]
     private GameObject explosionSprite;
+    private float explosionDuration;
+
+    protected override void FixedUpdate()
+    {
+        if (explosionArea.enabled)
+        {
+            explosionDuration -= Time.deltaTime;
+
+            if (explosionDuration <= 0)
+            {
+                Destroy(gameObject);
+            }
+            return;
+        }
+
+        base.FixedUpdate();
+    }
+
     protected override void Effect(Collider other)
     {
         if (other.GetComponent<CarSystem>() != null /*|| other.GetComponent<AiCarSystem>() != null*/)
@@ -39,5 +56,11 @@ public class MissileProjectile : Projectile
 
         TriggerExplosion();
         base.OnTriggerEnter(other);
+    }
+
+    public void SetDuration(float stunDuration, float explosionDuration)
+    {
+        this.stunDuration = stunDuration;
+        this.explosionDuration = explosionDuration;
     }
 }

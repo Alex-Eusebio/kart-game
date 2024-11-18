@@ -5,6 +5,7 @@ using UnityEngine;
 public abstract class Projectile : MonoBehaviour
 {
     public SphereCollider projectileArea;
+    private float emergencyTimer = 12f;
 
     protected virtual void OnTriggerEnter(Collider other)
     {
@@ -12,6 +13,16 @@ public abstract class Projectile : MonoBehaviour
         {
             Effect(other);
 
+            Destroy(gameObject);
+        }
+    }
+
+    protected virtual void FixedUpdate()
+    {
+        emergencyTimer -= Time.deltaTime;
+
+        if (emergencyTimer <= 0)
+        {
             Destroy(gameObject);
         }
     }

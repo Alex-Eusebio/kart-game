@@ -502,6 +502,8 @@ MonoBehaviour:
   resource: 0
   throwingStrenght: 180
   throwingBonusSpeedPer: 0.5
+  stunDuration: 1.5
+  explosionDuration: 5
   cooldown: 5
   throwablePrefab: {fileID: 7367894296141030729, guid: c60849d66e00cd642bed62e1cb7d987b, type: 3}
   throwSpawnPoint: {fileID: 8784941520373512294}
