@@ -325,6 +325,7 @@ MonoBehaviour:
   driftPassiveSteeringMulti: 1.6
   steering: 13
   steeringDriftMulti: 0.42
+  steeringDebuff: 4
   gravity: 22
   layerMask:
     serializedVersion: 2
@@ -404,6 +405,8 @@ MonoBehaviour:
   resource: 0
   throwingStrenght: 15
   throwingBonusSpeedPer: 0.25
+  slowStrenght: -20
+  slowDuration: 2
   cooldown: 5
   throwablePrefab: {fileID: 8792300465243922998, guid: 04823e20a705b7e46b830dcef76a09a3, type: 3}
   throwSpawnPoint: {fileID: 5961843987588355421}

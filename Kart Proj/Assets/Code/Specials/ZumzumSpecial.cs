@@ -10,6 +10,10 @@ public class ZumzumSpecial : SpecialAbility
     [SerializeField]
     private float throwingBonusSpeedPer;
     [SerializeField]
+    private float slowStrenght;
+    [SerializeField]
+    private float slowDuration;
+    [SerializeField]
     private float cooldown;
     private float inCooldown;
 
@@ -38,6 +42,7 @@ public class ZumzumSpecial : SpecialAbility
     void Throw()
     {
         GameObject projectile = MonoBehaviour.Instantiate(throwablePrefab, throwSpawnPoint.position, Quaternion.identity);
+        projectile.GetComponent<HiveProjectile>().SetSlow(slowDuration, slowStrenght);
         Rigidbody rb = projectile.GetComponent<Rigidbody>();
 
         if (rb != null)
