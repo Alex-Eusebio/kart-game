@@ -55,10 +55,10 @@ public class CarSystem : MonoBehaviour
     public float driftPassiveSteeringMulti = 2f;
     public float steering = 80f;
     public float steeringDriftMulti = 1f;
+    public float steeringDebuff = 4f;
     public float gravity = 10f;
     public LayerMask layerMask;
     public LayerMask groundMask;
-
 
     [Header("Ignore")]
     public bool ignoreStuns = false;
@@ -269,10 +269,13 @@ public class CarSystem : MonoBehaviour
         {
             int dir = steer > 0 ? 1 : -1;
             float amount = Mathf.Abs(steer);
+            float debuffValue = Mathf.Lerp(0, steeringDebuff, amount);
+            Debug.Log(debuffValue);
             Steer(dir, amount);
+            if (speed > steeringDebuff + 2)
+                speed -= debuffValue;
         }
         
-
         if (drifting)
         {
             if (speed > 5)
@@ -318,14 +321,14 @@ public class CarSystem : MonoBehaviour
 
     public int GetDriftLevel()
     {
-        if (driftPower > minDriftPower && driftPower < driftPowerPerLvl)
+        if (driftPower >= minDriftPower && driftPower < driftPowerPerLvl)
         {
             return 1;
-        } else if (driftPower > driftPowerPerLvl && driftPower < driftPowerPerLvl * 2)
+        } else if (driftPower >= driftPowerPerLvl && driftPower < driftPowerPerLvl * 2)
         {
             return 2;
         }
-        else if (driftPower > driftPowerPerLvl * 2)
+        else if (driftPower >= driftPowerPerLvl * 2)
         {
             return 3;
         } else
@@ -374,32 +377,26 @@ public class CarSystem : MonoBehaviour
         if (!first)
             c = Color.clear;
 
-        if (driftPower > 50 && driftPower < 100 - 1 && !first)
-        {
-            first = true;
-            //c = turboColors[0];
-            driftMode = 1;
+        driftMode = GetDriftLevel();
 
-            PlayFlashParticle(c);
+        switch (driftMode)
+        {
+            case 1:
+                first = true;
+                //c = turboColors[0];
+                break;
+            case 2:
+                second = true;
+                //c = turboColors[1];
+                break;
+            case 3:
+                third = true;
+                //c = turboColors[2];
+                break;
         }
 
-        if (driftPower > 100 && driftPower < 150 - 1 && !second)
-        {
-            second = true;
-            //c = turboColors[1];
-            driftMode = 2;
-
+        if (driftMode > 0)
             PlayFlashParticle(c);
-        }
-
-        if (driftPower > 150 && !third)
-        {
-            third = true;
-            //c = turboColors[2];
-            driftMode = 3;
-
-            PlayFlashParticle(c);
-        }
 
         /*foreach (ParticleSystem p in primaryParticles)
         {

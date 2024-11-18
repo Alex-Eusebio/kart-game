@@ -422,6 +422,7 @@ MonoBehaviour:
   driftPassiveSteeringMulti: 1.6
   steering: 11
   steeringDriftMulti: 0.4
+  steeringDebuff: 0
   gravity: 22
   layerMask:
     serializedVersion: 2
