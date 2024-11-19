@@ -4295,6 +4295,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ZumZum
       objectReference: {fileID: 0}
+    - target: {fileID: 665999898493642148, guid: 089aafb7bb6d8b2459892bae38ad165b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8313928737931796941, guid: 089aafb7bb6d8b2459892bae38ad165b, type: 3}
       propertyPath: _camera
       value: 
