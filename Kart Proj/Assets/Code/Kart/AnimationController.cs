@@ -16,8 +16,6 @@ public class AnimationController : MonoBehaviour
     private List<Transform> frontWheels;
     [SerializeField]
     private List<Transform> backWheels;
-    [SerializeField]
-    private Transform steeringWheel;
 
     [SerializeField]
     private float steering;
@@ -48,8 +46,6 @@ public class AnimationController : MonoBehaviour
             carAnimator.SetFloat("Steer", steering);
             carAnimator.SetFloat("BonusSpeed", bonusSpeed);
         }
-
-        //steeringWheel.localEulerAngles = new Vector3(-25, 90, ((steer * 45)));
     }
 
     public void ChangeSteer(float steer)
