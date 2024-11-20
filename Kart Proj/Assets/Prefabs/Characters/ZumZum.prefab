@@ -83,7 +83,6 @@ MonoBehaviour:
   carAnimator: {fileID: 8801337042872138034}
   frontWheels: []
   backWheels: []
-  steeringWheel: {fileID: 0}
   steering: 0
   bonusSpeed: 0
   isOnSpecial: 0
