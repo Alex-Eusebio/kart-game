@@ -8,6 +8,8 @@ public class MaxSpecial : SpecialAbility
     [SerializeField]
     private float boostStrenght;
     [SerializeField]
+    private float boostDuration;
+    [SerializeField]
     private float maxBattery;
     [SerializeField]
     private float chargingCap = 10;
@@ -21,7 +23,10 @@ public class MaxSpecial : SpecialAbility
 
     protected override void ExecuteAbility()
     {
-        carSystem.currentSpeed += boostStrenght; 
+        Boost boost = ScriptableObject.CreateInstance<Boost>();
+
+        boost.Setup(boostStrenght, 0, boostDuration);
+        carSystem.boostManager.AddBoost(boost);
     }
 
     public override void Charge()

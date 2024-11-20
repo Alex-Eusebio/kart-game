@@ -78,6 +78,7 @@ MonoBehaviour:
   driftPassiveSteeringMulti: 1.6
   steering: 13
   steeringDriftMulti: 0.42
+  steeringDebuff: 3
   gravity: 22
   layerMask:
     serializedVersion: 2
@@ -142,8 +143,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resource: 0
-  carSystem: {fileID: 0}
-  boostStrenght: 200
+  boostStrenght: 60
+  boostDuration: 0.5
   maxBattery: 1000
   chargingCap: 5
   driftPowerConvertPer: 0.09
@@ -275,9 +276,10 @@ MonoBehaviour:
   - {fileID: 8958105975572161646}
   backWheels:
   - {fileID: 6751307512024024313}
-  steeringWheel: {fileID: 0}
   steering: 0
+  bonusSpeed: 0
   isOnSpecial: 0
+  isStunned: 0
 --- !u!1 &4469739469312493226
 GameObject:
   m_ObjectHideFlags: 0
