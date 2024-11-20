@@ -1194,10 +1194,6 @@ MonoBehaviour:
   Boost: {fileID: 509527257}
   Drift: {fileID: 1489425526}
   Handling: {fileID: 832145922}
-  speedValue: 50
-  boostValue: 70
-  driftValue: 60
-  handlingValue: 80
 --- !u!1 &502016266
 GameObject:
   m_ObjectHideFlags: 0
@@ -1259,8 +1255,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 509527255}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.1275611, y: 2.6025126, z: 1.4808}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalScale: {x: 0.71032685, y: 2.6025126, z: 1.4808}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 258058492}
@@ -1270,7 +1266,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -581, y: -288.2}
+  m_AnchoredPosition: {x: -597, y: -288.2}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &509527257
@@ -1712,6 +1708,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 419197305}
+        m_TargetAssemblyTypeName: SliderController, Assembly-CSharp
+        m_MethodName: OnNextButtonClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &794842416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1776,7 +1784,7 @@ RectTransform:
   m_GameObject: {fileID: 832145920}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.1275611, y: 2.6025126, z: 1.4808}
+  m_LocalScale: {x: 0.7026621, y: 2.6025126, z: 1.4808}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 879223475}
@@ -1786,7 +1794,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -548.9, y: -377.5}
+  m_AnchoredPosition: {x: -556, y: -377.5}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &832145922
@@ -3974,8 +3982,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1489425524}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.1275611, y: 2.6025126, z: 1.4808}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalScale: {x: 0.74509233, y: 2.6025126, z: 1.4808}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 607910319}
@@ -3985,7 +3993,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -581, y: -330.8}
+  m_AnchoredPosition: {x: -600, y: -330.8}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1489425526
@@ -4970,8 +4978,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1989404569}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.1275611, y: 2.6025126, z: 1.4808}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalScale: {x: 0.6871211, y: 2.6025126, z: 1.4808}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 181091252}
@@ -4981,7 +4989,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -581, y: -244.6}
+  m_AnchoredPosition: {x: -591, y: -244.6}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1989404571
@@ -5220,6 +5228,18 @@ MonoBehaviour:
       - m_Target: {fileID: 419197304}
         m_TargetAssemblyTypeName: UISpriteSelector, Assembly-CSharp
         m_MethodName: PreviousSprite
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 419197305}
+        m_TargetAssemblyTypeName: SliderController, Assembly-CSharp
+        m_MethodName: OnPreviousButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
