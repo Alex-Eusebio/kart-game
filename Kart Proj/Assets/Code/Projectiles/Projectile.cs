@@ -6,14 +6,19 @@ public abstract class Projectile : MonoBehaviour
 {
     public SphereCollider projectileArea;
     private float emergencyTimer = 12f;
+    public CarSystem creator;
 
     protected virtual void OnTriggerEnter(Collider other)
     {
+        Debug.Log(other.gameObject);
         if (other.GetComponent<CarSystem>() != null /*|| other.GetComponent<AiCarSystem>() != null*/)
         {
-            Effect(other);
+            if (other.GetComponent<CarSystem>() != creator)
+            {
+                Effect(other);
 
-            Destroy(gameObject);
+                Destroy(gameObject);
+            }
         }
     }
 
