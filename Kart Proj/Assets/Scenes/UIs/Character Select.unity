@@ -800,6 +800,7 @@ GameObject:
   - component: {fileID: 419197302}
   - component: {fileID: 419197301}
   - component: {fileID: 419197300}
+  - component: {fileID: 419197304}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -896,6 +897,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &419197304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419197299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e75b614766bedc54ca4ce205f6d4676e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteDisplays:
+  - {fileID: 1550126129}
+  - {fileID: 992197254}
+  - {fileID: 1965038227}
+  - {fileID: 1473473518}
+  - {fileID: 2028206161}
 --- !u!1 &585469493
 GameObject:
   m_ObjectHideFlags: 0
@@ -1118,6 +1137,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 419197304}
+        m_TargetAssemblyTypeName: UISpriteSelector, Assembly-CSharp
+        m_MethodName: NextSprite
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3684,6 +3715,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: -1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 419197304}
+        m_TargetAssemblyTypeName: UISpriteSelector, Assembly-CSharp
+        m_MethodName: PreviousSprite
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
