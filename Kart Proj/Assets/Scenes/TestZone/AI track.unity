@@ -3527,13 +3527,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Max
       objectReference: {fileID: 0}
-    - target: {fileID: 5493390178810718564, guid: 49ba74f5a40370f40a1cb48f055d76ba, type: 3}
-      propertyPath: m_IsActive
-      value: 0
+    - target: {fileID: 7152816898753582295, guid: 49ba74f5a40370f40a1cb48f055d76ba, type: 3}
+      propertyPath: boostDuration
+      value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 8680975895763679563, guid: 49ba74f5a40370f40a1cb48f055d76ba, type: 3}
-      propertyPath: steeringDebuff
-      value: 3
+    - target: {fileID: 7152816898753582295, guid: 49ba74f5a40370f40a1cb48f055d76ba, type: 3}
+      propertyPath: boostStrenght
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
