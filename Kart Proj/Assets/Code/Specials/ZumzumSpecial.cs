@@ -43,6 +43,7 @@ public class ZumzumSpecial : SpecialAbility
     {
         GameObject projectile = MonoBehaviour.Instantiate(throwablePrefab, throwSpawnPoint.position, Quaternion.identity);
         projectile.GetComponent<HiveProjectile>().SetSlow(slowDuration, slowStrenght);
+        projectile.GetComponent<HiveProjectile>().creator = carSystem;
         Rigidbody rb = projectile.GetComponent<Rigidbody>();
 
         if (rb != null)

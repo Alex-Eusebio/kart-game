@@ -43,6 +43,7 @@ public class TanksSpecial : SpecialAbility
     {
         GameObject projectile = MonoBehaviour.Instantiate(throwablePrefab, throwSpawnPoint.position, carSystem.gameObject.transform.rotation);
         projectile.GetComponent<MissileProjectile>().SetDuration(stunDuration, explosionDuration);
+        projectile.GetComponent<MissileProjectile>().creator = carSystem;
         Rigidbody rb = projectile.GetComponent<Rigidbody>();
 
         if (rb != null)
