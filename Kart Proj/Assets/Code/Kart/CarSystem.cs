@@ -315,7 +315,7 @@ public class CarSystem : MonoBehaviour
         kartNormal.up = Vector3.Lerp(kartNormal.up, hitNear.normal, Time.deltaTime * 8.0f);
         kartNormal.Rotate(0, transform.eulerAngles.y, 0);
 
-        if (special)
+        if (special && !special.hasSpecialCharge)
             special.Charge();
     }
 

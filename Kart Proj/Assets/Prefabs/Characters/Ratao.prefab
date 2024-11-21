@@ -177,6 +177,7 @@ GameObject:
   - component: {fileID: 3919090456375274765}
   - component: {fileID: 5673087399909195987}
   - component: {fileID: 1368068856550202811}
+  - component: {fileID: 8651934187034880599}
   m_Layer: 3
   m_Name: Kart
   m_TagString: Untagged
@@ -218,7 +219,7 @@ MonoBehaviour:
   kartNormal: {fileID: 7034196224785165130}
   sphere: {fileID: 4136492240716495676}
   boostManager: {fileID: 0}
-  special: {fileID: 0}
+  special: {fileID: 8651934187034880599}
   speed: 0
   bonusSpeed: 0
   currentSpeed: 0
@@ -306,6 +307,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boosts: []
+--- !u!114 &8651934187034880599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 713885144395614289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38b0b2ff74d73894ba9bd5cb300d04ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resource: 0
+  maxResource: 150
+  hasSpecialCharge: 1
+  chargePerTick: 0.5
+  boostStrenght: 30
+  steeringBuff: 4
+  boostDuration: 3
+  jumpStrenght: 5000
+  specialCharger: {fileID: 5648953871841840400}
+  target: {fileID: 0}
 --- !u!1 &746149797097152015
 GameObject:
   m_ObjectHideFlags: 0
@@ -995,6 +1018,7 @@ Transform:
   - {fileID: 9065800564853508063}
   - {fileID: 4303367212305514270}
   - {fileID: -8679921383154817045}
+  - {fileID: 5448430058697435763}
   m_Father: {fileID: 614607387617427592}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &1509817466724799265
@@ -1203,6 +1227,72 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7354334182984646064}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5324469744550134303
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5448430058697435763}
+  - component: {fileID: 1387020760276902218}
+  - component: {fileID: 5648953871841840400}
+  m_Layer: 3
+  m_Name: Detector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5448430058697435763
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5324469744550134303}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.88, y: 0.59, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 638508522548299387}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1387020760276902218
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5324469744550134303}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 7.3055315, y: 1.4095559, z: 2.4994192}
+  m_Center: {x: -3.031558, y: -0.4241736, z: -0.19296002}
+--- !u!114 &5648953871841840400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5324469744550134303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64d25a625adad184798161134277781e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5493390178810718564
 GameObject:
   m_ObjectHideFlags: 0
