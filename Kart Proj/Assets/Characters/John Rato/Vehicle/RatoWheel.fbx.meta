@@ -9,6 +9,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Bike
     second: {fileID: 2100000, guid: 6e21b2c6c7b7377419ee9cf5dfc6eefa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bike.001
+    second: {fileID: 2100000, guid: 6e21b2c6c7b7377419ee9cf5dfc6eefa, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
