@@ -6,7 +6,10 @@ public abstract class SpecialAbility : MonoBehaviour, ISpecial
 {
     [SerializeField]
     protected float resource;
+    [SerializeField]
     protected float maxResource;
+    [SerializeField]
+    public bool hasSpecialCharge = false;
 
     protected private CarSystem carSystem;
 
