@@ -1155,6 +1155,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousButton: {fileID: 2053811113}
   nextButton: {fileID: 794842415}
+  previousKey: 97
+  nextKey: 100
+  previousArrowKey: 276
+  nextArrowKey: 275
 --- !u!4 &585469495
 Transform:
   m_ObjectHideFlags: 0
@@ -4123,15 +4127,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 0202773c5bcdad84fa3cc6f59a1ae913, type: 3}
       propertyPath: m_LocalScale.x
-      value: 17
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0202773c5bcdad84fa3cc6f59a1ae913, type: 3}
       propertyPath: m_LocalScale.y
-      value: 17
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0202773c5bcdad84fa3cc6f59a1ae913, type: 3}
       propertyPath: m_LocalScale.z
-      value: 17
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0202773c5bcdad84fa3cc6f59a1ae913, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4334,7 +4338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c74cd59fa6bc26141892dd093b4c47bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 57, y: -21, z: -43}
+  finalPosition: {x: 44.5, y: -21, z: -37}
 --- !u!1 &1481544147 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 55a00b1364d8a04488d961d250bb89bb, type: 3}
@@ -5076,6 +5080,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousButton: {fileID: 2053811113}
   nextButton: {fileID: 794842415}
+  previousKey: 97
+  nextKey: 100
+  previousArrowKey: 276
+  nextArrowKey: 275
 --- !u!4 &1772982418
 Transform:
   m_ObjectHideFlags: 0

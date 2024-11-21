@@ -23,6 +23,42 @@ public class CharacterImageController : MonoBehaviour
         StartPulseEffect();
     }
 
+    void Update()
+    {
+        // Controle com teclas A (anterior) e D (próximo)
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            OnPreviousButtonClicked();
+        }
+        else if (Input.GetKeyDown(KeyCode.D))
+        {
+            OnNextButtonClicked();
+        }
+
+        // Controle com as setas esquerda e direita
+        if (Input.GetKeyDown(KeyCode.LeftArrow)) // Seta esquerda
+        {
+            OnPreviousButtonClicked();
+        }
+        else if (Input.GetKeyDown(KeyCode.RightArrow)) // Seta direita
+        {
+            OnNextButtonClicked();
+        }
+
+        // Controle de clique nos ícones (se houver algum botão de clique nos ícones)
+        for (int i = 0; i < characterImages.Length; i++)
+        {
+            if (Input.GetMouseButtonDown(0)) // Detecta clique do mouse
+            {
+                RectTransform rt = characterImages[i].GetComponent<RectTransform>();
+                if (RectTransformUtility.RectangleContainsScreenPoint(rt, Input.mousePosition))
+                {
+                    SelectCharacter(i);
+                }
+            }
+        }
+    }
+
     public void OnNextButtonClicked()
     {
         StopPulseEffect();
@@ -35,6 +71,14 @@ public class CharacterImageController : MonoBehaviour
     {
         StopPulseEffect();
         currentCharacterIndex = (currentCharacterIndex - 1 + characterImages.Length) % characterImages.Length;
+        UpdateImageSizes();
+        StartPulseEffect();
+    }
+
+    private void SelectCharacter(int index)
+    {
+        StopPulseEffect();
+        currentCharacterIndex = index;
         UpdateImageSizes();
         StartPulseEffect();
     }
@@ -86,6 +130,8 @@ public class CharacterImageController : MonoBehaviour
         target.sizeDelta = endSize; // Garantir que o tamanho final é alcançado
     }
 }
+
+
 
 
 
