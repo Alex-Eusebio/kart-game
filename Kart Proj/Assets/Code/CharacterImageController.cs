@@ -12,8 +12,7 @@ public class CharacterImageController : MonoBehaviour
     public Vector2 enlargedSize = new Vector2(150f, 150f);
     public Vector2 pulseSize = new Vector2(120f, 120f); // Tamanho intermediário para pulsação
 
-    public float pulseSpeed = 0.9f; // Velocidade ligeiramente reduzida
-
+    public float pulseSpeed = 0.9f; // Velocidade da pulsação
 
     private Coroutine pulseCoroutine;
 
@@ -25,64 +24,46 @@ public class CharacterImageController : MonoBehaviour
 
     void Update()
     {
-        // Controle com teclas A (anterior) e D (próximo)
-        if (Input.GetKeyDown(KeyCode.A))
+        // Detecta teclas pressionadas e muda o personagem, mas verifica os limites
+        if ((Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) && currentCharacterIndex > 0)
         {
-            OnPreviousButtonClicked();
+            ChangeCharacter(-1); // Vai para o anterior
         }
-        else if (Input.GetKeyDown(KeyCode.D))
+        else if ((Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) && currentCharacterIndex < characterImages.Length - 1)
         {
-            OnNextButtonClicked();
-        }
-
-        // Controle com as setas esquerda e direita
-        if (Input.GetKeyDown(KeyCode.LeftArrow)) // Seta esquerda
-        {
-            OnPreviousButtonClicked();
-        }
-        else if (Input.GetKeyDown(KeyCode.RightArrow)) // Seta direita
-        {
-            OnNextButtonClicked();
-        }
-
-        // Controle de clique nos ícones (se houver algum botão de clique nos ícones)
-        for (int i = 0; i < characterImages.Length; i++)
-        {
-            if (Input.GetMouseButtonDown(0)) // Detecta clique do mouse
-            {
-                RectTransform rt = characterImages[i].GetComponent<RectTransform>();
-                if (RectTransformUtility.RectangleContainsScreenPoint(rt, Input.mousePosition))
-                {
-                    SelectCharacter(i);
-                }
-            }
+            ChangeCharacter(1); // Vai para o próximo
         }
     }
 
-    public void OnNextButtonClicked()
+    // Chamado pelos botões
+    public void OnNextCharacter()
     {
-        StopPulseEffect();
-        currentCharacterIndex = (currentCharacterIndex + 1) % characterImages.Length;
-        UpdateImageSizes();
-        StartPulseEffect();
+        if (currentCharacterIndex < characterImages.Length - 1)
+        {
+            ChangeCharacter(1);
+        }
     }
 
-    public void OnPreviousButtonClicked()
+    public void OnPreviousCharacter()
     {
-        StopPulseEffect();
-        currentCharacterIndex = (currentCharacterIndex - 1 + characterImages.Length) % characterImages.Length;
-        UpdateImageSizes();
-        StartPulseEffect();
+        if (currentCharacterIndex > 0)
+        {
+            ChangeCharacter(-1);
+        }
     }
 
-    private void SelectCharacter(int index)
+    // Método principal para alternar o personagem
+    private void ChangeCharacter(int direction)
     {
-        StopPulseEffect();
-        currentCharacterIndex = index;
-        UpdateImageSizes();
-        StartPulseEffect();
+        StopPulseEffect(); // Para o efeito de pulsação
+
+        currentCharacterIndex += direction; // Atualiza o índice
+
+        UpdateImageSizes(); // Atualiza os tamanhos das imagens
+        StartPulseEffect(); // Reinicia o efeito de pulsação
     }
 
+    // Atualiza os tamanhos das imagens (enlarged para o ativo, default para os outros)
     private void UpdateImageSizes()
     {
         for (int i = 0; i < characterImages.Length; i++)
@@ -91,11 +72,13 @@ public class CharacterImageController : MonoBehaviour
         }
     }
 
+    // Inicia a pulsação da imagem ativa
     private void StartPulseEffect()
     {
         pulseCoroutine = StartCoroutine(PulseEffect());
     }
 
+    // Para o efeito de pulsação
     private void StopPulseEffect()
     {
         if (pulseCoroutine != null)
@@ -104,6 +87,7 @@ public class CharacterImageController : MonoBehaviour
         }
     }
 
+    // Efeito de pulsação
     private IEnumerator PulseEffect()
     {
         while (true)
@@ -115,6 +99,7 @@ public class CharacterImageController : MonoBehaviour
         }
     }
 
+    // Animação de redimensionamento suave
     private IEnumerator SmoothResize(RectTransform target, Vector2 startSize, Vector2 endSize, float duration)
     {
         float elapsed = 0f;
@@ -130,6 +115,9 @@ public class CharacterImageController : MonoBehaviour
         target.sizeDelta = endSize; // Garantir que o tamanho final é alcançado
     }
 }
+
+
+
 
 
 
