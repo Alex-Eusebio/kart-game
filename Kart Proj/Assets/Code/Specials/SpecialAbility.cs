@@ -15,7 +15,7 @@ public abstract class SpecialAbility : MonoBehaviour, ISpecial
         resource = 0;
     }
 
-    private void Start()
+    protected virtual void Start()
     {
         carSystem = GetComponent<CarSystem>();
     }

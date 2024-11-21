@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class BoostManager : MonoBehaviour
 {
+    public delegate void BoostCounterHandler();
+    public event BoostCounterHandler OnBoostCount;
     [SerializeField]
     List<Boost> boosts = new List<Boost>();
     CarSystem carSystem;
@@ -59,6 +61,7 @@ public class BoostManager : MonoBehaviour
     public void AddBoost(Boost boost)
     {
         boosts.Add(boost);
+        OnBoostCount?.Invoke();
     }
 
     private void RemoveBoost(Boost boost)
