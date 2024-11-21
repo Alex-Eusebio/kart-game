@@ -35,23 +35,25 @@ public class CharacterSelection : MonoBehaviour
 
     public void ChangeCharacter(int _change)
     {
-        currentCharacter += _change; 
+        // Alterar a seleção do personagem com base no _change
+        currentCharacter += _change;
+
+        // Garantir que o índice de personagens não ultrapasse os limites
+        currentCharacter = Mathf.Clamp(currentCharacter, 0, transform.childCount - 1);
+
         SelectCharacter(currentCharacter); 
     }
 
     private void SelectCharacter(int _index)
     {
-        // Limitar os índices dentro dos limites possíveis
-        currentCharacter = Mathf.Clamp(_index, 0, transform.childCount - 1);
-
-        // Controlar a interatividade dos botões
-        previousButton.interactable = (currentCharacter != 0);
-        nextButton.interactable = (currentCharacter != transform.childCount - 1);
+        // Atualizar a interatividade dos botões
+        previousButton.interactable = (_index != 0); // Desativa o botão "Anterior" na primeira personagem
+        nextButton.interactable = (_index != transform.childCount - 1); // Desativa o botão "Próximo" na última personagem
 
         // Ativar apenas o personagem atual e desativar os outros
         for (int i = 0; i < transform.childCount; i++)
         {
-            transform.GetChild(i).gameObject.SetActive(i == currentCharacter);
+            transform.GetChild(i).gameObject.SetActive(i == _index);
         }
     }
 }

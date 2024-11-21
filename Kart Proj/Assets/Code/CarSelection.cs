@@ -9,13 +9,14 @@ public class CarSelection : MonoBehaviour
     [SerializeField] private KeyCode nextKey = KeyCode.D; // Tecla para próximo carro
     [SerializeField] private KeyCode previousArrowKey = KeyCode.LeftArrow; // Seta esquerda
     [SerializeField] private KeyCode nextArrowKey = KeyCode.RightArrow; // Seta direita
-    private int currentCar;
+    private int currentCar = 0;
 
     private void Awake()
     {
-        SelectCar(0);
+        // Inicia a seleção com o primeiro carro
+        SelectCar(currentCar);
 
-        // Atribuir ações aos botões
+        // Atribui ações aos botões
         previousButton.onClick.AddListener(() => ChangeCar(-1));
         nextButton.onClick.AddListener(() => ChangeCar(1));
     }
@@ -23,11 +24,11 @@ public class CarSelection : MonoBehaviour
     private void Update()
     {
         // Detectar teclas pressionadas
-        if (Input.GetKeyDown(previousKey) || Input.GetKeyDown(previousArrowKey)) // A ou Seta Esquerda
+        if (Input.GetKeyDown(previousKey) || Input.GetKeyDown(previousArrowKey)) // A ou seta esquerda
         {
             ChangeCar(-1);
         }
-        else if (Input.GetKeyDown(nextKey) || Input.GetKeyDown(nextArrowKey)) // D ou Seta Direita
+        else if (Input.GetKeyDown(nextKey) || Input.GetKeyDown(nextArrowKey)) // D ou seta direita
         {
             ChangeCar(1);
         }
@@ -35,25 +36,45 @@ public class CarSelection : MonoBehaviour
 
     private void ChangeCar(int _change)
     {
+        // Alterar o índice do carro
         currentCar += _change;
+
+        // Garantir que o índice do carro não ultrapasse os limites (primeiro e último)
+        if (currentCar < 0)
+        {
+            currentCar = 0; // Não pode ir antes do primeiro carro
+        }
+        else if (currentCar >= transform.childCount)
+        {
+            currentCar = transform.childCount - 1; // Não pode ultrapassar o último carro
+        }
+
+        // Atualizar a seleção de carros
         SelectCar(currentCar);
     }
 
     private void SelectCar(int _index)
     {
-        // Impedir que o índice ultrapasse os limites
-        currentCar = Mathf.Clamp(_index, 0, transform.childCount - 1);
+        // Atualizar o índice do carro
+        currentCar = _index;
 
-        // Controlar a interatividade dos botões
-        previousButton.interactable = (currentCar != 0);
-        nextButton.interactable = (currentCar != transform.childCount - 1);
-
-        // Ativar apenas o carro atual e desativar os outros
+        // Ativar e desativar os carros
         for (int i = 0; i < transform.childCount; i++)
         {
             transform.GetChild(i).gameObject.SetActive(i == currentCar);
         }
+
+        // Atualizar os botões
+        UpdateButtonStates();
+    }
+
+    private void UpdateButtonStates()
+    {
+        // Os botões de "anterior" e "próximo" são desabilitados quando o carro atual é o primeiro ou o último
+        previousButton.interactable = (currentCar > 0);
+        nextButton.interactable = (currentCar < transform.childCount - 1);
     }
 }
+
 
 
