@@ -6996,6 +6996,31 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9914d2b4c015bfe4aa88add901f05e35, type: 3}
+--- !u!1 &313126280 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5542331229680436369, guid: 189de88e3007603469433377a1c26746, type: 3}
+  m_PrefabInstance: {fileID: 722449682}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &313126286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313126280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f7257f1b3445cc409021fdd8d853c32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resource: 0
+  maxResource: 15
+  hasSpecialCharge: 1
+  boostStrenghtPerLvl: 10
+  boostStrenghtCap: 65
+  steeringBuffPerLvl: 1.2
+  steeringBuffCap: 12
+  boostDurationPerLvl: 1.5
 --- !u!1 &314591337
 GameObject:
   m_ObjectHideFlags: 0
@@ -9811,6 +9836,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4430257492302361995, guid: 189de88e3007603469433377a1c26746, type: 3}
+      propertyPath: special
+      value: 
+      objectReference: {fileID: 313126286}
     - target: {fileID: 8313928737931796941, guid: 189de88e3007603469433377a1c26746, type: 3}
       propertyPath: _camera
       value: 
@@ -9818,7 +9847,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5542331229680436369, guid: 189de88e3007603469433377a1c26746, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 313126286}
   m_SourcePrefab: {fileID: 100100000, guid: 189de88e3007603469433377a1c26746, type: 3}
 --- !u!1001 &725112774
 PrefabInstance:
@@ -9997,7 +10029,7 @@ MonoBehaviour:
   m_Script: {fileID: 365290288, guid: f56d46228aee4734f9114056c53bb57e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectid: 
+  projectid: 172676404584855
   updateInt: 10
   newSplatMapRestoreCode: 0
   toolbarInt: 0
@@ -18496,10 +18528,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 449810361992050163, guid: e431a4e551106d740b21533615ba86e9, type: 3}
-      propertyPath: m_Radius
-      value: 1.4
-      objectReference: {fileID: 0}
     - target: {fileID: 2838668091110802311, guid: e431a4e551106d740b21533615ba86e9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 27.520666
@@ -18540,6 +18568,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3289494757080074240, guid: e431a4e551106d740b21533615ba86e9, type: 3}
+      propertyPath: owner
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6152707986511186072, guid: e431a4e551106d740b21533615ba86e9, type: 3}
       propertyPath: m_Name
       value: Crystals
@@ -18547,37 +18579,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3881130307931827116, guid: e431a4e551106d740b21533615ba86e9, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 9024544871352815026}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e431a4e551106d740b21533615ba86e9, type: 3}
---- !u!1 &9024544871352815025 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3881130307931827116, guid: e431a4e551106d740b21533615ba86e9, type: 3}
-  m_PrefabInstance: {fileID: 9024544871352815024}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &9024544871352815026
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9024544871352815025}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: cf1a4594625101f499da8aec63365e11, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
