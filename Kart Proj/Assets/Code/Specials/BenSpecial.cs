@@ -17,6 +17,8 @@ public class BenSpecial : SpecialAbility
     [SerializeField]
     private float boostDurationPerLvl;
 
+    public GameObject crystal;
+
     private bool Ignore(Collider other)
     {
         return other.gameObject == carSystem.sphere.gameObject;

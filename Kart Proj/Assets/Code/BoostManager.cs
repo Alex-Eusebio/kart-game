@@ -2,15 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.ProBuilder;
 
 public class BoostManager : MonoBehaviour
 {
     [SerializeField]
     List<Boost> boosts = new List<Boost>();
     CarSystem carSystem;
+    BenSpecial[] allBenSpecials;
 
     private void Start()
     {
+        allBenSpecials = FindObjectsOfType<BenSpecial>();
+
         carSystem = GetComponent<CarSystem>();
     }
 
@@ -59,6 +63,19 @@ public class BoostManager : MonoBehaviour
     public void AddBoost(Boost boost)
     {
         boosts.Add(boost);
+
+        if (allBenSpecials.Count() > 0)
+        {
+            foreach (BenSpecial special in allBenSpecials)
+            {
+                if (gameObject.GetComponent<BenSpecial>() != special)
+                {
+                    GameObject crystal = MonoBehaviour.Instantiate(special.crystal, this.gameObject.transform.position, Quaternion.identity);
+                    crystal.GetComponent<BenCrystal>().owner = special.GetComponent<CarSystem>();
+                    crystal.gameObject.name = crystal.gameObject.name + " " + special.transform.parent.name;
+                }
+            }
+        }
     }
 
     private void RemoveBoost(Boost boost)
