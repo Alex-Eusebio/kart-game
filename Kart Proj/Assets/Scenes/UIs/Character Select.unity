@@ -843,8 +843,6 @@ GameObject:
   - component: {fileID: 419197301}
   - component: {fileID: 419197300}
   - component: {fileID: 419197304}
-  - component: {fileID: 419197305}
-  - component: {fileID: 419197306}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -962,50 +960,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e75b614766bedc54ca4ce205f6d4676e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteDisplays:
-  - {fileID: 1550126129}
-  - {fileID: 992197254}
-  - {fileID: 1965038227}
-  - {fileID: 1473473518}
-  - {fileID: 2028206161}
---- !u!114 &419197305
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 419197299}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8205b7dc26ef2c545ab96b7ffe1a3132, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speed: {fileID: 1989404571}
-  Boost: {fileID: 509527257}
-  Drift: {fileID: 1489425526}
-  Handling: {fileID: 832145922}
---- !u!114 &419197306
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 419197299}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8befda6ccc076054692c1e55f8b7c6f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   characterImages:
   - {fileID: 261184250}
   - {fileID: 1138911597}
   - {fileID: 2112575796}
   - {fileID: 835636400}
   - {fileID: 786189437}
+  spriteDisplays:
+  - {fileID: 1550126129}
+  - {fileID: 992197254}
+  - {fileID: 1965038227}
+  - {fileID: 1473473518}
+  - {fileID: 2028206161}
+  infoImages: []
+  Speed: {fileID: 1989404571}
+  Boost: {fileID: 509527257}
+  Drift: {fileID: 1489425526}
+  Handling: {fileID: 832145922}
   defaultSize: {x: 100, y: 100}
   enlargedSize: {x: 150, y: 150}
   pulseSize: {x: 120, y: 120}
-  pulseSpeed: 0.5
+  pulseSpeed: 0.9
 --- !u!1 &502016266
 GameObject:
   m_ObjectHideFlags: 0
@@ -1562,67 +1537,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 794842416}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 585469494}
-        m_TargetAssemblyTypeName: CarSelection, Assembly-CSharp
-        m_MethodName: ChangeCar
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1772982417}
-        m_TargetAssemblyTypeName: CharacterSelection, Assembly-CSharp
-        m_MethodName: ChangeCharacter
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 419197304}
-        m_TargetAssemblyTypeName: UISpriteSelector, Assembly-CSharp
-        m_MethodName: NextSprite
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 419197305}
-        m_TargetAssemblyTypeName: SliderController, Assembly-CSharp
-        m_MethodName: OnNextButtonClicked
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 419197306}
-        m_TargetAssemblyTypeName: CharacterImageController, Assembly-CSharp
-        m_MethodName: OnNextCharacter
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &794842416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3652,7 +3567,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Back
+  m_text: REMOVER ISTO
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4062,7 +3977,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Next
+  m_text: REMOVER ISTO
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5907,67 +5822,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2053811114}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 585469494}
-        m_TargetAssemblyTypeName: CarSelection, Assembly-CSharp
-        m_MethodName: ChangeCar
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: -1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1772982417}
-        m_TargetAssemblyTypeName: CharacterSelection, Assembly-CSharp
-        m_MethodName: ChangeCharacter
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: -1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 419197304}
-        m_TargetAssemblyTypeName: UISpriteSelector, Assembly-CSharp
-        m_MethodName: PreviousSprite
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 419197305}
-        m_TargetAssemblyTypeName: SliderController, Assembly-CSharp
-        m_MethodName: OnPreviousButtonClicked
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 419197306}
-        m_TargetAssemblyTypeName: CharacterImageController, Assembly-CSharp
-        m_MethodName: OnPreviousCharacter
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &2053811114
 MonoBehaviour:
   m_ObjectHideFlags: 0
