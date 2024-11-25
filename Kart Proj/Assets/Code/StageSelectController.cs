@@ -17,6 +17,12 @@ public class StageSelectController : MonoBehaviour
 
     void Start()
     {
+        // Configura todos os vídeos para ficarem em loop
+        foreach (VideoPlayer video in videos)
+        {
+            video.isLooping = true; // Ativa o looping para cada vídeo
+        }
+
         UpdateFlagSizes(); // Atualiza as bandeiras
         PlayVideo(currentFlagIndex); // Reproduz o vídeo correspondente à bandeira inicial
     }
@@ -82,6 +88,7 @@ public class StageSelectController : MonoBehaviour
         }
     }
 }
+
 
 
 
