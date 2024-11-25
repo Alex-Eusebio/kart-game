@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
+using System.Collections;
 
 public class StageSelectController : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class StageSelectController : MonoBehaviour
     public RawImage videoDisplay;  // RawImage para exibir o vídeo
 
     private int currentFlagIndex = 0; // Índice da bandeira atual
+    private Coroutine blinkCoroutine;  // Corrotina de piscar para a bandeira atual
 
     void Start()
     {
@@ -25,6 +27,11 @@ public class StageSelectController : MonoBehaviour
 
         UpdateFlagSizes(); // Atualiza as bandeiras
         PlayVideo(currentFlagIndex); // Reproduz o vídeo correspondente à bandeira inicial
+
+        // Inicializa a animação da bandeira atual, para garantir que o primeiro efeito de aumento aconteça
+        StartCoroutine(AnimateFlagSize(flagImages[currentFlagIndex], enlargedSize));
+        // Inicia o efeito de piscar para a primeira bandeira
+        blinkCoroutine = StartCoroutine(BlinkFlag(flagImages[currentFlagIndex]));
     }
 
     void Update()
@@ -45,10 +52,27 @@ public class StageSelectController : MonoBehaviour
     {
         // Para o vídeo atual antes de mudar de bandeira
         StopCurrentVideo();
-        
+
+        // Para a animação de piscar da bandeira anterior (se existir)
+        if (blinkCoroutine != null)
+        {
+            StopCoroutine(blinkCoroutine);
+        }
+
+        // Inicia animação de diminuição do tamanho para a bandeira anterior
+        StartCoroutine(AnimateFlagSize(flagImages[currentFlagIndex], defaultSize));
+
         currentFlagIndex += direction;  // Altera o índice
-        UpdateFlagSizes();  // Atualiza os tamanhos das bandeiras
+
+        // Atualiza os tamanhos das bandeiras e anima a nova bandeira
+        UpdateFlagSizes();  
         PlayVideo(currentFlagIndex);  // Reproduz o vídeo correspondente
+
+        // Inicia animação de aumento do tamanho para a nova bandeira
+        StartCoroutine(AnimateFlagSize(flagImages[currentFlagIndex], enlargedSize));
+
+        // Inicia o efeito de piscar para a nova bandeira
+        blinkCoroutine = StartCoroutine(BlinkFlag(flagImages[currentFlagIndex]));
     }
 
     // Atualiza os tamanhos das imagens das bandeiras
@@ -57,7 +81,10 @@ public class StageSelectController : MonoBehaviour
         for (int i = 0; i < flagImages.Length; i++)
         {
             // Altera o tamanho da bandeira ativa e mantém o tamanho padrão para as outras
-            flagImages[i].rectTransform.sizeDelta = (i == currentFlagIndex) ? enlargedSize : defaultSize;
+            if (i != currentFlagIndex)
+            {
+                flagImages[i].rectTransform.sizeDelta = defaultSize;
+            }
         }
     }
 
@@ -87,7 +114,39 @@ public class StageSelectController : MonoBehaviour
             videos[currentFlagIndex].Stop();
         }
     }
+
+    // Faz a bandeira ativa piscar (aumentando e diminuindo)
+    private IEnumerator BlinkFlag(Image flag)
+    {
+        while (true)
+        {
+            // Aumenta o tamanho
+            yield return StartCoroutine(AnimateFlagSize(flag, enlargedSize));
+
+            // Diminui o tamanho
+            yield return StartCoroutine(AnimateFlagSize(flag, defaultSize));
+        }
+    }
+
+    // Anima o aumento ou diminuição do tamanho da bandeira
+    private IEnumerator AnimateFlagSize(Image flag, Vector2 targetSize)
+    {
+        Vector2 initialSize = flag.rectTransform.sizeDelta;
+        float time = 0f;
+        float duration = 0.5f; // Duração da animação
+
+        while (time < duration)
+        {
+            flag.rectTransform.sizeDelta = Vector2.Lerp(initialSize, targetSize, time / duration);
+            time += Time.deltaTime;
+            yield return null;
+        }
+
+        flag.rectTransform.sizeDelta = targetSize; // Garante que o tamanho final é exatamente o target
+    }
 }
+
+
 
 
 
