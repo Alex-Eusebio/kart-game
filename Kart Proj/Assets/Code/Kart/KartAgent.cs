@@ -47,6 +47,9 @@ public class KartAgent : Agent
     {
         var input = actions.ContinuousActions;
 
+        if (input[1] < 0)
+            AddReward(Mathf.Lerp(-0.01f, -0.05f, input[1]));
+
         carSystem.ApplyAcceleration(input[1]);
         carSystem.Steer(input[0]);
         carSystem.Drift(input[2]);

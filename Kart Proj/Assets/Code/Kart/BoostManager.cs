@@ -7,24 +7,24 @@ using UnityEngine.ProBuilder;
 public class BoostManager : MonoBehaviour
 {
     [SerializeField]
-    List<Boost> boosts = new List<Boost>();
+    protected List<Boost> boosts = new List<Boost>();
     CarSystem carSystem;
-    BenSpecial[] allBenSpecials;
-
-    private void Start()
+    protected BenSpecial[] allBenSpecials;
+    
+    protected virtual void Start()
     {
         allBenSpecials = FindObjectsOfType<BenSpecial>();
 
         carSystem = GetComponent<CarSystem>();
     }
 
-    private void FixedUpdate()
+    protected void FixedUpdate()
     {
         ManageBoosts();
         CheckBonusStats();
     }
 
-    private void CheckBonusStats()
+    protected virtual void CheckBonusStats()
     {
         float bonusSpeed = 0;
         float bonusSteer = 0;
@@ -47,7 +47,7 @@ public class BoostManager : MonoBehaviour
         carSystem.animControll.UpdateBonusSpeed(bonusSpeed);
     }
 
-    void ManageBoosts()
+    protected void ManageBoosts()
     {
         foreach (Boost boost in boosts.ToList())
         {
@@ -78,7 +78,7 @@ public class BoostManager : MonoBehaviour
         }
     }
 
-    private void RemoveBoost(Boost boost)
+    protected void RemoveBoost(Boost boost)
     {
         boosts.Remove(boost); 
     }

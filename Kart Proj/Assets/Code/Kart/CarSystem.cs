@@ -9,9 +9,6 @@ using System.Dynamic;
 
 public class CarSystem : MonoBehaviour
 {
-    //private PostProcessVolume postVolume;
-    //private PostProcessProfile postProfile;
-
     public Transform kartModel;
     public Transform kartNormal;
     public Rigidbody sphere;
@@ -67,7 +64,6 @@ public class CarSystem : MonoBehaviour
 
     [Header("Animator")]
     public AnimationController animControll;
-
 
     [Header("Grounded Stats")]
     public float bonusGravity;
@@ -270,7 +266,6 @@ public class CarSystem : MonoBehaviour
             int dir = steer > 0 ? 1 : -1;
             float amount = Mathf.Abs(steer);
             float debuffValue = Mathf.Lerp(0, steeringDebuff, amount);
-            Debug.Log(debuffValue);
             Steer(dir, amount);
             if (speed > steeringDebuff + 2)
                 speed -= debuffValue;
