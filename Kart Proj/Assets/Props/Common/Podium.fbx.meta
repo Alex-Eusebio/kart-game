@@ -28,7 +28,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Cream
-    second: {fileID: 2100000, guid: 78b05c81ee070f24b8ebe7be82e36252, type: 2}
+    second: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
