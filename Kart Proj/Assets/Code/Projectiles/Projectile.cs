@@ -10,10 +10,9 @@ public abstract class Projectile : MonoBehaviour
 
     protected virtual void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.gameObject);
-        if (other.GetComponent<CarSystem>() != null /*|| other.GetComponent<AiCarSystem>() != null*/)
+        if (other.GetComponent<CarSystem>() != null || other.GetComponent<AICarSystem>() != null)
         {
-            if (other.GetComponent<CarSystem>() != creator)
+            if (other.GetComponent<CarSystem>() != creator || other.GetComponent<AICarSystem>() != creator)
             {
                 Effect(other);
 

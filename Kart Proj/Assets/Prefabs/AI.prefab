@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 5728554766467452472}
   - component: {fileID: 5677391980426118450}
   - component: {fileID: 2588772893580130672}
+  - component: {fileID: 3843948519451861542}
   m_Layer: 3
   m_Name: Kart
   m_TagString: Untagged
@@ -58,25 +59,34 @@ MonoBehaviour:
   kartModel: {fileID: 6518262514905910846}
   kartNormal: {fileID: 7034196224785165130}
   sphere: {fileID: 4136492240716495676}
+  boostManager: {fileID: 0}
+  special: {fileID: 0}
   speed: 0
+  bonusSpeed: 0
   currentSpeed: 0
-  currentSteer: 0
+  steerInput: 0
+  speedInput: 0
+  isTryingToDrift: 0
+  bonusSteer: 0
   driftPower: 0
-  minDriftPower: 40
-  driftPowerPerLvl: 80
-  driftBoostPerLvl: 50
   driftMode: 0
   drifting: 0
-  isTryingToDrift: 0
   isGrounded: 0
   onRoad: 0
+  isStunned: 0
+  stunDuration: 0
   maxSpeed: 80
   backwardsSpeed: -15
   acceleration: 8
+  minDriftPower: 40
+  driftPowerPerLvl: 80
+  driftBoostPerLvl: 50
+  driftBoostDurationPerLvl: 0.7
   driftSpeedDebuff: 4
   driftPassiveSteeringMulti: 1.6
   steering: 13
   steeringDriftMulti: 0.42
+  steeringDebuff: 4
   gravity: 1
   layerMask:
     serializedVersion: 2
@@ -84,9 +94,10 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 0
-  frontWheels: {fileID: 3116369572165924115}
-  backWheels: {fileID: 4776764368576013894}
-  steeringWheel: {fileID: 6418145159621599518}
+  ignoreStuns: 0
+  ignoreEnemySlows: 0
+  ignoreRoadSlows: 0
+  animControll: {fileID: 826319758539230561}
   bonusGravity: 0
   gravityScale: 70
   airBorneTime: 0.2
@@ -274,6 +285,19 @@ MonoBehaviour:
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
   m_StartVerticalOffset: 4
   m_EndVerticalOffset: 0
+--- !u!114 &3843948519451861542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 713885144395614289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddceffe6096f02649bcd0e37097846e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boosts: []
 --- !u!1 &956760711398695323
 GameObject:
   m_ObjectHideFlags: 0
@@ -380,6 +404,7 @@ GameObject:
   - component: {fileID: 6518262514905910846}
   - component: {fileID: 7964749036667173796}
   - component: {fileID: 5261459097062622668}
+  - component: {fileID: 826319758539230561}
   m_Layer: 3
   m_Name: Car
   m_TagString: Car
@@ -455,6 +480,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &826319758539230561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2621778200463138833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbc1113ac3db1e647b379203c9832d57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterAnimator: {fileID: 0}
+  carAnimator: {fileID: 0}
+  frontWheels: []
+  backWheels: []
+  steering: 0
+  bonusSpeed: 0
+  isOnSpecial: 0
+  isStunned: 0
 --- !u!1 &4469739469312493226
 GameObject:
   m_ObjectHideFlags: 0

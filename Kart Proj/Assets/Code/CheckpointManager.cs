@@ -6,7 +6,10 @@ using UnityEngine;
 public class CheckpointManager : MonoBehaviour
 {
     public float MaxTimeToReachNextCheckpoint = 30f;
-    public float TimeLeft = 30f;
+    public float TimeLeft = 30f; 
+    int maxLaps;
+    [SerializeField]
+    int curLaps;
 
     public KartAgent kartAgent;
     public Checkpoint nextCheckPointToReach;
@@ -21,6 +24,11 @@ public class CheckpointManager : MonoBehaviour
     {
         Checkpoints = FindObjectOfType<Checkpoints>().checkPoints;
         ResetCheckpoints();
+    }
+
+    public void SetMaxLap(int laps)
+    {
+        maxLaps = laps;
     }
 
     public void ResetCheckpoints()
@@ -53,8 +61,17 @@ public class CheckpointManager : MonoBehaviour
         if (CurrentCheckpointIndex >= Checkpoints.Count)
         {
             kartAgent.AddReward(1f * Checkpoints.Count);
-            Debug.Log($"{gameObject.transform.parent.name} COMPLETED! ({kartAgent.GetCumulativeReward()})");
-            kartAgent.EndEpisode();
+            curLaps++;
+
+            if (curLaps >= maxLaps)
+            {
+                Debug.Log($"{gameObject.transform.parent.name} COMPLETED! ({kartAgent.GetCumulativeReward()})");
+                kartAgent.EndEpisode();
+            } else
+            {
+                Debug.Log($"{gameObject.transform.parent.name} Completed the {curLaps} lap! ({kartAgent.GetCumulativeReward()})");
+                ResetCheckpoints();
+            }
         }
         else
         {

@@ -9807,6 +9807,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ben
       objectReference: {fileID: 0}
+    - target: {fileID: 665999898493642148, guid: 189de88e3007603469433377a1c26746, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8313928737931796941, guid: 189de88e3007603469433377a1c26746, type: 3}
       propertyPath: _camera
       value: 
@@ -14467,6 +14471,7 @@ MonoBehaviour:
   - {fileID: 931318169}
   - {fileID: 327763077}
   - {fileID: 1832217712}
+  maxLaps: 3
 --- !u!4 &1402107744 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5075192125091602741, guid: 8ab9de58b2a53a84fa5c1f0c1972e9a8, type: 3}
