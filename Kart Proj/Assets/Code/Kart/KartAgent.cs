@@ -36,7 +36,7 @@ public class KartAgent : Agent
         else if (!checkpointManager.nextCheckPointToReach.isOnTurn && carSystem.isTryingToDrift)
             AddReward(-0.08f);
             
-        if (!carSystem.onRoad)
+        if (!carSystem.onRoad && !carSystem.ignoreRoadSlows)
             AddReward(-0.07f);
 
         AddReward(-0.001f);
