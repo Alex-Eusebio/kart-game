@@ -30,6 +30,11 @@ public class CarSystem : MonoBehaviour
     public float driftPower;
     public int driftMode = 0;
 
+    [Header("Inputs")]
+    public float steerInput;
+    public float speedInput;
+    public bool isTryingToDrift = false;
+
     bool first, second, third;
     Color c;
     int driftDirection;

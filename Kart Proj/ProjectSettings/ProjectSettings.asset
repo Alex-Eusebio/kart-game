@@ -160,7 +160,8 @@ PlayerSettings:
   resetResolutionOnWindowResize: 0
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
-  applicationIdentifier: {}
+  applicationIdentifier:
+    Standalone: com.DefaultCompany.Kart-Proj
   buildNumber:
     Standalone: 0
     VisionOS: 0
@@ -665,7 +666,8 @@ PlayerSettings:
     tvOS: DOTWEEN;UNITY_POST_PROCESSING_STACK_V2
   additionalCompilerArguments: {}
   platformArchitecture: {}
-  scriptingBackend: {}
+  scriptingBackend:
+    Standalone: 1
   il2cppCompilerConfiguration: {}
   il2cppCodeGeneration: {}
   managedStrippingLevel:
@@ -694,8 +696,8 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: Kart Proj
-  metroPackageVersion: 
+  metroPackageName: KartProj
+  metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
@@ -703,7 +705,7 @@ PlayerSettings:
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: Kart Proj
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: Kart Proj
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0
