@@ -66,6 +66,7 @@ public class CheckpointManager : MonoBehaviour
             if (curLaps >= maxLaps)
             {
                 Debug.Log($"{gameObject.transform.parent.name} COMPLETED! ({kartAgent.GetCumulativeReward()})");
+                curLaps = 0;
                 kartAgent.EndEpisode();
             } else
             {

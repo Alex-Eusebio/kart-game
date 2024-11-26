@@ -28,6 +28,7 @@ public class AICarSystem : MonoBehaviour
     public float steerInput;
     public float speedInput;
     public bool isTryingToDrift = false;
+    public bool wasTryingToDrift = false;
     float rotate, currentRotate;
     public float bonusSteer;
     public float driftPower;
@@ -178,7 +179,7 @@ public class AICarSystem : MonoBehaviour
 
             }
 
-            if (isTryingToDrift && drifting)
+            if (wasTryingToDrift && drifting)
             {
                 Boost();
             }
@@ -318,6 +319,8 @@ public class AICarSystem : MonoBehaviour
 
         if (special && !special.hasSpecialCharge)
             special.Charge();
+
+        wasTryingToDrift = isTryingToDrift;
     }
 
     public int GetDriftLevel()
