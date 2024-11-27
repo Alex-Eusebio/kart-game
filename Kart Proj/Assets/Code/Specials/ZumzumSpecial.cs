@@ -16,6 +16,8 @@ public class ZumzumSpecial : SpecialAbility
     [SerializeField]
     private float cooldown;
     private float inCooldown;
+    [SerializeField]
+    private float puddleDuration;
 
     [Header("GameObjects")]
     [SerializeField]
@@ -42,7 +44,7 @@ public class ZumzumSpecial : SpecialAbility
     void Throw()
     {
         GameObject projectile = MonoBehaviour.Instantiate(throwablePrefab, throwSpawnPoint.position, Quaternion.identity);
-        projectile.GetComponent<HiveProjectile>().SetSlow(slowDuration, slowStrenght);
+        projectile.GetComponent<HiveProjectile>().SetSlow(slowDuration, slowStrenght, puddleDuration);
         projectile.GetComponent<HiveProjectile>().creator = carSystem;
         Rigidbody rb = projectile.GetComponent<Rigidbody>();
 
