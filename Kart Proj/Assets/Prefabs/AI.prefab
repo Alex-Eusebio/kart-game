@@ -64,9 +64,6 @@ MonoBehaviour:
   speed: 0
   bonusSpeed: 0
   currentSpeed: 0
-  steerInput: 0
-  speedInput: 0
-  isTryingToDrift: 0
   bonusSteer: 0
   driftPower: 0
   driftMode: 0
@@ -75,6 +72,10 @@ MonoBehaviour:
   onRoad: 0
   isStunned: 0
   stunDuration: 0
+  steerInput: 0
+  speedInput: 0
+  isTryingToDrift: 0
+  usedSpecial: 0
   maxSpeed: 80
   backwardsSpeed: -15
   acceleration: 8
@@ -145,7 +146,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 0}
+  m_Model: {fileID: 5022602860645237092, guid: 24d51bafe6d894047a5056544b5afb75, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: KartAI

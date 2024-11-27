@@ -50,9 +50,7 @@ public class KartAgent : Agent
         if (input[1] < 0)
             AddReward(Mathf.Lerp(-0.01f, -0.05f, input[1]));
 
-        carSystem.ApplyAcceleration(input[1]);
-        carSystem.Steer(input[0]);
-        carSystem.Drift(input[2]);
+        carSystem.GetAiInputs(input[1], input[0], Mathf.FloorToInt(input[2]) != 0);
     }
 
     //For manual testing with human input, the actionsOut defined here will be sent to OnActionsRecieved
