@@ -14,7 +14,7 @@ public class DebugCanvas : MonoBehaviour
     TextMeshProUGUI isDriftTxt;
 
     [Header("Car"), SerializeField]
-    CarSystem car;
+    public CarSystem car;
 
     // Update is called once per frame
     void Update()
