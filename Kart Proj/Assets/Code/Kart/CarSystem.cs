@@ -28,22 +28,24 @@ public class CarSystem : MonoBehaviour
     float rotate, currentRotate;
     public float bonusSteer;
     public float driftPower;
-    public int driftMode = 0;
-
-    [Header("Inputs")]
-    public float steerInput;
-    public float speedInput;
-    public bool isTryingToDrift = false;
-
-    bool first, second, third;
-    Color c;
-    int driftDirection;
-
+    public int driftMode = 0; 
     public bool drifting;
     public bool isGrounded;
     public bool onRoad;
     public bool isStunned;
     public float stunDuration;
+
+    bool first, second, third;
+    Color c;
+    int driftDirection;
+
+    [Header("Inputs")]
+    public float steerInput;
+    public float speedInput;
+    public bool isTryingToDrift = false;
+    protected bool wasTryingToDrift = false;
+    public bool usedSpecial = false;
+    bool wasSpecial = false;
 
     [Header("Parameters")]
     public float maxSpeed = 30f;
@@ -152,6 +154,8 @@ public class CarSystem : MonoBehaviour
 
     void Update()
     {
+        GetInputs();
+
         //Follow Collider
         transform.position = sphere.transform.position - new Vector3(0, 0.75f, 0);
 
@@ -159,31 +163,23 @@ public class CarSystem : MonoBehaviour
 
         if (!isStunned || ignoreStuns)
         {
-            steer = Input.GetAxis("Horizontal");
+            // Handle steering
+            steer = steerInput;
 
-            //Drift
-            if (Input.GetButtonDown("Jump") && !drifting && steer != 0)
+            // Start drifting
+            if (isTryingToDrift && !drifting && steer != 0)
             {
-                drifting = true;
-                driftDirection = steer > 0 ? 1 : -1;
-
-                /*foreach (ParticleSystem p in primaryParticles)
-                {
-                    p.startColor = Color.clear;
-                    p.Play();
-                }*/
-
-                kartModel.parent.DOComplete();
-                kartModel.parent.DOPunchPosition(transform.up * .2f, .3f, 5, 1);
-
+                StartDrifting(steer);
             }
 
-            if (Input.GetButtonUp("Jump") && drifting)
+            // Stop drifting when the button is released
+            if (!isTryingToDrift && drifting)
             {
-                Boost();
+                StopDrifting();
             }
 
-            if (Input.GetButtonDown("Fire1") && special != null)
+            // Activate special
+            if (usedSpecial && special != null)
             {
                 special.Activate();
             }
@@ -214,6 +210,34 @@ public class CarSystem : MonoBehaviour
             else
                 animControll.ChangeSteer(driftDirection);
         }
+    }
+
+    protected virtual void GetInputs()
+    {
+        speedInput = Input.GetAxis("Vertical");
+        steerInput = Input.GetAxis("Horizontal");
+        isTryingToDrift = Input.GetButton("Jump");
+        usedSpecial = Input.GetButton("Fire1");
+    }
+
+    // Start drifting
+    private void StartDrifting(float steer)
+    {
+        drifting = true;
+        driftDirection = steer > 0 ? 1 : -1;
+        wasTryingToDrift = true; // Update the previous state
+
+        // Example: Play effects or animations for drifting
+        kartModel.parent.DOComplete();
+        kartModel.parent.DOPunchPosition(transform.up * .2f, .3f, 5, 1);
+    }
+
+    // Stop drifting
+    private void StopDrifting()
+    {
+        drifting = false; // Stop the drifting state
+        wasTryingToDrift = false; // Reset the previous state
+        Boost(); // Apply the boost mechanic
     }
 
     private void FixedUpdate()
@@ -254,12 +278,12 @@ public class CarSystem : MonoBehaviour
 
         if (!isStunned || ignoreStuns)
         {
-            steer = Input.GetAxis("Horizontal");
+            steer = steerInput;
 
             //Accelerate
-            if (Input.GetAxis("Vertical") > 0)
+            if (speedInput > 0)
                 speed = maxSpeed;
-            else if (Input.GetAxis("Vertical") < 0)
+            else if (speedInput < 0)
             {
                 speed = backwardsSpeed;
             }

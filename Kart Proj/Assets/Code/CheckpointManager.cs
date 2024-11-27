@@ -47,6 +47,7 @@ public class CheckpointManager : MonoBehaviour
         {
             kartAgent.AddReward(-5f);
             kartAgent.EndEpisode();
+            curLaps = 0;
         }
     }
 
