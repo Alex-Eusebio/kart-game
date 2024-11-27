@@ -51,6 +51,12 @@ public class CharacterController : MonoBehaviour
         {
             ChangeCharacter(1);
         }
+
+        // Detecta quando o jogador pressiona Enter ou Espaço para avançar para a próxima cena
+        if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space))
+        {
+            OnEnterButtonClicked();
+        }
     }
 
     public void OnNextButtonClicked()
@@ -164,6 +170,17 @@ public class CharacterController : MonoBehaviour
         Handling.minValue = minValue;
         Handling.maxValue = maxValue;
     }
+
+    // Método chamado quando o jogador clica Enter ou Espaço
+    public void OnEnterButtonClicked()
+    {
+        // Salva o nome da personagem escolhida no PlayerPrefs
+        PlayerPrefs.SetString("SelectedCharacter", characters[currentCharacterIndex].Name);
+        PlayerPrefs.Save();  // Garante que o valor seja salvo
+        Debug.Log("Personagem escolhida: " + characters[currentCharacterIndex].Name);
+        // Aqui você pode adicionar o código para avançar para a próxima cena
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Stage Select");
+    }
 }
 
 [System.Serializable]
@@ -184,6 +201,8 @@ public class Character
         Handling = handling;
     }
 }
+
+
 
 
 

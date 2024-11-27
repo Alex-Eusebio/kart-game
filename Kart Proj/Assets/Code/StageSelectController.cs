@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
-using System.Collections;
+using System.Collections; // Adicione esta linha
 
 public class StageSelectController : MonoBehaviour
 {
@@ -19,6 +19,10 @@ public class StageSelectController : MonoBehaviour
 
     void Start()
     {
+        // Recupera a personagem escolhida na cena anterior
+        string selectedCharacter = PlayerPrefs.GetString("SelectedCharacter", "Ben");  // "Ben" é o valor padrão caso não tenha sido salvo nada
+        Debug.Log("Personagem escolhida na cena anterior: " + selectedCharacter);
+
         // Configura todos os vídeos para ficarem em loop
         foreach (VideoPlayer video in videos)
         {
@@ -45,9 +49,16 @@ public class StageSelectController : MonoBehaviour
         {
             ChangeFlag(1);  // Muda para a próxima bandeira
         }
+
+        // Controle de avanço para a próxima cena
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            string selectedCharacter = PlayerPrefs.GetString("SelectedCharacter", "Ben");
+            Debug.Log("Personagem escolhida: " + selectedCharacter);
+            UnityEngine.SceneManagement.SceneManager.LoadScene("NextScene");  // Troque "NextScene" pela cena de destino
+        }
     }
 
-    // Muda a bandeira com base na direção
     private void ChangeFlag(int direction)
     {
         // Para o vídeo atual antes de mudar de bandeira
@@ -91,22 +102,19 @@ public class StageSelectController : MonoBehaviour
     // Reproduz o vídeo correspondente à bandeira selecionada
     private void PlayVideo(int index)
     {
-        // Verifica se o índice é válido antes de tentar reproduzir o vídeo
         if (index >= 0 && index < videos.Length)
         {
-            // Para todos os vídeos (isso é importante para garantir que só um vídeo seja reproduzido de cada vez)
             foreach (VideoPlayer video in videos)
             {
-                video.Stop();  // Para todos os vídeos
+                video.Stop();
             }
 
-            // Começa o vídeo correspondente ao índice da bandeira
             videos[index].Play();
-            videoDisplay.texture = videos[index].texture;  // Atribui o vídeo ao RawImage para exibir na tela
+            videoDisplay.texture = videos[index].texture;
         }
     }
 
-    // Para o vídeo atual (caso haja) quando mudar de bandeira
+    // Para o vídeo atual
     private void StopCurrentVideo()
     {
         if (currentFlagIndex >= 0 && currentFlagIndex < videos.Length)
@@ -115,25 +123,20 @@ public class StageSelectController : MonoBehaviour
         }
     }
 
-    // Faz a bandeira ativa piscar (aumentando e diminuindo)
     private IEnumerator BlinkFlag(Image flag)
     {
         while (true)
         {
-            // Aumenta o tamanho
             yield return StartCoroutine(AnimateFlagSize(flag, enlargedSize));
-
-            // Diminui o tamanho
             yield return StartCoroutine(AnimateFlagSize(flag, defaultSize));
         }
     }
 
-    // Anima o aumento ou diminuição do tamanho da bandeira
     private IEnumerator AnimateFlagSize(Image flag, Vector2 targetSize)
     {
         Vector2 initialSize = flag.rectTransform.sizeDelta;
         float time = 0f;
-        float duration = 0.5f; // Duração da animação
+        float duration = 0.5f;
 
         while (time < duration)
         {
@@ -142,9 +145,12 @@ public class StageSelectController : MonoBehaviour
             yield return null;
         }
 
-        flag.rectTransform.sizeDelta = targetSize; // Garante que o tamanho final é exatamente o target
+        flag.rectTransform.sizeDelta = targetSize;
     }
 }
+
+
+
 
 
 
