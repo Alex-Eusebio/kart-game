@@ -9,6 +9,8 @@ using System.Dynamic;
 
 public class AICarSystem : CarSystem
 {
+    public KartAgent agent;
+
     public void GetAiInputs(float speed, float steer, bool isDrift)
     {
         speedInput = speed;

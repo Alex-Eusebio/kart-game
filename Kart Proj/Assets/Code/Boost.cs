@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Boost : ScriptableObject
 {
-    [SerializeField]
-    float duration;
+    public float duration;
     public float bonusSpeed;
     public float bonusSteering;
 

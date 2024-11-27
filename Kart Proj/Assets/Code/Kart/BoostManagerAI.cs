@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.ProBuilder;
 
@@ -12,30 +13,13 @@ public class BoostManagerAI : BoostManager
     {
         allBenSpecials = FindObjectsOfType<BenSpecial>();
 
+        carSystem = GetComponent<AICarSystem>();
         carSystemAi = GetComponent<AICarSystem>();
     }
 
-    protected override void CheckBonusStats()
+    public override void AddBoost(Boost boost)
     {
-        float bonusSpeed = 0;
-        float bonusSteer = 0;
-        foreach (Boost boost in boosts)
-        {
-            bonusSpeed += boost.bonusSpeed;
-            bonusSteer += boost.bonusSteering;
-        }
-
-        if (carSystemAi.currentSpeed + bonusSpeed > 0)
-            carSystemAi.bonusSpeed = bonusSpeed;
-        else
-        {
-            carSystemAi.bonusSpeed = 0;
-            bonusSpeed = 0;
-        }
-
-        carSystemAi.bonusSteer = bonusSteer;
-
-        carSystemAi.animControll.UpdateBonusSpeed(bonusSpeed);
+        carSystemAi.agent.AddReward(0.01f * boost.duration);
+        base.AddBoost(boost);
     }
-
 }

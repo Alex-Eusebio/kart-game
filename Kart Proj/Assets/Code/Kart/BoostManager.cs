@@ -8,7 +8,7 @@ public class BoostManager : MonoBehaviour
 {
     [SerializeField]
     protected List<Boost> boosts = new List<Boost>();
-    CarSystem carSystem;
+    protected CarSystem carSystem;
     protected BenSpecial[] allBenSpecials;
     
     protected virtual void Start()
@@ -24,7 +24,7 @@ public class BoostManager : MonoBehaviour
         CheckBonusStats();
     }
 
-    protected virtual void CheckBonusStats()
+    protected void CheckBonusStats()
     {
         float bonusSpeed = 0;
         float bonusSteer = 0;
@@ -60,7 +60,7 @@ public class BoostManager : MonoBehaviour
         }
     }
 
-    public void AddBoost(Boost boost)
+    public virtual void AddBoost(Boost boost)
     {
         boosts.Add(boost);
 

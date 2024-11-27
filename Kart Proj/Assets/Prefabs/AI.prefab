@@ -103,6 +103,7 @@ MonoBehaviour:
   gravityScale: 70
   airBorneTime: 0.2
   airBorneTimer: 0
+  agent: {fileID: 7317988881178992869}
 --- !u!135 &5673087399909195987
 SphereCollider:
   m_ObjectHideFlags: 0
