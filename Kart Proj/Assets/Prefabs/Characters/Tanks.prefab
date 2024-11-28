@@ -85,7 +85,6 @@ MonoBehaviour:
   - {fileID: 8088568870717669571}
   backWheels:
   - {fileID: 8325305539503974089}
-  steeringWheel: {fileID: 0}
   steering: 0
   bonusSpeed: 0
   isOnSpecial: 0
@@ -305,7 +304,7 @@ Transform:
   m_GameObject: {fileID: 4519821333649109002}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.6, z: -3.71}
+  m_LocalPosition: {x: 0, y: 1.85, z: -3.71}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -411,6 +410,10 @@ MonoBehaviour:
   onRoad: 0
   isStunned: 0
   stunDuration: 0
+  steerInput: 0
+  speedInput: 0
+  isTryingToDrift: 0
+  usedSpecial: 0
   maxSpeed: 65
   backwardsSpeed: -10
   acceleration: 5
@@ -500,10 +503,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resource: 0
-  throwingStrenght: 180
-  throwingBonusSpeedPer: 0.5
+  maxResource: 0
+  hasSpecialCharge: 0
+  throwingStrenght: 140
+  throwingBonusSpeedPer: 0.55
   stunDuration: 1.5
-  explosionDuration: 5
+  rocketSpeed: 0.5
   cooldown: 5
   throwablePrefab: {fileID: 7367894296141030729, guid: c60849d66e00cd642bed62e1cb7d987b, type: 3}
   throwSpawnPoint: {fileID: 8784941520373512294}
@@ -532,7 +537,7 @@ Transform:
   m_GameObject: {fileID: 5960597877002866917}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.37, z: -5.41}
+  m_LocalPosition: {x: 0, y: 2.5, z: -5.53}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
