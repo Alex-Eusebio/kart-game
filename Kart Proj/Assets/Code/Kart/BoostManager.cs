@@ -64,7 +64,7 @@ public class BoostManager : MonoBehaviour
     {
         boosts.Add(boost);
 
-        if (allBenSpecials.Count() > 0)
+        if (allBenSpecials.Count() > 0 && boost.bonusSpeed > 0)
         {
             foreach (BenSpecial special in allBenSpecials)
             {
