@@ -33,19 +33,22 @@ public class HiveProjectile : Projectile
 
     protected override void Effect(Collider other)
     {
-        if (other.GetComponent<CarSystem>() != creator)
-        {
-            Boost slow = ScriptableObject.CreateInstance<Boost>();
-            slow.Setup(slowStrenght, 0, slowDuration);
+        if (other.GetComponent<CarSystem>() != null) {
+            if (other.GetComponent<CarSystem>() != creator)
+            {
+                Boost slow = ScriptableObject.CreateInstance<Boost>();
+                slow.Setup(slowStrenght, 0, slowDuration);
 
-            other.GetComponent<CarSystem>().boostManager.AddBoost(slow);
+                other.GetComponent<CarSystem>().boostManager.AddBoost(slow);
 
-        } else
-        {
-            Boost slow = ScriptableObject.CreateInstance<Boost>();
-            slow.Setup(-slowStrenght, 0, slowDuration);
+            }
+            else
+            {
+                Boost slow = ScriptableObject.CreateInstance<Boost>();
+                slow.Setup(-slowStrenght, 0, slowDuration);
 
-            other.GetComponent<CarSystem>().boostManager.AddBoost(slow);
+                other.GetComponent<CarSystem>().boostManager.AddBoost(slow);
+            }
         }
     }
 
