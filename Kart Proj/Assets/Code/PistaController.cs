@@ -7,6 +7,8 @@ public class PistaController : MonoBehaviour
     public Transform[] spawnPoints;        // Pontos de spawn para a personagem
     public Camera mainCamera;              // A câmera principal para seguir a personagem
 
+    public DebugCanvas debugCanvas;
+
     private GameObject spawnedCharacter;  // Armazenará a personagem que foi spawnada
     private Transform characterTransform; // Referência para o transform da personagem para a câmera seguir
 
@@ -42,6 +44,7 @@ public class PistaController : MonoBehaviour
                 // Instancia a personagem na posição do ponto de spawn
                 spawnedCharacter = Instantiate(characterPrefab, spawnPoint.position, spawnPoint.rotation);
                 spawnedCharacter.GetComponentInChildren <CameraFollow>()._camera=mainCamera;
+                debugCanvas.SetCar(spawnedCharacter.GetComponentInChildren<CarSystem>());
 
                 // Exibe no console que a personagem foi spawnada
                 Debug.Log("Personagem " + characterName + " foi spawnada na posição " + spawnPoint.position);
