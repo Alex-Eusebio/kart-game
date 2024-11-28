@@ -8864,13 +8864,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3919090456375274765, guid: ed93a58a075497c4486ca597f369d756, type: 3}
-      propertyPath: _camera
-      value: 
-      objectReference: {fileID: 1149226916}
     - target: {fileID: 5075192125091602741, guid: ed93a58a075497c4486ca597f369d756, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 34.72
+      value: 30.3
       objectReference: {fileID: 0}
     - target: {fileID: 5075192125091602741, guid: ed93a58a075497c4486ca597f369d756, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8878,7 +8874,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5075192125091602741, guid: ed93a58a075497c4486ca597f369d756, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 113.93
+      value: 297.7
       objectReference: {fileID: 0}
     - target: {fileID: 5075192125091602741, guid: ed93a58a075497c4486ca597f369d756, type: 3}
       propertyPath: m_LocalRotation.w
@@ -8914,14 +8910,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5493390178810718564, guid: ed93a58a075497c4486ca597f369d756, type: 3}
       propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8680975895763679563, guid: ed93a58a075497c4486ca597f369d756, type: 3}
-      propertyPath: isStunned
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8680975895763679563, guid: ed93a58a075497c4486ca597f369d756, type: 3}
-      propertyPath: stunDuration
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -12117,7 +12105,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 665999898493642148, guid: 352db47fad1f631418c31ebe97c8d8f0, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8313928737931796941, guid: 352db47fad1f631418c31ebe97c8d8f0, type: 3}
       propertyPath: _camera

@@ -66,6 +66,10 @@ MonoBehaviour:
   onRoad: 0
   isStunned: 0
   stunDuration: 0
+  steerInput: 0
+  speedInput: 0
+  isTryingToDrift: 0
+  usedSpecial: 0
   maxSpeed: 70
   backwardsSpeed: -15
   acceleration: 7
@@ -77,6 +81,7 @@ MonoBehaviour:
   driftPassiveSteeringMulti: 1.6
   steering: 13
   steeringDriftMulti: 0.43
+  steeringDebuff: 4
   gravity: 22
   layerMask:
     serializedVersion: 2
@@ -290,7 +295,6 @@ MonoBehaviour:
   - {fileID: 3116369572165924115}
   backWheels:
   - {fileID: 4776764368576013894}
-  steeringWheel: {fileID: 0}
   steering: 0
   bonusSpeed: 0
   isOnSpecial: 0
