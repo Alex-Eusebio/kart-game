@@ -16,7 +16,6 @@ public class CarSystem : MonoBehaviour
     public BoostManager boostManager;
     [SerializeField]
     public SpecialAbility special;
-    SpawnPointManager spawnPointManager;
 
     //public List<ParticleSystem> primaryParticles = new List<ParticleSystem>();
     //public List<ParticleSystem> secondaryParticles = new List<ParticleSystem>();
@@ -85,12 +84,6 @@ public class CarSystem : MonoBehaviour
 
     float distToGround;
     private Quaternion initialRotation;
-
-    private void Awake()
-    {
-        if (!spawnPointManager)
-            spawnPointManager = FindObjectOfType<SpawnPointManager>();
-    }
 
     void Start()
     {
@@ -445,15 +438,6 @@ public class CarSystem : MonoBehaviour
             pmain.startColor = c;
             p.Play();
         }*/
-    }
-
-    public void Respawn()
-    {
-        Vector3 pos = spawnPointManager.SelectRandomSpawnpoint();
-        sphere.MovePosition(pos);
-        transform.position = pos - new Vector3(0, 0.4f, 0);
-        transform.rotation = Quaternion.identity;
-        transform.eulerAngles = new Vector3(0, -90, 0);
     }
 
     private void Speed(float x)

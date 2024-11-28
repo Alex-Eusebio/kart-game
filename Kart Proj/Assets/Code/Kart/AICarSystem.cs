@@ -10,6 +10,14 @@ using System.Dynamic;
 public class AICarSystem : CarSystem
 {
     public KartAgent agent;
+    SpawnPointManager spawnPointManager;
+    Vector3 rotatio;
+    private void Awake()
+    {
+        rotatio = gameObject.transform.eulerAngles;
+        if (!spawnPointManager)
+            spawnPointManager = FindObjectOfType<SpawnPointManager>();
+    }
 
     public void GetAiInputs(float speed, float steer, bool isDrift)
     {
@@ -22,5 +30,15 @@ public class AICarSystem : CarSystem
     protected override void GetInputs()
     {
         
+    }
+
+    public void Respawn()
+    {
+        Vector3 pos = spawnPointManager.SelectRandomSpawnpoint();
+        sphere.MovePosition(pos);
+        transform.position = pos - new Vector3(0, 0.4f, 0);
+        transform.rotation = Quaternion.identity;
+        transform.eulerAngles = rotatio;
+        driftPower = 0;
     }
 }

@@ -76,19 +76,19 @@ MonoBehaviour:
   speedInput: 0
   isTryingToDrift: 0
   usedSpecial: 0
-  maxSpeed: 80
+  maxSpeed: 70
   backwardsSpeed: -15
-  acceleration: 8
+  acceleration: 7
   minDriftPower: 40
   driftPowerPerLvl: 80
-  driftBoostPerLvl: 50
-  driftBoostDurationPerLvl: 0.7
-  driftSpeedDebuff: 4
+  driftBoostPerLvl: 25
+  driftBoostDurationPerLvl: 0.4
+  driftSpeedDebuff: 3
   driftPassiveSteeringMulti: 1.6
   steering: 13
-  steeringDriftMulti: 0.42
+  steeringDriftMulti: 0.43
   steeringDebuff: 4
-  gravity: 1
+  gravity: 22
   layerMask:
     serializedVersion: 2
     m_Bits: 55
@@ -147,7 +147,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 24d51bafe6d894047a5056544b5afb75, type: 3}
+  m_Model: {fileID: 0}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: KartAI
