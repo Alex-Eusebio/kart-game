@@ -43,6 +43,7 @@ public class ZumzumSpecial : SpecialAbility
 
     void Throw()
     {
+        carSystem.animControll.UpdateSpecial(true);
         GameObject projectile = MonoBehaviour.Instantiate(throwablePrefab, throwSpawnPoint.position, Quaternion.identity);
         projectile.GetComponent<HiveProjectile>().SetSlow(slowDuration, slowStrenght, puddleDuration);
         projectile.GetComponent<HiveProjectile>().creator = carSystem;
@@ -52,6 +53,7 @@ public class ZumzumSpecial : SpecialAbility
         {
             rb.velocity = throwSpawnPoint.forward * (throwingStrenght + (carSystem.currentSpeed + carSystem.bonusSpeed) * throwingBonusSpeedPer);
         }
+        carSystem.animControll.UpdateSpecial(false);
     }
 
     public override void Charge()

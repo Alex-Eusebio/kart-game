@@ -41,6 +41,7 @@ public class TanksSpecial : SpecialAbility
 
     void Throw()
     {
+        carSystem.animControll.UpdateSpecial(true);
         GameObject projectile = MonoBehaviour.Instantiate(throwablePrefab, throwSpawnPoint.position, carSystem.gameObject.transform.rotation);
         projectile.GetComponentInChildren<MissileProjectile>().creator = carSystem;
         projectile.GetComponentInChildren<MissileProjectile>().SetDuration(stunDuration, rocketSpeed);
@@ -50,6 +51,7 @@ public class TanksSpecial : SpecialAbility
         {
             rb.velocity = throwSpawnPoint.forward * (throwingStrenght + (carSystem.currentSpeed + carSystem.bonusSpeed) * throwingBonusSpeedPer);
         }
+        carSystem.animControll.UpdateSpecial(false);
     }
 
     public override void Charge()
