@@ -14,15 +14,15 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_Fog: 1
+  m_FogColor: {r: 0.008615262, g: 0, b: 0.39607844, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.01
+  m_FogDensity: 0.005
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
-  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
-  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientSkyColor: {r: 1, g: 1, b: 1, a: 1}
+  m_AmbientEquatorColor: {r: 1, g: 1, b: 1, a: 1}
+  m_AmbientGroundColor: {r: 1, g: 1, b: 1, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
@@ -271,7 +271,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ff6ebc4e14f40574b8db06858267a82c, type: 2}
+      objectReference: {fileID: 2100000, guid: c5c1f9aa00e406e499d9f7b9f614647d, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (7)
@@ -353,7 +353,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: 3d435a3dd5f308245bc4631371279237, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (19)
@@ -435,7 +435,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3284b6cbacdf8334f8e8f0decbdb01b5, type: 2}
+      objectReference: {fileID: 2100000, guid: 14dd40ce750ecab47a522d8a29c88602, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (18)
@@ -673,7 +673,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: bbaca78cfc80a8845a20ff1b2b43cf81, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (6)
@@ -755,7 +755,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: f87f8eb38fffedb41a528d4cfebb7845, type: 2}
+      objectReference: {fileID: 2100000, guid: d971e4c7e7caf94469d6a2691288d786, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (9)
@@ -837,7 +837,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: c5c1f9aa00e406e499d9f7b9f614647d, type: 2}
+      objectReference: {fileID: 2100000, guid: f87f8eb38fffedb41a528d4cfebb7845, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (3)
@@ -862,7 +862,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 731940812056087298, guid: 3d8d5a9dd97b26d41a37357b4096108a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -286.36996
+      value: -286.37
       objectReference: {fileID: 0}
     - target: {fileID: 3552044560166871385, guid: 3d8d5a9dd97b26d41a37357b4096108a, type: 3}
       propertyPath: m_Pivot.x
@@ -1380,7 +1380,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3d435a3dd5f308245bc4631371279237, type: 2}
+      objectReference: {fileID: 2100000, guid: bbaca78cfc80a8845a20ff1b2b43cf81, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (6)
@@ -1462,7 +1462,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3284b6cbacdf8334f8e8f0decbdb01b5, type: 2}
+      objectReference: {fileID: 2100000, guid: 3ae4d8923010fc9459cb3801798fe9a9, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (1)
@@ -1544,7 +1544,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: bbaca78cfc80a8845a20ff1b2b43cf81, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (6)
@@ -1626,7 +1626,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ff6ebc4e14f40574b8db06858267a82c, type: 2}
+      objectReference: {fileID: 2100000, guid: c5c1f9aa00e406e499d9f7b9f614647d, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (7)
@@ -1708,7 +1708,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: 6e5210749100e424bbfd7161664705a0, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (10)
@@ -1988,7 +1988,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3e30c7f33f4b51d4082f85c3cbe1fd6a, type: 2}
+      objectReference: {fileID: 2100000, guid: 9c1f9156800d90e48a37e942f4888429, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (22)
@@ -2070,7 +2070,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: d971e4c7e7caf94469d6a2691288d786, type: 2}
+      objectReference: {fileID: 2100000, guid: f87f8eb38fffedb41a528d4cfebb7845, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (4)
@@ -2276,7 +2276,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: c5c1f9aa00e406e499d9f7b9f614647d, type: 2}
+      objectReference: {fileID: 2100000, guid: f87f8eb38fffedb41a528d4cfebb7845, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (3)
@@ -2358,7 +2358,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ff6ebc4e14f40574b8db06858267a82c, type: 2}
+      objectReference: {fileID: 2100000, guid: f87f8eb38fffedb41a528d4cfebb7845, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (39)
@@ -2440,7 +2440,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: 3ae4d8923010fc9459cb3801798fe9a9, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (4)
@@ -2892,7 +2892,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3e30c7f33f4b51d4082f85c3cbe1fd6a, type: 2}
+      objectReference: {fileID: 2100000, guid: 9c1f9156800d90e48a37e942f4888429, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (18)
@@ -3118,7 +3118,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: 3ae4d8923010fc9459cb3801798fe9a9, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (17)
@@ -3200,7 +3200,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: 3ae4d8923010fc9459cb3801798fe9a9, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (1)
@@ -3348,7 +3348,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: bbaca78cfc80a8845a20ff1b2b43cf81, type: 2}
+      objectReference: {fileID: 2100000, guid: 6e5210749100e424bbfd7161664705a0, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (10)
@@ -3512,7 +3512,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3284b6cbacdf8334f8e8f0decbdb01b5, type: 2}
+      objectReference: {fileID: 2100000, guid: 14dd40ce750ecab47a522d8a29c88602, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (28)
@@ -3594,7 +3594,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: 3d435a3dd5f308245bc4631371279237, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (20)
@@ -3676,7 +3676,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: 3ae4d8923010fc9459cb3801798fe9a9, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (1)
@@ -3902,7 +3902,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ff6ebc4e14f40574b8db06858267a82c, type: 2}
+      objectReference: {fileID: 2100000, guid: f87f8eb38fffedb41a528d4cfebb7845, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (36)
@@ -4128,7 +4128,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3284b6cbacdf8334f8e8f0decbdb01b5, type: 2}
+      objectReference: {fileID: 2100000, guid: 3ae4d8923010fc9459cb3801798fe9a9, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (1)
@@ -4292,7 +4292,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: 9c1f9156800d90e48a37e942f4888429, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (15)
@@ -4621,7 +4621,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3d435a3dd5f308245bc4631371279237, type: 2}
+      objectReference: {fileID: 2100000, guid: bbaca78cfc80a8845a20ff1b2b43cf81, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (6)
@@ -4703,7 +4703,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: bbaca78cfc80a8845a20ff1b2b43cf81, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (31)
@@ -4785,7 +4785,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3e30c7f33f4b51d4082f85c3cbe1fd6a, type: 2}
+      objectReference: {fileID: 2100000, guid: a888b3355609b954a8c39cb3e90e390f, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (5)
@@ -4867,7 +4867,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: 3ae4d8923010fc9459cb3801798fe9a9, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (2)
@@ -5159,7 +5159,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: c5c1f9aa00e406e499d9f7b9f614647d, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (7)
@@ -5241,7 +5241,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: 3ae4d8923010fc9459cb3801798fe9a9, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (6)
@@ -5389,7 +5389,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: c5c1f9aa00e406e499d9f7b9f614647d, type: 2}
+      objectReference: {fileID: 2100000, guid: f87f8eb38fffedb41a528d4cfebb7845, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (3)
@@ -5533,7 +5533,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: bbaca78cfc80a8845a20ff1b2b43cf81, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (28)
@@ -6508,7 +6508,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: 9c1f9156800d90e48a37e942f4888429, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (17)
@@ -6664,7 +6664,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 14dd40ce750ecab47a522d8a29c88602, type: 2}
+      objectReference: {fileID: 2100000, guid: 3ae4d8923010fc9459cb3801798fe9a9, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (9)
@@ -6977,7 +6977,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: 9c1f9156800d90e48a37e942f4888429, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (14)
@@ -7258,7 +7258,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3e30c7f33f4b51d4082f85c3cbe1fd6a, type: 2}
+      objectReference: {fileID: 2100000, guid: 6e5210749100e424bbfd7161664705a0, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (13)
@@ -7721,7 +7721,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: f87f8eb38fffedb41a528d4cfebb7845, type: 2}
+      objectReference: {fileID: 2100000, guid: d971e4c7e7caf94469d6a2691288d786, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (9)
@@ -7803,7 +7803,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: d971e4c7e7caf94469d6a2691288d786, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (9)
@@ -8060,7 +8060,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3e30c7f33f4b51d4082f85c3cbe1fd6a, type: 2}
+      objectReference: {fileID: 2100000, guid: a888b3355609b954a8c39cb3e90e390f, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (5)
@@ -9163,7 +9163,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 14dd40ce750ecab47a522d8a29c88602, type: 2}
+      objectReference: {fileID: 2100000, guid: 3ae4d8923010fc9459cb3801798fe9a9, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (1)
@@ -9385,7 +9385,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: f87f8eb38fffedb41a528d4cfebb7845, type: 2}
+      objectReference: {fileID: 2100000, guid: d971e4c7e7caf94469d6a2691288d786, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (9)
@@ -9467,7 +9467,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3e30c7f33f4b51d4082f85c3cbe1fd6a, type: 2}
+      objectReference: {fileID: 2100000, guid: a888b3355609b954a8c39cb3e90e390f, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (5)
@@ -9549,7 +9549,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 14dd40ce750ecab47a522d8a29c88602, type: 2}
+      objectReference: {fileID: 2100000, guid: 3ae4d8923010fc9459cb3801798fe9a9, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (2)
@@ -9697,7 +9697,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3e30c7f33f4b51d4082f85c3cbe1fd6a, type: 2}
+      objectReference: {fileID: 2100000, guid: 9c1f9156800d90e48a37e942f4888429, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (19)
@@ -9779,7 +9779,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: d971e4c7e7caf94469d6a2691288d786, type: 2}
+      objectReference: {fileID: 2100000, guid: f87f8eb38fffedb41a528d4cfebb7845, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (4)
@@ -10092,7 +10092,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3e30c7f33f4b51d4082f85c3cbe1fd6a, type: 2}
+      objectReference: {fileID: 2100000, guid: 6e5210749100e424bbfd7161664705a0, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (24)
@@ -10256,7 +10256,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ff6ebc4e14f40574b8db06858267a82c, type: 2}
+      objectReference: {fileID: 2100000, guid: f87f8eb38fffedb41a528d4cfebb7845, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (37)
@@ -10271,6 +10271,55 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
   m_PrefabInstance: {fileID: 476657909}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &479937565
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 479937567}
+  - component: {fileID: 479937566}
+  m_Layer: 0
+  m_Name: Post Process
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &479937566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 479937565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 11400000, guid: b6567ef4ce1eec04499fde563a9a5abe, type: 2}
+  isGlobal: 1
+  blendDistance: 0
+  weight: 1
+  priority: 0
+--- !u!4 &479937567
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 479937565}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &480081908
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10338,7 +10387,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: 6e5210749100e424bbfd7161664705a0, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (10)
@@ -10420,7 +10469,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: d971e4c7e7caf94469d6a2691288d786, type: 2}
+      objectReference: {fileID: 2100000, guid: f87f8eb38fffedb41a528d4cfebb7845, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (4)
@@ -10502,7 +10551,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: 14dd40ce750ecab47a522d8a29c88602, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (23)
@@ -10728,7 +10777,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: d971e4c7e7caf94469d6a2691288d786, type: 2}
+      objectReference: {fileID: 2100000, guid: f87f8eb38fffedb41a528d4cfebb7845, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (4)
@@ -10872,7 +10921,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3ae4d8923010fc9459cb3801798fe9a9, type: 2}
+      objectReference: {fileID: 2100000, guid: 14dd40ce750ecab47a522d8a29c88602, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (2)
@@ -10954,7 +11003,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3e30c7f33f4b51d4082f85c3cbe1fd6a, type: 2}
+      objectReference: {fileID: 2100000, guid: a888b3355609b954a8c39cb3e90e390f, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (5)
@@ -11118,7 +11167,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: 3ae4d8923010fc9459cb3801798fe9a9, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (3)
@@ -11422,7 +11471,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3e30c7f33f4b51d4082f85c3cbe1fd6a, type: 2}
+      objectReference: {fileID: 2100000, guid: 6e5210749100e424bbfd7161664705a0, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (15)
@@ -11504,7 +11553,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3284b6cbacdf8334f8e8f0decbdb01b5, type: 2}
+      objectReference: {fileID: 2100000, guid: 3ae4d8923010fc9459cb3801798fe9a9, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (1)
@@ -11800,7 +11849,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3ae4d8923010fc9459cb3801798fe9a9, type: 2}
+      objectReference: {fileID: 2100000, guid: 14dd40ce750ecab47a522d8a29c88602, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (2)
@@ -12047,7 +12096,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: f87f8eb38fffedb41a528d4cfebb7845, type: 2}
+      objectReference: {fileID: 2100000, guid: d971e4c7e7caf94469d6a2691288d786, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (9)
@@ -12211,7 +12260,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: 6e5210749100e424bbfd7161664705a0, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (10)
@@ -12293,7 +12342,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3e30c7f33f4b51d4082f85c3cbe1fd6a, type: 2}
+      objectReference: {fileID: 2100000, guid: 6e5210749100e424bbfd7161664705a0, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (16)
@@ -12375,7 +12424,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: 14dd40ce750ecab47a522d8a29c88602, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (29)
@@ -12622,7 +12671,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3284b6cbacdf8334f8e8f0decbdb01b5, type: 2}
+      objectReference: {fileID: 2100000, guid: 14dd40ce750ecab47a522d8a29c88602, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (35)
@@ -12704,7 +12753,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: bbaca78cfc80a8845a20ff1b2b43cf81, type: 2}
+      objectReference: {fileID: 2100000, guid: 6e5210749100e424bbfd7161664705a0, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (10)
@@ -12950,7 +12999,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: 3ae4d8923010fc9459cb3801798fe9a9, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (18)
@@ -13172,7 +13221,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3e30c7f33f4b51d4082f85c3cbe1fd6a, type: 2}
+      objectReference: {fileID: 2100000, guid: a888b3355609b954a8c39cb3e90e390f, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (5)
@@ -13633,8 +13682,8 @@ LightingSettings:
   m_PVREnvironmentSampleCount: 256
   m_PVREnvironmentReferencePointCount: 2048
   m_LightProbeSampleCountMultiplier: 4
-  m_PVRBounces: 2
-  m_PVRMinBounces: 2
+  m_PVRBounces: 1
+  m_PVRMinBounces: 1
   m_PVREnvironmentImportanceSampling: 1
   m_PVRFilteringMode: 1
   m_PVRDenoiserTypeDirect: 1
@@ -13940,7 +13989,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: d971e4c7e7caf94469d6a2691288d786, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (9)
@@ -14022,7 +14071,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: c5c1f9aa00e406e499d9f7b9f614647d, type: 2}
+      objectReference: {fileID: 2100000, guid: f87f8eb38fffedb41a528d4cfebb7845, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (3)
@@ -14310,7 +14359,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: bbaca78cfc80a8845a20ff1b2b43cf81, type: 2}
+      objectReference: {fileID: 2100000, guid: 6e5210749100e424bbfd7161664705a0, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (10)
@@ -14392,7 +14441,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3ae4d8923010fc9459cb3801798fe9a9, type: 2}
+      objectReference: {fileID: 2100000, guid: 14dd40ce750ecab47a522d8a29c88602, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (2)
@@ -14708,7 +14757,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: d971e4c7e7caf94469d6a2691288d786, type: 2}
+      objectReference: {fileID: 2100000, guid: f87f8eb38fffedb41a528d4cfebb7845, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (4)
@@ -14790,7 +14839,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3ae4d8923010fc9459cb3801798fe9a9, type: 2}
+      objectReference: {fileID: 2100000, guid: 14dd40ce750ecab47a522d8a29c88602, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (2)
@@ -14872,7 +14921,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3e30c7f33f4b51d4082f85c3cbe1fd6a, type: 2}
+      objectReference: {fileID: 2100000, guid: 9c1f9156800d90e48a37e942f4888429, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (11)
@@ -14954,7 +15003,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: f87f8eb38fffedb41a528d4cfebb7845, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (3)
@@ -15036,7 +15085,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ff6ebc4e14f40574b8db06858267a82c, type: 2}
+      objectReference: {fileID: 2100000, guid: c5c1f9aa00e406e499d9f7b9f614647d, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (7)
@@ -15591,7 +15640,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: f87f8eb38fffedb41a528d4cfebb7845, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (34)
@@ -16074,7 +16123,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: 3d435a3dd5f308245bc4631371279237, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (17)
@@ -16238,7 +16287,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ff6ebc4e14f40574b8db06858267a82c, type: 2}
+      objectReference: {fileID: 2100000, guid: c5c1f9aa00e406e499d9f7b9f614647d, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (7)
@@ -16320,7 +16369,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3d435a3dd5f308245bc4631371279237, type: 2}
+      objectReference: {fileID: 2100000, guid: bbaca78cfc80a8845a20ff1b2b43cf81, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (6)
@@ -16577,7 +16626,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3284b6cbacdf8334f8e8f0decbdb01b5, type: 2}
+      objectReference: {fileID: 2100000, guid: 3ae4d8923010fc9459cb3801798fe9a9, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (1)
@@ -16752,7 +16801,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: 9c1f9156800d90e48a37e942f4888429, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (13)
@@ -16834,7 +16883,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3e30c7f33f4b51d4082f85c3cbe1fd6a, type: 2}
+      objectReference: {fileID: 2100000, guid: 6e5210749100e424bbfd7161664705a0, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (21)
@@ -17138,7 +17187,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: f87f8eb38fffedb41a528d4cfebb7845, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (4)
@@ -17220,7 +17269,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: f87f8eb38fffedb41a528d4cfebb7845, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (31)
@@ -17656,7 +17705,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: bbaca78cfc80a8845a20ff1b2b43cf81, type: 2}
+      objectReference: {fileID: 2100000, guid: 6e5210749100e424bbfd7161664705a0, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (10)
@@ -17964,7 +18013,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: f87f8eb38fffedb41a528d4cfebb7845, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (23)
@@ -18046,7 +18095,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ff6ebc4e14f40574b8db06858267a82c, type: 2}
+      objectReference: {fileID: 2100000, guid: f87f8eb38fffedb41a528d4cfebb7845, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (19)
@@ -18210,7 +18259,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: 9c1f9156800d90e48a37e942f4888429, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (12)
@@ -18292,7 +18341,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3e30c7f33f4b51d4082f85c3cbe1fd6a, type: 2}
+      objectReference: {fileID: 2100000, guid: 6e5210749100e424bbfd7161664705a0, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (22)
@@ -18374,7 +18423,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: c5c1f9aa00e406e499d9f7b9f614647d, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (17)
@@ -18456,7 +18505,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: 14dd40ce750ecab47a522d8a29c88602, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (22)
@@ -18538,7 +18587,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3284b6cbacdf8334f8e8f0decbdb01b5, type: 2}
+      objectReference: {fileID: 2100000, guid: 3ae4d8923010fc9459cb3801798fe9a9, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (1)
@@ -18620,7 +18669,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ff6ebc4e14f40574b8db06858267a82c, type: 2}
+      objectReference: {fileID: 2100000, guid: c5c1f9aa00e406e499d9f7b9f614647d, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (7)
@@ -18702,7 +18751,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: c5c1f9aa00e406e499d9f7b9f614647d, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (7)
@@ -19948,7 +19997,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: 14dd40ce750ecab47a522d8a29c88602, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (27)
@@ -20104,7 +20153,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: c5c1f9aa00e406e499d9f7b9f614647d, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (29)
@@ -20186,7 +20235,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: c5c1f9aa00e406e499d9f7b9f614647d, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (7)
@@ -20268,7 +20317,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3284b6cbacdf8334f8e8f0decbdb01b5, type: 2}
+      objectReference: {fileID: 2100000, guid: 3ae4d8923010fc9459cb3801798fe9a9, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (1)
@@ -20350,7 +20399,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3e30c7f33f4b51d4082f85c3cbe1fd6a, type: 2}
+      objectReference: {fileID: 2100000, guid: 9c1f9156800d90e48a37e942f4888429, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (23)
@@ -20597,7 +20646,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3d435a3dd5f308245bc4631371279237, type: 2}
+      objectReference: {fileID: 2100000, guid: bbaca78cfc80a8845a20ff1b2b43cf81, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (6)
@@ -20777,159 +20826,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1 &923420807
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 923420811}
-  - component: {fileID: 923420810}
-  - component: {fileID: 923420809}
-  - component: {fileID: 923420808}
-  m_Layer: 0
-  m_Name: UI Camera
-  m_TagString: MainCamera
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &923420808
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 923420807}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  volumeTrigger: {fileID: 923420811}
-  volumeLayer:
-    serializedVersion: 2
-    m_Bits: 1
-  stopNaNPropagation: 1
-  finalBlitToCameraTarget: 0
-  antialiasingMode: 0
-  temporalAntialiasing:
-    jitterSpread: 0.75
-    sharpness: 0.25
-    stationaryBlending: 0.95
-    motionBlending: 0.85
-  subpixelMorphologicalAntialiasing:
-    quality: 2
-  fastApproximateAntialiasing:
-    fastMode: 0
-    keepAlpha: 0
-  fog:
-    enabled: 1
-    excludeSkybox: 1
-  debugLayer:
-    lightMeter:
-      width: 512
-      height: 256
-      showCurves: 1
-    histogram:
-      width: 512
-      height: 256
-      channel: 3
-    waveform:
-      exposure: 0.12
-      height: 256
-    vectorscope:
-      size: 256
-      exposure: 0.12
-    overlaySettings:
-      linearDepth: 0
-      motionColorIntensity: 4
-      motionGridSize: 64
-      colorBlindnessType: 0
-      colorBlindnessStrength: 1
-  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
-  m_ShowToolkit: 0
-  m_ShowCustomSorter: 0
-  breakBeforeColorGrading: 0
-  m_BeforeTransparentBundles: []
-  m_BeforeStackBundles: []
-  m_AfterStackBundles: []
---- !u!81 &923420809
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 923420807}
-  m_Enabled: 1
---- !u!20 &923420810
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 923420807}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
-  m_GateFitMode: 2
-  m_FOVAxisMode: 0
-  m_Iso: 200
-  m_ShutterSpeed: 0.005
-  m_Aperture: 16
-  m_FocusDistance: 10
-  m_FocalLength: 50
-  m_BladeCount: 5
-  m_Curvature: {x: 2, y: 11}
-  m_BarrelClipping: 0.25
-  m_Anamorphism: 0
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: -1
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 32
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
---- !u!4 &923420811
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 923420807}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &930302876
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21223,7 +21119,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3284b6cbacdf8334f8e8f0decbdb01b5, type: 2}
+      objectReference: {fileID: 2100000, guid: 14dd40ce750ecab47a522d8a29c88602, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (17)
@@ -21448,7 +21344,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: 14dd40ce750ecab47a522d8a29c88602, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (2)
@@ -21530,7 +21426,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3d435a3dd5f308245bc4631371279237, type: 2}
+      objectReference: {fileID: 2100000, guid: bbaca78cfc80a8845a20ff1b2b43cf81, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (6)
@@ -21612,7 +21508,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3284b6cbacdf8334f8e8f0decbdb01b5, type: 2}
+      objectReference: {fileID: 2100000, guid: 3ae4d8923010fc9459cb3801798fe9a9, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (1)
@@ -21694,7 +21590,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: c5c1f9aa00e406e499d9f7b9f614647d, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (30)
@@ -21838,7 +21734,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3284b6cbacdf8334f8e8f0decbdb01b5, type: 2}
+      objectReference: {fileID: 2100000, guid: 14dd40ce750ecab47a522d8a29c88602, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (19)
@@ -21920,7 +21816,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3e30c7f33f4b51d4082f85c3cbe1fd6a, type: 2}
+      objectReference: {fileID: 2100000, guid: 6e5210749100e424bbfd7161664705a0, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (12)
@@ -22732,7 +22628,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: 14dd40ce750ecab47a522d8a29c88602, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (2)
@@ -23287,7 +23183,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: f87f8eb38fffedb41a528d4cfebb7845, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (3)
@@ -23369,7 +23265,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: 9c1f9156800d90e48a37e942f4888429, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (16)
@@ -23451,7 +23347,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ff6ebc4e14f40574b8db06858267a82c, type: 2}
+      objectReference: {fileID: 2100000, guid: f87f8eb38fffedb41a528d4cfebb7845, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (32)
@@ -23615,7 +23511,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3e30c7f33f4b51d4082f85c3cbe1fd6a, type: 2}
+      objectReference: {fileID: 2100000, guid: a888b3355609b954a8c39cb3e90e390f, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (5)
@@ -23697,7 +23593,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3e30c7f33f4b51d4082f85c3cbe1fd6a, type: 2}
+      objectReference: {fileID: 2100000, guid: 6e5210749100e424bbfd7161664705a0, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (23)
@@ -23779,7 +23675,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3e30c7f33f4b51d4082f85c3cbe1fd6a, type: 2}
+      objectReference: {fileID: 2100000, guid: 6e5210749100e424bbfd7161664705a0, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (14)
@@ -23861,7 +23757,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3e30c7f33f4b51d4082f85c3cbe1fd6a, type: 2}
+      objectReference: {fileID: 2100000, guid: 6e5210749100e424bbfd7161664705a0, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (20)
@@ -24005,7 +23901,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: 14dd40ce750ecab47a522d8a29c88602, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (20)
@@ -24087,7 +23983,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: bbaca78cfc80a8845a20ff1b2b43cf81, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (6)
@@ -24168,6 +24064,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3ae4d8923010fc9459cb3801798fe9a9, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
+      propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 3ae4d8923010fc9459cb3801798fe9a9, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
@@ -24251,7 +24151,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3e30c7f33f4b51d4082f85c3cbe1fd6a, type: 2}
+      objectReference: {fileID: 2100000, guid: 9c1f9156800d90e48a37e942f4888429, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (21)
@@ -24579,7 +24479,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: bbaca78cfc80a8845a20ff1b2b43cf81, type: 2}
+      objectReference: {fileID: 2100000, guid: 6e5210749100e424bbfd7161664705a0, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (10)
@@ -24661,7 +24561,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: c5c1f9aa00e406e499d9f7b9f614647d, type: 2}
+      objectReference: {fileID: 2100000, guid: f87f8eb38fffedb41a528d4cfebb7845, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (3)
@@ -24743,7 +24643,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: d971e4c7e7caf94469d6a2691288d786, type: 2}
+      objectReference: {fileID: 2100000, guid: f87f8eb38fffedb41a528d4cfebb7845, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (4)
@@ -24990,7 +24890,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: bbaca78cfc80a8845a20ff1b2b43cf81, type: 2}
+      objectReference: {fileID: 2100000, guid: 6e5210749100e424bbfd7161664705a0, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (10)
@@ -25380,7 +25280,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3e30c7f33f4b51d4082f85c3cbe1fd6a, type: 2}
+      objectReference: {fileID: 2100000, guid: 9c1f9156800d90e48a37e942f4888429, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (20)
@@ -25462,7 +25362,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: bbaca78cfc80a8845a20ff1b2b43cf81, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (33)
@@ -25626,7 +25526,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ff6ebc4e14f40574b8db06858267a82c, type: 2}
+      objectReference: {fileID: 2100000, guid: c5c1f9aa00e406e499d9f7b9f614647d, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (7)
@@ -26017,13 +25917,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1198653148}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.9063079, z: -0.42261827, w: 0}
+  m_LocalRotation: {x: 0.073386915, y: 0.89253896, z: -0.41619772, w: 0.15737876}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 50, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 50, y: 160, z: 0}
 --- !u!1001 &1201213102
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26091,7 +25991,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: c5c1f9aa00e406e499d9f7b9f614647d, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (18)
@@ -26235,7 +26135,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3284b6cbacdf8334f8e8f0decbdb01b5, type: 2}
+      objectReference: {fileID: 2100000, guid: 14dd40ce750ecab47a522d8a29c88602, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (34)
@@ -26317,7 +26217,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: 6e5210749100e424bbfd7161664705a0, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (10)
@@ -26477,7 +26377,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: 3ae4d8923010fc9459cb3801798fe9a9, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (19)
@@ -26849,7 +26749,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3284b6cbacdf8334f8e8f0decbdb01b5, type: 2}
+      objectReference: {fileID: 2100000, guid: 14dd40ce750ecab47a522d8a29c88602, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (36)
@@ -26993,7 +26893,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: 14dd40ce750ecab47a522d8a29c88602, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (2)
@@ -27075,7 +26975,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3e30c7f33f4b51d4082f85c3cbe1fd6a, type: 2}
+      objectReference: {fileID: 2100000, guid: a888b3355609b954a8c39cb3e90e390f, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (5)
@@ -27157,7 +27057,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: c5c1f9aa00e406e499d9f7b9f614647d, type: 2}
+      objectReference: {fileID: 2100000, guid: f87f8eb38fffedb41a528d4cfebb7845, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (3)
@@ -27239,7 +27139,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: d971e4c7e7caf94469d6a2691288d786, type: 2}
+      objectReference: {fileID: 2100000, guid: f87f8eb38fffedb41a528d4cfebb7845, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (4)
@@ -27321,7 +27221,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: 3d435a3dd5f308245bc4631371279237, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (16)
@@ -27563,7 +27463,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: f87f8eb38fffedb41a528d4cfebb7845, type: 2}
+      objectReference: {fileID: 2100000, guid: d971e4c7e7caf94469d6a2691288d786, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (9)
@@ -27645,7 +27545,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 14dd40ce750ecab47a522d8a29c88602, type: 2}
+      objectReference: {fileID: 2100000, guid: 3ae4d8923010fc9459cb3801798fe9a9, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (6)
@@ -28118,7 +28018,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: f87f8eb38fffedb41a528d4cfebb7845, type: 2}
+      objectReference: {fileID: 2100000, guid: d971e4c7e7caf94469d6a2691288d786, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (9)
@@ -29075,7 +28975,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ff6ebc4e14f40574b8db06858267a82c, type: 2}
+      objectReference: {fileID: 2100000, guid: c5c1f9aa00e406e499d9f7b9f614647d, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (7)
@@ -29322,7 +29222,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3284b6cbacdf8334f8e8f0decbdb01b5, type: 2}
+      objectReference: {fileID: 2100000, guid: 3ae4d8923010fc9459cb3801798fe9a9, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (1)
@@ -29403,6 +29303,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3d435a3dd5f308245bc4631371279237, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
+      propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 3d435a3dd5f308245bc4631371279237, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
@@ -29486,7 +29390,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ff6ebc4e14f40574b8db06858267a82c, type: 2}
+      objectReference: {fileID: 2100000, guid: f87f8eb38fffedb41a528d4cfebb7845, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (35)
@@ -29568,7 +29472,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: c5c1f9aa00e406e499d9f7b9f614647d, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (20)
@@ -31261,7 +31165,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: 6e5210749100e424bbfd7161664705a0, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (10)
@@ -31343,7 +31247,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: c5c1f9aa00e406e499d9f7b9f614647d, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (7)
@@ -31569,7 +31473,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: d971e4c7e7caf94469d6a2691288d786, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (9)
@@ -31651,7 +31555,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: d971e4c7e7caf94469d6a2691288d786, type: 2}
+      objectReference: {fileID: 2100000, guid: f87f8eb38fffedb41a528d4cfebb7845, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (4)
@@ -31733,7 +31637,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: 14dd40ce750ecab47a522d8a29c88602, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (26)
@@ -31951,7 +31855,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3284b6cbacdf8334f8e8f0decbdb01b5, type: 2}
+      objectReference: {fileID: 2100000, guid: 14dd40ce750ecab47a522d8a29c88602, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (37)
@@ -32033,7 +31937,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3d435a3dd5f308245bc4631371279237, type: 2}
+      objectReference: {fileID: 2100000, guid: bbaca78cfc80a8845a20ff1b2b43cf81, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (6)
@@ -32259,7 +32163,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3e30c7f33f4b51d4082f85c3cbe1fd6a, type: 2}
+      objectReference: {fileID: 2100000, guid: a888b3355609b954a8c39cb3e90e390f, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (5)
@@ -32341,7 +32245,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: d971e4c7e7caf94469d6a2691288d786, type: 2}
+      objectReference: {fileID: 2100000, guid: f87f8eb38fffedb41a528d4cfebb7845, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (4)
@@ -32485,7 +32389,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3e30c7f33f4b51d4082f85c3cbe1fd6a, type: 2}
+      objectReference: {fileID: 2100000, guid: 6e5210749100e424bbfd7161664705a0, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (25)
@@ -32629,7 +32533,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: d971e4c7e7caf94469d6a2691288d786, type: 2}
+      objectReference: {fileID: 2100000, guid: f87f8eb38fffedb41a528d4cfebb7845, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (4)
@@ -32711,7 +32615,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: f87f8eb38fffedb41a528d4cfebb7845, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (25)
@@ -32793,7 +32697,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: d971e4c7e7caf94469d6a2691288d786, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (27)
@@ -32875,7 +32779,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: 14dd40ce750ecab47a522d8a29c88602, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (31)
@@ -33093,7 +32997,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: 3d435a3dd5f308245bc4631371279237, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (15)
@@ -33175,7 +33079,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3284b6cbacdf8334f8e8f0decbdb01b5, type: 2}
+      objectReference: {fileID: 2100000, guid: 3ae4d8923010fc9459cb3801798fe9a9, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (1)
@@ -33339,7 +33243,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: f87f8eb38fffedb41a528d4cfebb7845, type: 2}
+      objectReference: {fileID: 2100000, guid: d971e4c7e7caf94469d6a2691288d786, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (9)
@@ -33421,7 +33325,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 14dd40ce750ecab47a522d8a29c88602, type: 2}
+      objectReference: {fileID: 2100000, guid: 3ae4d8923010fc9459cb3801798fe9a9, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (7)
@@ -33569,7 +33473,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: c5c1f9aa00e406e499d9f7b9f614647d, type: 2}
+      objectReference: {fileID: 2100000, guid: f87f8eb38fffedb41a528d4cfebb7845, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (3)
@@ -33713,7 +33617,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: 14dd40ce750ecab47a522d8a29c88602, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (2)
@@ -34166,7 +34070,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: f87f8eb38fffedb41a528d4cfebb7845, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (22)
@@ -34248,7 +34152,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: d971e4c7e7caf94469d6a2691288d786, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (24)
@@ -35684,7 +35588,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: f87f8eb38fffedb41a528d4cfebb7845, type: 2}
+      objectReference: {fileID: 2100000, guid: d971e4c7e7caf94469d6a2691288d786, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (9)
@@ -35766,7 +35670,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3ae4d8923010fc9459cb3801798fe9a9, type: 2}
+      objectReference: {fileID: 2100000, guid: 14dd40ce750ecab47a522d8a29c88602, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (2)
@@ -35930,7 +35834,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: 3ae4d8923010fc9459cb3801798fe9a9, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (1)
@@ -36012,7 +35916,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: 14dd40ce750ecab47a522d8a29c88602, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (2)
@@ -36156,7 +36060,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3284b6cbacdf8334f8e8f0decbdb01b5, type: 2}
+      objectReference: {fileID: 2100000, guid: 14dd40ce750ecab47a522d8a29c88602, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (32)
@@ -36238,7 +36142,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: bbaca78cfc80a8845a20ff1b2b43cf81, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (6)
@@ -36320,7 +36224,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3d435a3dd5f308245bc4631371279237, type: 2}
+      objectReference: {fileID: 2100000, guid: bbaca78cfc80a8845a20ff1b2b43cf81, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (6)
@@ -36484,7 +36388,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: f87f8eb38fffedb41a528d4cfebb7845, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (3)
@@ -36566,7 +36470,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 14dd40ce750ecab47a522d8a29c88602, type: 2}
+      objectReference: {fileID: 2100000, guid: 3ae4d8923010fc9459cb3801798fe9a9, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (5)
@@ -36714,7 +36618,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: c5c1f9aa00e406e499d9f7b9f614647d, type: 2}
+      objectReference: {fileID: 2100000, guid: f87f8eb38fffedb41a528d4cfebb7845, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (3)
@@ -36729,55 +36633,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
   m_PrefabInstance: {fileID: 1727827097}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1736406612
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1736406614}
-  - component: {fileID: 1736406613}
-  m_Layer: 0
-  m_Name: Post Process
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1736406613
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736406612}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sharedProfile: {fileID: 11400000, guid: 5eab480d645718849a47adb01e5dec7e, type: 2}
-  isGlobal: 1
-  blendDistance: 0
-  weight: 1
-  priority: 0
---- !u!4 &1736406614
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736406612}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 198.93475, y: 7.6857176, z: 190.09973}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1740174155
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37777,7 +37632,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: 3ae4d8923010fc9459cb3801798fe9a9, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (21)
@@ -38419,7 +38274,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: f87f8eb38fffedb41a528d4cfebb7845, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (28)
@@ -38661,7 +38516,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: 3ae4d8923010fc9459cb3801798fe9a9, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (1)
@@ -38867,7 +38722,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ff6ebc4e14f40574b8db06858267a82c, type: 2}
+      objectReference: {fileID: 2100000, guid: f87f8eb38fffedb41a528d4cfebb7845, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (33)
@@ -38949,7 +38804,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: d971e4c7e7caf94469d6a2691288d786, type: 2}
+      objectReference: {fileID: 2100000, guid: f87f8eb38fffedb41a528d4cfebb7845, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (4)
@@ -39222,7 +39077,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3e30c7f33f4b51d4082f85c3cbe1fd6a, type: 2}
+      objectReference: {fileID: 2100000, guid: 6e5210749100e424bbfd7161664705a0, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (17)
@@ -39304,7 +39159,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: f87f8eb38fffedb41a528d4cfebb7845, type: 2}
+      objectReference: {fileID: 2100000, guid: d971e4c7e7caf94469d6a2691288d786, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (9)
@@ -39386,7 +39241,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ff6ebc4e14f40574b8db06858267a82c, type: 2}
+      objectReference: {fileID: 2100000, guid: f87f8eb38fffedb41a528d4cfebb7845, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (38)
@@ -39468,7 +39323,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: f87f8eb38fffedb41a528d4cfebb7845, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (3)
@@ -41387,7 +41242,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: d971e4c7e7caf94469d6a2691288d786, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (19)
@@ -41539,7 +41394,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: 3d435a3dd5f308245bc4631371279237, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (22)
@@ -41699,7 +41554,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3e30c7f33f4b51d4082f85c3cbe1fd6a, type: 2}
+      objectReference: {fileID: 2100000, guid: 6e5210749100e424bbfd7161664705a0, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (18)
@@ -41855,7 +41710,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: c5c1f9aa00e406e499d9f7b9f614647d, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (16)
@@ -41937,7 +41792,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3e30c7f33f4b51d4082f85c3cbe1fd6a, type: 2}
+      objectReference: {fileID: 2100000, guid: a888b3355609b954a8c39cb3e90e390f, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (5)
@@ -43257,7 +43112,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 14dd40ce750ecab47a522d8a29c88602, type: 2}
+      objectReference: {fileID: 2100000, guid: 3ae4d8923010fc9459cb3801798fe9a9, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (3)
@@ -44165,7 +44020,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: bbaca78cfc80a8845a20ff1b2b43cf81, type: 2}
+      objectReference: {fileID: 2100000, guid: 6e5210749100e424bbfd7161664705a0, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (10)
@@ -44247,7 +44102,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: 14dd40ce750ecab47a522d8a29c88602, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (20)
@@ -44740,7 +44595,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 479
+    m_Bits: 4294967295
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -44782,19 +44637,19 @@ MonoBehaviour:
   volumeTrigger: {fileID: 1952675578}
   volumeLayer:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 479
   stopNaNPropagation: 1
   finalBlitToCameraTarget: 0
-  antialiasingMode: 0
+  antialiasingMode: 1
   temporalAntialiasing:
     jitterSpread: 0.75
     sharpness: 0.25
     stationaryBlending: 0.95
     motionBlending: 0.85
   subpixelMorphologicalAntialiasing:
-    quality: 2
+    quality: 0
   fastApproximateAntialiasing:
-    fastMode: 0
+    fastMode: 1
     keepAlpha: 0
   fog:
     enabled: 1
@@ -45521,7 +45376,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3284b6cbacdf8334f8e8f0decbdb01b5, type: 2}
+      objectReference: {fileID: 2100000, guid: 14dd40ce750ecab47a522d8a29c88602, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (33)
@@ -45603,7 +45458,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3ae4d8923010fc9459cb3801798fe9a9, type: 2}
+      objectReference: {fileID: 2100000, guid: 14dd40ce750ecab47a522d8a29c88602, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (2)
@@ -46135,7 +45990,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3e30c7f33f4b51d4082f85c3cbe1fd6a, type: 2}
+      objectReference: {fileID: 2100000, guid: a888b3355609b954a8c39cb3e90e390f, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (5)
@@ -46217,7 +46072,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ff6ebc4e14f40574b8db06858267a82c, type: 2}
+      objectReference: {fileID: 2100000, guid: f87f8eb38fffedb41a528d4cfebb7845, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (21)
@@ -46299,7 +46154,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: c5c1f9aa00e406e499d9f7b9f614647d, type: 2}
+      objectReference: {fileID: 2100000, guid: f87f8eb38fffedb41a528d4cfebb7845, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (3)
@@ -46381,7 +46236,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3d435a3dd5f308245bc4631371279237, type: 2}
+      objectReference: {fileID: 2100000, guid: bbaca78cfc80a8845a20ff1b2b43cf81, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (6)
@@ -46741,7 +46596,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3284b6cbacdf8334f8e8f0decbdb01b5, type: 2}
+      objectReference: {fileID: 2100000, guid: 3ae4d8923010fc9459cb3801798fe9a9, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (1)
@@ -50597,7 +50452,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3ae4d8923010fc9459cb3801798fe9a9, type: 2}
+      objectReference: {fileID: 2100000, guid: 14dd40ce750ecab47a522d8a29c88602, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (2)
@@ -50679,7 +50534,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: f87f8eb38fffedb41a528d4cfebb7845, type: 2}
+      objectReference: {fileID: 2100000, guid: d971e4c7e7caf94469d6a2691288d786, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (9)
@@ -50843,7 +50698,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3d435a3dd5f308245bc4631371279237, type: 2}
+      objectReference: {fileID: 2100000, guid: bbaca78cfc80a8845a20ff1b2b43cf81, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (6)
@@ -51069,7 +50924,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3e30c7f33f4b51d4082f85c3cbe1fd6a, type: 2}
+      objectReference: {fileID: 2100000, guid: a888b3355609b954a8c39cb3e90e390f, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (5)
@@ -56785,7 +56640,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: c5c1f9aa00e406e499d9f7b9f614647d, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (7)
@@ -56867,7 +56722,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: 3ae4d8923010fc9459cb3801798fe9a9, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (23)
@@ -57179,7 +57034,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: 6e5210749100e424bbfd7161664705a0, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (10)
@@ -57261,7 +57116,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3ae4d8923010fc9459cb3801798fe9a9, type: 2}
+      objectReference: {fileID: 2100000, guid: 14dd40ce750ecab47a522d8a29c88602, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (2)
@@ -57499,7 +57354,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: c5c1f9aa00e406e499d9f7b9f614647d, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (7)
@@ -57581,7 +57436,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: f87f8eb38fffedb41a528d4cfebb7845, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (4)
@@ -57663,7 +57518,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3e30c7f33f4b51d4082f85c3cbe1fd6a, type: 2}
+      objectReference: {fileID: 2100000, guid: a888b3355609b954a8c39cb3e90e390f, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (5)
@@ -57909,7 +57764,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3e30c7f33f4b51d4082f85c3cbe1fd6a, type: 2}
+      objectReference: {fileID: 2100000, guid: a888b3355609b954a8c39cb3e90e390f, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (5)
@@ -57991,7 +57846,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e01585507bbf4a3428f601787c18ab66, type: 2}
+      objectReference: {fileID: 2100000, guid: bbaca78cfc80a8845a20ff1b2b43cf81, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (23)
@@ -58390,7 +58245,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 14dd40ce750ecab47a522d8a29c88602, type: 2}
+      objectReference: {fileID: 2100000, guid: 3ae4d8923010fc9459cb3801798fe9a9, type: 2}
     - target: {fileID: 919132149155446097, guid: 42183ee75e915b241baab89ecf83ce6a, type: 3}
       propertyPath: m_Name
       value: TrackStand (10)
@@ -58848,13 +58703,12 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1952675578}
-  - {fileID: 923420811}
   - {fileID: 1198653150}
   - {fileID: 785933404}
   - {fileID: 1235998692}
   - {fileID: 946301018}
   - {fileID: 36021660}
   - {fileID: 1376935522}
-  - {fileID: 1736406614}
   - {fileID: 25708779}
   - {fileID: 611456409}
+  - {fileID: 479937567}

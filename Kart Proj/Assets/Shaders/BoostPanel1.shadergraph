@@ -429,8 +429,8 @@
     },
     "m_FragmentContext": {
         "m_Position": {
-            "x": 144.0000762939453,
-            "y": 235.00001525878907
+            "x": 292.6666564941406,
+            "y": 300.66668701171877
         },
         "m_Blocks": [
             {
@@ -2025,12 +2025,12 @@
     "m_Hidden": false,
     "m_Value": {
         "r": 0.0,
-        "g": 0.1708054542541504,
-        "b": 1.0,
+        "g": 0.3416109085083008,
+        "b": 2.0,
         "a": 0.0
     },
     "isMainColor": false,
-    "m_ColorMode": 0
+    "m_ColorMode": 1
 }
 
 {
@@ -2355,13 +2355,13 @@
     "hlslDeclarationOverride": 2,
     "m_Hidden": false,
     "m_Value": {
-        "r": 1.0,
+        "r": 2.0,
         "g": 0.0,
-        "b": 0.8966507911682129,
+        "b": 1.7933015823364258,
         "a": 0.0
     },
     "isMainColor": false,
-    "m_ColorMode": 0
+    "m_ColorMode": 1
 }
 
 {
