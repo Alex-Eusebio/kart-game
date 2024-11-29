@@ -8,7 +8,7 @@ using System;
 
 public class KartAgent : Agent
 {
-    private AICarSystem carSystem;
+    public AICarSystem carSystem;
     public CheckpointManager checkpointManager;
 
     public override void Initialize()

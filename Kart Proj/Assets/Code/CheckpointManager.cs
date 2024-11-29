@@ -42,7 +42,8 @@ public class CheckpointManager : MonoBehaviour
 
     private void Update()
     {
-        TimeLeft -= Time.deltaTime;
+        if (!kartAgent.carSystem.isStunned)
+            TimeLeft -= Time.deltaTime;
 
         if (TimeLeft < 0f)
         {

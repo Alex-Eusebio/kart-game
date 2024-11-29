@@ -6,7 +6,7 @@ public abstract class Projectile : MonoBehaviour
 {
     public SphereCollider projectileArea;
     [SerializeField]
-    private float emergencyTimer = 12f;
+    protected float emergencyTimer = 12f;
     public CarSystem creator;
 
     protected virtual void OnTriggerEnter(Collider other)
