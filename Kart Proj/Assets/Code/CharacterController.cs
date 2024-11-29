@@ -175,7 +175,7 @@ public class CharacterController : MonoBehaviour
     public void OnEnterButtonClicked()
     {
         // Salva o nome da personagem escolhida no PlayerPrefs
-        PlayerPrefs.SetString("SelectedCharacter", characters[currentCharacterIndex].Name);
+        PlayerPrefs.SetInt("SelectedCharacter", currentCharacterIndex);
         PlayerPrefs.Save();  // Garante que o valor seja salvo
         Debug.Log("Personagem escolhida: " + characters[currentCharacterIndex].Name);
         // Aqui você pode adicionar o código para avançar para a próxima cena
