@@ -29,6 +29,13 @@ public class MissileProjectile : Projectile
 
     protected override void FixedUpdate()
     {
+        emergencyTimer -= Time.deltaTime;
+
+        if (emergencyTimer <= 0)
+        {
+            Destroy(gameObject.transform.parent.gameObject);
+        }
+
         if (target != null)
         {
             Debug.Log(target);
