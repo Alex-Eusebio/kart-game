@@ -6,6 +6,7 @@ using UnityEngine;
 public class CheckpointManager : MonoBehaviour
 {
     public float MaxTimeToReachNextCheckpoint = 30f;
+    public float FirstTimeToReachNextCheckpoint = 3f;
     public float TimeLeft = 30f; 
     int maxLaps;
     [SerializeField]
@@ -34,7 +35,7 @@ public class CheckpointManager : MonoBehaviour
     public void ResetCheckpoints()
     {
         CurrentCheckpointIndex = 0;
-        TimeLeft = MaxTimeToReachNextCheckpoint;
+        TimeLeft = FirstTimeToReachNextCheckpoint;
 
         SetNextCheckpoint();
     }
@@ -86,7 +87,11 @@ public class CheckpointManager : MonoBehaviour
     {
         if (Checkpoints.Count > 0)
         {
-            TimeLeft = MaxTimeToReachNextCheckpoint;
+            if (CurrentCheckpointIndex == 0)
+                TimeLeft = FirstTimeToReachNextCheckpoint;
+            else if (CurrentCheckpointIndex > 0)
+                TimeLeft = MaxTimeToReachNextCheckpoint;
+
             nextCheckPointToReach = Checkpoints[CurrentCheckpointIndex];
 
         }
