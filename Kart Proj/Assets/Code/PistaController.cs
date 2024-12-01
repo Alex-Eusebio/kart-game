@@ -1,35 +1,33 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PistaController : MonoBehaviour
 {
     [Header("Personagens")]
-    public GameObject[] characterPrefabs;  // Referência para os prefabs dos personagens
-    public Transform[] spawnPoints;        // Pontos de spawn para a personagem
-    public Camera mainCamera;              // A câmera principal para seguir a personagem
+    public GameObject[] characterPrefabs;  // Prefabs dos personagens
+    public Transform[] spawnPoints;        // Pontos de spawn
+    public Camera mainCamera;              // Câmera principal
 
-    public DebugCanvas debugCanvas;
+    public DebugCanvas debugCanvas;        // Debug Canvas (opcional)
+    public Slider[] characterSliders;      // Sliders no Canvas (um para cada personagem)
 
-    private GameObject spawnedCharacter;  // Armazenará a personagem que foi spawnada
-    private Transform characterTransform; // Referência para o transform da personagem para a câmera seguir
+    private GameObject spawnedCharacter;   // Referência para o personagem spawnado
 
     private void Start()
     {
         int selectedCharacter = PlayerPrefs.GetInt("SelectedCharacter");
-        Debug.Log("Personagem escolhida na cena anterior: " + selectedCharacter); 
+        Debug.Log($"Personagem escolhida na cena anterior: {selectedCharacter}"); 
         
-        // Instancia a personagem na cena
+        // Instancia a personagem
         InstantiateCharacter(selectedCharacter);
 
-        // Ajusta a câmera para seguir a personagem
-        if (spawnedCharacter != null)
-            characterTransform = spawnedCharacter.transform;
+        // Ativar o slider correspondente
+        ActivateCharacterSlider(selectedCharacter);
     }
 
-    // Método de escolha de personagem (baseado no PlayerPrefs)
     private void InstantiateCharacter(int characterId)
     {
         int i = 0;
-        // Verifica o nome do personagem e instância o prefab correspondente
         foreach (var characterPrefab in characterPrefabs)
         {
             if (i == characterId)
@@ -58,6 +56,29 @@ public class PistaController : MonoBehaviour
                 break;
             }
             i++;
+        }
+    }
+
+    private void ActivateCharacterSlider(int characterId)
+    {
+        Debug.Log("Iniciando ativação dos sliders...");
+        
+        // Desativa todos os sliders primeiro
+        for (int i = 0; i < characterSliders.Length; i++)
+        {
+            characterSliders[i].gameObject.SetActive(false);
+            Debug.Log($"Slider {i} desativado.");
+        }
+
+        // Ativa apenas o slider correspondente ao personagem escolhido
+        if (characterId >= 0 && characterId < characterSliders.Length)
+        {
+            characterSliders[characterId].gameObject.SetActive(true);
+            Debug.Log($"Slider {characterId} ativado para o personagem correspondente.");
+        }
+        else
+        {
+            Debug.LogWarning("ID do personagem fora do intervalo dos sliders.");
         }
     }
 }
