@@ -20,20 +20,14 @@ public class TanksSpecial : SpecialAbility
     [SerializeField]
     Transform throwSpawnPoint;
 
-    private void Awake()
-    {
-        maxResource = 0;
-    }
-
     public override bool IsAvailable()
     {
-        return resource <= 0;
+        return resource >= maxResource;
     }
 
     protected override void ExecuteAbility()
     {
         Throw();
-        resource = maxResource;
     }
 
     void Throw()
@@ -53,9 +47,9 @@ public class TanksSpecial : SpecialAbility
 
     public override void Charge()
     {
-        if (resource > 0)
+        if (resource < maxResource)
         {
-            resource -= Time.deltaTime;
+            resource += Time.deltaTime;
         }
     }
 }

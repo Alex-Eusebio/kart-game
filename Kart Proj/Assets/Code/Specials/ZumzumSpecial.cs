@@ -24,13 +24,12 @@ public class ZumzumSpecial : SpecialAbility
 
     public override bool IsAvailable()
     {
-        return resource <= 0;
+        return resource >= maxResource;
     }
 
     protected override void ExecuteAbility()
     {
         Throw();
-        resource = maxResource;
     }
 
     void Throw()
@@ -50,9 +49,9 @@ public class ZumzumSpecial : SpecialAbility
 
     public override void Charge()
     {
-        if (resource > 0)
+        if (resource < maxResource)
         {
-            resource -= Time.deltaTime;
+            resource += Time.deltaTime;
         }
     }
 }
