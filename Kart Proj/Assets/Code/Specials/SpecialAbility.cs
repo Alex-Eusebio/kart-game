@@ -4,10 +4,8 @@ using UnityEngine;
 
 public abstract class SpecialAbility : MonoBehaviour, ISpecial
 {
-    [SerializeField]
-    protected float resource;
-    [SerializeField]
-    protected float maxResource;
+    public float resource;
+    public float maxResource;
     [SerializeField]
     public bool hasSpecialCharge = false;
 
