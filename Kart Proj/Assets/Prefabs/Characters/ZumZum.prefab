@@ -406,13 +406,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resource: 0
-  maxResource: 0
+  maxResource: 5
   hasSpecialCharge: 0
   throwingStrenght: 15
   throwingBonusSpeedPer: 0.25
   slowStrenght: -20
   slowDuration: 2
-  cooldown: 5
   puddleDuration: 3
   throwablePrefab: {fileID: 8792300465243922998, guid: 04823e20a705b7e46b830dcef76a09a3, type: 3}
   throwSpawnPoint: {fileID: 5961843987588355421}

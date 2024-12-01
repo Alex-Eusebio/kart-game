@@ -472,7 +472,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resource: 0
   maxResource: 15
-  hasSpecialCharge: 0
+  hasSpecialCharge: 1
   boostStrenghtPerLvl: 10
   boostStrenghtCap: 65
   steeringBuffPerLvl: 1.2

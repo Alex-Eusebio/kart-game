@@ -10,16 +10,9 @@ public class MaxSpecial : SpecialAbility
     [SerializeField]
     private float boostDuration;
     [SerializeField]
-    private float maxBattery;
-    [SerializeField]
     private float chargingCap = 10;
     [SerializeField]
     private float driftPowerConvertPer = 0.2f;
-
-    private void Awake()
-    {
-        maxResource = maxBattery;
-    }
 
     protected override void ExecuteAbility()
     {

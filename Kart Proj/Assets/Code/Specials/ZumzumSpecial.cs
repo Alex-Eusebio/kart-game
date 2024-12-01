@@ -14,9 +14,6 @@ public class ZumzumSpecial : SpecialAbility
     [SerializeField]
     private float slowDuration;
     [SerializeField]
-    private float cooldown;
-    private float inCooldown;
-    [SerializeField]
     private float puddleDuration;
 
     [Header("GameObjects")]
@@ -25,20 +22,15 @@ public class ZumzumSpecial : SpecialAbility
     [SerializeField]
     Transform throwSpawnPoint;
 
-    private void Awake()
-    {
-        maxResource = 0;
-    }
-
     public override bool IsAvailable()
     {
-        return inCooldown <= 0;
+        return resource <= 0;
     }
 
     protected override void ExecuteAbility()
     {
         Throw();
-        inCooldown = cooldown;
+        resource = maxResource;
     }
 
     void Throw()
@@ -58,9 +50,9 @@ public class ZumzumSpecial : SpecialAbility
 
     public override void Charge()
     {
-        if (inCooldown > 0)
+        if (resource > 0)
         {
-            inCooldown -= Time.deltaTime;
+            resource -= Time.deltaTime;
         }
     }
 }

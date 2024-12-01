@@ -13,9 +13,6 @@ public class TanksSpecial : SpecialAbility
     private float stunDuration;
     [SerializeField]
     private float rocketSpeed;
-    [SerializeField]
-    private float cooldown;
-    private float inCooldown;
 
     [Header("GameObjects")]
     [SerializeField]
@@ -30,13 +27,13 @@ public class TanksSpecial : SpecialAbility
 
     public override bool IsAvailable()
     {
-        return inCooldown <= 0;
+        return resource <= 0;
     }
 
     protected override void ExecuteAbility()
     {
         Throw();
-        inCooldown = cooldown;
+        resource = maxResource;
     }
 
     void Throw()
@@ -56,9 +53,9 @@ public class TanksSpecial : SpecialAbility
 
     public override void Charge()
     {
-        if (inCooldown > 0)
+        if (resource > 0)
         {
-            inCooldown -= Time.deltaTime;
+            resource -= Time.deltaTime;
         }
     }
 }

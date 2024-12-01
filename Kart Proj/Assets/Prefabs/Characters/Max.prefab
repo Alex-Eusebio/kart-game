@@ -67,6 +67,10 @@ MonoBehaviour:
   onRoad: 0
   isStunned: 0
   stunDuration: 0
+  steerInput: 0
+  speedInput: 0
+  isTryingToDrift: 0
+  usedSpecial: 0
   maxSpeed: 75
   backwardsSpeed: -15
   acceleration: 9
@@ -143,9 +147,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resource: 0
+  maxResource: 1000
+  hasSpecialCharge: 0
   boostStrenght: 60
   boostDuration: 0.5
-  maxBattery: 1000
   chargingCap: 5
   driftPowerConvertPer: 0.09
 --- !u!114 &206921178645280948
