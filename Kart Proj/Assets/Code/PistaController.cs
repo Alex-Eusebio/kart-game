@@ -13,6 +13,8 @@ public class PistaController : MonoBehaviour
 
     private GameObject spawnedCharacter;   // Referência para o personagem spawnado
 
+    public SliderSpecial sliderSpecial; //Referencia ao sliderSpawner
+
     private void Start()
     {
         int selectedCharacter = PlayerPrefs.GetInt("SelectedCharacter");
@@ -23,6 +25,9 @@ public class PistaController : MonoBehaviour
 
         // Ativar o slider correspondente
         ActivateCharacterSlider(selectedCharacter);
+
+        sliderSpecial.carSystem = spawnedCharacter.GetComponentInChildren<CarSystem>();
+    
     }
 
     private void InstantiateCharacter(int characterId)
