@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: JoyStcikTop
+  m_Name: Pizzal Circle
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -79,6 +79,6 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.90646935, g: 0.06608656, b: 0.22449514, a: 1}
-    - _EmissionColor: {r: 1.7984363, g: 0.14688621, b: 0.4474147, a: 0}
+    - _Color: {r: 0.9064301, g: 0, b: 0.11731052, a: 1}
+    - _EmissionColor: {r: 1.0132132, g: 0.07983783, b: 0.17753167, a: 0}
   m_BuildTextureStacks: []
