@@ -231,6 +231,10 @@ MonoBehaviour:
   onRoad: 0
   isStunned: 0
   stunDuration: 0
+  steerInput: 0
+  speedInput: 0
+  isTryingToDrift: 0
+  usedSpecial: 0
   maxSpeed: 80
   backwardsSpeed: -15
   acceleration: 8
@@ -1035,10 +1039,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterAnimator: {fileID: 5519388962170027180}
   carAnimator: {fileID: 2781599014511083330}
-  frontWheels:
-  - {fileID: 0}
-  backWheels:
-  - {fileID: 0}
+  frontWheels: []
+  backWheels: []
   steering: 0
   bonusSpeed: 0
   isOnSpecial: 0
