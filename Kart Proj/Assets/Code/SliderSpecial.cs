@@ -3,16 +3,22 @@ using UnityEngine.UI;
 
 public class SliderSpecial : MonoBehaviour
 {
-    public CarSystem carSystem;
-    public Slider specialSlider; // O slider associado a este personagem
+    public CarSystem carSystem;           // Sistema associado
+    public Slider[] specialSliders;      // Array de sliders associados
 
-    // Método para atualizar a barra (você pode adicionar sua lógica aqui)
     private void Update()
     {
-        if (specialSlider != null)
+        if (specialSliders != null)
         {
-            specialSlider.value = carSystem.special.resource;
-            specialSlider.maxValue = carSystem.special.maxResource;
+            foreach (var specialSlider in specialSliders)
+            {
+                if (specialSlider != null)
+                {
+                    // Atualiza cada slider
+                    specialSlider.value = carSystem.special.resource;
+                    specialSlider.maxValue = carSystem.special.maxResource;
+                }
+            }
         }
     }
 }

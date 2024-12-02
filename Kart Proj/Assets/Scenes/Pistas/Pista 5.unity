@@ -4375,7 +4375,7 @@ GameObject:
   - component: {fileID: 337042442}
   - component: {fileID: 337042443}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: BenSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6197,7 +6197,7 @@ GameObject:
   - component: {fileID: 538650773}
   - component: {fileID: 538650774}
   m_Layer: 5
-  m_Name: Slider (4)
+  m_Name: ZumZumSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18542,7 +18542,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSystem: {fileID: 0}
-  specialSlider: {fileID: 538650774}
+  specialSliders:
+  - {fileID: 337042443}
+  - {fileID: 2111989897}
+  - {fileID: 1856471457}
+  - {fileID: 1791260002}
+  - {fileID: 538650774}
 --- !u!1 &1621851280
 GameObject:
   m_ObjectHideFlags: 0
@@ -20522,7 +20527,7 @@ GameObject:
   - component: {fileID: 1791260001}
   - component: {fileID: 1791260002}
   m_Layer: 5
-  m_Name: Slider (3)
+  m_Name: TanksSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21900,7 +21905,7 @@ GameObject:
   - component: {fileID: 1856471456}
   - component: {fileID: 1856471457}
   m_Layer: 5
-  m_Name: Slider (2)
+  m_Name: RatoSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24123,7 +24128,7 @@ GameObject:
   - component: {fileID: 2111989896}
   - component: {fileID: 2111989897}
   m_Layer: 5
-  m_Name: Slider (1)
+  m_Name: MaxSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
