@@ -147,7 +147,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 0}
+  m_Model: {fileID: 5022602860645237092, guid: 3d7c115c9d059c24ca6753736e587d80, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: KartAI
@@ -171,6 +171,7 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 0
+  carSystem: {fileID: 0}
   checkpointManager: {fileID: 2002910360361881589}
 --- !u!114 &5260853809218118204
 MonoBehaviour:
@@ -230,6 +231,7 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 0
+  carSystem: {fileID: 0}
   checkpointManager: {fileID: 0}
 --- !u!114 &5677391980426118450
 MonoBehaviour:
