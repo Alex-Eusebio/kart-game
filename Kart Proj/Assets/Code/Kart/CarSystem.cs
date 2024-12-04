@@ -17,9 +17,6 @@ public class CarSystem : MonoBehaviour
     [SerializeField]
     public SpecialAbility special;
 
-    //public List<ParticleSystem> primaryParticles = new List<ParticleSystem>();
-    //public List<ParticleSystem> secondaryParticles = new List<ParticleSystem>();
-
     [Header("Car Stats")]
     public float speed;
     public float bonusSpeed;
@@ -77,10 +74,12 @@ public class CarSystem : MonoBehaviour
     public float airBorneTime;
     public float airBorneTimer;
 
-    /*[Header("Particles")]
+    [Header("Particles")]
+    public List<ParticleSystem> primaryParticles = new List<ParticleSystem>();
+    public List<ParticleSystem> secondaryParticles = new List<ParticleSystem>();
     public Transform wheelParticles;
     public Transform flashParticles;
-    public Color[] turboColors;*/
+    public Color[] turboColors;
 
     float distToGround;
     private Quaternion initialRotation;
@@ -89,25 +88,23 @@ public class CarSystem : MonoBehaviour
     {
         boostManager = GetComponent<BoostManager>();
 
-        //initialRotation = kartModel.localEulerAngles;
-
-        /*postVolume = Camera.main.GetComponent<PostProcessVolume>();
-        postProfile = postVolume.profile;*/
-
-        /*for (int i = 0; i < wheelParticles.GetChild(0).childCount; i++)
+        if (wheelParticles != null && primaryParticles != null && secondaryParticles != null)
         {
-            primaryParticles.Add(wheelParticles.GetChild(0).GetChild(i).GetComponent<ParticleSystem>());
+            for (int i = 0; i < wheelParticles.GetChild(0).childCount; i++)
+            {
+                primaryParticles.Add(wheelParticles.GetChild(0).GetChild(i).GetComponent<ParticleSystem>());
+            }
+
+            for (int i = 0; i < wheelParticles.GetChild(1).childCount; i++)
+            {
+                primaryParticles.Add(wheelParticles.GetChild(1).GetChild(i).GetComponent<ParticleSystem>());
+            }
+
+            foreach (ParticleSystem p in flashParticles.GetComponentsInChildren<ParticleSystem>())
+            {
+                secondaryParticles.Add(p);
+            }
         }
-
-        for (int i = 0; i < wheelParticles.GetChild(1).childCount; i++)
-        {
-            primaryParticles.Add(wheelParticles.GetChild(1).GetChild(i).GetComponent<ParticleSystem>());
-        }
-
-        foreach (ParticleSystem p in flashParticles.GetComponentsInChildren<ParticleSystem>())
-        {
-            secondaryParticles.Add(p);
-        }*/
     }
 
     public bool IsGrounded()
@@ -366,19 +363,22 @@ public class CarSystem : MonoBehaviour
             boostManager.AddBoost(boost);
 
             Debug.Log("BOOST!" + GetDriftLevel());
-            //kartModel.Find("Tube001").GetComponentInChildren<ParticleSystem>().Play();
-            //kartModel.Find("Tube002").GetComponentInChildren<ParticleSystem>().Play();
+            if (primaryParticles != null)
+            {
+                kartModel.Find("Tube001").GetComponentInChildren<ParticleSystem>().Play();
+                kartModel.Find("Tube002").GetComponentInChildren<ParticleSystem>().Play();
+            }
         }
 
         driftPower = 0;
         driftMode = 0;
         first = false; second = false; third = false;
 
-        /*foreach (ParticleSystem p in primaryParticles)
-        {
-            p.startColor = Color.clear;
-            p.Stop();
-        }*/
+        if (primaryParticles != null) 
+            foreach (ParticleSystem p in primaryParticles)
+            {
+                p.Stop();
+            }
 
         kartModel.parent.DOLocalRotate(Vector3.zero, .5f).SetEase(Ease.OutBack);
 
@@ -400,53 +400,46 @@ public class CarSystem : MonoBehaviour
         {
             case 1:
                 first = true;
-                //c = turboColors[0];
+                if (turboColors.Length > 0)
+                    c = turboColors[0];
                 break;
             case 2:
                 second = true;
-                //c = turboColors[1];
+                if (turboColors.Length > 0)
+                    c = turboColors[1];
                 break;
             case 3:
                 third = true;
-                //c = turboColors[2];
+                if (turboColors.Length > 0)
+                    c = turboColors[2];
                 break;
         }
 
         if (driftMode > 0)
             PlayFlashParticle(c);
 
-        /*foreach (ParticleSystem p in primaryParticles)
-        {
-            var pmain = p.main;
-            pmain.startColor = c;
-        }
-
-        foreach (ParticleSystem p in secondaryParticles)
-        {
-            var pmain = p.main;
-            pmain.startColor = c;
-        }*/
+        if (primaryParticles != null)
+            foreach (ParticleSystem p in primaryParticles)
+            {
+                var pmain = p.main;
+                pmain.startColor = c;
+            }
+        if (secondaryParticles != null)
+            foreach (ParticleSystem p in secondaryParticles)
+            {
+                var pmain = p.main;
+                pmain.startColor = c;
+            }
     }
 
     void PlayFlashParticle(Color c)
     {
-        //GameObject.Find("CM vcam1").GetComponent<CinemachineImpulseSource>().GenerateImpulse();
-
-        /*foreach (ParticleSystem p in secondaryParticles)
-        {
-            var pmain = p.main;
-            pmain.startColor = c;
-            p.Play();
-        }*/
-    }
-
-    private void Speed(float x)
-    {
-        currentSpeed = x;
-    }
-
-    void ChromaticAmount(float x)
-    {
-        //postProfile.GetSetting<ChromaticAberration>().intensity.value = x;
+        if (secondaryParticles != null)
+            foreach (ParticleSystem p in secondaryParticles)
+            {
+                var pmain = p.main;
+                pmain.startColor = c;
+                p.Play();
+            }
     }
 }
