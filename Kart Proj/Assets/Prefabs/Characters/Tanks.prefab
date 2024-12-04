@@ -951,6 +951,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -59020089676736384, guid: e43df6e4e2688b74885339e452924289, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1d9e92217e779aa45a320fa7446c2df9, type: 2}
     - target: {fileID: 919132149155446097, guid: e43df6e4e2688b74885339e452924289, type: 3}
       propertyPath: m_Name
       value: Tank
