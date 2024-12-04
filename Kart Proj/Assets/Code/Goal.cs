@@ -13,12 +13,7 @@ public class Goal : MonoBehaviour
 
     private void Start()
     {
-        LapManager[] carts = FindObjectsOfType<LapManager>();
 
-        foreach (LapManager cart in carts)
-        {
-            cart.SetMaxLaps(maxLaps);
-        }
     }
 
     private void Update()

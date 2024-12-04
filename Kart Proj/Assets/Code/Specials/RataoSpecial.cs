@@ -20,11 +20,9 @@ public class RataoSpecial : SpecialAbility
     [SerializeField]
     public CarSystem target;
 
-    protected override void Start()
+    private void Start()
     {
-        carSystem = GetComponent<CarSystem>();
         specialCharger.SetSpecial(this);
-        base.Start();
     }
 
     protected override void ExecuteAbility()

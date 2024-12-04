@@ -1212,7 +1212,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
+  m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
@@ -1254,14 +1254,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e75b614766bedc54ca4ce205f6d4676e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  players: 2
+  curPlayer: 0
   currentCharacter: 0
   characters:
   - name: Ben
     description: Just a little guy
     speed: 50
-    boost: 60
-    drift: 70
-    handling: 0
+    boost: 50
+    drift: 60
+    handling: 70
     charcModel: {fileID: 1626487440}
     carModel: {fileID: 1322862192}
     spriteDisplay: {fileID: 261184250}
@@ -1270,8 +1272,8 @@ MonoBehaviour:
     description: Basicly AstroBot
     speed: 80
     boost: 90
-    drift: 60
-    handling: 70
+    drift: 70
+    handling: 50
     charcModel: {fileID: 1475718633}
     carModel: {fileID: 1481544147}
     spriteDisplay: {fileID: 1138911597}
@@ -1279,8 +1281,8 @@ MonoBehaviour:
   - name: "Jo\xE3o Rat\xE3o"
     description: OH SHIT A RAT
     speed: 60
-    boost: 70
-    drift: 50
+    boost: 65
+    drift: 40
     handling: 90
     charcModel: {fileID: 1164420101}
     carModel: {fileID: 1396785481}
@@ -1288,20 +1290,20 @@ MonoBehaviour:
     infoImage: {fileID: 0}
   - name: Sargent Tanks
     description: I CANT SEE HIM
-    speed: 90
-    boost: 50
-    drift: 75
-    handling: 65
+    speed: 35
+    boost: 60
+    drift: 60
+    handling: 75
     charcModel: {fileID: 1161046134}
     carModel: {fileID: 1310067483}
     spriteDisplay: {fileID: 835636400}
     infoImage: {fileID: 0}
   - name: Zumzum
     description: ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
-    speed: 70
-    boost: 85
-    drift: 80
-    handling: 55
+    speed: 60
+    boost: 75
+    drift: 70
+    handling: 60
     charcModel: {fileID: 1070714979}
     carModel: {fileID: 309118745}
     spriteDisplay: {fileID: 786189437}
@@ -1312,9 +1314,9 @@ MonoBehaviour:
   Handling: {fileID: 832145922}
   nameTxt: {fileID: 285044885}
   descTxt: {fileID: 1181745438}
-  defaultSize: {x: 100, y: 100}
-  enlargedSize: {x: 150, y: 150}
-  pulseSize: {x: 120, y: 120}
+  defaultSize: {x: 200, y: 100}
+  enlargedSize: {x: 220, y: 110}
+  pulseSize: {x: 180, y: 80}
   pulseSpeed: 0.9
 --- !u!1 &509527255
 GameObject:

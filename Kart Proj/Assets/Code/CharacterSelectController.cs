@@ -6,6 +6,9 @@ using TMPro;
 public class CharacterSelectController : MonoBehaviour
 {
     [SerializeField]
+    private int players = 1; // Quantos players vao jogar
+    [SerializeField] private int curPlayer;
+    [SerializeField]
     private int currentCharacter = 0; // Índice do personagem atual
     [SerializeField]
     private Character[] characters;
@@ -29,6 +32,10 @@ public class CharacterSelectController : MonoBehaviour
 
     void Start()
     {
+        PlayerPrefs.DeleteKey("SelectedCharacter0");
+        PlayerPrefs.DeleteKey("SelectedCharacter1");
+        PlayerPrefs.DeleteKey("SelectedCharacter2");
+        PlayerPrefs.DeleteKey("SelectedCharacter3");
         UpdateUI();
         StartPulseEffect(); 
         ChangeCharacter(0); // Seleciona a primeira personagem no início
@@ -131,11 +138,14 @@ public class CharacterSelectController : MonoBehaviour
     public void OnEnterButtonClicked()
     {
         // Salva o nome da personagem escolhida no PlayerPrefs
-        PlayerPrefs.SetInt("SelectedCharacter", currentCharacter);
+        PlayerPrefs.SetInt("SelectedCharacter" + curPlayer, currentCharacter);
         PlayerPrefs.Save();  // Garante que o valor seja salvo
         Debug.Log("Personagem escolhida: " + characters[currentCharacter].name);
-        // Aqui você pode adicionar o código para avançar para a próxima cena
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Stage Select");
+        curPlayer++;
+
+        if (curPlayer == players)
+            // Avança para o Stage Select
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Stage Select");
     }
 }
 

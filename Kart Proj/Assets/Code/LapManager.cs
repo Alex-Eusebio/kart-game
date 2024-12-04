@@ -5,15 +5,16 @@ using UnityEngine;
 
 public class LapManager : MonoBehaviour
 {
+    [SerializeField]
     int maxLaps;
     [SerializeField]
     int curLaps;
 
     List<float> lapTimes = new List<float>();
 
-    public void SetMaxLaps(int maxLaps)
+    private void Start()
     {
-        this.maxLaps = maxLaps;
+        maxLaps = FindAnyObjectByType<Goal>().maxLaps;
     }
 
     public void Lap(float time)
@@ -25,6 +26,7 @@ public class LapManager : MonoBehaviour
 
         if (curLaps == maxLaps+1)
         {
+            Debug.Log(transform.parent.name);
             for (int i = 0;  i < lapTimes.Count; i++)
             {
                 TimeSpan t = TimeSpan.FromMilliseconds(lapTimes[i]);
@@ -33,8 +35,10 @@ public class LapManager : MonoBehaviour
                                         t.Minutes,
                                         t.Seconds,
                                         t.Milliseconds);
-                Debug.Log(answer);
+                Debug.Log($"Lap {i} - {answer}");
             }
+            Debug.Log("-----------------------");
+            Destroy(transform.parent.gameObject);
         }
     }
 }

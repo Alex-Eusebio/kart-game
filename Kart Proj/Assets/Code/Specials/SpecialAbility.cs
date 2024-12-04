@@ -10,17 +10,15 @@ public abstract class SpecialAbility : MonoBehaviour, ISpecial
     public bool hasSpecialCharge = false;
 
     protected private CarSystem carSystem;
-    protected private AICarSystem carSystemAi;
 
     public SpecialAbility()
     {
         resource = 0;
     }
 
-    protected virtual void Start()
+    private void Awake()
     {
         carSystem = GetComponent<CarSystem>();
-        carSystemAi = GetComponent<AICarSystem>();
     }
 
     public virtual void Charge()

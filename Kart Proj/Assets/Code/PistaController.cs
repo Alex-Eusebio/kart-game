@@ -16,17 +16,30 @@ public class PistaController : MonoBehaviour
 
     private void Start()
     {
-        int selectedCharacter = PlayerPrefs.GetInt("SelectedCharacter");
-        Debug.Log($"Personagem escolhida na cena anterior: {selectedCharacter}"); 
-        
-        // Instancia a personagem
-        InstantiateCharacter(selectedCharacter);
+        int i = 0;
 
-        // Ativar o slider correspondente
-        ActivateCharacterSlider(selectedCharacter);
+        while (true)
+        {
+            int selectedCharacter = 0;
+            if (PlayerPrefs.HasKey("SelectedCharacter" + i))
+            {
+                selectedCharacter = PlayerPrefs.GetInt("SelectedCharacter" + i);
+                Debug.Log(i);
+            }
+            else
+                break;
 
-        sliderSpecial.carSystem = spawnedCharacter.GetComponentInChildren<CarSystem>();
-    
+            Debug.Log($"Personagem escolhida na cena anterior: {selectedCharacter}");
+
+            // Instancia a personagem
+            InstantiateCharacter(selectedCharacter);
+
+            // Ativar o slider correspondente
+            ActivateCharacterSlider(selectedCharacter);
+
+            //sliderSpecial.carSystem = spawnedCharacter.GetComponentInChildren<CarSystem>();
+            i++;
+        }    
     }
 
     private void InstantiateCharacter(int characterId)

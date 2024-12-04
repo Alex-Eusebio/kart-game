@@ -16,10 +16,11 @@ public class MissileProjectile : Projectile
         }
     }
 
-    public void SetDuration(float stunDuration, float speed)
+    public void SetDuration(float stunDuration, float speed, float lifeTime)
     {
         this.stunDuration = stunDuration;
         this.speed = speed;
+        emergencyTimer = lifeTime;
     }
 
     public void FoundTarget(GameObject target)

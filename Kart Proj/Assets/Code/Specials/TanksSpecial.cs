@@ -13,6 +13,8 @@ public class TanksSpecial : SpecialAbility
     private float stunDuration;
     [SerializeField]
     private float rocketSpeed;
+    [SerializeField]
+    private float rocketLifeTime;
 
     [Header("GameObjects")]
     [SerializeField]
@@ -35,7 +37,7 @@ public class TanksSpecial : SpecialAbility
         carSystem.animControll.UpdateSpecial(true);
         GameObject projectile = MonoBehaviour.Instantiate(throwablePrefab, throwSpawnPoint.position, carSystem.gameObject.transform.rotation);
         projectile.GetComponentInChildren<MissileProjectile>().creator = carSystem;
-        projectile.GetComponentInChildren<MissileProjectile>().SetDuration(stunDuration, rocketSpeed);
+        projectile.GetComponentInChildren<MissileProjectile>().SetDuration(stunDuration, rocketSpeed, rocketLifeTime);
         Rigidbody rb = projectile.GetComponent<Rigidbody>();
 
         if (rb != null)

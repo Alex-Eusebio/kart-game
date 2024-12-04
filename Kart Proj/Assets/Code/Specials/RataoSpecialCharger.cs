@@ -5,6 +5,7 @@ using UnityEngine;
 public class RataoSpecialCharger : MonoBehaviour
 {
     private RataoSpecial special;
+    private bool ready = false;
 
     public void SetSpecial(RataoSpecial special)
     {
@@ -16,36 +17,47 @@ public class RataoSpecialCharger : MonoBehaviour
         return other.gameObject == special.GetCar().sphere.gameObject;
     }
 
+    private void Start()
+    {
+        ready = true;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        if (Ignore(other))
-            return;
-
-        GameObject gb = null;
-
-        if (other.transform.parent.GetComponentInChildren<CarSystem>() != null)
-            gb = other.transform.parent.GetComponentInChildren<CarSystem>().gameObject;
-
-        if (gb != null)
+        if (ready)
         {
-            special.target = gb.GetComponent<CarSystem>();
+            if (Ignore(other))
+                return;
+
+            GameObject gb = null;
+
+            if (other.transform.parent.GetComponentInChildren<CarSystem>() != null)
+                gb = other.transform.parent.GetComponentInChildren<CarSystem>().gameObject;
+
+            if (gb != null)
+            {
+                special.target = gb.GetComponent<CarSystem>();
+            }
         }
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if (Ignore(other))
-            return;
-
-        GameObject gb = null;
-
-        if (other.transform.parent.GetComponentInChildren<CarSystem>() != null)
-            gb = other.transform.parent.GetComponentInChildren<CarSystem>().gameObject;
-
-        if (gb.GetComponent<CarSystem>() != null)
+        if (ready)
         {
-            special.target = gb.GetComponent<CarSystem>();
-            special.Charge();
+            if (Ignore(other))
+                return;
+
+            GameObject gb = null;
+
+            if (other.transform.parent.GetComponentInChildren<CarSystem>() != null)
+                gb = other.transform.parent.GetComponentInChildren<CarSystem>().gameObject;
+
+            if (gb.GetComponent<CarSystem>() != null)
+            {
+                special.target = gb.GetComponent<CarSystem>();
+                special.Charge();
+            }
         }
     }
 

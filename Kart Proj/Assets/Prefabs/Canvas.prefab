@@ -820,6 +820,7 @@ MonoBehaviour:
   driftPowerTxt: {fileID: 1539731335989507830}
   isDriftTxt: {fileID: 4085525497609004241}
   car: {fileID: 0}
+  followTarget: {fileID: 0}
 --- !u!223 &7352531785239319813
 Canvas:
   m_ObjectHideFlags: 0
@@ -837,7 +838,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
+  m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: -1211814727
