@@ -1,5 +1,5 @@
-using UnityEngine.EventSystems;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
@@ -8,7 +8,7 @@ public class MainMenuController : MonoBehaviour
     public Button[] menuButtons; // Array de botões no menu
     private int currentIndex = 0; // Índice do botão atualmente selecionado
     public string playSceneName; // Nome da cena para o botão Play
-    public GameObject settingsPanel; // Painel de configurações
+    public string settingsSceneName; // Nome da cena para o botão Settings
 
     void Start()
     {
@@ -104,16 +104,16 @@ public class MainMenuController : MonoBehaviour
         }
     }
 
-    // Botão Settings
+    // Botão Settings (agora carrega uma nova cena)
     public void OpenSettings()
     {
-        if (settingsPanel != null)
+        if (!string.IsNullOrEmpty(settingsSceneName))
         {
-            settingsPanel.SetActive(true); // Ativa o painel de configurações
+            SceneManager.LoadScene(settingsSceneName); // Carrega a cena de configurações
         }
         else
         {
-            Debug.LogError("Settings panel is not assigned!");
+            Debug.LogError("Settings scene name is not set!");
         }
     }
 
@@ -123,14 +123,6 @@ public class MainMenuController : MonoBehaviour
         Debug.Log("Quitting game...");
         Application.Quit(); // Fecha o jogo (funciona apenas no build)
     }
-
-    // Fecha as configurações
-    public void CloseSettings()
-    {
-        if (settingsPanel != null)
-        {
-            settingsPanel.SetActive(false); // Fecha o painel de configurações
-        }
-    }
 }
+
 

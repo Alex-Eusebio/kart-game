@@ -1301,7 +1301,7 @@ MonoBehaviour:
   - {fileID: 783639884}
   - {fileID: 706955384}
   playSceneName: Character Select
-  settingsPanel: {fileID: 102039536}
+  settingsSceneName: Settings
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
