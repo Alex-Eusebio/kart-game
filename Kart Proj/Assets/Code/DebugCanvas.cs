@@ -42,7 +42,7 @@ public class DebugCanvas : MonoBehaviour
         {
             try
             {
-                curSpeedTxt.text = $"Current Speed: {car.currentSpeed.ToString("0.0")}";
+                curSpeedTxt.text = $"Current Speed: {car.currentSpeed+car.bonusSpeed.ToString("0.0")}";
                 driftPowerTxt.text = $"Drift Power: {car.driftPower.ToString("0.0")} (lvl {car.GetDriftLevel()})";
                 isDriftTxt.text = $"Is Drifting? {car.drifting}";
             }

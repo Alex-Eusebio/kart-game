@@ -4,6 +4,7 @@ using UnityEngine;
 using DG.Tweening;
 using Unity.VisualScripting;
 using System.Dynamic;
+using UnityEngine.InputSystem;
 //using UnityEngine.Rendering.PostProcessing;
 //using Cinemachine;
 
@@ -88,7 +89,7 @@ public class CarSystem : MonoBehaviour
     {
         boostManager = GetComponent<BoostManager>();
 
-        if (wheelParticles != null && primaryParticles != null && secondaryParticles != null)
+        if (wheelParticles != null && primaryParticles.Count > 0 && secondaryParticles.Count > 0)
         {
             for (int i = 0; i < wheelParticles.GetChild(0).childCount; i++)
             {
@@ -204,10 +205,10 @@ public class CarSystem : MonoBehaviour
 
     protected virtual void GetInputs()
     {
-        speedInput = Input.GetAxis("Vertical");
+        /*speedInput = Input.GetAxis("Vertical");
         steerInput = Input.GetAxis("Horizontal");
         isTryingToDrift = Input.GetButton("Jump");
-        usedSpecial = Input.GetButton("Fire1");
+        usedSpecial = Input.GetButton("Fire1");*/
     }
 
     // Start drifting
@@ -363,7 +364,7 @@ public class CarSystem : MonoBehaviour
             boostManager.AddBoost(boost);
 
             Debug.Log("BOOST!" + GetDriftLevel());
-            if (primaryParticles != null)
+            if (primaryParticles.Count > 0)
             {
                 kartModel.Find("Tube001").GetComponentInChildren<ParticleSystem>().Play();
                 kartModel.Find("Tube002").GetComponentInChildren<ParticleSystem>().Play();
@@ -374,7 +375,7 @@ public class CarSystem : MonoBehaviour
         driftMode = 0;
         first = false; second = false; third = false;
 
-        if (primaryParticles != null) 
+        if (primaryParticles.Count > 0) 
             foreach (ParticleSystem p in primaryParticles)
             {
                 p.Stop();
@@ -418,7 +419,7 @@ public class CarSystem : MonoBehaviour
         if (driftMode > 0)
             PlayFlashParticle(c);
 
-        if (primaryParticles != null)
+        if (primaryParticles.Count > 0)
             foreach (ParticleSystem p in primaryParticles)
             {
                 var pmain = p.main;

@@ -6,7 +6,6 @@ public class PistaController : MonoBehaviour
     [Header("Personagens")]
     public GameObject[] characterPrefabs;  // Prefabs dos personagens
     public Transform[] spawnPoints;        // Pontos de spawn
-    public Camera mainCamera;              // Câmera principal
 
     public DebugCanvas debugCanvas;        // Debug Canvas (opcional)
     public Slider[] characterSliders;      // Sliders no Canvas (um para cada personagem)
@@ -42,14 +41,6 @@ public class PistaController : MonoBehaviour
 
                 spawnedCharacter = Instantiate(characterPrefab, spawnPoint.position, spawnPoint.rotation);
                 Debug.Log($"Personagem {characterPrefab.name} foi spawnada na posição {spawnPoint.position}");
-
-                // Configurar a câmera para seguir a personagem
-                CameraFollow cameraFollow = spawnedCharacter.GetComponentInChildren<CameraFollow>();
-                if (cameraFollow != null)
-                {
-                    cameraFollow._camera = mainCamera;
-                    Debug.Log("Câmera configurada para seguir a personagem.");
-                }
 
                 // Associar o sistema de carro ao DebugCanvas
                 if (debugCanvas != null)
