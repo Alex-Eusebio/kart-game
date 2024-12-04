@@ -2231,7 +2231,6 @@ GameObject:
   - component: {fileID: 146992467}
   - component: {fileID: 146992466}
   - component: {fileID: 146992465}
-  - component: {fileID: 146992464}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -2254,28 +2253,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 961388789}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &146992464
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 146992462}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 1186801719}
 --- !u!33 &146992465
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -2283,7 +2260,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 146992462}
-  m_Mesh: {fileID: 1186801719}
+  m_Mesh: {fileID: 1036988554}
 --- !u!23 &146992466
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2603,7 +2580,7 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 1186801719}
+  m_Mesh: {fileID: 1036988554}
   m_VersionIndex: 3091
   m_IsSelectable: 1
   m_SelectedFaces: 
@@ -7215,7 +7192,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!43 &1006822724
+--- !u!43 &1036988554
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7556,13 +7533,13 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bef083c9471d9344f840e12138aa6a04, type: 3}
---- !u!43 &1186801719
+--- !u!43 &1188046673
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-51268
+  m_Name: pb_Mesh-51268(Clone)(Clone)
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -13493,7 +13470,6 @@ GameObject:
   - component: {fileID: 1836763675}
   - component: {fileID: 1836763674}
   - component: {fileID: 1836763673}
-  - component: {fileID: 1836763672}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -13516,28 +13492,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 146045730}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1836763672
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1836763670}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 1006822724}
 --- !u!33 &1836763673
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -13545,7 +13499,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1836763670}
-  m_Mesh: {fileID: 1006822724}
+  m_Mesh: {fileID: 1188046673}
 --- !u!23 &1836763674
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13865,7 +13819,7 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 1006822724}
+  m_Mesh: {fileID: 1188046673}
   m_VersionIndex: 3091
   m_IsSelectable: 1
   m_SelectedFaces: 
@@ -15014,7 +14968,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7422559318332244233, guid: 539d6e9d278057c41b7c4294b13def6b, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.018194
+      value: 0.7064433
       objectReference: {fileID: 0}
     - target: {fileID: 7422559318332244233, guid: 539d6e9d278057c41b7c4294b13def6b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15059,7 +15013,7 @@ PrefabInstance:
     - target: {fileID: 7562047562770117615, guid: 539d6e9d278057c41b7c4294b13def6b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: d679a6db32ce1964d8231685f663738c, type: 2}
+      objectReference: {fileID: 2100000, guid: 3d0d27af28ae9f94795c7b257e1ad7a8, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
