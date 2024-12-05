@@ -45,8 +45,12 @@ public class RataoSpecial : SpecialAbility
             {
                 Boost boost = ScriptableObject.CreateInstance<Boost>();
 
-                boost.Setup(target.maxSpeed - carSystem.maxSpeed, 0, 0.05f);
-                carSystem.boostManager.AddBoost(boost);
+                float speedDifference = (target.maxSpeed - carSystem.maxSpeed) + 5;
+
+                if (speedDifference < 0) {
+                    boost.Setup(speedDifference, 0, 0.04f);
+                    carSystem.boostManager.AddBoost(boost);
+                }
             }
 
             if (resource == maxResource)

@@ -131,9 +131,9 @@ public class CarSystem : MonoBehaviour
                     }
                 } else
                 {
-                    currentSpeed += speedChange;
+                    if (currentSpeed + speedChange > 0)
+                        currentSpeed += speedChange;
                 }
-
             } else
             {
                 onRoad = true;

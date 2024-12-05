@@ -749,7 +749,7 @@ MonoBehaviour:
   driftBoostDurationPerLvl: 0.85
   driftSpeedDebuff: 10
   driftPassiveSteeringMulti: 1.6
-  steering: 12
+  steering: 10
   steeringDriftMulti: 0.42
   steeringDebuff: 10
   gravity: 22
@@ -840,7 +840,7 @@ MonoBehaviour:
   boostStrenghtCap: 60
   steeringBuffPerLvl: 1.2
   steeringBuffCap: 15
-  boostDurationPerLvl: 0.8
+  boostDurationPerLvl: 0.85
   crystal: {fileID: 6152707986511186072, guid: e431a4e551106d740b21533615ba86e9, type: 3}
 --- !u!1 &5960597877002866917
 GameObject:
