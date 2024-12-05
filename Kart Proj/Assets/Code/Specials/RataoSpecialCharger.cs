@@ -31,7 +31,7 @@ public class RataoSpecialCharger : MonoBehaviour
 
             GameObject gb = null;
 
-            if (other.transform.parent.GetComponentInChildren<CarSystem>() != null)
+            if (other.transform.parent && other.transform.parent.GetComponentInChildren<CarSystem>() != null)
                 gb = other.transform.parent.GetComponentInChildren<CarSystem>().gameObject;
 
             if (gb != null)
@@ -48,14 +48,9 @@ public class RataoSpecialCharger : MonoBehaviour
             if (Ignore(other))
                 return;
 
-            GameObject gb = null;
-
-            if (other.transform.parent.GetComponentInChildren<CarSystem>() != null)
-                gb = other.transform.parent.GetComponentInChildren<CarSystem>().gameObject;
-
-            if (gb.GetComponent<CarSystem>() != null)
+            if (other.transform.parent && other.transform.parent.GetComponentInChildren<CarSystem>() != null)
             {
-                special.target = gb.GetComponent<CarSystem>();
+                special.target = other.transform.parent.GetComponentInChildren<CarSystem>();
                 special.Charge();
             }
         }
@@ -66,14 +61,7 @@ public class RataoSpecialCharger : MonoBehaviour
         if (Ignore(other))
             return; 
         
-        GameObject gb = null;
-
-        if (other.transform.parent.GetComponentInChildren<CarSystem>() != null)
-            gb = other.transform.parent.GetComponentInChildren<CarSystem>().gameObject;
-
-        if (gb.GetComponent<CarSystem>() != null)
-        {
+        if (other.transform.parent && other.transform.parent.GetComponentInChildren<CarSystem>() != null)
             special.target = null;
-        }
     }
 }

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PistaController : MonoBehaviour
@@ -24,7 +25,6 @@ public class PistaController : MonoBehaviour
             if (PlayerPrefs.HasKey("SelectedCharacter" + i))
             {
                 selectedCharacter = PlayerPrefs.GetInt("SelectedCharacter" + i);
-                Debug.Log(i);
             }
             else
                 break;
@@ -33,9 +33,6 @@ public class PistaController : MonoBehaviour
 
             // Instancia a personagem
             InstantiateCharacter(selectedCharacter);
-
-            // Ativar o slider correspondente
-            ActivateCharacterSlider(selectedCharacter);
 
             //sliderSpecial.carSystem = spawnedCharacter.GetComponentInChildren<CarSystem>();
             i++;
@@ -61,26 +58,11 @@ public class PistaController : MonoBehaviour
         }
     }
 
-    private void ActivateCharacterSlider(int characterId)
+    private void Update()
     {
-        Debug.Log("Iniciando ativação dos sliders...");
-        
-        // Desativa todos os sliders primeiro
-        for (int i = 0; i < characterSliders.Length; i++)
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            characterSliders[i].gameObject.SetActive(false);
-            Debug.Log($"Slider {i} desativado.");
-        }
-
-        // Ativa apenas o slider correspondente ao personagem escolhido
-        if (characterId >= 0 && characterId < characterSliders.Length)
-        {
-            characterSliders[characterId].gameObject.SetActive(true);
-            Debug.Log($"Slider {characterId} ativado para o personagem correspondente.");
-        }
-        else
-        {
-            Debug.LogWarning("ID do personagem fora do intervalo dos sliders.");
+            SceneManager.LoadScene(3);
         }
     }
 }

@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class CharacterSelectController : MonoBehaviour
 {
@@ -36,6 +37,10 @@ public class CharacterSelectController : MonoBehaviour
         PlayerPrefs.DeleteKey("SelectedCharacter1");
         PlayerPrefs.DeleteKey("SelectedCharacter2");
         PlayerPrefs.DeleteKey("SelectedCharacter3");
+
+        if (PlayerPrefs.HasKey("PlayerCount"))
+            players = PlayerPrefs.GetInt("PlayerCount");
+
         UpdateUI();
         StartPulseEffect(); 
         ChangeCharacter(0); // Seleciona a primeira personagem no início
@@ -53,6 +58,10 @@ public class CharacterSelectController : MonoBehaviour
         {
             OnEnterButtonClicked();
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        
     }
 
     private void ChangeCharacter(int _change)

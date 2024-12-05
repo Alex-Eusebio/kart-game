@@ -1259,17 +1259,17 @@ MonoBehaviour:
   currentCharacter: 0
   characters:
   - name: Ben
-    description: Just a little guy
+    description: The little hero
     speed: 50
-    boost: 50
-    drift: 60
-    handling: 70
+    boost: 70
+    drift: 55
+    handling: 60
     charcModel: {fileID: 1626487440}
     carModel: {fileID: 1322862192}
     spriteDisplay: {fileID: 261184250}
     infoImage: {fileID: 0}
   - name: Max
-    description: Basicly AstroBot
+    description: The robot
     speed: 80
     boost: 90
     drift: 70
@@ -1279,7 +1279,7 @@ MonoBehaviour:
     spriteDisplay: {fileID: 1138911597}
     infoImage: {fileID: 0}
   - name: "Jo\xE3o Rat\xE3o"
-    description: OH SHIT A RAT
+    description: The big cheese
     speed: 60
     boost: 65
     drift: 40
@@ -1289,7 +1289,7 @@ MonoBehaviour:
     spriteDisplay: {fileID: 2112575796}
     infoImage: {fileID: 0}
   - name: Sargent Tanks
-    description: I CANT SEE HIM
+    description: The tank
     speed: 35
     boost: 60
     drift: 60
@@ -1299,7 +1299,7 @@ MonoBehaviour:
     spriteDisplay: {fileID: 835636400}
     infoImage: {fileID: 0}
   - name: Zumzum
-    description: ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
+    description: The warrior bee
     speed: 60
     boost: 75
     drift: 70
@@ -5659,7 +5659,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1759881646}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5672,7 +5672,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -76, y: -58}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1772982416

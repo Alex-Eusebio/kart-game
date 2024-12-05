@@ -12,28 +12,9 @@ public class DebugCanvas : MonoBehaviour
 
     [Header("Car")]
     [SerializeField] private CarSystem car; // Referência ao CarSystem
-    [SerializeField] private Transform followTarget; // Transform do objeto a ser seguido
-
-    private Vector3 offset; // Offset para posicionar o canvas em relação ao carro
-
-    void Start()
-    {
-        followTarget = car.transform;
-        // Defina o offset inicial baseado na posição relativa atual
-        if (followTarget != null)
-        {
-            offset = transform.position - followTarget.position;
-        }
-    }
 
     void Update()
     {
-        // Atualiza a posição do DebugCanvas para acompanhar o carro
-        if (followTarget != null)
-        {
-            transform.position = followTarget.position + offset;
-        }
-
         // Atualiza os textos com as informações do carro
         if (car != null)
         {

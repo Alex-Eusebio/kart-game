@@ -53,6 +53,11 @@ public class StageSelectController : MonoBehaviour
             // Aqui você já está na bandeira certa e vai para a cena correspondente
             LoadTrackScene(currentFlagIndex);
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(3);
+        }
     }
 
     // Muda a bandeira com base na direção

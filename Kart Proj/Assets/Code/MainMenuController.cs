@@ -7,8 +7,8 @@ public class MainMenuController : MonoBehaviour
 {
     public Button[] menuButtons; // Array de botões no menu
     private int currentIndex = 0; // Índice do botão atualmente selecionado
-    public string playSceneName; // Nome da cena para o botão Play
-    public string settingsSceneName; // Nome da cena para o botão Settings
+    public int playSceneName; // Nome da cena para o botão Play
+    public int settingsSceneName; // Nome da cena para o botão Settings
 
     void Start()
     {
@@ -38,6 +38,11 @@ public class MainMenuController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space))
         {
             ConfirmSelection(); // Confirma a seleção ao pressionar Enter ou Espaço
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(0);
         }
     }
 
@@ -94,27 +99,13 @@ public class MainMenuController : MonoBehaviour
     // Botão Play
     public void PlayGame()
     {
-        if (!string.IsNullOrEmpty(playSceneName))
-        {
-            SceneManager.LoadScene(playSceneName); // Carrega a cena do jogo
-        }
-        else
-        {
-            Debug.LogError("Play scene name is not set!");
-        }
+        SceneManager.LoadScene(playSceneName); // Carrega a cena do jogo
     }
 
     // Botão Settings (agora carrega uma nova cena)
     public void OpenSettings()
     {
-        if (!string.IsNullOrEmpty(settingsSceneName))
-        {
-            SceneManager.LoadScene(settingsSceneName); // Carrega a cena de configurações
-        }
-        else
-        {
-            Debug.LogError("Settings scene name is not set!");
-        }
+        SceneManager.LoadScene(settingsSceneName); // Carrega a cena de configurações
     }
 
     // Botão Quit

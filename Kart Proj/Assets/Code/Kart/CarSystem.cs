@@ -363,7 +363,6 @@ public class CarSystem : MonoBehaviour
             boost.Setup(driftBoostPerLvl*driftMode, 0, driftBoostDurationPerLvl*driftMode);
             boostManager.AddBoost(boost);
 
-            Debug.Log("BOOST!" + GetDriftLevel());
             if (primaryParticles.Count > 0)
             {
                 kartModel.Find("Tube001").GetComponentInChildren<ParticleSystem>().Play();
