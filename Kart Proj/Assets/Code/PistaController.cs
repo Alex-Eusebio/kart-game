@@ -55,13 +55,6 @@ public class PistaController : MonoBehaviour
                 spawnedCharacter = Instantiate(characterPrefab, spawnPoint.position, spawnPoint.rotation);
                 Debug.Log($"Personagem {characterPrefab.name} foi spawnada na posição {spawnPoint.position}");
 
-                // Associar o sistema de carro ao DebugCanvas
-                if (debugCanvas != null)
-                {
-                    debugCanvas.SetCar(spawnedCharacter.GetComponentInChildren<CarSystem>());
-                    Debug.Log("Carro associado ao DebugCanvas.");
-                }
-
                 break;
             }
             i++;
