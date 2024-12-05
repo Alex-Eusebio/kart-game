@@ -74,9 +74,9 @@ MonoBehaviour:
   maxSpeed: 75
   backwardsSpeed: -15
   acceleration: 9
-  minDriftPower: 40
+  minDriftPower: 45
   driftPowerPerLvl: 80
-  driftBoostPerLvl: 50
+  driftBoostPerLvl: 35
   driftBoostDurationPerLvl: 0.7
   driftSpeedDebuff: 3
   driftPassiveSteeringMulti: 1.6
@@ -691,6 +691,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21eef4a0cad805942b195afa806dc4b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxLaps: 0
   curLaps: 0
 --- !u!1 &8915943828899904714
 GameObject:
@@ -1182,8 +1183,30 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7972858493798810500, guid: 3d8d5a9dd97b26d41a37357b4096108a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1251679585261875150}
   m_SourcePrefab: {fileID: 100100000, guid: 3d8d5a9dd97b26d41a37357b4096108a, type: 3}
+--- !u!1 &1280460080030702477 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7972858493798810500, guid: 3d8d5a9dd97b26d41a37357b4096108a, type: 3}
+  m_PrefabInstance: {fileID: 9178427464397477897}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1251679585261875150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280460080030702477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51d03360fed1133469b229c32c4d29ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carSystem: {fileID: 8680975895763679563}
+  specialSliders: []
 --- !u!224 &5632655766075947344 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3552044560166871385, guid: 3d8d5a9dd97b26d41a37357b4096108a, type: 3}

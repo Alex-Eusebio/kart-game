@@ -30,7 +30,7 @@ public class BoostManager : MonoBehaviour
         float bonusSteer = 0;
         foreach (Boost boost in boosts)
         {
-            if (carSystem.ignoreEnemySlows && boost.bonusSpeed > 0)
+            if (carSystem.ignoreEnemySlows && boost.bonusSpeed < 0)
                 bonusSpeed += 0;
             else
                 bonusSpeed += boost.bonusSpeed;

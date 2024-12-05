@@ -198,10 +198,10 @@ MonoBehaviour:
   resource: 0
   maxResource: 150
   hasSpecialCharge: 1
-  chargePerTick: 0.5
+  chargePerTick: 0.6
   boostStrenght: 30
   steeringBuff: 4
-  boostDuration: 3
+  boostDuration: 3.85
   jumpStrenght: 5000
   specialCharger: {fileID: 5648953871841840400}
   target: {fileID: 0}
@@ -828,6 +828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21eef4a0cad805942b195afa806dc4b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxLaps: 0
   curLaps: 0
 --- !u!1 &8783837986011252762
 GameObject:

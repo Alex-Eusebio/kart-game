@@ -593,18 +593,18 @@ MonoBehaviour:
   speedInput: 0
   isTryingToDrift: 0
   usedSpecial: 0
-  maxSpeed: 65
+  maxSpeed: 80
   backwardsSpeed: -15
-  acceleration: 7
+  acceleration: 4
   minDriftPower: 55
   driftPowerPerLvl: 95
-  driftBoostPerLvl: 20
+  driftBoostPerLvl: 15
   driftBoostDurationPerLvl: 0.85
-  driftSpeedDebuff: 5
+  driftSpeedDebuff: 10
   driftPassiveSteeringMulti: 1.6
-  steering: 10
+  steering: 12
   steeringDriftMulti: 0.42
-  steeringDebuff: 4
+  steeringDebuff: 10
   gravity: 22
   layerMask:
     serializedVersion: 2
@@ -617,7 +617,7 @@ MonoBehaviour:
   ignoreRoadSlows: 0
   animControll: {fileID: 8675287817834752483}
   bonusGravity: 0
-  gravityScale: 70
+  gravityScale: 90
   airBorneTime: 0.2
   airBorneTimer: 0
   primaryParticles: []
@@ -689,11 +689,11 @@ MonoBehaviour:
   resource: 0
   maxResource: 15
   hasSpecialCharge: 1
-  boostStrenghtPerLvl: 10
-  boostStrenghtCap: 65
+  boostStrenghtPerLvl: 7
+  boostStrenghtCap: 60
   steeringBuffPerLvl: 1.2
   steeringBuffCap: 15
-  boostDurationPerLvl: 1.3
+  boostDurationPerLvl: 0.8
   crystal: {fileID: 6152707986511186072, guid: e431a4e551106d740b21533615ba86e9, type: 3}
 --- !u!1 &5960597877002866917
 GameObject:

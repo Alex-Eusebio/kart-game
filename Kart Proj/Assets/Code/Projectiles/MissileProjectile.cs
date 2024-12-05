@@ -10,9 +10,9 @@ public class MissileProjectile : Projectile
 
     protected override void Effect(Collider other)
     {
-        if (other.GetComponent<CarSystem>() != null /*|| other.GetComponent<AiCarSystem>() != null*/)
+        if (other.transform.parent.GetComponentInChildren<CarSystem>() != null /*|| other.GetComponent<AiCarSystem>() != null*/)
         {
-            other.GetComponent<CarSystem>().stunDuration = stunDuration;
+            other.transform.parent.GetComponentInChildren<CarSystem>().stunDuration = stunDuration;
         }
     }
 
@@ -39,9 +39,8 @@ public class MissileProjectile : Projectile
 
         if (target != null)
         {
-            Debug.Log(target);
             Vector3 pos = target.transform.position;
-            pos.y += 1.5f;
+            pos.y += 2.5f;
             transform.parent.position = Vector3.MoveTowards(transform.parent.position, pos, speed);
         }
     }
@@ -50,14 +49,12 @@ public class MissileProjectile : Projectile
     {
         if (target != null)
         {
-            if (other.GetComponent<CarSystem>() != null)
-            {
-                if (other.GetComponent<CarSystem>() != creator)
-                {
-                    Effect(other);
+            Debug.Log(other.gameObject);
+            if (other.transform.parent.GetComponentInChildren<CarSystem>() && other.transform.parent.GetComponentInChildren<CarSystem>() != creator)
+            { 
+                Effect(other);
 
-                    Destroy(gameObject.transform.parent.gameObject);
-                }
+                Destroy(gameObject.transform.parent.gameObject);
             }
         }
     }

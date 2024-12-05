@@ -544,11 +544,11 @@ MonoBehaviour:
   usedSpecial: 0
   maxSpeed: 65
   backwardsSpeed: -10
-  acceleration: 5
+  acceleration: 6
   minDriftPower: 40
   driftPowerPerLvl: 80
-  driftBoostPerLvl: 40
-  driftBoostDurationPerLvl: 0.7
+  driftBoostPerLvl: 30
+  driftBoostDurationPerLvl: 0.8
   driftSpeedDebuff: 0
   driftPassiveSteeringMulti: 1.6
   steering: 11
@@ -636,13 +636,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resource: 0
-  maxResource: 15
+  maxResource: 12
   hasSpecialCharge: 0
   throwingStrenght: 140
   throwingBonusSpeedPer: 0.55
-  stunDuration: 1.5
-  rocketSpeed: 0.4
-  rocketLifeTime: 2.5
+  stunDuration: 1.2
+  rocketSpeed: 0.75
+  rocketLifeTime: 2.9
   throwablePrefab: {fileID: 7367894296141030729, guid: c60849d66e00cd642bed62e1cb7d987b, type: 3}
   throwSpawnPoint: {fileID: 8784941520373512294}
 --- !u!1 &5960597877002866917
