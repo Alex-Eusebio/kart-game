@@ -21,7 +21,13 @@ public class CharacterSelectController : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI nameTxt;
     [SerializeField]
+    private TextMeshProUGUI titleTxt;
+    [SerializeField]
     private TextMeshProUGUI descTxt;
+    [SerializeField]
+    private TextMeshProUGUI specialNameTxt;
+    [SerializeField]
+    private Image specialIcon;
 
     [Header("Image Sizes")]
     public Vector2 defaultSize = new Vector2(100f, 100f);
@@ -89,7 +95,10 @@ public class CharacterSelectController : MonoBehaviour
     private void UpdateUI()
     {
         nameTxt.text = characters[currentCharacter].name;
-        descTxt.text = characters[currentCharacter].description;
+        titleTxt.text = characters[currentCharacter].title;
+        descTxt.text = characters[currentCharacter].specialDescription;
+        specialNameTxt.text = characters[currentCharacter].specialName;
+        specialIcon.sprite = characters[currentCharacter].specialIcon;
 
         for (int i = 0; i < characters.Length; i++)
         {
@@ -162,8 +171,11 @@ public class CharacterSelectController : MonoBehaviour
 public struct Character
 {
     public string name;
+    public string title;
+    public Sprite specialIcon;
+    public string specialName;
     [TextArea(3, 3)]
-    public string description;
+    public string specialDescription;
     [Range(0.0f, 100.0f)]
     public float speed;
     [Range(0.0f, 100.0f)]
