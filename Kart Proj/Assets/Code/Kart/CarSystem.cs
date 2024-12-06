@@ -112,6 +112,7 @@ public class CarSystem : MonoBehaviour
     {
         RaycastHit hit;
         float rayLength = 1.1f; // Adjust based on your character's size
+        
         if (Physics.Raycast(transform.position, Vector3.down, out hit, rayLength))
         {
             if (hit.collider.gameObject.GetComponent<IChangeSpeed>() != null)

@@ -15,21 +15,16 @@ public class DebugCanvas : MonoBehaviour
 
     void Update()
     {
+        if (FindAnyObjectByType<Goal>())
+            timerTxt.text = FindAnyObjectByType<Goal>().GetTimer();
+
         // Atualiza os textos com as informações do carro
         if (car != null)
         {
-            try
-            {
-                curSpeedTxt.text = $"Current Speed: {(car.currentSpeed+car.bonusSpeed).ToString("0.0")}";
-                driftPowerTxt.text = $"Drift Power: {car.driftPower.ToString("0")} (lvl {car.GetDriftLevel()})";
-                isSpecialTxt.text = $"Is Special Ready? {car.special.IsAvailable()}";
-                isDriftTxt.text = $"Is Drifting? {car.drifting}";
-                timerTxt.text = FindAnyObjectByType<Goal>().GetTimer();
-            }
-            catch
-            {
-                Debug.LogWarning("Erro ao atualizar os textos do DebugCanvas.");
-            }
+            curSpeedTxt.text = $"Current Speed: {(car.currentSpeed+car.bonusSpeed).ToString("0.0")}";
+            driftPowerTxt.text = $"Drift Power: {car.driftPower.ToString("0")} (lvl {car.GetDriftLevel()})";
+            isSpecialTxt.text = $"Is Special Ready? {car.special.IsAvailable()}";
+            isDriftTxt.text = $"Is Drifting? {car.drifting}";
         }
     }
 }

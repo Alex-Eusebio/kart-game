@@ -861,8 +861,8 @@ MonoBehaviour:
   resource: 0
   maxResource: 9
   hasSpecialCharge: 0
-  throwingStrenght: 20
-  throwingBonusSpeedPer: 0.19
+  throwingStrenght: 21
+  throwingBonusSpeedPer: 0.21
   slowStrenght: -20
   slowDuration: 3
   puddleDuration: 10
