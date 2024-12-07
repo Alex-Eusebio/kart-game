@@ -9,6 +9,7 @@ public class DebugCanvas : MonoBehaviour
     [SerializeField] private TextMeshProUGUI isDriftTxt;
     [SerializeField] private TextMeshProUGUI isSpecialTxt;
     [SerializeField] private TextMeshProUGUI timerTxt;
+    [SerializeField] private TextMeshProUGUI lapTxt;
 
     [Header("Car")]
     [SerializeField] private CarSystem car; // Referência ao CarSystem
@@ -25,6 +26,7 @@ public class DebugCanvas : MonoBehaviour
             driftPowerTxt.text = $"Drift Power: {car.driftPower.ToString("0")} (lvl {car.GetDriftLevel()})";
             isSpecialTxt.text = $"Is Special Ready? {car.special.IsAvailable()}";
             isDriftTxt.text = $"Is Drifting? {car.drifting}";
+            lapTxt.text = $"Lap {car.transform.parent.GetComponentInChildren<LapManager>().curLaps}/{car.transform.parent.GetComponentInChildren<LapManager>().maxLaps}";
         }
     }
 }
