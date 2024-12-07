@@ -5,10 +5,8 @@ using UnityEngine;
 
 public class LapManager : MonoBehaviour
 {
-    [SerializeField]
-    int maxLaps;
-    [SerializeField]
-    int curLaps;
+    public int maxLaps;
+    public int curLaps;
 
     List<float> lapTimes = new List<float>();
 
