@@ -9,15 +9,7 @@ public class Goal : MonoBehaviour
     float time;
     public int maxLaps = 3;
 
-    private void Start()
-    {
-
-    }
-
-    private void Update()
-    {
-        
-    }
+    public List<Checkpoint> checkpointList;
 
     public string GetTimer()
     {

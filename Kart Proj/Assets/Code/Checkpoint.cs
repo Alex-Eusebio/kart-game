@@ -11,6 +11,9 @@ public class Checkpoint : MonoBehaviour
         if (other.GetComponent<CheckpointManager>() != null)
         {
             other.GetComponent<CheckpointManager>().CheckPointReached(this);
+        } else if (other.GetComponent<LapManager>() != null)
+        {
+            other.GetComponent<LapManager>().CheckPointReached(this);
         }
     }
 }
