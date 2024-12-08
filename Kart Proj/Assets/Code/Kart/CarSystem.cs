@@ -5,6 +5,7 @@ using DG.Tweening;
 using Unity.VisualScripting;
 using System.Dynamic;
 using UnityEngine.InputSystem;
+using UnityEngine.ProBuilder.Shapes;
 //using UnityEngine.Rendering.PostProcessing;
 //using Cinemachine;
 
@@ -146,8 +147,6 @@ public class CarSystem : MonoBehaviour
 
     void Update()
     {
-        GetInputs();
-
         //Follow Collider
         transform.position = sphere.transform.position - new Vector3(0, 0.75f, 0);
 
@@ -204,12 +203,14 @@ public class CarSystem : MonoBehaviour
         }
     }
 
-    protected virtual void GetInputs()
+    public void RespawnCar()
     {
-        /*speedInput = Input.GetAxis("Vertical");
-        steerInput = Input.GetAxis("Horizontal");
-        isTryingToDrift = Input.GetButton("Jump");
-        usedSpecial = Input.GetButton("Fire1");*/
+        if (sphere.GetComponent<LapManager>().lastCheckpoint)
+        {
+            sphere.position = sphere.GetComponent<LapManager>().lastCheckpoint.transform.position;
+            transform.rotation = sphere.GetComponent<LapManager>().lastCheckpoint.transform.rotation;
+            currentSpeed = 0;
+        }
     }
 
     // Start drifting

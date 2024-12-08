@@ -238,6 +238,15 @@ public partial class @GameInputs: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Respawn"",
+                    ""type"": ""Button"",
+                    ""id"": ""84f73c7f-12c1-49f2-81ee-f31344ddf6bf"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -438,6 +447,28 @@ public partial class @GameInputs: IInputActionCollection2, IDisposable
                     ""action"": ""Vertical"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""688da9ff-30fb-4c5d-8150-cf2f91f2ff79"",
+                    ""path"": ""<Keyboard>/#(R)"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Respawn"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5ed29187-657e-4306-87ac-371e28d9f8a2"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controler"",
+                    ""action"": ""Respawn"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -479,6 +510,7 @@ public partial class @GameInputs: IInputActionCollection2, IDisposable
         m_Game_Special = m_Game.FindAction("Special", throwIfNotFound: true);
         m_Game_Drift = m_Game.FindAction("Drift", throwIfNotFound: true);
         m_Game_Pause = m_Game.FindAction("Pause", throwIfNotFound: true);
+        m_Game_Respawn = m_Game.FindAction("Respawn", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -607,6 +639,7 @@ public partial class @GameInputs: IInputActionCollection2, IDisposable
     private readonly InputAction m_Game_Special;
     private readonly InputAction m_Game_Drift;
     private readonly InputAction m_Game_Pause;
+    private readonly InputAction m_Game_Respawn;
     public struct GameActions
     {
         private @GameInputs m_Wrapper;
@@ -616,6 +649,7 @@ public partial class @GameInputs: IInputActionCollection2, IDisposable
         public InputAction @Special => m_Wrapper.m_Game_Special;
         public InputAction @Drift => m_Wrapper.m_Game_Drift;
         public InputAction @Pause => m_Wrapper.m_Game_Pause;
+        public InputAction @Respawn => m_Wrapper.m_Game_Respawn;
         public InputActionMap Get() { return m_Wrapper.m_Game; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -640,6 +674,9 @@ public partial class @GameInputs: IInputActionCollection2, IDisposable
             @Pause.started += instance.OnPause;
             @Pause.performed += instance.OnPause;
             @Pause.canceled += instance.OnPause;
+            @Respawn.started += instance.OnRespawn;
+            @Respawn.performed += instance.OnRespawn;
+            @Respawn.canceled += instance.OnRespawn;
         }
 
         private void UnregisterCallbacks(IGameActions instance)
@@ -659,6 +696,9 @@ public partial class @GameInputs: IInputActionCollection2, IDisposable
             @Pause.started -= instance.OnPause;
             @Pause.performed -= instance.OnPause;
             @Pause.canceled -= instance.OnPause;
+            @Respawn.started -= instance.OnRespawn;
+            @Respawn.performed -= instance.OnRespawn;
+            @Respawn.canceled -= instance.OnRespawn;
         }
 
         public void RemoveCallbacks(IGameActions instance)
@@ -707,5 +747,6 @@ public partial class @GameInputs: IInputActionCollection2, IDisposable
         void OnSpecial(InputAction.CallbackContext context);
         void OnDrift(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
+        void OnRespawn(InputAction.CallbackContext context);
     }
 }
