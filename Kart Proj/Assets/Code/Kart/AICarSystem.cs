@@ -27,11 +27,6 @@ public class AICarSystem : CarSystem
         //usedSpecial = Input.GetButton("Fire1");
     }
 
-    protected override void GetInputs()
-    {
-        
-    }
-
     public void Respawn()
     {
         Vector3 pos = spawnPointManager.SelectRandomSpawnpoint();

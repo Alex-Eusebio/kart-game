@@ -15,7 +15,7 @@ public class LapManager : MonoBehaviour
     private int currentCheckpointIndex;
     [SerializeField]
     private List<Checkpoint> checkpoints;
-    private Checkpoint lastCheckpoint;
+    public Checkpoint lastCheckpoint;
 
     private void Start()
     {
@@ -81,6 +81,7 @@ public class LapManager : MonoBehaviour
                 SetNextCheckpoint();
         } else
         {
+            lastCheckpoint = checkpoints[currentCheckpointIndex];
             nextCheckPointToReach = null;
         }
     }

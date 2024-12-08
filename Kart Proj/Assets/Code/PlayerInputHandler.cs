@@ -26,4 +26,9 @@ public class PlayerInputHandler : MonoBehaviour
     {
         carSystem.usedSpecial = value.action.triggered;
     }
+
+    public void OnRespawn(InputAction.CallbackContext value)
+    {
+        carSystem.RespawnCar();
+    }
 }
