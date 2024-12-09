@@ -14,7 +14,13 @@ public class TanksSpecial : SpecialAbility
     [SerializeField]
     private float rocketSpeed;
     [SerializeField]
+    private float rocketLifeTimeReward;
+    [SerializeField]
     private float rocketLifeTime;
+    [SerializeField]
+    private float boostGained;
+    [SerializeField]
+    private float boostDuration;
 
     [Header("GameObjects")]
     [SerializeField]
@@ -37,7 +43,7 @@ public class TanksSpecial : SpecialAbility
         carSystem.animControll.UpdateSpecial(true);
         GameObject projectile = MonoBehaviour.Instantiate(throwablePrefab, throwSpawnPoint.position, carSystem.gameObject.transform.rotation);
         projectile.GetComponentInChildren<MissileProjectile>().creator = carSystem;
-        projectile.GetComponentInChildren<MissileProjectile>().SetDuration(stunDuration, rocketSpeed, rocketLifeTime);
+        projectile.GetComponentInChildren<MissileProjectile>().SetDuration(stunDuration, rocketSpeed, rocketLifeTime, rocketLifeTimeReward);
         Rigidbody rb = projectile.GetComponent<Rigidbody>();
 
         if (rb != null)
@@ -45,6 +51,14 @@ public class TanksSpecial : SpecialAbility
             rb.velocity = throwSpawnPoint.forward * (throwingStrenght + (carSystem.currentSpeed + carSystem.bonusSpeed) * throwingBonusSpeedPer);
         }
         carSystem.animControll.UpdateSpecial(false);
+    }
+
+    public void RocketReward()
+    {
+        Boost boost = ScriptableObject.CreateInstance<Boost>();
+
+        boost.Setup(boostGained, 0, boostDuration);
+        carSystem.boostManager.AddBoost(boost);
     }
 
     public override void Charge()

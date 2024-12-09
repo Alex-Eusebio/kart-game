@@ -6,21 +6,30 @@ public class MissileProjectile : Projectile
 {
     private float stunDuration;
     private float speed = 1;
+    private float rewardLifeTime;
     public GameObject target;
+    private float startLifeTime;
 
     protected override void Effect(Collider other)
     {
         if (other.transform.parent.GetComponentInChildren<CarSystem>() != null /*|| other.GetComponent<AiCarSystem>() != null*/)
         {
             other.transform.parent.GetComponentInChildren<CarSystem>().stunDuration = stunDuration;
+
+            if (emergencyTimer < startLifeTime * rewardLifeTime)
+            {
+                creator.GetComponent<TanksSpecial>().RocketReward();
+            }
         }
     }
 
-    public void SetDuration(float stunDuration, float speed, float lifeTime)
+    public void SetDuration(float stunDuration, float speed, float lifeTime, float rewardLifeTime)
     {
         this.stunDuration = stunDuration;
         this.speed = speed;
         emergencyTimer = lifeTime;
+        startLifeTime = lifeTime;
+        this.rewardLifeTime = rewardLifeTime;
     }
 
     public void FoundTarget(GameObject target)

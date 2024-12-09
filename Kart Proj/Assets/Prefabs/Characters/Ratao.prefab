@@ -271,11 +271,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resource: 0
-  maxResource: 150
+  maxResource: 130
   hasSpecialCharge: 1
   chargePerTick: 0.6
   boostStrenght: 30
-  steeringBuff: 4
+  steeringBuff: 4.1
   boostDuration: 3.85
   jumpStrenght: 5000
   specialCharger: {fileID: 5648953871841840400}
@@ -805,8 +805,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 8.459774, y: 1.4095559, z: 4.7154455}
-  m_Center: {x: -2.4544363, y: 0, z: 0}
+  m_Size: {x: 9.336001, y: 4.1750684, z: 7.6510572}
+  m_Center: {x: -2.7621312, y: 0.5868108, z: 1.0830543e-14}
 --- !u!114 &5648953871841840400
 MonoBehaviour:
   m_ObjectHideFlags: 0

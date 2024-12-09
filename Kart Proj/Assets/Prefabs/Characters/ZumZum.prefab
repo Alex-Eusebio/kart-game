@@ -954,7 +954,7 @@ MonoBehaviour:
   acceleration: 8
   minDriftPower: 40
   driftPowerPerLvl: 80
-  driftBoostPerLvl: 50
+  driftBoostPerLvl: 45
   driftBoostDurationPerLvl: 0.7
   driftSpeedDebuff: 4
   driftPassiveSteeringMulti: 1.6

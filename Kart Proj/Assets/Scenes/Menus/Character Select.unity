@@ -1263,14 +1263,20 @@ MonoBehaviour:
     title: The little hero
     specialIcon: {fileID: 21300000, guid: 777e35078faba37489c1c1f6f019ad03, type: 3}
     specialName: Crystal Dump
-    specialDescription: Every time a car that is not Ben boosts, they will leave
+    specialDescription: 'Every time a car that is not Ben boosts, they will leave
       a mana crystal behind. Ben can pick them up to later dump all at once into
       his cauldron and gain a big boost. The more crystals he has on the time of
       activation, the longer and the faster he goes.
-    speed: 70
+
+      --------
+
+      Ben has
+      a highter speed when going in a straght line, but is heavily penalized for
+      turning or going offroad.'
+    speed: 75
     boost: 40
-    drift: 45
-    handling: 50
+    drift: 50
+    handling: 20
     charcModel: {fileID: 1626487440}
     carModel: {fileID: 1322862192}
     spriteDisplay: {fileID: 261184250}
@@ -1284,22 +1290,23 @@ MonoBehaviour:
     speed: 80
     boost: 90
     drift: 70
-    handling: 50
+    handling: 55
     charcModel: {fileID: 1475718633}
     carModel: {fileID: 1481544147}
     spriteDisplay: {fileID: 1138911597}
     infoImage: {fileID: 0}
-  - name: "Jo\xE3o Rat\xE3o"
+  - name: Joao Ratao
     title: Cheesy biker
     specialIcon: {fileID: 21300000, guid: e17017c55a0f8ad47a6e90a8ab2c3267, type: 3}
     specialName: Cheese Stealing
     specialDescription: "Jo\xE3o will stick to an enemy car stealing cheese from
       them, when he steals a certain amount of cheese, he will jump fowards and gain
-      a speed boost."
-    speed: 60
-    boost: 65
+      a speed boost.\n---------\nJoao's level 1 boosts require shorter drifing time
+      than other car, use that for your advantage!"
+    speed: 70
+    boost: 85
     drift: 40
-    handling: 90
+    handling: 60
     charcModel: {fileID: 1164420101}
     carModel: {fileID: 1396785481}
     spriteDisplay: {fileID: 2112575796}
@@ -1310,7 +1317,8 @@ MonoBehaviour:
     specialName: Quiet private!
     specialDescription: 'Tanks will shoot a rocket fowards at a hight speed, if the
       rocket sees a target it will start following it. If it hits the target, they
-      will be stunned for a brief duration.
+      will be stunned for a brief duration. If the rocket hits a target that is far
+      away, Tanks gain a speed boost for a brief duration.
 
       -------------------
 
@@ -1501,8 +1509,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Speed
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 04799b11fc05ba2428c8d8447fe42384, type: 2}
+  m_sharedMaterial: {fileID: 6882214719628445298, guid: 04799b11fc05ba2428c8d8447fe42384, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1526,7 +1534,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 8.4
+  m_fontSize: 9.4
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1871,8 +1879,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.692, y: -0.186}
-  m_SizeDelta: {x: 276.184, y: 241.371}
+  m_AnchoredPosition: {x: 1.692, y: -0.385}
+  m_SizeDelta: {x: 276.184, y: 261.478}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &715954279
 MonoBehaviour:
@@ -1924,8 +1932,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 16
+  m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2182,7 +2190,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 791678723}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.000000094119}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 5.005678, y: 1.3515012, z: 2.3752706}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2190,8 +2198,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -201.5, y: 0.429}
-  m_SizeDelta: {x: 48.57, y: 9.416}
+  m_AnchoredPosition: {x: -207.452, y: 0.429}
+  m_SizeDelta: {x: 46.192, y: 9.416}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &791678725
 MonoBehaviour:
@@ -2215,8 +2223,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Handling
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 04799b11fc05ba2428c8d8447fe42384, type: 2}
+  m_sharedMaterial: {fileID: 6882214719628445298, guid: 04799b11fc05ba2428c8d8447fe42384, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2240,7 +2248,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 8.4
+  m_fontSize: 9.05
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2724,8 +2732,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Drift
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 04799b11fc05ba2428c8d8447fe42384, type: 2}
+  m_sharedMaterial: {fileID: 6882214719628445298, guid: 04799b11fc05ba2428c8d8447fe42384, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2749,7 +2757,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 8.4
+  m_fontSize: 9.4
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3466,8 +3474,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Boost
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 04799b11fc05ba2428c8d8447fe42384, type: 2}
+  m_sharedMaterial: {fileID: 6882214719628445298, guid: 04799b11fc05ba2428c8d8447fe42384, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3491,7 +3499,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 8.4
+  m_fontSize: 9.4
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4297,8 +4305,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 8
-  m_fontSizeBase: 8
+  m_fontSize: 6
+  m_fontSizeBase: 6
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 1
@@ -6049,7 +6057,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.0703, y: 135.72516}
+  m_AnchoredPosition: {x: 1.0705, y: 147}
   m_SizeDelta: {x: 292.14, y: 74.193}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1691538952
@@ -6234,8 +6242,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.07, y: -37.42}
-  m_SizeDelta: {x: 292.141, y: 257.636}
+  m_AnchoredPosition: {x: 1.07, y: -44.24}
+  m_SizeDelta: {x: 292.141, y: 288.277}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1907821252
 MonoBehaviour:
@@ -6308,8 +6316,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -380, y: -189.14}
-  m_SizeDelta: {x: 319.504, y: 362.28}
+  m_AnchoredPosition: {x: -380, y: -172.39888}
+  m_SizeDelta: {x: 319.504, y: 395.762}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1964182580
 MonoBehaviour:

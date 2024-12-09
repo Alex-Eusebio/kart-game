@@ -62,8 +62,7 @@ MeshRenderer:
   m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: ec91757bffc41094c9e4044199af2419, type: 2}
+  m_Materials: []
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -118,3 +117,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7d44b5cc986dd843a006128edec2ff2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isOnTurn: 0
