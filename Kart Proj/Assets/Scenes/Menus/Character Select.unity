@@ -1300,9 +1300,9 @@ MonoBehaviour:
     specialIcon: {fileID: 21300000, guid: 54bea3fe49973d14b97e3cc05c2468fb, type: 3}
     specialName: Cheese Stealing
     specialDescription: "Jo\xE3o will stick to an enemy car stealing cheese from
-      them, when he steals a certain amount of cheese, he will jump fowards and gain
-      a speed boost.\n---------\nJoao's level 1 boosts require shorter drifing time
-      than other car, use that for your advantage!"
+      them, when he steals a certain amount of cheese, he will jump forwards and
+      gain a speed boost.\n---------\nJoao's level 1 boosts require shorter drifing
+      time than other car, use that for your advantage!"
     speed: 70
     boost: 85
     drift: 40
@@ -1315,10 +1315,10 @@ MonoBehaviour:
     title: The Sargent that is a tank
     specialIcon: {fileID: 21300000, guid: 341ae26b7b88c464195948b928a2386c, type: 3}
     specialName: Quiet private!
-    specialDescription: 'Tanks will shoot a rocket fowards at a hight speed, if the
-      rocket sees a target it will start following it. If it hits the target, they
-      will be stunned for a brief duration. If the rocket hits a target that is far
-      away, Tanks gain a speed boost for a brief duration.
+    specialDescription: 'Tanks will shoot a rocket forward at high speed. If the
+      rocket detects a target, it will start following it. If it hits the target,
+      they will be stunned for a brief duration. If the rocket hits a target that
+      is far away, Tanks gain a speed boost for a short duration.
 
       -------------------
 
@@ -1336,8 +1336,9 @@ MonoBehaviour:
     title: The warrior bee
     specialIcon: {fileID: 21300000, guid: 35f9cd830c8624b498cf0c3adb5ac5df, type: 3}
     specialName: Juicy Hive
-    specialDescription: ZumZum throws a beehive fowards leaving a puddle of honey,
-      when ZumZum passes throught it he gets bonus speed, and it's an enemy its slowdowned.
+    specialDescription: ZumZum throws a beehive forward, leaving a puddle of honey.
+      When ZumZum passes through it, he gets a speed boost, but if it's an enemy,
+      they are slowed down.
     speed: 60
     boost: 75
     drift: 70
