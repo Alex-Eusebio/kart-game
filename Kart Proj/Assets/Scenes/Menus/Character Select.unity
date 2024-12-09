@@ -1261,7 +1261,7 @@ MonoBehaviour:
   characters:
   - name: Ben
     title: The little hero
-    specialIcon: {fileID: 21300000, guid: 777e35078faba37489c1c1f6f019ad03, type: 3}
+    specialIcon: {fileID: 21300000, guid: bb20d7e7c22ff3c4bb1b036cadd6f7b1, type: 3}
     specialName: Crystal Dump
     specialDescription: 'Every time a car that is not Ben boosts, they will leave
       a mana crystal behind. Ben can pick them up to later dump all at once into
@@ -1297,7 +1297,7 @@ MonoBehaviour:
     infoImage: {fileID: 0}
   - name: Joao Ratao
     title: Cheesy biker
-    specialIcon: {fileID: 21300000, guid: e17017c55a0f8ad47a6e90a8ab2c3267, type: 3}
+    specialIcon: {fileID: 21300000, guid: 54bea3fe49973d14b97e3cc05c2468fb, type: 3}
     specialName: Cheese Stealing
     specialDescription: "Jo\xE3o will stick to an enemy car stealing cheese from
       them, when he steals a certain amount of cheese, he will jump fowards and gain
@@ -1313,7 +1313,7 @@ MonoBehaviour:
     infoImage: {fileID: 0}
   - name: Sargent Tanks
     title: The Sargent that is a tank
-    specialIcon: {fileID: 21300000, guid: 475e45610b3401c40bc73cb4e7007fb8, type: 3}
+    specialIcon: {fileID: 21300000, guid: 341ae26b7b88c464195948b928a2386c, type: 3}
     specialName: Quiet private!
     specialDescription: 'Tanks will shoot a rocket fowards at a hight speed, if the
       rocket sees a target it will start following it. If it hits the target, they
@@ -1334,7 +1334,7 @@ MonoBehaviour:
     infoImage: {fileID: 0}
   - name: ZumZum
     title: The warrior bee
-    specialIcon: {fileID: 21300000, guid: a73d331a834c40e47854947996bfc97b, type: 3}
+    specialIcon: {fileID: 21300000, guid: 35f9cd830c8624b498cf0c3adb5ac5df, type: 3}
     specialName: Juicy Hive
     specialDescription: ZumZum throws a beehive fowards leaving a puddle of honey,
       when ZumZum passes throught it he gets bonus speed, and it's an enemy its slowdowned.
