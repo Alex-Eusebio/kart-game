@@ -244,6 +244,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d6005e83f1771b4bb16f76fecba78ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menuItems:
+  - {fileID: 1470949698}
+  - {fileID: 1320646592}
+  - {fileID: 1673752871}
+  - {fileID: 1072208430}
+  selectedColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  normalScale: {x: 1, y: 1, z: 1}
+  pulseScale: {x: 1.2, y: 1.2, z: 1.2}
+  pulseSpeed: 0.5
 --- !u!1 &622755786
 GameObject:
   m_ObjectHideFlags: 0
