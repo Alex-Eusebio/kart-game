@@ -31,7 +31,7 @@ public abstract class SpecialAbility : MonoBehaviour, ISpecial
 
     public virtual bool IsAvailable()
     {
-        return resource == maxResource;
+        return resource >= maxResource;
     }
 
     public virtual void Activate()
