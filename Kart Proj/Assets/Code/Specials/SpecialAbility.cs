@@ -10,11 +10,7 @@ public abstract class SpecialAbility : MonoBehaviour, ISpecial
     public bool hasSpecialCharge = false;
 
     protected private CarSystem carSystem;
-
-    public SpecialAbility()
-    {
-        resource = 0;
-    }
+    private bool lastTimeCheck = false;
 
     private void Awake()
     {
@@ -27,6 +23,8 @@ public abstract class SpecialAbility : MonoBehaviour, ISpecial
         {
             resource = maxResource;
         }
+
+        CheckIfReady();
     }
 
     public virtual bool IsAvailable()
@@ -38,11 +36,31 @@ public abstract class SpecialAbility : MonoBehaviour, ISpecial
     {
         if (IsAvailable())
         {
+            SfxActivate();
             ExecuteAbility();
             resource = 0;
+        } else
+        {
+            SfxNotReady();
         }
     }
 
+    protected void CheckIfReady()
+    {
+        bool isready = lastTimeCheck;
+        lastTimeCheck = IsAvailable();
+
+        if (isready == false && lastTimeCheck == true )
+            SfxReady();
+    }
+
+    private void SfxNotReady()
+    {
+        AudioManager.Instance.PlaySfx("specialNotReady");
+    }
+
     protected abstract void ExecuteAbility(); // The actual ability logic
+    protected abstract void SfxActivate();
+    protected abstract void SfxReady();
 }
 

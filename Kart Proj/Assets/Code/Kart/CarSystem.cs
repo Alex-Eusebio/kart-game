@@ -97,10 +97,11 @@ public class CarSystem : MonoBehaviour
                 driftParticles.Add(wheelParticles.GetChild(0).GetChild(i).GetComponent<ParticleSystem>());
             }
 
-            for (int i = 0; i < wheelParticles.GetChild(1).childCount; i++)
-            {
-                driftParticles.Add(wheelParticles.GetChild(1).GetChild(i).GetComponent<ParticleSystem>());
-            }
+            if (wheelParticles.childCount > 1)
+                for (int i = 0; i < wheelParticles.GetChild(1).childCount; i++)
+                {
+                    driftParticles.Add(wheelParticles.GetChild(1).GetChild(i).GetComponent<ParticleSystem>());
+                }
 
             foreach (ParticleSystem p in flashParticles.GetComponentsInChildren<ParticleSystem>())
             {
@@ -374,9 +375,14 @@ public class CarSystem : MonoBehaviour
             {
                 foreach (ParticleSystem particle in tubeParticles)
                 {
+                    var pmain = particle.main;
+                    if (turboColors.Length > 0)
+                        pmain.startColor = turboColors[driftMode];
                     particle.Play();
                 }
             }
+
+            AudioManager.Instance.PlaySfx("boost");
         }
 
         driftPower = 0;
