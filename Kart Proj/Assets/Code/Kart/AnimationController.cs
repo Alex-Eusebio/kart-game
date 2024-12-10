@@ -10,6 +10,8 @@ public class AnimationController : MonoBehaviour
     private Animator characterAnimator;
     [SerializeField]
     private Animator carAnimator;
+    [SerializeField]
+    private Animator wheelsAnimator; // Novo Animator para as rodas
 
     [Header("Car Parts")]
     [SerializeField]
@@ -46,11 +48,19 @@ public class AnimationController : MonoBehaviour
             carAnimator.SetFloat("Steer", steering);
             carAnimator.SetFloat("BonusSpeed", bonusSpeed);
         }
+
+        if (wheelsAnimator) // Atualiza os parâmetros do wheelsAnimator
+        {
+            wheelsAnimator.SetFloat("Steer", steering);
+            wheelsAnimator.SetFloat("BonusSpeed", bonusSpeed);
+            wheelsAnimator.SetBool("IsOnSpecial", isOnSpecial);
+            wheelsAnimator.SetBool("IsStunned", isStunned);
+        }
     }
 
     public void ChangeSteer(float steer)
     {
-        steering = Mathf.Lerp(steering, steer, Time.deltaTime*smoothTime);
+        steering = Mathf.Lerp(steering, steer, Time.deltaTime * smoothTime);
     }
 
     public void UpdateSpecial(bool isOnSpecial)
@@ -80,7 +90,7 @@ public class AnimationController : MonoBehaviour
                 f.localEulerAngles = new Vector3(wheelSpinAngle, (steering * 10f), 0);
             }
         }
-        
+
         if (backWheels.Count > 0)
         {
             foreach (Transform b in backWheels)
@@ -88,6 +98,5 @@ public class AnimationController : MonoBehaviour
                 b.localEulerAngles = new Vector3(wheelSpinAngle, 0, 0);
             }
         }
-        
     }
 }

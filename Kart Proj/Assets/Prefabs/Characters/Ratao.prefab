@@ -633,6 +633,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterAnimator: {fileID: 5914888451253277305}
   carAnimator: {fileID: 8586558784454914916}
+  wheelsAnimator: {fileID: 1740077385408550239}
   frontWheels: []
   backWheels: []
   steering: 0
