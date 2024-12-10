@@ -4936,10 +4936,12 @@ MonoBehaviour:
   gravityScale: 0
   airBorneTime: 0
   airBorneTimer: 0
-  primaryParticles: []
-  secondaryParticles: []
+  driftParticles: []
+  sparkParticles: []
+  tubeParticles: []
   wheelParticles: {fileID: 0}
   flashParticles: {fileID: 0}
+  tubeSmokeParticles: {fileID: 0}
   turboColors: []
 --- !u!135 &1194930973
 SphereCollider:
@@ -8814,6 +8816,42 @@ PrefabInstance:
     - target: {fileID: 7990080022603573595, guid: 982bb9e04a0018f4f9a2b15267d4f194, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8844296459429240152, guid: 982bb9e04a0018f4f9a2b15267d4f194, type: 3}
+      propertyPath: ShapeModule.type
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8844296459429240152, guid: 982bb9e04a0018f4f9a2b15267d4f194, type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8844296459429240152, guid: 982bb9e04a0018f4f9a2b15267d4f194, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 9061522280280595642, guid: 982bb9e04a0018f4f9a2b15267d4f194, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9061522280280595642, guid: 982bb9e04a0018f4f9a2b15267d4f194, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9061522280280595642, guid: 982bb9e04a0018f4f9a2b15267d4f194, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9061522280280595642, guid: 982bb9e04a0018f4f9a2b15267d4f194, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9061522280280595642, guid: 982bb9e04a0018f4f9a2b15267d4f194, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9061522280280595642, guid: 982bb9e04a0018f4f9a2b15267d4f194, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
