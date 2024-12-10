@@ -24,7 +24,8 @@ public class DebugCanvas : MonoBehaviour
         {
             curSpeedTxt.text = $"Current Speed: {(car.currentSpeed+car.bonusSpeed).ToString("0.0")}";
             driftPowerTxt.text = $"Drift Power: {car.driftPower.ToString("0")} (lvl {car.GetDriftLevel()})";
-            isSpecialTxt.text = $"Is Special Ready? {car.special.IsAvailable()}";
+            if (car.special)
+                isSpecialTxt.text = $"Is Special Ready? {car.special.IsAvailable()}";
             isDriftTxt.text = $"Is Drifting? {car.drifting}";
             lapTxt.text = $"Lap {car.transform.parent.GetComponentInChildren<LapManager>().curLaps}/{car.transform.parent.GetComponentInChildren<LapManager>().maxLaps}";
         }

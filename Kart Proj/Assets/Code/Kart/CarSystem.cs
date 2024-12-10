@@ -33,7 +33,6 @@ public class CarSystem : MonoBehaviour
     public bool isStunned;
     public float stunDuration;
 
-    bool first, second, third;
     Color c;
     int driftDirection;
 
@@ -43,7 +42,6 @@ public class CarSystem : MonoBehaviour
     public bool isTryingToDrift = false;
     protected bool wasTryingToDrift = false;
     public bool usedSpecial = false;
-    bool wasSpecial = false;
 
     [Header("Parameters")]
     public float maxSpeed = 30f;
@@ -77,10 +75,12 @@ public class CarSystem : MonoBehaviour
     public float airBorneTimer;
 
     [Header("Particles")]
-    public List<ParticleSystem> primaryParticles = new List<ParticleSystem>();
-    public List<ParticleSystem> secondaryParticles = new List<ParticleSystem>();
+    public List<ParticleSystem> driftParticles = new List<ParticleSystem>();
+    public List<ParticleSystem> sparkParticles = new List<ParticleSystem>();
+    public List<ParticleSystem> tubeParticles = new List<ParticleSystem>();
     public Transform wheelParticles;
     public Transform flashParticles;
+    public Transform tubeSmokeParticles;
     public Color[] turboColors;
 
     float distToGround;
@@ -90,21 +90,26 @@ public class CarSystem : MonoBehaviour
     {
         boostManager = GetComponent<BoostManager>();
 
-        if (wheelParticles != null && primaryParticles.Count > 0 && secondaryParticles.Count > 0)
+        if (wheelParticles != null && flashParticles != null)
         {
             for (int i = 0; i < wheelParticles.GetChild(0).childCount; i++)
             {
-                primaryParticles.Add(wheelParticles.GetChild(0).GetChild(i).GetComponent<ParticleSystem>());
+                driftParticles.Add(wheelParticles.GetChild(0).GetChild(i).GetComponent<ParticleSystem>());
             }
 
             for (int i = 0; i < wheelParticles.GetChild(1).childCount; i++)
             {
-                primaryParticles.Add(wheelParticles.GetChild(1).GetChild(i).GetComponent<ParticleSystem>());
+                driftParticles.Add(wheelParticles.GetChild(1).GetChild(i).GetComponent<ParticleSystem>());
             }
 
             foreach (ParticleSystem p in flashParticles.GetComponentsInChildren<ParticleSystem>())
             {
-                secondaryParticles.Add(p);
+                sparkParticles.Add(p);
+            }
+
+            foreach (ParticleSystem p in tubeSmokeParticles.GetComponentsInChildren<ParticleSystem>())
+            {
+                tubeParticles.Add(p);
             }
         }
     }
@@ -365,21 +370,23 @@ public class CarSystem : MonoBehaviour
             boost.Setup(driftBoostPerLvl*driftMode, 0, driftBoostDurationPerLvl*driftMode);
             boostManager.AddBoost(boost);
 
-            if (primaryParticles.Count > 0)
+            if (tubeParticles.Count > 0)
             {
-                kartModel.Find("Tube001").GetComponentInChildren<ParticleSystem>().Play();
-                kartModel.Find("Tube002").GetComponentInChildren<ParticleSystem>().Play();
+                foreach (ParticleSystem particle in tubeParticles)
+                {
+                    particle.Play();
+                }
             }
         }
 
         driftPower = 0;
         driftMode = 0;
-        first = false; second = false; third = false;
 
-        if (primaryParticles.Count > 0) 
-            foreach (ParticleSystem p in primaryParticles)
+        if (driftParticles.Count > 0) 
+            foreach (ParticleSystem p in driftParticles)
             {
                 p.Stop();
+                p.Clear();
             }
 
         kartModel.parent.DOLocalRotate(Vector3.zero, .5f).SetEase(Ease.OutBack);
@@ -393,51 +400,30 @@ public class CarSystem : MonoBehaviour
 
     public void ColorDrift()
     {
-        if (!first)
-            c = Color.clear;
-
+        int temp = driftMode;
         driftMode = GetDriftLevel();
 
-        switch (driftMode)
-        {
-            case 1:
-                first = true;
-                if (turboColors.Length > 0)
-                    c = turboColors[0];
-                break;
-            case 2:
-                second = true;
-                if (turboColors.Length > 0)
-                    c = turboColors[1];
-                break;
-            case 3:
-                third = true;
-                if (turboColors.Length > 0)
-                    c = turboColors[2];
-                break;
-        }
+        if (turboColors.Length > 0)
+            c = turboColors[driftMode];
 
-        if (driftMode > 0)
+        if (driftMode > 0 && (temp != driftMode))
             PlayFlashParticle(c);
 
-        if (primaryParticles.Count > 0)
-            foreach (ParticleSystem p in primaryParticles)
+        if (driftParticles.Count > 0)
+        {
+            foreach (ParticleSystem p in driftParticles)
             {
                 var pmain = p.main;
                 pmain.startColor = c;
+                p.Play();
             }
-        if (secondaryParticles != null)
-            foreach (ParticleSystem p in secondaryParticles)
-            {
-                var pmain = p.main;
-                pmain.startColor = c;
-            }
+        }
     }
 
     void PlayFlashParticle(Color c)
     {
-        if (secondaryParticles != null)
-            foreach (ParticleSystem p in secondaryParticles)
+        if (sparkParticles.Count > 0)
+            foreach (ParticleSystem p in sparkParticles)
             {
                 var pmain = p.main;
                 pmain.startColor = c;
