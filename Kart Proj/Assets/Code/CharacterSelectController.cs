@@ -28,6 +28,8 @@ public class CharacterSelectController : MonoBehaviour
     private TextMeshProUGUI specialNameTxt;
     [SerializeField]
     private Image specialIcon;
+    [SerializeField]
+    private Image backgroundMat;
 
     [Header("Image Sizes")]
     public Vector2 defaultSize = new Vector2(100f, 100f);
@@ -94,6 +96,8 @@ public class CharacterSelectController : MonoBehaviour
 
     private void UpdateUI()
     {
+        backgroundMat.material.SetColor("_Color", characters[currentCharacter].backgroundColor);
+
         nameTxt.text = characters[currentCharacter].name;
         titleTxt.text = characters[currentCharacter].title;
         descTxt.text = characters[currentCharacter].specialDescription;
@@ -172,6 +176,7 @@ public struct Character
 {
     public string name;
     public string title;
+    public Color backgroundColor;
     public Sprite specialIcon;
     public string specialName;
     [TextArea(3, 3)]
