@@ -8749,10 +8749,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Testmobile
       objectReference: {fileID: 0}
-    - target: {fileID: 5493390178810718564, guid: ed93a58a075497c4486ca597f369d756, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16758,11 +16754,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 665999898493642148, guid: 189de88e3007603469433377a1c26746, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2083207051216092189, guid: 189de88e3007603469433377a1c26746, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3672991395959719986, guid: 189de88e3007603469433377a1c26746, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -16770,7 +16766,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7980734420240769419, guid: 189de88e3007603469433377a1c26746, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
