@@ -67,5 +67,17 @@ public class TanksSpecial : SpecialAbility
         {
             resource += Time.deltaTime;
         }
+
+        CheckIfReady();
+    }
+
+    protected override void SfxActivate()
+    {
+        AudioManager.Instance.PlaySfx("tanksSpecialActivate");
+    }
+
+    protected override void SfxReady()
+    {
+        AudioManager.Instance.PlaySfx("tanksSpecialReady");
     }
 }

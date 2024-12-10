@@ -71,8 +71,17 @@ public class BenSpecial : SpecialAbility
         {
             resource++;
 
-            if (resource == maxResource)
-                Debug.Log("Ben Special is Full!!");
+            CheckIfReady();
         }
+    }
+
+    protected override void SfxActivate()
+    {
+        AudioManager.Instance.PlaySfx("benSpecialActivate");
+    }
+
+    protected override void SfxReady()
+    {
+        AudioManager.Instance.PlaySfx("benSpecialReady");
     }
 }

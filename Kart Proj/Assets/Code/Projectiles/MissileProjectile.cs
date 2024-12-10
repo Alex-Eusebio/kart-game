@@ -62,7 +62,7 @@ public class MissileProjectile : Projectile
             if (other.transform.parent.GetComponentInChildren<CarSystem>() && other.transform.parent.GetComponentInChildren<CarSystem>() != creator)
             { 
                 Effect(other);
-
+                AudioManager.Instance.PlaySfx("tanksSpecialHit");
                 Destroy(gameObject.transform.parent.gameObject);
             }
         }

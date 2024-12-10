@@ -12,6 +12,8 @@ public class HiveProjectile : Projectile
     [SerializeField]
     private GameObject puddleSprite;
     private float puddleDuration;
+    private bool affectedOwner = false;
+    private List<Collider> enemyHit; 
 
     protected override void FixedUpdate()
     {
@@ -34,20 +36,26 @@ public class HiveProjectile : Projectile
     protected override void Effect(Collider other)
     {
         if (other.GetComponent<CarSystem>() != null) {
-            if (other.GetComponent<CarSystem>() != creator)
+            if (other.GetComponent<CarSystem>() != creator && !enemyHit.Contains(other))
             {
                 Boost slow = ScriptableObject.CreateInstance<Boost>();
                 slow.Setup(slowStrenght, 0, slowDuration);
 
                 other.GetComponent<CarSystem>().boostManager.AddBoost(slow);
-
+                AudioManager.Instance.PlaySfx("zumzumSpecialHitEnemy");
+                enemyHit.Add(other);
             }
             else
             {
-                Boost slow = ScriptableObject.CreateInstance<Boost>();
-                slow.Setup(-slowStrenght, 0, slowDuration);
+                if (!affectedOwner)
+                {
+                    Boost slow = ScriptableObject.CreateInstance<Boost>();
+                    slow.Setup(-slowStrenght, 0, slowDuration);
 
-                other.GetComponent<CarSystem>().boostManager.AddBoost(slow);
+                    other.GetComponent<CarSystem>().boostManager.AddBoost(slow);
+                    AudioManager.Instance.PlaySfx("zumzumSpecialHitSelf");
+                    affectedOwner = true;
+                }
             }
         }
     }
@@ -79,5 +87,6 @@ public class HiveProjectile : Projectile
         puddleSprite.SetActive(true);
         GetComponent<Rigidbody>().velocity = Vector3.zero;
         GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+        AudioManager.Instance.PlaySfx("zumzumSpecialLand");
     }
 }

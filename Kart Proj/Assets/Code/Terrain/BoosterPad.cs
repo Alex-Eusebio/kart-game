@@ -14,6 +14,7 @@ public class BoosterPad : MonoBehaviour, IChangeSpeed
     public float ChangeSpeed(float speed)
     {
         timer += Time.deltaTime;
+        AudioManager.Instance.PlaySfx("padBoost");
         if (timer >= maxTimer)
         {
             timer = 0;

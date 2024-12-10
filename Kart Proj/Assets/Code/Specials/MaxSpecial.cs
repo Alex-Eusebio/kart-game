@@ -36,10 +36,21 @@ public class MaxSpecial : SpecialAbility
             resource += charge;
         }
 
+        CheckIfReady();
+
         if (resource > maxResource)
         {
             resource = maxResource;
-            Debug.Log("Max Special is Ready!!");
         }
+    }
+
+    protected override void SfxActivate()
+    {
+        AudioManager.Instance.PlaySfx("maxSpecialActivate");
+    }
+
+    protected override void SfxReady()
+    {
+        AudioManager.Instance.PlaySfx("maxSpecialReady");
     }
 }

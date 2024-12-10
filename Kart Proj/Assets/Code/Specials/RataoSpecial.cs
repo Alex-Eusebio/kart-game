@@ -40,6 +40,7 @@ public class RataoSpecial : SpecialAbility
         if (resource < maxResource)
         {
             resource += chargePerTick;
+            AudioManager.Instance.PlaySfx("rataoSpecialFeedback");
 
             if (target && target.maxSpeed < carSystem.maxSpeed)
             {
@@ -52,14 +53,23 @@ public class RataoSpecial : SpecialAbility
                     carSystem.boostManager.AddBoost(boost);
                 }
             }
-
-            if (resource == maxResource)
-                Debug.Log("Ratao Special is Ready!!");
         }
+
+        CheckIfReady();
     }
 
     public CarSystem GetCar()
     {
         return carSystem;
+    }
+
+    protected override void SfxActivate()
+    {
+        AudioManager.Instance.PlaySfx("rataoSpecialActivate");
+    }
+
+    protected override void SfxReady()
+    {
+        AudioManager.Instance.PlaySfx("rataoSpecialReady");
     }
 }

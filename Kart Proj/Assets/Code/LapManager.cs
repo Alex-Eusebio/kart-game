@@ -36,6 +36,7 @@ public class LapManager : MonoBehaviour
 
             if (curLaps == maxLaps + 1)
             {
+                AudioManager.Instance.PlaySfx("raceComplete");
                 Debug.Log("-----------------------");
                 Debug.Log(transform.parent.name);
                 for (int i = 0; i < lapTimes.Count; i++)
@@ -50,6 +51,9 @@ public class LapManager : MonoBehaviour
                 }
                 Debug.Log("-----------------------");
                 Destroy(transform.parent.gameObject);
+            } else
+            {
+                AudioManager.Instance.PlaySfx("lapComplete");
             }
         }
     }
