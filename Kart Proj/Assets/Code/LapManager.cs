@@ -54,6 +54,9 @@ public class LapManager : MonoBehaviour
                 Destroy(transform.parent.gameObject);
             } else
             {
+                if (FindAnyObjectByType<GateScript>())
+                    FindAnyObjectByType<GateScript>().HandleGateLogic(curLaps);
+
                 if (curLaps == maxLaps)
                     transform.parent.GetComponentInChildren<DebugCanvas>().LaspLap();
                 AudioManager.Instance.PlaySfx("lapComplete");
