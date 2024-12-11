@@ -10,11 +10,18 @@ public class DebugCanvas : MonoBehaviour
     [SerializeField] private TextMeshProUGUI isSpecialTxt;
     [SerializeField] private TextMeshProUGUI timerTxt;
     [SerializeField] private TextMeshProUGUI lapTxt;
+    [SerializeField] private ParticleSystem speedLines;
+    [SerializeField] private Animator laspLapAnim;
 
     [Header("Car")]
     [SerializeField] private CarSystem car; // Referência ao CarSystem
 
-    void Update()
+    private void Start()
+    {
+        DisableSpeedLines();
+    }
+
+    void FixedUpdate()
     {
         if (FindAnyObjectByType<Goal>())
             timerTxt.text = FindAnyObjectByType<Goal>().GetTimer();
@@ -28,6 +35,28 @@ public class DebugCanvas : MonoBehaviour
                 isSpecialTxt.text = $"Is Special Ready? {car.special.IsAvailable()}";
             isDriftTxt.text = $"Is Drifting? {car.drifting}";
             lapTxt.text = $"Lap {car.transform.parent.GetComponentInChildren<LapManager>().curLaps}/{car.transform.parent.GetComponentInChildren<LapManager>().maxLaps}";
+        }
+    }
+
+    public void LaspLap()
+    {
+        laspLapAnim.SetTrigger("1");
+    }
+
+    public void EnableSpeedLines()
+    {
+        if (speedLines != null)
+        {
+            speedLines.Play();
+        }
+    }
+
+    public void DisableSpeedLines()
+    {
+        if (speedLines != null)
+        {
+            speedLines.Clear();
+            speedLines.Stop();
         }
     }
 }
