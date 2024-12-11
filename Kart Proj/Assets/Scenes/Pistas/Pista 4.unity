@@ -8017,6 +8017,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 650072095}
     - target: {fileID: 5882925012470744746, guid: 7553a39e80a7b4447b99288309f3b631, type: 3}
+      propertyPath: musicName
+      value: pista4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5882925012470744746, guid: 7553a39e80a7b4447b99288309f3b631, type: 3}
       propertyPath: checkpointList.Array.size
       value: 10
       objectReference: {fileID: 0}

@@ -29,12 +29,20 @@ public class DebugCanvas : MonoBehaviour
         // Atualiza os textos com as informações do carro
         if (car != null)
         {
-            curSpeedTxt.text = $"Current Speed: {(car.currentSpeed+car.bonusSpeed).ToString("0.0")}";
-            driftPowerTxt.text = $"Drift Power: {car.driftPower.ToString("0")} (lvl {car.GetDriftLevel()})";
-            if (car.special)
+            if (curSpeedTxt)
+                curSpeedTxt.text = $"Current Speed: {(car.currentSpeed+car.bonusSpeed).ToString("0.0")}";
+
+            if (driftPowerTxt)
+                driftPowerTxt.text = $"Drift Power: {car.driftPower.ToString("0")} (lvl {car.GetDriftLevel()})";
+
+            if (car.special && isSpecialTxt)
                 isSpecialTxt.text = $"Is Special Ready? {car.special.IsAvailable()}";
-            isDriftTxt.text = $"Is Drifting? {car.drifting}";
-            lapTxt.text = $"Lap {car.transform.parent.GetComponentInChildren<LapManager>().curLaps}/{car.transform.parent.GetComponentInChildren<LapManager>().maxLaps}";
+
+            if (isDriftTxt)
+                isDriftTxt.text = $"Is Drifting? {car.drifting}";
+
+            if (lapTxt)
+                lapTxt.text = $"Lap {car.transform.parent.GetComponentInChildren<LapManager>().curLaps}/{car.transform.parent.GetComponentInChildren<LapManager>().maxLaps}";
         }
     }
 

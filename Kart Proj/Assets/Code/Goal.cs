@@ -11,13 +11,20 @@ public class Goal : MonoBehaviour
 
     public List<Checkpoint> checkpointList;
 
+    [SerializeField]
+    private string musicName;
+
+    private void Start()
+    {
+        AudioManager.Instance.PlayMusic(musicName);
+    }
+
     public string GetTimer()
     {
         time += Time.deltaTime * 1000;
         CountDown();
         TimeSpan t = TimeSpan.FromMilliseconds(time);
-        return string.Format("{0:D2}:{1:D2}:{2:D2}:{3:D3}",
-                                t.Hours,
+        return string.Format("{0:D2}:{1:D2}:{2:D2}",
                                 t.Minutes,
                                 t.Seconds,
                                 t.Milliseconds);
