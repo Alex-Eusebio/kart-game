@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering;
 
 public class LapManager : MonoBehaviour
 {
@@ -53,6 +54,8 @@ public class LapManager : MonoBehaviour
                 Destroy(transform.parent.gameObject);
             } else
             {
+                if (curLaps == maxLaps)
+                    transform.parent.GetComponentInChildren<DebugCanvas>().LaspLap();
                 AudioManager.Instance.PlaySfx("lapComplete");
             }
         }
