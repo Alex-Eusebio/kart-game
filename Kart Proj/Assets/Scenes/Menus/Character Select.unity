@@ -1261,7 +1261,7 @@ MonoBehaviour:
   characters:
   - name: Ben
     title: The little hero
-    backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+    backgroundColor: {r: 0.29559743, g: 0, b: 0, a: 0}
     specialIcon: {fileID: 21300000, guid: bb20d7e7c22ff3c4bb1b036cadd6f7b1, type: 3}
     specialName: Crystal Dump
     specialDescription: 'Every time a car that is not Ben boosts, they will leave
@@ -1284,7 +1284,7 @@ MonoBehaviour:
     infoImage: {fileID: 0}
   - name: Max
     title: The adventurous bot
-    backgroundColor: {r: 0.26539695, g: 0.55310714, b: 0.7924528, a: 1}
+    backgroundColor: {r: 0, g: 0.18844455, b: 0.34591186, a: 1}
     specialIcon: {fileID: 21300000, guid: 032d518e0cea5a14fad15dae802f87ff, type: 3}
     specialName: Battery Charge
     specialDescription: When Max is drifting, he will charge his battery, when the
@@ -1299,7 +1299,7 @@ MonoBehaviour:
     infoImage: {fileID: 0}
   - name: Joao Ratao
     title: Cheesy biker
-    backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+    backgroundColor: {r: 0.25157225, g: 0.25157225, b: 0.25157225, a: 0}
     specialIcon: {fileID: 21300000, guid: 54bea3fe49973d14b97e3cc05c2468fb, type: 3}
     specialName: Cheese Stealing
     specialDescription: "Jo\xE3o will stick to an enemy car stealing cheese from
@@ -1316,7 +1316,7 @@ MonoBehaviour:
     infoImage: {fileID: 0}
   - name: Sargent Tanks
     title: The Sargent that is a tank
-    backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+    backgroundColor: {r: 0, g: 0.28930807, b: 0.017533805, a: 0}
     specialIcon: {fileID: 21300000, guid: 341ae26b7b88c464195948b928a2386c, type: 3}
     specialName: Quiet private!
     specialDescription: 'Tanks will shoot a rocket forward at high speed. If the
@@ -1338,7 +1338,7 @@ MonoBehaviour:
     infoImage: {fileID: 0}
   - name: ZumZum
     title: The warrior bee
-    backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+    backgroundColor: {r: 0.26415092, g: 0.19811319, b: 0, a: 0}
     specialIcon: {fileID: 21300000, guid: 35f9cd830c8624b498cf0c3adb5ac5df, type: 3}
     specialName: Juicy Hive
     specialDescription: ZumZum throws a beehive forward, leaving a puddle of honey.
