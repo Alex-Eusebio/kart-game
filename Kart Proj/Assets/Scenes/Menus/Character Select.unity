@@ -1302,10 +1302,14 @@ MonoBehaviour:
     backgroundColor: {r: 0.25157225, g: 0.25157225, b: 0.25157225, a: 0}
     specialIcon: {fileID: 21300000, guid: 54bea3fe49973d14b97e3cc05c2468fb, type: 3}
     specialName: Cheese Stealing
-    specialDescription: "Jo\xE3o will stick to an enemy car stealing cheese from
-      them, when he steals a certain amount of cheese, he will jump forwards and
-      gain a speed boost.\n---------\nJoao's level 1 boosts require shorter drifing
-      time than other car, use that for your advantage!"
+    specialDescription: 'Joao will stick to an enemy car stealing cheese from them,
+      when he steals a certain amount of cheese, he will jump forwards and gain a
+      speed boost.
+
+      ---------
+
+      Joao''s level 1 boosts require shorter
+      drifing time than other car, use that for your advantage!'
     speed: 70
     boost: 85
     drift: 40
