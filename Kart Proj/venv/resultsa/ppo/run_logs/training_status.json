@@ -1,0 +1,65 @@
+{
+    "KartAI": {
+        "checkpoints": [
+            {
+                "steps": 38499821,
+                "file_path": "results\\ppo\\KartAI\\KartAI-38499821.onnx",
+                "reward": null,
+                "creation_time": 1733249506.9584432,
+                "auxillary_file_paths": [
+                    "results\\ppo\\KartAI\\KartAI-38499821.pt"
+                ]
+            },
+            {
+                "steps": 38999912,
+                "file_path": "results\\ppo\\KartAI\\KartAI-38999912.onnx",
+                "reward": 4541.10234375,
+                "creation_time": 1733249870.363033,
+                "auxillary_file_paths": [
+                    "results\\ppo\\KartAI\\KartAI-38999912.pt"
+                ]
+            },
+            {
+                "steps": 39220216,
+                "file_path": "results\\ppo\\KartAI\\KartAI-39220216.onnx",
+                "reward": 5791.389099121094,
+                "creation_time": 1733250046.418584,
+                "auxillary_file_paths": [
+                    "results\\ppo\\KartAI\\KartAI-39220216.pt"
+                ]
+            },
+            {
+                "steps": 39246220,
+                "file_path": "results\\ppo\\KartAI\\KartAI-39246220.onnx",
+                "reward": -6.736916621526082,
+                "creation_time": 1733920011.387132,
+                "auxillary_file_paths": [
+                    "results\\ppo\\KartAI\\KartAI-39246220.pt"
+                ]
+            },
+            {
+                "steps": 39323032,
+                "file_path": "results\\ppo\\KartAI\\KartAI-39323032.onnx",
+                "reward": -6.731833304677691,
+                "creation_time": 1733920594.4652529,
+                "auxillary_file_paths": [
+                    "results\\ppo\\KartAI\\KartAI-39323032.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 39323032,
+            "file_path": "results\\ppo\\KartAI.onnx",
+            "reward": -6.731833304677691,
+            "creation_time": 1733920594.4652529,
+            "auxillary_file_paths": [
+                "results\\ppo\\KartAI\\KartAI-39323032.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.4.1+cpu"
+    }
+}

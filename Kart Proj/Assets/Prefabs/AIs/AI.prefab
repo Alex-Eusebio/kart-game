@@ -103,6 +103,13 @@ MonoBehaviour:
   gravityScale: 70
   airBorneTime: 0.2
   airBorneTimer: 0
+  driftParticles: []
+  sparkParticles: []
+  tubeParticles: []
+  wheelParticles: {fileID: 0}
+  flashParticles: {fileID: 0}
+  tubeSmokeParticles: {fileID: 0}
+  turboColors: []
   agent: {fileID: 7317988881178992869}
 --- !u!135 &5673087399909195987
 SphereCollider:
@@ -147,7 +154,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 3d7c115c9d059c24ca6753736e587d80, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: 4993b35c4efdc1848a39c9dd49fb84c0, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: KartAI
@@ -582,6 +589,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterAnimator: {fileID: 0}
   carAnimator: {fileID: 0}
+  wheelsAnimator: {fileID: 0}
   frontWheels: []
   backWheels: []
   steering: 0
