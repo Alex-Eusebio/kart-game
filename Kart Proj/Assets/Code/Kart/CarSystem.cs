@@ -83,7 +83,7 @@ public class CarSystem : MonoBehaviour
     public Transform tubeSmokeParticles;
     public Color[] turboColors;
 
-    float driftDelay = 0.7f;
+    float driftDelay = 1.4f;
     float driftOnDelay;
 
     float distToGround;

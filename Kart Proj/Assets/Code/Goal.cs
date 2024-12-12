@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Goal : MonoBehaviour
 {
@@ -17,6 +18,15 @@ public class Goal : MonoBehaviour
     private void Start()
     {
         AudioManager.Instance.PlayMusic(musicName);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(3);
+            AudioManager.Instance.StopAllSounds();
+        }
     }
 
     public string GetTimer()
