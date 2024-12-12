@@ -22,6 +22,8 @@ public class Goal : MonoBehaviour
 
     private void Start()
     {
+        pauseMenu.SetActive(false);
+
         AudioManager.Instance.PlayMusic(musicName);
     }
 
@@ -52,14 +54,17 @@ public class Goal : MonoBehaviour
 
         foreach (CarSystem c in cars)
         {
-            c.transform.parent.GetComponentInChildren<Camera>().enabled = !isPause;
+            if (c is not AICarSystem)
+                c.transform.parent.GetComponentInChildren<Camera>().enabled = !isPause;
         }
+        Debug.Log("LOL " + isPause);
         pauseMenu.SetActive(isPause);
     }
 
     public string GetTimer()
     {
-        time += Time.deltaTime * 1000;
+        if (!isPause)
+            time += Time.deltaTime * 1000;
 
         CountDown();
         TimeSpan t = TimeSpan.FromMilliseconds(time);
