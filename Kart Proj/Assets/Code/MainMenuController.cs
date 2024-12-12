@@ -107,7 +107,9 @@ public class MainMenuController : MonoBehaviour
     // Botão Play
     public void PlayAi()
     {
-        SceneManager.LoadScene(playSceneName); // Carrega a cena do jogo
+        PlayerPrefs.SetInt("PlayerCount", 1);
+        PlayerPrefs.SetInt("IsAi", 1);
+        SceneManager.LoadScene(playAiScene); // Carrega a cena do jogo
     }
 
     // Botão Settings (agora carrega uma nova cena)
