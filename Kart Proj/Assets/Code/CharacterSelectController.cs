@@ -166,8 +166,14 @@ public class CharacterSelectController : MonoBehaviour
         curPlayer++;
 
         if (curPlayer == players)
-            // Avança para o Stage Select
-            UnityEngine.SceneManagement.SceneManager.LoadScene("Stage Select");
+        {
+            if (PlayerPrefs.HasKey("IsAi"))
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Pista AI");
+            else 
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Stage Select");
+
+            PlayerPrefs.DeleteKey("IsAi");
+        }
     }
 }
 
