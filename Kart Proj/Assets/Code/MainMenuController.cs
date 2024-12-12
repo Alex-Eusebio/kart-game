@@ -9,6 +9,7 @@ public class MainMenuController : MonoBehaviour
     private int currentIndex = 0; // Índice do botão atualmente selecionado
     public int playSceneName; // Nome da cena para o botão Play
     public int settingsSceneName; // Nome da cena para o botão Settings
+    public int creditsSceneName; // Nome da cena para o botão Settings
 
     void Start()
     {
@@ -106,6 +107,12 @@ public class MainMenuController : MonoBehaviour
     public void OpenSettings()
     {
         SceneManager.LoadScene(settingsSceneName); // Carrega a cena de configurações
+    }
+
+    // Botão Credits (agora carrega uma nova cena)
+    public void OpenCredits()
+    {
+        SceneManager.LoadScene(creditsSceneName); // Carrega a cena de configurações
     }
 
     // Botão Quit
