@@ -224,7 +224,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -102, y: 19.5}
+  m_AnchoredPosition: {x: -111.1, y: 19.5}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &68395994
@@ -643,7 +643,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -14.649139, y: 26.2}
+  m_AnchoredPosition: {x: -18.8, y: 26.2}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &279974986
@@ -718,7 +718,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -73.2395, y: 21.7}
+  m_AnchoredPosition: {x: -79.6, y: 21.7}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &390015963
@@ -1566,8 +1566,8 @@ MonoBehaviour:
     description: TEXT
     flagImage: {fileID: 441531845}
     player: {fileID: 2118188116}
-  defaultSize: {x: 200, y: 200}
-  enlargedSize: {x: 300, y: 300}
+  defaultSize: {x: 300, y: 300}
+  enlargedSize: {x: 400, y: 400}
   titleTxt: {fileID: 609931964}
   descTxt: {fileID: 677375495}
 --- !u!1 &1006263619
@@ -3878,7 +3878,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -43.40973, y: 23.8}
+  m_AnchoredPosition: {x: -50.4, y: 23.8}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1459238772
