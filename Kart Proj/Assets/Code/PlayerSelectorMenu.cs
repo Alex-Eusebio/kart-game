@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayerSelectorMenu : MonoBehaviour
 {
     [SerializeField]
-    private List<GameObject> menuItems; // Lista de itens do menu
+    private List<MenuItem> menuItems; // Lista de itens do menu
     private int currentIndex = 0; // Índice do item selecionado atualmente
     [SerializeField]
     private Color selectedColor = Color.yellow; // Cor para o item selecionado
@@ -77,21 +78,31 @@ public class PlayerSelectorMenu : MonoBehaviour
         for (int i = 0; i < menuItems.Count; i++)
         {
             // Atualiza as cores dos itens de menu
-            var renderer = menuItems[i].GetComponent<Renderer>();
+            var renderer = menuItems[i].button.GetComponent<Renderer>();
             if (renderer != null)
             {
                 renderer.material.color = (i == currentIndex) ? selectedColor : normalColor;
             }
 
             // Atualiza a escala para itens não selecionados
-            menuItems[i].transform.localScale = (i == currentIndex) ? pulseScale : normalScale;
+            menuItems[i].button.transform.localScale = (i == currentIndex) ? pulseScale : normalScale;
+
+            if (i != currentIndex)
+            {
+                menuItems[i].unselectedSprite.SetActive(true);
+                menuItems[i].selectedSprite.SetActive(false);
+            } else
+            {
+                menuItems[i].unselectedSprite.SetActive(false);
+                menuItems[i].selectedSprite.SetActive(true);
+            }
         }
     }
 
     private void StartPulseEffect()
     {
         // Inicia a animação de pulsação para o item selecionado
-        pulseCoroutine = StartCoroutine(PulseEffect(menuItems[currentIndex]));
+        pulseCoroutine = StartCoroutine(PulseEffect(menuItems[currentIndex].button));
     }
 
     private void StopPulseEffect()
@@ -104,7 +115,7 @@ public class PlayerSelectorMenu : MonoBehaviour
         }
 
         // Restaura o tamanho normal do item
-        menuItems[currentIndex].transform.localScale = normalScale;
+        menuItems[currentIndex].button.transform.localScale = normalScale;
     }
 
     private IEnumerator PulseEffect(GameObject target)
@@ -144,6 +155,14 @@ public class PlayerSelectorMenu : MonoBehaviour
     {
         PlayerPrefs.SetInt("PlayerCount", i);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    [System.Serializable]
+    struct MenuItem
+    {
+        public GameObject button;
+        public GameObject selectedSprite;
+        public GameObject unselectedSprite;
     }
 }
 

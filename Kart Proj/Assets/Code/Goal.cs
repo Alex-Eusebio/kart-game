@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.MLAgents.Sensors;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -14,6 +15,10 @@ public class Goal : MonoBehaviour
 
     [SerializeField]
     private string musicName;
+    private bool isPause = false;
+
+    [SerializeField]
+    private GameObject pauseMenu;
 
     private void Start()
     {
@@ -24,14 +29,38 @@ public class Goal : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            SceneManager.LoadScene(3);
-            AudioManager.Instance.StopAllSounds();
+            TogglePause();
         }
+
+        if (Input.GetKeyDown(KeyCode.Return) && isPause)
+        {
+            ExitTrack();
+        }
+    }
+
+    private void ExitTrack()
+    {
+        SceneManager.LoadScene(3);
+        AudioManager.Instance.StopAllSounds();
+    }
+
+    private void TogglePause()
+    {
+        isPause = !isPause;
+
+        CarSystem[] cars = FindObjectsOfType<CarSystem>();
+
+        foreach (CarSystem c in cars)
+        {
+            c.transform.parent.GetComponentInChildren<Camera>().enabled = !isPause;
+        }
+        pauseMenu.SetActive(isPause);
     }
 
     public string GetTimer()
     {
         time += Time.deltaTime * 1000;
+
         CountDown();
         TimeSpan t = TimeSpan.FromMilliseconds(time);
         return string.Format("{0:D2}:{1:D2}:{2:D2}",
