@@ -8,6 +8,7 @@ public class MainMenuController : MonoBehaviour
     public Button[] menuButtons; // Array de botões no menu
     private int currentIndex = 0; // Índice do botão atualmente selecionado
     public int playSceneName; // Nome da cena para o botão Play
+    public int playAiScene; // Nome da cena para o botão Play
     public int settingsSceneName; // Nome da cena para o botão Settings
     public int creditsSceneName; // Nome da cena para o botão Settings
 
@@ -99,6 +100,12 @@ public class MainMenuController : MonoBehaviour
 
     // Botão Play
     public void PlayGame()
+    {
+        SceneManager.LoadScene(playSceneName); // Carrega a cena do jogo
+    }
+
+    // Botão Play
+    public void PlayAi()
     {
         SceneManager.LoadScene(playSceneName); // Carrega a cena do jogo
     }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UiController : MonoBehaviour
@@ -11,6 +12,12 @@ public class UiController : MonoBehaviour
     {
         musicSlider.value = AudioManager.Instance.musicSource.volume;
         sfxSlider.value = AudioManager.Instance.sfxSource.volume;
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+            ExitSettings();
     }
 
     public void ToggleMusic()
@@ -31,5 +38,10 @@ public class UiController : MonoBehaviour
     public void SfxVolume()
     {
         AudioManager.Instance.SfxVolume(sfxSlider.value);
+    }
+
+    public void ExitSettings()
+    {
+        SceneManager.LoadScene(1);
     }
 }
