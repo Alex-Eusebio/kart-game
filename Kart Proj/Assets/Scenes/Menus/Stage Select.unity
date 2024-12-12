@@ -1150,8 +1150,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Title
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 04799b11fc05ba2428c8d8447fe42384, type: 2}
+  m_sharedMaterial: {fileID: 6882214719628445298, guid: 04799b11fc05ba2428c8d8447fe42384, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1259,7 +1259,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 548, y: 171}
+  m_AnchoredPosition: {x: 548, y: 133}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &677375495
@@ -1287,8 +1287,8 @@ MonoBehaviour:
     enim, sit amet dapibus ipsum est vitae purus. Phasellus quis sodales eros, ac
     tempus turpis. '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 04799b11fc05ba2428c8d8447fe42384, type: 2}
+  m_sharedMaterial: {fileID: 6882214719628445298, guid: 04799b11fc05ba2428c8d8447fe42384, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1547,23 +1547,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tracks:
   - title: Rift Raceway
-    description: TEXT
+    description: "Set on a bright, sunny day under a clear blue sky. It\u2019s a
+      classic setup that lets racers focus on speed and skill."
     flagImage: {fileID: 68395994}
     player: {fileID: 1072498039}
   - title: Coastal Town
-    description: TEXT
+    description: "A small village on a peaceful island. The scenery includes a distant
+      boat on the horizon and a tall lighthouse. It\u2019s a calm, scenic place for
+      a competitive race. "
     flagImage: {fileID: 390015963}
     player: {fileID: 1201951228}
   - title: Neon City
-    description: TEXT
+    description: A fast-paced track in a neon-lit futuristic city, where racers speed
+      through lively streets and towering buildings at night.
     flagImage: {fileID: 1459238772}
     player: {fileID: 1055221564}
-  - title: Battlefield
-    description: TEXT
+  - title: Foggy Trail
+    description: A battlefield track with rough terrain, scattered tanks, trenches,
+      and thick fog, creating a challenging and unpredictable race.
     flagImage: {fileID: 279974986}
     player: {fileID: 1283693849}
   - title: Honey Copium
-    description: TEXT
+    description: A race track inside a giant beehive civilization, featuring honey
+      streams, hexagonal buildings, and a unique energy that makes the race fun and
+      challenging.
     flagImage: {fileID: 441531845}
     player: {fileID: 2118188116}
   defaultSize: {x: 280, y: 280}
