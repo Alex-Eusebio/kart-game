@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using TMPro;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 public class CharacterSelectController : MonoBehaviour
 {
@@ -42,6 +43,8 @@ public class CharacterSelectController : MonoBehaviour
     public float pulseSpeed = 0.9f;
 
     private Coroutine pulseCoroutine;
+    [SerializeField]
+    List<int> pickedNumbers = new List<int>();
 
     void Start()
     {
@@ -82,18 +85,23 @@ public class CharacterSelectController : MonoBehaviour
 
         currentCharacter += _change;
 
-        for (int i = 0; i < curPlayer; i++)
+        if (currentCharacter < 0)
+            currentCharacter = characters.Length - 1;
+        else if (currentCharacter > characters.Length - 1)
+            currentCharacter = 0;
+
+        if (curPlayer > 0)
         {
-            if (PlayerPrefs.HasKey($"SelectedCharacter{i}") && PlayerPrefs.GetInt($"SelectedCharacter{i}") == currentCharacter)
+            while (pickedNumbers.Contains(currentCharacter))
             {
                 currentCharacter += _change;
+
+                if (currentCharacter < 0)
+                    currentCharacter = characters.Length - 1;
+                else if (currentCharacter > characters.Length - 1)
+                    currentCharacter = 0;
             }
         }
-
-        if (currentCharacter < 0)
-            currentCharacter = characters.Length-1;
-        else if (currentCharacter > characters.Length-1)
-            currentCharacter = 0;
 
         // Ativar apenas o personagem atual e desativar os outros
         for (int i = 0; i < characters.Length; i++)
@@ -197,6 +205,7 @@ public class CharacterSelectController : MonoBehaviour
         characters[currentCharacter].pickNumber.gameObject.SetActive(true);
         characters[currentCharacter].pickNumber.sprite = pick[curPlayer-1];
         characters[currentCharacter].unselectedDisplay.color = redOut;
+        pickedNumbers.Add(currentCharacter);
         ChangeCharacter(1);
     }
 }
