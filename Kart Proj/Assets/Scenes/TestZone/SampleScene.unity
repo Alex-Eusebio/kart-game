@@ -6781,7 +6781,7 @@ GameObject:
   - component: {fileID: 968092984}
   - component: {fileID: 968092983}
   m_Layer: 5
-  m_Name: Canvas (1)
+  m_Name: CheeseIn/Out
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7234,7 +7234,7 @@ GameObject:
   - component: {fileID: 1158339187}
   - component: {fileID: 1158339186}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: FadeIn/Out
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
