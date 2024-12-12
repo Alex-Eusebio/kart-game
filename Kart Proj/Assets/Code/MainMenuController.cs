@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Collections;  // Necessário para usar corrotinas
 
 public class MainMenuController : MonoBehaviour
 {
@@ -12,17 +13,31 @@ public class MainMenuController : MonoBehaviour
     public int settingsSceneName; // Nome da cena para o botão Settings
     public int creditsSceneName; // Nome da cena para o botão Settings
 
+    private Vector3[] defaultScales; // Escalas padrões dos botões
+    private float scalePulse = 1.1f; // Fator de escala para o efeito de "pulsar"
+    private float pulseSpeed = 1.5f; // Velocidade de pulsação
+
+    private Coroutine pulseCoroutine = null; // Corrotina para pulsação
+
     void Start()
     {
         if (menuButtons.Length > 0)
         {
+            defaultScales = new Vector3[menuButtons.Length];
+            
+            // Salva a escala padrão de cada botão
+            for (int i = 0; i < menuButtons.Length; i++)
+            {
+                defaultScales[i] = menuButtons[i].transform.localScale;
+            }
+
             HighlightButton(currentIndex); // Inicia destacando o primeiro botão
         }
     }
 
     void Update()
     {
-        HandleInput();
+        HandleInput(); // Gerencia as entradas do jogador
     }
 
     // Gerencia a navegação do menu
@@ -71,21 +86,36 @@ public class MainMenuController : MonoBehaviour
         HighlightButton(currentIndex);
     }
 
-    // Destaca o botão selecionado
+    // Destaca o botão selecionado e começa a pulsação
     private void HighlightButton(int index)
     {
         if (menuButtons[index] != null)
         {
             menuButtons[index].Select(); // Destaca o botão
+            menuButtons[index].transform.localScale = defaultScales[index] * scalePulse; // Aumenta a escala do botão selecionado
+
+            // Se a corrotina não estiver rodando, inicia a pulsação
+            if (pulseCoroutine == null)
+            {
+                pulseCoroutine = StartCoroutine(PulseButton(menuButtons[index])); // Inicia a pulsação do botão
+            }
         }
     }
 
-    // Remove o destaque do botão
+    // Remove o destaque do botão e para a pulsação
     private void RemoveHighlight(int index)
     {
         if (menuButtons[index] != null)
         {
             EventSystem.current.SetSelectedGameObject(null); // Remove o foco
+            menuButtons[index].transform.localScale = defaultScales[index]; // Restaura a escala padrão do botão
+
+            // Para a corrotina de pulsação se ela estiver rodando
+            if (pulseCoroutine != null)
+            {
+                StopCoroutine(pulseCoroutine); // Para a pulsação
+                pulseCoroutine = null;
+            }
         }
     }
 
@@ -95,6 +125,19 @@ public class MainMenuController : MonoBehaviour
         if (menuButtons[currentIndex] != null)
         {
             menuButtons[currentIndex].onClick.Invoke(); // Invoca o evento do botão
+        }
+    }
+
+    // Corrotina para pulsar o botão
+    private IEnumerator PulseButton(Button button)
+    {
+        while (true)
+        {
+            // Pulsação para aumentar
+            float time = Mathf.PingPong(Time.time * pulseSpeed, 1);
+            button.transform.localScale = defaultScales[currentIndex] * (scalePulse + time * 0.1f); // 0.1f de variação
+
+            yield return null;
         }
     }
 
@@ -131,5 +174,8 @@ public class MainMenuController : MonoBehaviour
         Application.Quit(); // Fecha o jogo (funciona apenas no build)
     }
 }
+
+
+
 
 
