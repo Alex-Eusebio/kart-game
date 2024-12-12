@@ -2,7 +2,8 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using System.Collections;  // Necessário para usar corrotinas
+using UnityEngine.InputSystem;  // Necessário para usar o sistema de PlayerInput
+using System.Collections;  // Necessário para usar IEnumerator e corrotinas
 
 public class MainMenuController : MonoBehaviour
 {
@@ -19,8 +20,11 @@ public class MainMenuController : MonoBehaviour
 
     private Coroutine pulseCoroutine = null; // Corrotina para pulsação
 
+    private PlayerInput playerInput; // Componente PlayerInput para capturar as ações do jogador
+
     void Start()
     {
+        playerInput = GetComponent<PlayerInput>(); // Obtém o componente PlayerInput
         if (menuButtons.Length > 0)
         {
             defaultScales = new Vector3[menuButtons.Length];
@@ -59,7 +63,17 @@ public class MainMenuController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(0); // Volta para o menu inicial ao apertar Escape
+        }
+    }
+
+    // Função chamada quando a ação de "Back" (Botão B) é pressionada
+    public void OnBackPressed(InputAction.CallbackContext context)
+    {
+        if (context.performed) // Verifica se a tecla foi pressionada
+        {
+            // Aqui você pode definir qual cena deve ser carregada ao pressionar o "B"
+            SceneManager.LoadScene(0); // Exemplo: Voltar para o menu principal (substitua pelo índice ou nome da sua cena anterior)
         }
     }
 
@@ -174,8 +188,4 @@ public class MainMenuController : MonoBehaviour
         Application.Quit(); // Fecha o jogo (funciona apenas no build)
     }
 }
-
-
-
-
 
