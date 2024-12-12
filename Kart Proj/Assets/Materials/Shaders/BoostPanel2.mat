@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: BoostPanel2
-  m_Shader: {fileID: -6465566751694194690, guid: b8dfaa682c8b22f4f83227390d0090d5, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 2fc699c53debca649baf2299585caadf, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []

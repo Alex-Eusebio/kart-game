@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Checkers
-  m_Shader: {fileID: -6465566751694194690, guid: 7145a5396241c1a40918cc3f2f0308e7, type: 3}
+  m_Name: New Material
+  m_Shader: {fileID: -6465566751694194690, guid: b8dfaa682c8b22f4f83227390d0090d5, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -59,6 +59,14 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_0216b16c97664bd0ae6a4a9063dddf13_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: b3e933ad34af4834d8d12a2120983958, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_12129e493e574a028ec027c6b06aa533_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: dcfedf80e827adc4b8871658198b7c64, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
     - _BUILTIN_QueueControl: 0
@@ -80,10 +88,13 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.25157225, g: 0.25157225, b: 0.25157225, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _Gradient1: {r: 0, g: 0.3416109, b: 2, a: 0}
+    - _Gradient2: {r: 2, g: 0, b: 1.793302, a: 0}
+    - _Speed: {r: 0.2, g: 0.2, b: 0, a: 0}
   m_BuildTextureStacks: []
---- !u!114 &7892111015817357486
+--- !u!114 &7903471984028320529
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
