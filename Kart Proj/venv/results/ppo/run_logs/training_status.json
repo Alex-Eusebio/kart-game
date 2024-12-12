@@ -2,49 +2,58 @@
     "KartAI": {
         "checkpoints": [
             {
-                "steps": 37608,
-                "file_path": "results\\ppo\\KartAI\\KartAI-37608.onnx",
-                "reward": -6.8240000406901045,
-                "creation_time": 1733920904.337159,
+                "steps": 25999533,
+                "file_path": "results\\ppo\\KartAI\\KartAI-25999533.onnx",
+                "reward": 293.04001235961914,
+                "creation_time": 1734026102.6338902,
                 "auxillary_file_paths": [
-                    "results\\ppo\\KartAI\\KartAI-37608.pt"
+                    "results\\ppo\\KartAI\\KartAI-25999533.pt"
                 ]
             },
             {
-                "steps": 499775,
-                "file_path": "results\\ppo\\KartAI\\KartAI-499775.onnx",
-                "reward": 24.616501092910767,
-                "creation_time": 1733921742.4923077,
+                "steps": 26499420,
+                "file_path": "results\\ppo\\KartAI\\KartAI-26499420.onnx",
+                "reward": 114.81455710199144,
+                "creation_time": 1734026590.244737,
                 "auxillary_file_paths": [
-                    "results\\ppo\\KartAI\\KartAI-499775.pt"
+                    "results\\ppo\\KartAI\\KartAI-26499420.pt"
                 ]
             },
             {
-                "steps": 999994,
-                "file_path": "results\\ppo\\KartAI\\KartAI-999994.onnx",
-                "reward": 29.653714815775555,
-                "creation_time": 1733922494.1242142,
+                "steps": 26999334,
+                "file_path": "results\\ppo\\KartAI\\KartAI-26999334.onnx",
+                "reward": 283.02407748882587,
+                "creation_time": 1734027082.2900534,
                 "auxillary_file_paths": [
-                    "results\\ppo\\KartAI\\KartAI-999994.pt"
+                    "results\\ppo\\KartAI\\KartAI-26999334.pt"
                 ]
             },
             {
-                "steps": 1123114,
-                "file_path": "results\\ppo\\KartAI\\KartAI-1123114.onnx",
-                "reward": 31.728957051816195,
-                "creation_time": 1733922687.7606952,
+                "steps": 27499893,
+                "file_path": "results\\ppo\\KartAI\\KartAI-27499893.onnx",
+                "reward": 292.76899909973145,
+                "creation_time": 1734027574.4310641,
                 "auxillary_file_paths": [
-                    "results\\ppo\\KartAI\\KartAI-1123114.pt"
+                    "results\\ppo\\KartAI\\KartAI-27499893.pt"
+                ]
+            },
+            {
+                "steps": 27546978,
+                "file_path": "results\\ppo\\KartAI\\KartAI-27546978.onnx",
+                "reward": null,
+                "creation_time": 1734027627.1485493,
+                "auxillary_file_paths": [
+                    "results\\ppo\\KartAI\\KartAI-27546978.pt"
                 ]
             }
         ],
         "final_checkpoint": {
-            "steps": 1123114,
+            "steps": 27546978,
             "file_path": "results\\ppo\\KartAI.onnx",
-            "reward": 31.728957051816195,
-            "creation_time": 1733922687.7606952,
+            "reward": null,
+            "creation_time": 1734027627.1485493,
             "auxillary_file_paths": [
-                "results\\ppo\\KartAI\\KartAI-1123114.pt"
+                "results\\ppo\\KartAI\\KartAI-27546978.pt"
             ]
         }
     },
