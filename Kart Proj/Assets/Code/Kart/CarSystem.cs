@@ -83,6 +83,9 @@ public class CarSystem : MonoBehaviour
     public Transform tubeSmokeParticles;
     public Color[] turboColors;
 
+    float driftDelay = 0.7f;
+    float driftOnDelay;
+
     float distToGround;
     private Quaternion initialRotation;
 
@@ -241,6 +244,11 @@ public class CarSystem : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (driftOnDelay > 0)
+        {
+            driftOnDelay -= Time.deltaTime;
+        }
+
         if (ignoreStuns)
         {
             stunDuration = 0;
@@ -304,6 +312,11 @@ public class CarSystem : MonoBehaviour
             if (speed > 5)
                 speed -= driftSpeedDebuff;
 
+            if (driftOnDelay <= 0)
+            {
+                driftOnDelay = driftDelay;
+                AudioManager.Instance.PlaySfx("drift");
+            }
             float control = (driftDirection == 1) ? ExtensionMethods.Remap(steer, -1, 1, 0.2f, 2) : ExtensionMethods.Remap(steer, -1, 1, 2, 0.2f);
             float powerControl = (driftDirection == 1) ? ExtensionMethods.Remap(steer, -1, 1, .2f, 1) : ExtensionMethods.Remap(steer, -1, 1, 1, .2f);
             Steer(driftDirection*driftPassiveSteeringMulti, control, steeringDriftMulti);

@@ -48,7 +48,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSounds: []
-  sfxSounds: []
+  sfxSounds:
+  - name: drift
+    clip: {fileID: 8300000, guid: 678e8c3710d0b0f4ebd8ff024c70200d, type: 3}
   musicSource: {fileID: 233352652444706222}
   sfxSource: {fileID: 2701712886009467750}
 --- !u!82 &2701712886009467750

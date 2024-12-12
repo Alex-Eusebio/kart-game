@@ -1303,8 +1303,8 @@ MonoBehaviour:
   - {fileID: 1459238772}
   - {fileID: 279974986}
   - {fileID: 441531845}
-  defaultSize: {x: 100, y: 100}
-  enlargedSize: {x: 150, y: 150}
+  defaultSize: {x: 200, y: 200}
+  enlargedSize: {x: 300, y: 300}
   videos:
   - {fileID: 1072498039}
   - {fileID: 1201951228}
