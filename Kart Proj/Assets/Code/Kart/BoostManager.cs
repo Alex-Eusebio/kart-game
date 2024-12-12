@@ -48,7 +48,7 @@ public class BoostManager : MonoBehaviour
 
         carSystem.bonusSteer = bonusSteer;
 
-        if (carSystem.transform.parent.GetComponentInChildren<AICarSystem>())
+        if (!carSystem.transform.parent.GetComponentInChildren<AICarSystem>())
         {
             if (bonusSpeed > 0)
                 carSystem.transform.parent.GetComponentInChildren<DebugCanvas>().EnableSpeedLines();

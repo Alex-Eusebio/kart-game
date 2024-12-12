@@ -9,13 +9,6 @@ public class PistaController : MonoBehaviour
     public GameObject[] characterPrefabs;  // Prefabs dos personagens
     public Transform[] spawnPoints;        // Pontos de spawn
 
-    public DebugCanvas debugCanvas;        // Debug Canvas (opcional)
-    public Slider[] characterSliders;      // Sliders no Canvas (um para cada personagem)
-
-    private GameObject spawnedCharacter;   // Referência para o personagem spawnado
-
-    public SliderSpecial sliderSpecial; //Referencia ao sliderSpawner
-
     private void Start()
     {
         int i = 0;
@@ -50,20 +43,12 @@ public class PistaController : MonoBehaviour
                 int randomSpawnIndex = Random.Range(0, spawnPoints.Length);
                 Transform spawnPoint = spawnPoints[randomSpawnIndex];
 
-                spawnedCharacter = Instantiate(characterPrefab, spawnPoint.position, spawnPoint.rotation);
+                GameObject spawnedCharacter = Instantiate(characterPrefab, spawnPoint.position, spawnPoint.rotation);
                 Debug.Log($"Personagem {characterPrefab.name} foi spawnada na posição {spawnPoint.position}");
 
                 break;
             }
             i++;
-        }
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            SceneManager.LoadScene(3);
         }
     }
 }
