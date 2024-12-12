@@ -1920,7 +1920,7 @@ RectTransform:
   m_GameObject: {fileID: 1202452562}
   m_LocalRotation: {x: 0, y: 0, z: 0.16392866, w: 0.98647225}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalScale: {x: 0.27, y: 0.27, z: 0.27}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 706955383}
@@ -1950,7 +1950,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Quit le game '
+  m_text: 'Quit the game '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 04799b11fc05ba2428c8d8447fe42384, type: 2}
   m_sharedMaterial: {fileID: 6882214719628445298, guid: 04799b11fc05ba2428c8d8447fe42384, type: 2}
