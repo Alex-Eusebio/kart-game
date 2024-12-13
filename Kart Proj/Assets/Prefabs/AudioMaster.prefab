@@ -87,6 +87,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: b33c00eae30927b4e9e716e911e091bd, type: 3}
   - name: zumzumSpecialActivate
     clip: {fileID: 8300000, guid: 960c35d99db8cd841a025dc2a4e6c228, type: 3}
+  - name: lastLap
+    clip: {fileID: 8300000, guid: 588ec1018843f174fa723efe755df921, type: 3}
   musicSource: {fileID: 233352652444706222}
   sfxSource: {fileID: 2701712886009467750}
 --- !u!82 &2701712886009467750

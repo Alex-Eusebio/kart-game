@@ -66,7 +66,13 @@ public class LapManager : MonoBehaviour
                 if (curLaps == maxLaps)
                 {
                     transform.parent.GetComponentInChildren<DebugCanvas>().LaspLap();
-                    AudioManager.Instance.PlaySfx("lastLap");
+
+                    if (!FindObjectOfType<Goal>().someoneLastLap)
+                    {
+                        AudioManager.Instance.PlaySfx("lastLap");
+                        FindObjectOfType<Goal>().someoneLastLap = true;
+                    }
+
                 } 
             }
         }
