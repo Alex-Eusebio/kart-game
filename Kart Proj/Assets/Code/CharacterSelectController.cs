@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using TMPro;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 public class CharacterSelectController : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class CharacterSelectController : MonoBehaviour
     [SerializeField] private int curPlayer;
     [SerializeField]
     private int currentCharacter = 0; // Índice do personagem atual
+    [SerializeField]
+    private Color redOut;
     [SerializeField]
     private Character[] characters;
     [Header("UI Components")]
@@ -30,6 +33,8 @@ public class CharacterSelectController : MonoBehaviour
     private Image specialIcon;
     [SerializeField]
     private Image backgroundMat;
+    [SerializeField]
+    private Sprite[] pick;
 
     [Header("Image Sizes")]
     public Vector2 defaultSize = new Vector2(100f, 100f);
@@ -38,6 +43,8 @@ public class CharacterSelectController : MonoBehaviour
     public float pulseSpeed = 0.9f;
 
     private Coroutine pulseCoroutine;
+    [SerializeField]
+    List<int> pickedNumbers = new List<int>();
 
     void Start()
     {
@@ -79,9 +86,22 @@ public class CharacterSelectController : MonoBehaviour
         currentCharacter += _change;
 
         if (currentCharacter < 0)
-            currentCharacter = characters.Length-1;
-        else if (currentCharacter > characters.Length-1)
+            currentCharacter = characters.Length - 1;
+        else if (currentCharacter > characters.Length - 1)
             currentCharacter = 0;
+
+        if (curPlayer > 0)
+        {
+            while (pickedNumbers.Contains(currentCharacter))
+            {
+                currentCharacter += _change;
+
+                if (currentCharacter < 0)
+                    currentCharacter = characters.Length - 1;
+                else if (currentCharacter > characters.Length - 1)
+                    currentCharacter = 0;
+            }
+        }
 
         // Ativar apenas o personagem atual e desativar os outros
         for (int i = 0; i < characters.Length; i++)
@@ -103,11 +123,18 @@ public class CharacterSelectController : MonoBehaviour
         descTxt.text = characters[currentCharacter].specialDescription;
         specialNameTxt.text = characters[currentCharacter].specialName;
         specialIcon.sprite = characters[currentCharacter].specialIcon;
+        characters[currentCharacter].unselectedDisplay.gameObject.SetActive(false);
+        characters[currentCharacter].spriteDisplay.gameObject.SetActive(true);
+        characters[currentCharacter].spriteDisplay.rectTransform.sizeDelta = enlargedSize;
 
         for (int i = 0; i < characters.Length; i++)
         {
-            characters[i].spriteDisplay.rectTransform.sizeDelta = (i == currentCharacter) ? enlargedSize : defaultSize;
-            //characters[i].infoImage.enabled = (i == currentCharacter);
+            if (i != currentCharacter)
+            {
+                characters[i].spriteDisplay.rectTransform.sizeDelta = defaultSize;
+                characters[i].spriteDisplay.gameObject.SetActive(false);
+                characters[i].unselectedDisplay.gameObject.SetActive(true);
+            }
         }
 
         UpdateSliders();       // Atualiza os sliders
@@ -174,6 +201,12 @@ public class CharacterSelectController : MonoBehaviour
 
             PlayerPrefs.DeleteKey("IsAi");
         }
+
+        characters[currentCharacter].pickNumber.gameObject.SetActive(true);
+        characters[currentCharacter].pickNumber.sprite = pick[curPlayer-1];
+        characters[currentCharacter].unselectedDisplay.color = redOut;
+        pickedNumbers.Add(currentCharacter);
+        ChangeCharacter(1);
     }
 }
 
@@ -198,7 +231,8 @@ public struct Character
     public GameObject charcModel;
     public GameObject carModel;
     public Image spriteDisplay;     // Sprites associados aos personagens
-    public Image infoImage;         // Imagens de informações para cada personagem
+    public Image unselectedDisplay;         // Imagens de informações para cada personagem
+    public Image pickNumber;
 }
 
 
