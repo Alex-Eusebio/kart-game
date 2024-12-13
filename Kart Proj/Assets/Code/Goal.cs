@@ -41,13 +41,13 @@ public class Goal : MonoBehaviour
         }
     }
 
-    private void ExitTrack()
+    public void ExitTrack()
     {
         SceneManager.LoadScene(3);
         AudioManager.Instance.StopAllSounds();
     }
 
-    private void TogglePause()
+    public void TogglePause()
     {
         isPause = !isPause;
 
@@ -58,7 +58,6 @@ public class Goal : MonoBehaviour
             if (c is not AICarSystem)
                 c.transform.parent.GetComponentInChildren<Camera>().enabled = !isPause;
         }
-        Debug.Log("LOL " + isPause);
         pauseMenu.SetActive(isPause);
     }
 
