@@ -77,6 +77,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 6d5364884fa009544aebc72707fdc12c, type: 3}
   - name: raceStart
     clip: {fileID: 8300000, guid: 20aa0c2ba4429fa42bf382237253bf3a, type: 3}
+  - name: padBoost
+    clip: {fileID: 8300000, guid: b33c00eae30927b4e9e716e911e091bd, type: 3}
   musicSource: {fileID: 233352652444706222}
   sfxSource: {fileID: 2701712886009467750}
 --- !u!82 &2701712886009467750
