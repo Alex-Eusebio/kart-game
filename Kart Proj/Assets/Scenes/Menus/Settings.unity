@@ -132,7 +132,6 @@ GameObject:
   m_Component:
   - component: {fileID: 503996621}
   - component: {fileID: 503996620}
-  - component: {fileID: 503996619}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -140,14 +139,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &503996619
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 503996618}
-  m_Enabled: 1
 --- !u!20 &503996620
 Camera:
   m_ObjectHideFlags: 0
@@ -798,6 +789,14 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 1421270430399136385, guid: 6438dab9549b4f741881a53f07a5b255, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1253847305}
+    - target: {fileID: 1421270430399136385, guid: 6438dab9549b4f741881a53f07a5b255, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MusicVolume
+      objectReference: {fileID: 0}
     - target: {fileID: 2054053416309198048, guid: 6438dab9549b4f741881a53f07a5b255, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -897,6 +896,14 @@ PrefabInstance:
     - target: {fileID: 2137145214075167771, guid: 6438dab9549b4f741881a53f07a5b255, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 93
+      objectReference: {fileID: 0}
+    - target: {fileID: 3135132985249285712, guid: 6438dab9549b4f741881a53f07a5b255, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1253847305}
+    - target: {fileID: 3135132985249285712, guid: 6438dab9549b4f741881a53f07a5b255, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SfxVolume
       objectReference: {fileID: 0}
     - target: {fileID: 3822309380543282597, guid: 6438dab9549b4f741881a53f07a5b255, type: 3}
       propertyPath: m_AnchoredPosition.x

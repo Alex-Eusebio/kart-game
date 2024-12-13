@@ -65,9 +65,9 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 5717d04e798e43f48a2539f78dfdb12f, type: 3}
   - name: laspLap
     clip: {fileID: 8300000, guid: 588ec1018843f174fa723efe755df921, type: 3}
-  - name: benSpecialReady
+  - name: benSpecialActivate
     clip: {fileID: 8300000, guid: d742c410d05fd7440a45427c08ede25f, type: 3}
-  - name: benSpecialReady
+  - name: benSpeciaReady
     clip: {fileID: 8300000, guid: 4ea62c1814edacc448fc3e1352544e41, type: 3}
   - name: maxSpecialActivate
     clip: {fileID: 8300000, guid: fa417459a3e168648b39e88ebb460a45, type: 3}
@@ -79,6 +79,12 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 20aa0c2ba4429fa42bf382237253bf3a, type: 3}
   - name: padBoost
     clip: {fileID: 8300000, guid: b33c00eae30927b4e9e716e911e091bd, type: 3}
+  - name: tanksSpecialHit
+    clip: {fileID: 8300000, guid: 2adc027ec8efa8841b3b9b1f8054fcf9, type: 3}
+  - name: boost
+    clip: {fileID: 8300000, guid: b33c00eae30927b4e9e716e911e091bd, type: 3}
+  - name: zumzumSpecialActivate
+    clip: {fileID: 8300000, guid: 960c35d99db8cd841a025dc2a4e6c228, type: 3}
   musicSource: {fileID: 233352652444706222}
   sfxSource: {fileID: 2701712886009467750}
 --- !u!82 &2701712886009467750
