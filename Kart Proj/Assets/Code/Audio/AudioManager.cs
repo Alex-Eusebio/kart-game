@@ -41,6 +41,11 @@ public class AudioManager : MonoBehaviour
         sfxSource.Stop();
     }
 
+    public void StopMusic()
+    {
+        musicSource.Stop();
+    }
+
     public void PlaySfx(string name)
     {
         Sound s = Array.Find(sfxSounds, x => x.name == name);

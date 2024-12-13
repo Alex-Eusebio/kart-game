@@ -17,6 +17,7 @@ public class Goal : MonoBehaviour
     [SerializeField]
     private string musicName;
     private bool isPause = false;
+    public bool someoneComplete = false;
 
     [SerializeField]
     private GameObject pauseMenu;

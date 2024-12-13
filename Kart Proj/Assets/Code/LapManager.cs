@@ -37,7 +37,13 @@ public class LapManager : MonoBehaviour
 
             if (curLaps == maxLaps + 1)
             {
-                AudioManager.Instance.PlaySfx("raceComplete");
+                if (!FindObjectOfType<Goal>().someoneComplete)
+                {
+                    AudioManager.Instance.StopMusic();
+                    AudioManager.Instance.PlayMusic("raceComplete");
+                    FindObjectOfType<Goal>().someoneComplete = true;
+                }
+
                 Debug.Log("-----------------------");
                 Debug.Log(transform.parent.name);
                 for (int i = 0; i < lapTimes.Count; i++)
