@@ -9,6 +9,7 @@ using UnityEngine.SceneManagement;
 public class Goal : MonoBehaviour
 {
     float time = -5000;
+    bool triggeredMusic = false;
     public int maxLaps = 3;
 
     public List<Checkpoint> checkpointList;
@@ -24,7 +25,7 @@ public class Goal : MonoBehaviour
     {
         pauseMenu.SetActive(false);
 
-        AudioManager.Instance.PlayMusic(musicName);
+        AudioManager.Instance.PlaySfx("raceStart");
     }
 
     private void Update()
@@ -65,6 +66,12 @@ public class Goal : MonoBehaviour
     {
         if (!isPause)
             time += Time.deltaTime * 1000;
+
+        if (time >= 0 && !triggeredMusic)
+        {
+            triggeredMusic = true;
+            AudioManager.Instance.PlayMusic(musicName);
+        }
 
         CountDown();
         TimeSpan t = TimeSpan.FromMilliseconds(time);

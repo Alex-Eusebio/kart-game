@@ -58,8 +58,10 @@ public class LapManager : MonoBehaviour
                     FindAnyObjectByType<GateScript>().HandleGateLogic(curLaps);
 
                 if (curLaps == maxLaps)
+                {
                     transform.parent.GetComponentInChildren<DebugCanvas>().LaspLap();
-                AudioManager.Instance.PlaySfx("lapComplete");
+                    AudioManager.Instance.PlaySfx("lastLap");
+                } 
             }
         }
     }
