@@ -7,6 +7,11 @@ public class PressAnyKeyToStart : MonoBehaviour
     
     private bool keyPressed = false; // Garante que o evento só aconteça uma vez
 
+    private void Start()
+    {
+        AudioManager.Instance.PlayMusic("mainMenu");
+    }
+
     void Update()
     {
         if (!keyPressed && Input.anyKeyDown) // Detecta se qualquer tecla foi pressionada

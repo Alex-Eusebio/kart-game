@@ -60,6 +60,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 4f9c876ec30c6bd4599d54b4808f9860, type: 3}
   - name: raceComplete
     clip: {fileID: 8300000, guid: aff190e039895394aa4905edc7b8b8f3, type: 3}
+  - name: mainMenu
+    clip: {fileID: 8300000, guid: 82918c10196b65b40959b6b0cdd702f1, type: 3}
   sfxSounds:
   - name: drift
     clip: {fileID: 8300000, guid: 5717d04e798e43f48a2539f78dfdb12f, type: 3}
@@ -99,7 +101,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -195,7 +197,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 1
   Mute: 0

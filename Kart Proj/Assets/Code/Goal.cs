@@ -26,6 +26,7 @@ public class Goal : MonoBehaviour
     {
         pauseMenu.SetActive(false);
 
+        AudioManager.Instance.StopMusic();
         AudioManager.Instance.PlaySfx("raceStart");
     }
 
