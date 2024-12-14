@@ -2395,7 +2395,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2037595599}
         m_TargetAssemblyTypeName: MainMenuController, Assembly-CSharp
-        m_MethodName: OpenSettings
+        m_MethodName: OpenCredits
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
