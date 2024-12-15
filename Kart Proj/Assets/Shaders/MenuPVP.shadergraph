@@ -1358,9 +1358,9 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "r": 2.0,
-        "g": 1.861548900604248,
-        "b": 0.0,
+        "r": 0.0,
+        "g": 2.0,
+        "b": 0.4558210074901581,
         "a": 0.0
     },
     "isMainColor": false,
@@ -1462,7 +1462,7 @@
     "m_CustomColors": {
         "m_SerializableColors": []
     },
-    "m_BlendMode": 15
+    "m_BlendMode": 21
 }
 
 {
@@ -1561,9 +1561,9 @@
     "hlslDeclarationOverride": 2,
     "m_Hidden": false,
     "m_Value": {
-        "r": 2.0,
-        "g": 0.0,
-        "b": 0.7741460800170898,
+        "r": 0.0,
+        "g": 0.0025768280029296877,
+        "b": 2.0,
         "a": 0.0
     },
     "isMainColor": false,
@@ -1580,7 +1580,7 @@
     "m_Hidden": false,
     "m_ShaderOutputName": "Opacity",
     "m_StageCapability": 3,
-    "m_Value": 0.07000000029802323,
+    "m_Value": 0.05000000074505806,
     "m_DefaultValue": 1.0,
     "m_Labels": []
 }

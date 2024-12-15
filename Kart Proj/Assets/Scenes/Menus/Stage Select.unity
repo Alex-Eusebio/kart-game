@@ -224,7 +224,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -103.1, y: 19.5}
+  m_AnchoredPosition: {x: -103.1, y: 20.4}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &68395994
@@ -643,7 +643,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -17, y: 26.2}
+  m_AnchoredPosition: {x: -17, y: 27.100025}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &279974986
@@ -718,7 +718,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -75.30001, y: 21.7}
+  m_AnchoredPosition: {x: -75.30001, y: 22.600025}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &390015963
@@ -958,7 +958,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 14.5, y: 28.1}
+  m_AnchoredPosition: {x: 14.5, y: 29.000025}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &441531845
@@ -1116,7 +1116,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 739, y: 265}
+  m_AnchoredPosition: {x: 773, y: 265}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &609931964
@@ -1141,8 +1141,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Title
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 04799b11fc05ba2428c8d8447fe42384, type: 2}
-  m_sharedMaterial: {fileID: 6882214719628445298, guid: 04799b11fc05ba2428c8d8447fe42384, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5b288083299405a40a22f2b74bd0e9f6, type: 2}
+  m_sharedMaterial: {fileID: -12525363348707576, guid: 5b288083299405a40a22f2b74bd0e9f6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1172,7 +1172,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 3
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1278,8 +1278,8 @@ MonoBehaviour:
     enim, sit amet dapibus ipsum est vitae purus. Phasellus quis sodales eros, ac
     tempus turpis. '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 04799b11fc05ba2428c8d8447fe42384, type: 2}
-  m_sharedMaterial: {fileID: 6882214719628445298, guid: 04799b11fc05ba2428c8d8447fe42384, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5b288083299405a40a22f2b74bd0e9f6, type: 2}
+  m_sharedMaterial: {fileID: -12525363348707576, guid: 5b288083299405a40a22f2b74bd0e9f6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1309,7 +1309,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -1565,7 +1565,7 @@ MonoBehaviour:
     flagImage: {fileID: 441531845}
     player: {fileID: 2118188116}
   defaultSize: {x: 280, y: 280}
-  enlargedSize: {x: 300, y: 300}
+  enlargedSize: {x: 320, y: 320}
   titleTxt: {fileID: 609931964}
   descTxt: {fileID: 677375495}
 --- !u!1 &1006263619
@@ -3716,7 +3716,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -270, y: -154}
+  m_AnchoredPosition: {x: -270, y: -145.582}
   m_SizeDelta: {x: 1921.3, y: 1099.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1387800195
@@ -3876,7 +3876,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -46.100014, y: 23.8}
+  m_AnchoredPosition: {x: -46.100014, y: 24.700024}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1459238772
