@@ -3658,7 +3658,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Quit le game
+  m_text: Quit the game
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5b288083299405a40a22f2b74bd0e9f6, type: 2}
   m_sharedMaterial: {fileID: -12525363348707576, guid: 5b288083299405a40a22f2b74bd0e9f6, type: 2}
