@@ -44,4 +44,8 @@ public class UiController : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
+     public void Controls()
+    {
+        SceneManager.LoadScene("Controls");
+    }
 }
