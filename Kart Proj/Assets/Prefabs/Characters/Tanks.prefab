@@ -830,6 +830,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21eef4a0cad805942b195afa806dc4b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterId: 3
   maxLaps: 0
   curLaps: 0
   nextCheckPointToReach: {fileID: 0}
@@ -1724,6 +1725,10 @@ PrefabInstance:
     - target: {fileID: 731940812056087298, guid: 3d8d5a9dd97b26d41a37357b4096108a, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 834509815001913002, guid: 3d8d5a9dd97b26d41a37357b4096108a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -9.300003
       objectReference: {fileID: 0}
     - target: {fileID: 3552044560166871385, guid: 3d8d5a9dd97b26d41a37357b4096108a, type: 3}
       propertyPath: m_Pivot.x

@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/UIs/Main.unity
-    guid: 4c4084dfa17ce2340b5cac83bb96cd85
   - enabled: 1
     path: Assets/Scenes/Menus/Title Screen.unity
     guid: 2cc810fa91340404d9c48cfe5831db87
@@ -47,8 +44,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Pistas/Pista AI.unity
     guid: 1c4ed9b3ad589b240a287e5b48aa49c2
-  - enabled: 0
-    path: Assets/Scenes/TestZone/testingobjects.unity
-    guid: 0b5c00ee0893aad48994842ee598aa9a
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 922b08f39b8f16047b20968528820156, type: 2}

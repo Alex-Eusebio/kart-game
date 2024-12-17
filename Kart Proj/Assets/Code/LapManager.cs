@@ -6,9 +6,11 @@ using UnityEngine.Experimental.Rendering;
 
 public class LapManager : MonoBehaviour
 {
+    [SerializeField]
+    int characterId;
     public int maxLaps;
     public int curLaps;
-
+    
     List<float> lapTimes = new List<float>();
 
     public Checkpoint nextCheckPointToReach;
@@ -44,21 +46,10 @@ public class LapManager : MonoBehaviour
                     FindObjectOfType<Goal>().someoneComplete = true;
                 }
 
-                Debug.Log("-----------------------");
-                Debug.Log(transform.parent.name);
-                for (int i = 0; i < lapTimes.Count; i++)
-                {
-                    TimeSpan t = TimeSpan.FromMilliseconds(lapTimes[i]);
-                    string answer = string.Format("{0:D2}:{1:D2}:{2:D2}:{3:D3}",
-                                            t.Hours,
-                                            t.Minutes,
-                                            t.Seconds,
-                                            t.Milliseconds);
-                    Debug.Log($"Lap {i} - {answer}");
-                }
-                Debug.Log("-----------------------");
+                FindObjectOfType<Goal>().SendPlayer(characterId, lapTimes);
                 Destroy(transform.parent.gameObject);
-            } else
+            }
+            else
             {
                 if (FindAnyObjectByType<GateScript>())
                     FindAnyObjectByType<GateScript>().HandleGateLogic(curLaps);

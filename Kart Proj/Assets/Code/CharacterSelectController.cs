@@ -75,7 +75,15 @@ public class CharacterSelectController : MonoBehaviour
         }
 
         if (Input.GetKeyDown(KeyCode.Escape))
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        {
+            if (!PlayerPrefs.HasKey("IsAi"))
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+            else
+            {
+                PlayerPrefs.DeleteKey("IsAi");
+                SceneManager.LoadScene("MainMenu");
+            }
+        }
         
     }
 
