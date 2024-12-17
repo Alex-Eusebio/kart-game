@@ -205,7 +205,7 @@ RectTransform:
   m_GameObject: {fileID: 975482759607292976}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6521664133689944094}
@@ -406,7 +406,7 @@ RectTransform:
   m_GameObject: {fileID: 1606375679474994978}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0487628, y: 1.8595084, z: 0.7438034}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 691887248963199593}
@@ -479,7 +479,7 @@ RectTransform:
   m_GameObject: {fileID: 1822999930928719561}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2083207051216092189}
@@ -487,8 +487,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -5, y: 0}
-  m_SizeDelta: {x: -20, y: 0}
+  m_AnchoredPosition: {x: -7.5, y: 0}
+  m_SizeDelta: {x: -25, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &3284542726807222879
 GameObject:
@@ -795,7 +795,7 @@ RectTransform:
   m_GameObject: {fileID: 4595884816641086749}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0487628, y: 1.8595084, z: 0.7438034}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5944477994896418071}
@@ -1704,6 +1704,10 @@ PrefabInstance:
     - target: {fileID: 731940812056087298, guid: 3d8d5a9dd97b26d41a37357b4096108a, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 834509815001913002, guid: 3d8d5a9dd97b26d41a37357b4096108a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -9.299988
       objectReference: {fileID: 0}
     - target: {fileID: 3552044560166871385, guid: 3d8d5a9dd97b26d41a37357b4096108a, type: 3}
       propertyPath: m_Pivot.x
