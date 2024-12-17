@@ -30,6 +30,8 @@ public class StageSelectController : MonoBehaviour
             t.player.isLooping = true; // Ativa o looping para cada vídeo
         }
 
+        ChangeFlag(0);
+
         UpdateFlagSizes(); // Atualiza as bandeiras
         PlayVideo(currentFlagIndex); // Reproduz o vídeo correspondente à bandeira inicial
         titleTxt.text = tracks[currentFlagIndex].title;
@@ -82,6 +84,18 @@ public class StageSelectController : MonoBehaviour
 
         titleTxt.text = tracks[currentFlagIndex].title;
         descTxt.text = tracks[currentFlagIndex].description;
+
+        for (int i = 0; i < tracks.Length; i++)
+        {
+            if (i != currentFlagIndex)
+            {
+                tracks[i].flagImageUnselect.gameObject.SetActive(true);
+                tracks[i].flagImage.gameObject.SetActive(false);
+            }
+        }
+
+        tracks[currentFlagIndex].flagImageUnselect.gameObject.SetActive(false);
+        tracks[currentFlagIndex].flagImage.gameObject.SetActive(true);
 
         // Atualiza os tamanhos das bandeiras e anima a nova bandeira
         UpdateFlagSizes();  
@@ -178,5 +192,6 @@ public struct Track
     public string title;
     public string description;
     public Image flagImage;
+    public Image flagImageUnselect;
     public VideoPlayer player;
 }
