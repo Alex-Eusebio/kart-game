@@ -67,7 +67,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc890be9099343c4cb3572a5bec22d4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLaps: 1
+  maxLaps: 3
   checkpointList: []
   musicName: 
   someoneComplete: 0
