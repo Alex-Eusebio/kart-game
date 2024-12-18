@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using System.Xml.Linq;
 using TMPro;
 using Unity.MLAgents.Sensors;
 using Unity.VisualScripting;
@@ -88,7 +90,7 @@ public class Goal : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!isPause)
+        if (!isPause || !(players.Count >= maxPlayers))
             time += Time.deltaTime * 1000;
     }
 
@@ -101,7 +103,46 @@ public class Goal : MonoBehaviour
         }
 
         CountDown();
-        return TransformTime(time);
+        if (!(players.Count >= maxPlayers))
+            return TransformTime(time);
+        else return "";
+    }
+
+    public int GetPosition(LapManager lapManag)
+    {
+        LapManager[] manag = FindObjectsOfType<LapManager>();
+
+        int asking = -1;
+        List<PlayerDist> car = new List<PlayerDist>();
+        foreach (LapManager l in manag)
+        {
+            if (lapManag == l)
+                asking = l.characterId;
+            PlayerDist temp;
+            if (l.nextCheckPointToReach)
+            {
+                temp = new PlayerDist(l.characterId,
+                l.curLaps,
+                l.currentCheckpointIndex,
+                Vector3.Distance(l.transform.position, l.nextCheckPointToReach.transform.position));
+            } else
+            {
+                temp = new PlayerDist(l.characterId,
+                l.curLaps,
+                l.currentCheckpointIndex+1,
+                0);
+            }
+
+            car.Add(temp);
+        }
+
+        car = car
+        .OrderByDescending(p => p.lap) // Descending by lap
+        .ThenByDescending(p => p.curCheckpoint) // Descending by curCheckpoint
+        .ThenBy(p => p.curDistance) // Ascending by curDistance
+        .ToList();
+
+        return car.FindIndex(p => p.id == asking);
     }
 
     private string TransformTime(float time)
@@ -185,5 +226,21 @@ public struct PlayerComplete
     {
         this.id = id;
         this.times = times;
+    }
+}
+
+struct PlayerDist
+{
+    public int id;
+    public int lap;
+    public int curCheckpoint;
+    public float curDistance;
+
+    public PlayerDist(int id, int lap, int curCheckpoint, float curDistance)
+    {
+        this.id = id;
+        this.lap = lap;
+        this.curCheckpoint = curCheckpoint;
+        this.curDistance = curDistance;
     }
 }

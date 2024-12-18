@@ -6,8 +6,7 @@ using UnityEngine.Experimental.Rendering;
 
 public class LapManager : MonoBehaviour
 {
-    [SerializeField]
-    int characterId;
+    public int characterId;
     public int maxLaps;
     public int curLaps;
     
@@ -15,9 +14,8 @@ public class LapManager : MonoBehaviour
 
     public Checkpoint nextCheckPointToReach;
 
-    private int currentCheckpointIndex;
-    [SerializeField]
-    private List<Checkpoint> checkpoints;
+    public int currentCheckpointIndex;
+    public List<Checkpoint> checkpoints;
     public Checkpoint lastCheckpoint;
 
     private void Start()
