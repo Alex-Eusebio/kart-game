@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Unity.MLAgents.Sensors;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
@@ -10,7 +11,7 @@ using UnityEngine.TextCore.Text;
 
 public class Goal : MonoBehaviour
 {
-    float time = -5000;
+    float time = -2200;
     bool triggeredMusic = false;
     public int maxLaps = 3;
     float maxPlayers = 1;
@@ -25,6 +26,8 @@ public class Goal : MonoBehaviour
 
     [SerializeField]
     private GameObject pauseMenu;
+    [SerializeField]
+    private GameObject leaderBoardMenu;
     [Header("Finish Race")]
     public List<PlayerComplete> players;
     public GameObject[] characters;  // Array de personagens na cena
@@ -50,7 +53,10 @@ public class Goal : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            TogglePause();
+            if (players.Count < maxPlayers)
+                TogglePause();
+            else
+                HandleLeaderBoard();
         }
 
         if (Input.GetKeyDown(KeyCode.Return) && isPause)
@@ -80,11 +86,14 @@ public class Goal : MonoBehaviour
         pauseMenu.SetActive(isPause);
     }
 
-    public string GetTimer()
+    private void FixedUpdate()
     {
         if (!isPause)
             time += Time.deltaTime * 1000;
+    }
 
+    public string GetTimer()
+    {
         if (time >= 0 && !triggeredMusic)
         {
             triggeredMusic = true;
@@ -129,6 +138,18 @@ public class Goal : MonoBehaviour
             characters[p.id].SetActive(true);
             characters[p.id].transform.position = spawnPoints[i].position;
             characters[p.id].transform.rotation = spawnPoints[i].rotation;
+
+            i++;
+        }
+    }
+
+    private void HandleLeaderBoard()
+    {
+        int i = 0;
+        foreach (PlayerComplete p in players)
+        {
+            leaderBoardMenu.SetActive(true);
+            leaderBoardMenu.GetComponent<Leaderboard>().SetTime(i, p);
 
             i++;
         }
