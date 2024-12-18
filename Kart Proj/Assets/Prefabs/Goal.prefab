@@ -67,8 +67,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc890be9099343c4cb3572a5bec22d4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLaps: 3
-  timerTxt: {fileID: 0}
+  maxLaps: 1
+  checkpointList: []
+  musicName: 
+  someoneComplete: 0
+  someoneLastLap: 0
+  pauseMenu: {fileID: 0}
+  leaderBoardMenu: {fileID: 0}
+  players: []
+  characters: []
+  spawnPoints: []
 --- !u!1001 &1166349517233568825
 PrefabInstance:
   m_ObjectHideFlags: 0
