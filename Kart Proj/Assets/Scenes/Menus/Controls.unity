@@ -1072,11 +1072,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 769913989}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63e32f0b5082f3b48bb84a1dd4fbf587, type: 3}
+  m_Script: {fileID: 11500000, guid: 960b70ef8ac50844bb1c1cb1e9ad2eb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicSlider: {fileID: 0}
-  sfxSlider: {fileID: 0}
 --- !u!1 &1264328092
 GameObject:
   m_ObjectHideFlags: 0
@@ -1881,7 +1879,7 @@ PrefabInstance:
     - target: {fileID: 1421270430399136385, guid: 6438dab9549b4f741881a53f07a5b255, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1253847305}
+      objectReference: {fileID: 0}
     - target: {fileID: 1421270430399136385, guid: 6438dab9549b4f741881a53f07a5b255, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: MusicVolume
@@ -2001,7 +1999,7 @@ PrefabInstance:
     - target: {fileID: 3135132985249285712, guid: 6438dab9549b4f741881a53f07a5b255, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1253847305}
+      objectReference: {fileID: 0}
     - target: {fileID: 3135132985249285712, guid: 6438dab9549b4f741881a53f07a5b255, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SfxVolume
@@ -2134,7 +2132,8 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 327965835691249076, guid: 6438dab9549b4f741881a53f07a5b255, type: 3}
     m_RemovedGameObjects:
     - {fileID: 9132811556004159504, guid: 6438dab9549b4f741881a53f07a5b255, type: 3}
     - {fileID: 6689226666811980215, guid: 6438dab9549b4f741881a53f07a5b255, type: 3}
@@ -2270,8 +2269,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1253847305}
-        m_TargetAssemblyTypeName: UiController, Assembly-CSharp
-        m_MethodName: ExitSettings
+        m_TargetAssemblyTypeName: Credits, Assembly-CSharp
+        m_MethodName: Leave
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
