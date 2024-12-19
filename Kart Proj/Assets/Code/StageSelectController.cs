@@ -62,6 +62,8 @@ public class StageSelectController : MonoBehaviour
     // Muda a bandeira com base na direção
     private void ChangeFlag(int direction)
     {
+        if (direction != 0)
+            AudioManager.Instance.PlaySfx("menuClick");
 
         // Para o vídeo atual antes de mudar de bandeira
         StopCurrentVideo();
@@ -180,6 +182,7 @@ public class StageSelectController : MonoBehaviour
     // Carrega a cena da pista com base na bandeira selecionada
     private void LoadTrackScene(int flagIndex)
     {
+        AudioManager.Instance.PlaySfx("menuSelect");
         string sceneName = "Pista " + (flagIndex + 1);  // A cena é "Pista 1", "Pista 2", etc.
         Debug.Log("Carregando a cena: " + sceneName);
         SceneManager.LoadScene(sceneName);  // Carrega a cena correspondente à bandeira

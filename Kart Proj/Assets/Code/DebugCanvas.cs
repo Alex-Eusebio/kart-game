@@ -1,3 +1,4 @@
+using EasyRoads3Dv3;
 using TMPro;
 using UnityEngine;
 
@@ -10,6 +11,7 @@ public class DebugCanvas : MonoBehaviour
     [SerializeField] private TextMeshProUGUI isSpecialTxt;
     [SerializeField] private TextMeshProUGUI timerTxt;
     [SerializeField] private TextMeshProUGUI lapTxt;
+    [SerializeField] private TextMeshProUGUI positionTxt;
     [SerializeField] private ParticleSystem speedLines;
     [SerializeField] private Animator laspLapAnim;
 
@@ -24,7 +26,35 @@ public class DebugCanvas : MonoBehaviour
     void FixedUpdate()
     {
         if (FindAnyObjectByType<Goal>())
+        {
+            if (positionTxt)
+            {
+                int temp = FindAnyObjectByType<Goal>().GetPosition(car.transform.parent.GetComponentInChildren<LapManager>());
+                string txt = "";
+                switch (temp)
+                {
+                    case 0:
+                        txt = "1st";
+                        break;
+                    case 1:
+                        txt = "2nd";
+                        break;
+                    case 2:
+                        txt = "3rd";
+                        break;
+                    case 3:
+                        txt = "4th";
+                        break;
+                    default:
+                        txt = "PROBLEM";
+                        break;
+                }
+
+                positionTxt.text = txt;
+            }
+            
             timerTxt.text = FindAnyObjectByType<Goal>().GetTimer();
+        }
 
         // Atualiza os textos com as informações do carro
         if (car != null)

@@ -89,6 +89,10 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 960c35d99db8cd841a025dc2a4e6c228, type: 3}
   - name: lastLap
     clip: {fileID: 8300000, guid: 588ec1018843f174fa723efe755df921, type: 3}
+  - name: menuClick
+    clip: {fileID: 8300000, guid: 7082b27c60edc9344802aba0ef84777a, type: 3}
+  - name: menuSelect
+    clip: {fileID: 8300000, guid: 4d246f0896cc47848a429c4dfcbe8f6a, type: 3}
   musicSource: {fileID: 233352652444706222}
   sfxSource: {fileID: 2701712886009467750}
 --- !u!82 &2701712886009467750

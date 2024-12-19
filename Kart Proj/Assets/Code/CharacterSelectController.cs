@@ -89,6 +89,9 @@ public class CharacterSelectController : MonoBehaviour
 
     private void ChangeCharacter(int _change)
     {
+        if (_change != 0)
+            AudioManager.Instance.PlaySfx("menuClick");
+
         StopPulseEffect();
 
         currentCharacter += _change;
@@ -194,6 +197,7 @@ public class CharacterSelectController : MonoBehaviour
     // Método chamado quando o jogador clica Enter ou Espaço
     public void OnEnterButtonClicked()
     {
+        AudioManager.Instance.PlaySfx("menuSelect");
         // Salva o nome da personagem escolhida no PlayerPrefs
         PlayerPrefs.SetInt("SelectedCharacter" + curPlayer, currentCharacter);
         PlayerPrefs.Save();  // Garante que o valor seja salvo

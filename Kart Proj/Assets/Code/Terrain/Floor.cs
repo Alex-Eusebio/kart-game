@@ -11,7 +11,7 @@ public class Floor : MonoBehaviour, IChangeSpeed
     float maxTimer;
     float timer;
 
-    public float ChangeSpeed(float speed)
+    public float ChangeSpeed(float speed, CarSystem car)
     {
         timer += Time.deltaTime;
         if (timer >= maxTimer && speed > 10)

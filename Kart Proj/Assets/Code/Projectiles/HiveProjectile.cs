@@ -13,7 +13,7 @@ public class HiveProjectile : Projectile
     private GameObject puddleSprite;
     private float puddleDuration;
     private bool affectedOwner = false;
-    private List<Collider> enemyHit; 
+    private List<Collider> enemyHit = new List<Collider>(); 
 
     protected override void FixedUpdate()
     {
@@ -36,14 +36,17 @@ public class HiveProjectile : Projectile
     protected override void Effect(Collider other)
     {
         if (other.GetComponent<CarSystem>() != null) {
-            if (other.GetComponent<CarSystem>() != creator && !enemyHit.Contains(other))
+            if (other.GetComponent<CarSystem>() != creator)
             {
-                Boost slow = ScriptableObject.CreateInstance<Boost>();
-                slow.Setup(slowStrenght, 0, slowDuration);
+                if (!enemyHit.Contains(other))
+                {
+                    Boost slow = ScriptableObject.CreateInstance<Boost>();
+                    slow.Setup(slowStrenght, 0, slowDuration);
 
-                other.GetComponent<CarSystem>().boostManager.AddBoost(slow);
-                AudioManager.Instance.PlaySfx("zumzumSpecialHitEnemy");
-                enemyHit.Add(other);
+                    other.GetComponent<CarSystem>().boostManager.AddBoost(slow);
+                    AudioManager.Instance.PlaySfx("zumzumSpecialHitEnemy");
+                    enemyHit.Add(other);
+                }
             }
             else
             {
