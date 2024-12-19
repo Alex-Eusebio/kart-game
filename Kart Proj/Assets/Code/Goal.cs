@@ -58,7 +58,12 @@ public class Goal : MonoBehaviour
             if (players.Count < maxPlayers)
                 TogglePause();
             else
-                HandleLeaderBoard();
+            {
+                if (!isPause)
+                    HandleLeaderBoard();
+                else
+                    ExitTrack();
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.Return) && isPause)
@@ -186,6 +191,7 @@ public class Goal : MonoBehaviour
 
     private void HandleLeaderBoard()
     {
+        isPause = true;
         int i = 0;
         foreach (PlayerComplete p in players)
         {

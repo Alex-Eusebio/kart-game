@@ -277,12 +277,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resource: 0
-  maxResource: 130
+  maxResource: 100
   hasSpecialCharge: 1
   chargePerTick: 0.6
   boostStrenght: 30
   steeringBuff: 4.1
-  boostDuration: 3.85
+  boostDuration: 4.15
   jumpStrenght: 5000
   specialCharger: {fileID: 5648953871841840400}
   target: {fileID: 0}
@@ -870,7 +870,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -5.12, y: -0}
+  m_AnchoredPosition: {x: -5.1200027, y: 0}
   m_SizeDelta: {x: -44.82, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &5324469744550134303
@@ -925,8 +925,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 9.336001, y: 4.1750684, z: 7.6510572}
-  m_Center: {x: -2.7621312, y: 0.5868108, z: 1.0830543e-14}
+  m_Size: {x: 17.806273, y: 4.5073004, z: 9.757847}
+  m_Center: {x: -6.997262, y: 0.7529268, z: 0}
 --- !u!114 &5648953871841840400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1225,7 +1225,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -7.22, y: -0}
+  m_AnchoredPosition: {x: -7.220001, y: 0}
   m_SizeDelta: {x: -59.07, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &7139836840237133629
