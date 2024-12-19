@@ -127,7 +127,7 @@ public class CarSystem : MonoBehaviour
         {
             if (hit.collider.gameObject.GetComponent<IChangeSpeed>() != null)
             {
-                float speedChange = hit.collider.gameObject.GetComponent<IChangeSpeed>().ChangeSpeed(currentSpeed);
+                float speedChange = hit.collider.gameObject.GetComponent<IChangeSpeed>().ChangeSpeed(currentSpeed, this);
 
                 if (speedChange > 0)
                     onRoad = true;

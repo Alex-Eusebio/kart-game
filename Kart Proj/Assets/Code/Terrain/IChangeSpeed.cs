@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IChangeSpeed
 {
-    float ChangeSpeed(float speed);
+    float ChangeSpeed(float speed, CarSystem car);
 }

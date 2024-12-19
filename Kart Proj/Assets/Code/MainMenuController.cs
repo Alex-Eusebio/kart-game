@@ -80,6 +80,8 @@ public class MainMenuController : MonoBehaviour
     // Move a seleção no menu
     private void MoveSelection(int direction)
     {
+        AudioManager.Instance.PlaySfx("menuClick");
+
         // Remove destaque do botão atual
         RemoveHighlight(currentIndex);
 
@@ -158,12 +160,14 @@ public class MainMenuController : MonoBehaviour
     // Botão Play
     public void PlayGame()
     {
+        AudioManager.Instance.PlaySfx("menuSelect");
         SceneManager.LoadScene(playSceneName); // Carrega a cena do jogo
     }
 
     // Botão Play
     public void PlayAi()
     {
+        AudioManager.Instance.PlaySfx("menuSelect");
         PlayerPrefs.SetInt("PlayerCount", 1);
         PlayerPrefs.SetInt("IsAi", 1);
         SceneManager.LoadScene(playAiScene); // Carrega a cena do jogo
@@ -172,18 +176,21 @@ public class MainMenuController : MonoBehaviour
     // Botão Settings (agora carrega uma nova cena)
     public void OpenSettings()
     {
+        AudioManager.Instance.PlaySfx("menuSelect");
         SceneManager.LoadScene(settingsSceneName); // Carrega a cena de configurações
     }
 
     // Botão Credits (agora carrega uma nova cena)
     public void OpenCredits()
     {
+        AudioManager.Instance.PlaySfx("menuSelect");
         SceneManager.LoadScene(creditsSceneName); // Carrega a cena de configurações
     }
 
     // Botão Quit
     public void QuitGame()
     {
+        AudioManager.Instance.PlaySfx("menuSelect");
         Debug.Log("Quitting game...");
         Application.Quit(); // Fecha o jogo (funciona apenas no build)
     }

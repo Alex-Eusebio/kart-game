@@ -57,6 +57,8 @@ public class PlayerSelectorMenu : MonoBehaviour
 
     private void ChangeSelection(int change)
     {
+        AudioManager.Instance.PlaySfx("menuClick");
+
         // Para a animação do item atualmente selecionado
         StopPulseEffect();
 
@@ -147,6 +149,7 @@ public class PlayerSelectorMenu : MonoBehaviour
 
     private void ConfirmSelection()
     {
+        AudioManager.Instance.PlaySfx("menuSelect");
         Debug.Log($"Jogadores Selecionados: {currentIndex + 1}");
         SelectPlayer(currentIndex + 1); // Passa o número de jogadores selecionados
     }

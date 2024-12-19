@@ -355,11 +355,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &769913989 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 425460953967380726, guid: 6438dab9549b4f741881a53f07a5b255, type: 3}
-  m_PrefabInstance: {fileID: 1819699499}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &991272443
 GameObject:
   m_ObjectHideFlags: 0
@@ -534,20 +529,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2054053416309198048, guid: 6438dab9549b4f741881a53f07a5b255, type: 3}
   m_PrefabInstance: {fileID: 1819699499}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1253847305
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 769913989}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63e32f0b5082f3b48bb84a1dd4fbf587, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  musicSlider: {fileID: 0}
-  sfxSlider: {fileID: 0}
 --- !u!1 &1443497217
 GameObject:
   m_ObjectHideFlags: 0
@@ -950,7 +931,7 @@ PrefabInstance:
     - target: {fileID: 1421270430399136385, guid: 6438dab9549b4f741881a53f07a5b255, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1253847305}
+      objectReference: {fileID: 0}
     - target: {fileID: 1421270430399136385, guid: 6438dab9549b4f741881a53f07a5b255, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: MusicVolume
@@ -1070,7 +1051,7 @@ PrefabInstance:
     - target: {fileID: 3135132985249285712, guid: 6438dab9549b4f741881a53f07a5b255, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1253847305}
+      objectReference: {fileID: 0}
     - target: {fileID: 3135132985249285712, guid: 6438dab9549b4f741881a53f07a5b255, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SfxVolume
@@ -1110,6 +1091,10 @@ PrefabInstance:
     - target: {fileID: 4450799224861541606, guid: 6438dab9549b4f741881a53f07a5b255, type: 3}
       propertyPath: m_RenderMode
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4450799224861541606, guid: 6438dab9549b4f741881a53f07a5b255, type: 3}
+      propertyPath: m_VertexColorAlwaysGammaSpace
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6426311392021501936, guid: 6438dab9549b4f741881a53f07a5b255, type: 3}
       propertyPath: m_IsActive
@@ -1175,7 +1160,8 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 327965835691249076, guid: 6438dab9549b4f741881a53f07a5b255, type: 3}
     m_RemovedGameObjects:
     - {fileID: 9132811556004159504, guid: 6438dab9549b4f741881a53f07a5b255, type: 3}
     - {fileID: 6689226666811980215, guid: 6438dab9549b4f741881a53f07a5b255, type: 3}
@@ -1202,8 +1188,25 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 425460953967380726, guid: 6438dab9549b4f741881a53f07a5b255, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1253847305}
+      addedObject: {fileID: 1819699501}
   m_SourcePrefab: {fileID: 100100000, guid: 6438dab9549b4f741881a53f07a5b255, type: 3}
+--- !u!1 &1819699500 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 425460953967380726, guid: 6438dab9549b4f741881a53f07a5b255, type: 3}
+  m_PrefabInstance: {fileID: 1819699499}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1819699501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819699500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 960b70ef8ac50844bb1c1cb1e9ad2eb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1873979733
 GameObject:
   m_ObjectHideFlags: 0
@@ -1286,9 +1289,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1253847305}
-        m_TargetAssemblyTypeName: UiController, Assembly-CSharp
-        m_MethodName: ExitSettings
+      - m_Target: {fileID: 1819699501}
+        m_TargetAssemblyTypeName: Credits, Assembly-CSharp
+        m_MethodName: Leave
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

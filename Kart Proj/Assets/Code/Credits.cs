@@ -8,6 +8,11 @@ public class Credits : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
-            SceneManager.LoadScene(1);
+            Leave();
+    }
+
+    public void Leave()
+    {
+        SceneManager.LoadScene(1);
     }
 }

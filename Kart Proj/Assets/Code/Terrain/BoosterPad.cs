@@ -11,12 +11,13 @@ public class BoosterPad : MonoBehaviour, IChangeSpeed
     float maxTimer;
     float timer;
 
-    public float ChangeSpeed(float speed)
+    public float ChangeSpeed(float speed, CarSystem car)
     {
         timer += Time.deltaTime;
         if (timer >= maxTimer)
         {
-            AudioManager.Instance.PlaySfx("padBoost");
+            if (car is not AICarSystem)
+                AudioManager.Instance.PlaySfx("padBoost");
             timer = 0;
             return speedChange;
         }
